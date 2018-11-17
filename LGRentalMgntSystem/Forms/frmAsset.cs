@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LGRentalMgntSystem
 {
-    public partial class Form1 : Form
+    public partial class frmAsset : Form
     {
-        public Form1()
+        public frmAsset()
         {
             InitializeComponent();
         }

@@ -98,7 +98,7 @@ namespace LGRentalMgntSystem.Class
         #endregion
 
         #region "Insert Update Delete - Stored Procedure"
-        public int Execute(string StoredProcedureName, DBParameters Parameters)
+        public int Execute(string StoredProcedureName, DatabaseParameters Parameters)
         {
             int _result = 0;
             int _counter = 0;
@@ -194,7 +194,7 @@ namespace LGRentalMgntSystem.Class
             return _result;
         }
 
-        public int Execute(string StoredProcedureName, DBParameters Parameters, out object ParameterValue)
+        public int Execute(string StoredProcedureName, DatabaseParameters Parameters, out object ParameterValue)
         {
             int _result = 0;
             int _counter = 0;
@@ -268,7 +268,7 @@ namespace LGRentalMgntSystem.Class
             return _result;
         }
 
-        public int Execute(string StoredProcedureName, DBParameters Parameters, out object ParameterValue1, out object ParameterValue2)
+        public int Execute(string StoredProcedureName, DatabaseParameters Parameters, out object ParameterValue1, out object ParameterValue2)
         {
             int _result = 0;
             int _counter = 0;
@@ -339,7 +339,7 @@ namespace LGRentalMgntSystem.Class
             return _result;
         }
 
-        public object ExecuteScalar(string StoredProcedureName, DBParameters Parameters)
+        public object ExecuteScalar(string StoredProcedureName, DatabaseParameters Parameters)
         {
             object _result = null;
             int _counter = 0;
@@ -574,7 +574,7 @@ namespace LGRentalMgntSystem.Class
 
         #region "Retrive Data - Stored Procedure"
 
-        public void Retrive(string StoredProcedureName, DBParameters Parameters, out SqlDataReader _result)
+        public void Retrive(string StoredProcedureName, DatabaseParameters Parameters, out SqlDataReader _result)
         {
             //SqlDataReader _result;
             int _counter = 0;
@@ -626,7 +626,7 @@ namespace LGRentalMgntSystem.Class
             //return _result;
         }
 
-        public void Retrive(string StoredProcedureName, DBParameters Parameters, out DataSet _result)
+        public void Retrive(string StoredProcedureName, DatabaseParameters Parameters, out DataSet _result)
         {
             //DataSet _result = new DataSet();
             int _counter = 0;
@@ -685,7 +685,7 @@ namespace LGRentalMgntSystem.Class
             //return _result;
         }
 
-        public void Retrive(string StoredProcedureName, DBParameters Parameters, out DataTable _result)
+        public void Retrive(string StoredProcedureName, DatabaseParameters Parameters, out DataTable _result)
         {
             //DataTable _result = new DataTable();
             int _counter = 0;
@@ -994,7 +994,7 @@ namespace LGRentalMgntSystem.Class
     }
 }
 
-public class DBParameter : IDisposable
+public class DatabaseParameter : IDisposable
 {
 
     private string _parametername;
@@ -1005,11 +1005,11 @@ public class DBParameter : IDisposable
 
     #region "Constructor & Distructor"
     private bool disposed = false;
-    public DBParameter()
+    public DatabaseParameter()
     {
     }
 
-    public DBParameter(string parametername, object value, ParameterDirection parameterdirection, SqlDbType datatype, int fieldsize)
+    public DatabaseParameter(string parametername, object value, ParameterDirection parameterdirection, SqlDbType datatype, int fieldsize)
     {
         _parametername = parametername;
         _parameterdirection = parameterdirection;
@@ -1018,7 +1018,7 @@ public class DBParameter : IDisposable
         _size = fieldsize;
     }
 
-    public DBParameter(string parametername, object value, ParameterDirection parameterdirection, SqlDbType datatype)
+    public DatabaseParameter(string parametername, object value, ParameterDirection parameterdirection, SqlDbType datatype)
     {
         _parametername = parametername;
         _parameterdirection = parameterdirection;
@@ -1044,7 +1044,7 @@ public class DBParameter : IDisposable
         disposed = true;
     }
 
-    ~DBParameter()
+    ~DatabaseParameter()
     {
         Dispose(false);
     }
@@ -1083,13 +1083,13 @@ public class DBParameter : IDisposable
     #endregion
 }
 
-public class DBParameters : IDisposable
+public class DatabaseParameters : IDisposable
 {
     protected ArrayList _innerList;
 
     #region "Constructor & Distructor"
     private bool disposed = false;
-    public DBParameters()
+    public DatabaseParameters()
     {
         _innerList = new ArrayList();
     }
@@ -1111,7 +1111,7 @@ public class DBParameters : IDisposable
         disposed = true;
     }
 
-    ~DBParameters()
+    ~DatabaseParameters()
     {
         Dispose(false);
     }
@@ -1122,32 +1122,32 @@ public class DBParameters : IDisposable
         get { return _innerList.Count; }
     }
 
-    public void Add(DBParameter item)
+    public void Add(DatabaseParameter item)
     {
         _innerList.Add(item);
     }
 
     public int Add(string parametername, object value, ParameterDirection parameterdirection, SqlDbType datatype, int fieldsize)
     {
-        DBParameter item = new DBParameter(parametername, value, parameterdirection, datatype, fieldsize);
+        DatabaseParameter item = new DatabaseParameter(parametername, value, parameterdirection, datatype, fieldsize);
         return _innerList.Add(item);
     }
 
     public int Add(string parametername, object value, ParameterDirection parameterdirection, SqlDbType datatype)
     {
-        DBParameter item = new DBParameter(parametername, value, parameterdirection, datatype);
+        DatabaseParameter item = new DatabaseParameter(parametername, value, parameterdirection, datatype);
         return _innerList.Add(item);
     }
 
-    public bool Remove(DBParameter item)
+    public bool Remove(DatabaseParameter item)
     {
         bool result = false;
-        DBParameter obj;
+        DatabaseParameter obj;
 
         for (int i = 0; i < _innerList.Count; i++)
         {
-            obj = new DBParameter();
-            obj = (DBParameter)_innerList[i];
+            obj = new DatabaseParameter();
+            obj = (DatabaseParameter)_innerList[i];
             if (obj.ParameterName == item.ParameterName && obj.DataType == item.DataType)
             {
                 _innerList.RemoveAt(i);
@@ -1171,25 +1171,25 @@ public class DBParameters : IDisposable
     {
         _innerList.Clear();
     }
-    public DBParameter this[int index]
+    public DatabaseParameter this[int index]
     {
         get
         {
-            return (DBParameter)_innerList[index];
+            return (DatabaseParameter)_innerList[index];
         }
     }
 
-    public bool Contains(DBParameter item)
+    public bool Contains(DatabaseParameter item)
     {
         return _innerList.Contains(item);
     }
 
-    public int IndexOf(DBParameter item)
+    public int IndexOf(DatabaseParameter item)
     {
         return _innerList.IndexOf(item);
     }
 
-    public void copyTo(DBParameter[] array, int index)
+    public void copyTo(DatabaseParameter[] array, int index)
     {
         _innerList.CopyTo(array, index);
     }
