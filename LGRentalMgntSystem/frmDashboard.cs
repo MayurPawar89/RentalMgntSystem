@@ -29,7 +29,7 @@ namespace LGRentalMgntSystem
 
         private void assetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowAsset();
+            
         }
 
         private void kitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +76,11 @@ namespace LGRentalMgntSystem
         {
             frmAsset frmAsset = new frmAsset();
             frmAsset.ShowDialog();
+        }
+
+        private void assetToolStripMenuItemAsset_Click(object sender, EventArgs e)
+        {
+            ShowAsset();
         }
     }
 }

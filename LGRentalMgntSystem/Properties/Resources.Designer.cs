@@ -63,6 +63,16 @@ namespace LGRentalMgntSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnBackground {
+            get {
+                object obj = ResourceManager.GetObject("btnBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RentalLogo {
             get {
                 object obj = ResourceManager.GetObject("RentalLogo", resourceCulture);
