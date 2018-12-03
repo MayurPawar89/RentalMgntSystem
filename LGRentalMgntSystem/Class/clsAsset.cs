@@ -90,7 +90,7 @@ namespace LGRentalMgntSystem.Class
                 oDBParameter.Add("@sAssetDescription", this.sAssetDescription, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAssetShortDescription", this.sAssetShortDescription, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@nCompanyID", this.nCompanyID, ParameterDirection.Input, SqlDbType.BigInt);
-                oDBParameter.Add("@sBarcodeID", this.nBarcodeID, ParameterDirection.Input, SqlDbType.BigInt);
+                //oDBParameter.Add("@sBarcodeID", this.nBarcodeID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@nAssetMainTypeID", this.nAssetMainTypeID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@sAssetSize", this.sAssetSize, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAssetCapacity", this.sAssetCapacity, ParameterDirection.Input, SqlDbType.VarChar);

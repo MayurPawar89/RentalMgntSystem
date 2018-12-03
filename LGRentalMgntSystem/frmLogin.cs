@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LGRentalMgntSystem
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
         public string sMessageboxCaption =string.Empty;
         public frmLogin()

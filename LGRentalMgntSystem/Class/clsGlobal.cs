@@ -35,8 +35,9 @@ namespace LGRentalMgntSystem.Class
             get { return clsGlobal._sUserDesignation; }
             set { clsGlobal._sUserDesignation = value; }
         }
-        
+
         
         
     }
+    
 }

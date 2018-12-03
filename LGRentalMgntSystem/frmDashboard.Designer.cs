@@ -28,300 +28,464 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
-            this.mnuMain = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.partyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.siteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.associationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.companyWarehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.companyTransportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMainStrip = new System.Windows.Forms.ToolStrip();
-            this.tsb_Asset = new System.Windows.Forms.ToolStripButton();
-            this.assetTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assetToolStripMenuItemAsset = new System.Windows.Forms.ToolStripMenuItem();
-            this.assetTypeToolStripMenuItemMainType = new System.Windows.Forms.ToolStripMenuItem();
-            this.assetMaterialToolStripMenuItemMaterial = new System.Windows.Forms.ToolStripMenuItem();
-            this.assetTypeToolStripMenuItemType = new System.Windows.Forms.ToolStripMenuItem();
-            this.assetType1ToolStripMenuItemType1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuMain.SuspendLayout();
-            this.tsMainStrip.SuspendLayout();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.btnAddAsset = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssetList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnExpiredAssetList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddKit = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKitList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddCompanyType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCompanyTypeList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddMaterialType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMaterialTypeList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddDesigantion = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDesignationList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssetType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssetTypeList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddAssetType1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssetType1List = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddPartyType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPartyList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddVehicleType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnVehicleList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddColourType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnColourList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddDensityType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDensityTypeList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddAssetMainType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAssetMainTypeList = new DevExpress.XtraBars.BarButtonItem();
+            this.rpAsset = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgAsset = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgKit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpChallan = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpJobCart = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpInvoice = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpExernalVehicle = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpMaster = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpTypeMaster = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgAssetMainType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgCompanyType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgMaterialType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgDesignation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgAssetType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgAssetTypeOne = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgPartyType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgVehicleType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgColourType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgDensityType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpSettings = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
-            // mnuMain
+            // ribbonControl1
             // 
-            this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.goToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.reportToolStripMenuItem,
-            this.settingToolStripMenuItem,
-            this.toolToolStripMenuItem});
-            this.mnuMain.Location = new System.Drawing.Point(0, 0);
-            this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(1238, 24);
-            this.mnuMain.TabIndex = 0;
-            this.mnuMain.Text = "menuStrip1";
+            this.ribbonControl1.AllowMinimizeRibbon = false;
+            this.ribbonControl1.ExpandCollapseItem.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.btnAddAsset,
+            this.btnAssetList,
+            this.btnExpiredAssetList,
+            this.btnAddKit,
+            this.btnKitList,
+            this.btnAddCompanyType,
+            this.btnCompanyTypeList,
+            this.btnAddMaterialType,
+            this.btnMaterialTypeList,
+            this.btnAddDesigantion,
+            this.btnDesignationList,
+            this.btnAssetType,
+            this.btnAssetTypeList,
+            this.btnAddAssetType1,
+            this.btnAssetType1List,
+            this.btnAddPartyType,
+            this.btnPartyList,
+            this.btnAddVehicleType,
+            this.btnVehicleList,
+            this.btnAddColourType,
+            this.btnColourList,
+            this.btnAddDensityType,
+            this.btnDensityTypeList,
+            this.btnAddAssetMainType,
+            this.btnAssetMainTypeList});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 26;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.rpAsset,
+            this.rpChallan,
+            this.rpJobCart,
+            this.rpInvoice,
+            this.rpExernalVehicle,
+            this.rpMaster,
+            this.rpTypeMaster,
+            this.rpSettings});
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
+            this.ribbonControl1.ShowToolbarCustomizeItem = false;
+            this.ribbonControl1.Size = new System.Drawing.Size(1238, 130);
+            this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             // 
-            // fileToolStripMenuItem
+            // btnAddAsset
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashboardToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "&File";
+            this.btnAddAsset.Caption = "Add Asset";
+            this.btnAddAsset.Id = 1;
+            this.btnAddAsset.ImageUri.Uri = "Add";
+            this.btnAddAsset.Name = "btnAddAsset";
+            this.btnAddAsset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAsset_ItemClick);
             // 
-            // dashboardToolStripMenuItem
+            // btnAssetList
             // 
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.dashboardToolStripMenuItem.Text = "&Dashboard";
-            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
+            this.btnAssetList.Caption = "Asset List";
+            this.btnAssetList.Id = 2;
+            this.btnAssetList.ImageUri.Uri = "ListNumbers";
+            this.btnAssetList.Name = "btnAssetList";
             // 
-            // exitToolStripMenuItem
+            // btnExpiredAssetList
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.exitToolStripMenuItem.Text = "&Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.btnExpiredAssetList.Caption = "Expired Asset List";
+            this.btnExpiredAssetList.Id = 3;
+            this.btnExpiredAssetList.ImageUri.Uri = "ListNumbers";
+            this.btnExpiredAssetList.Name = "btnExpiredAssetList";
             // 
-            // editToolStripMenuItem
+            // btnAddKit
             // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.masterToolStripMenuItem,
-            this.associationToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "&Edit";
+            this.btnAddKit.Caption = "Add Kit";
+            this.btnAddKit.Id = 4;
+            this.btnAddKit.ImageUri.Uri = "Add";
+            this.btnAddKit.Name = "btnAddKit";
             // 
-            // masterToolStripMenuItem
+            // btnKitList
             // 
-            this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.assetToolStripMenuItem,
-            this.kitToolStripMenuItem,
-            this.companyToolStripMenuItem,
-            this.partyToolStripMenuItem,
-            this.siteToolStripMenuItem,
-            this.userToolStripMenuItem,
-            this.staffToolStripMenuItem,
-            this.vehicleToolStripMenuItem,
-            this.assetTypeToolStripMenuItem});
-            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.masterToolStripMenuItem.Text = "&Master";
+            this.btnKitList.Caption = "Kit List";
+            this.btnKitList.Id = 5;
+            this.btnKitList.ImageUri.Uri = "ListNumbers";
+            this.btnKitList.Name = "btnKitList";
             // 
-            // assetToolStripMenuItem
+            // btnAddCompanyType
             // 
-            this.assetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.assetToolStripMenuItemAsset,
-            this.assetTypeToolStripMenuItemMainType,
-            this.assetMaterialToolStripMenuItemMaterial,
-            this.assetTypeToolStripMenuItemType,
-            this.assetType1ToolStripMenuItemType1});
-            this.assetToolStripMenuItem.Name = "assetToolStripMenuItem";
-            this.assetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.assetToolStripMenuItem.Text = "&Asset";
-            this.assetToolStripMenuItem.Click += new System.EventHandler(this.assetToolStripMenuItem_Click);
+            this.btnAddCompanyType.Caption = "Add Company Type";
+            this.btnAddCompanyType.Id = 6;
+            this.btnAddCompanyType.ImageUri.Uri = "Add";
+            this.btnAddCompanyType.Name = "btnAddCompanyType";
+            this.btnAddCompanyType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddCompanyType_ItemClick);
             // 
-            // kitToolStripMenuItem
+            // btnCompanyTypeList
             // 
-            this.kitToolStripMenuItem.Name = "kitToolStripMenuItem";
-            this.kitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.kitToolStripMenuItem.Text = "&Kit";
-            this.kitToolStripMenuItem.Click += new System.EventHandler(this.kitToolStripMenuItem_Click);
+            this.btnCompanyTypeList.Caption = "Company Type List";
+            this.btnCompanyTypeList.Id = 7;
+            this.btnCompanyTypeList.ImageUri.Uri = "ListNumbers";
+            this.btnCompanyTypeList.Name = "btnCompanyTypeList";
+            this.btnCompanyTypeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCompanyTypeList_ItemClick);
             // 
-            // companyToolStripMenuItem
+            // btnAddMaterialType
             // 
-            this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
-            this.companyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.companyToolStripMenuItem.Text = "&Company";
-            this.companyToolStripMenuItem.Click += new System.EventHandler(this.companyToolStripMenuItem_Click);
+            this.btnAddMaterialType.Caption = "Add Material Type";
+            this.btnAddMaterialType.Id = 8;
+            this.btnAddMaterialType.ImageUri.Uri = "Add";
+            this.btnAddMaterialType.Name = "btnAddMaterialType";
+            this.btnAddMaterialType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddMaterialType_ItemClick);
             // 
-            // partyToolStripMenuItem
+            // btnMaterialTypeList
             // 
-            this.partyToolStripMenuItem.Name = "partyToolStripMenuItem";
-            this.partyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.partyToolStripMenuItem.Text = "&Party";
-            this.partyToolStripMenuItem.Click += new System.EventHandler(this.partyToolStripMenuItem_Click);
+            this.btnMaterialTypeList.Caption = "Material Type List";
+            this.btnMaterialTypeList.Id = 9;
+            this.btnMaterialTypeList.ImageUri.Uri = "ListNumbers";
+            this.btnMaterialTypeList.Name = "btnMaterialTypeList";
+            this.btnMaterialTypeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMaterialTypeList_ItemClick);
             // 
-            // siteToolStripMenuItem
+            // btnAddDesigantion
             // 
-            this.siteToolStripMenuItem.Name = "siteToolStripMenuItem";
-            this.siteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.siteToolStripMenuItem.Text = "&Site";
-            this.siteToolStripMenuItem.Click += new System.EventHandler(this.siteToolStripMenuItem_Click);
+            this.btnAddDesigantion.Caption = "Add Designation";
+            this.btnAddDesigantion.Id = 10;
+            this.btnAddDesigantion.ImageUri.Uri = "Add";
+            this.btnAddDesigantion.Name = "btnAddDesigantion";
+            this.btnAddDesigantion.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddDesigantion_ItemClick);
             // 
-            // userToolStripMenuItem
+            // btnDesignationList
             // 
-            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.userToolStripMenuItem.Text = "&User";
-            this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
+            this.btnDesignationList.Caption = "Designation List";
+            this.btnDesignationList.Id = 11;
+            this.btnDesignationList.ImageUri.Uri = "ListNumbers";
+            this.btnDesignationList.Name = "btnDesignationList";
+            this.btnDesignationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDesignationList_ItemClick);
             // 
-            // staffToolStripMenuItem
+            // btnAssetType
             // 
-            this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.staffToolStripMenuItem.Text = "&Staff";
-            this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click);
+            this.btnAssetType.Caption = "Add Asset Type";
+            this.btnAssetType.Id = 12;
+            this.btnAssetType.ImageUri.Uri = "Add";
+            this.btnAssetType.Name = "btnAssetType";
+            this.btnAssetType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssetType_ItemClick);
             // 
-            // vehicleToolStripMenuItem
+            // btnAssetTypeList
             // 
-            this.vehicleToolStripMenuItem.Name = "vehicleToolStripMenuItem";
-            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.vehicleToolStripMenuItem.Text = "&Vehicle";
-            this.vehicleToolStripMenuItem.Click += new System.EventHandler(this.vehicleToolStripMenuItem_Click);
+            this.btnAssetTypeList.Caption = "Asset Type List";
+            this.btnAssetTypeList.Id = 13;
+            this.btnAssetTypeList.ImageUri.Uri = "ListNumbers";
+            this.btnAssetTypeList.Name = "btnAssetTypeList";
+            this.btnAssetTypeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssetTypeList_ItemClick);
             // 
-            // associationToolStripMenuItem
+            // btnAddAssetType1
             // 
-            this.associationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kitToolStripMenuItem1,
-            this.companyWarehouseToolStripMenuItem,
-            this.companyTransportToolStripMenuItem});
-            this.associationToolStripMenuItem.Name = "associationToolStripMenuItem";
-            this.associationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.associationToolStripMenuItem.Text = "&Association";
+            this.btnAddAssetType1.Caption = "Add Asset Type 1";
+            this.btnAddAssetType1.Id = 14;
+            this.btnAddAssetType1.ImageUri.Uri = "Add";
+            this.btnAddAssetType1.Name = "btnAddAssetType1";
+            this.btnAddAssetType1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAssetType1_ItemClick);
             // 
-            // kitToolStripMenuItem1
+            // btnAssetType1List
             // 
-            this.kitToolStripMenuItem1.Name = "kitToolStripMenuItem1";
-            this.kitToolStripMenuItem1.Size = new System.Drawing.Size(201, 22);
-            this.kitToolStripMenuItem1.Text = "Kit && Asset";
+            this.btnAssetType1List.Caption = "Asset Type1 List";
+            this.btnAssetType1List.Id = 15;
+            this.btnAssetType1List.ImageUri.Uri = "ListNumbers";
+            this.btnAssetType1List.Name = "btnAssetType1List";
+            this.btnAssetType1List.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssetType1List_ItemClick);
             // 
-            // companyWarehouseToolStripMenuItem
+            // btnAddPartyType
             // 
-            this.companyWarehouseToolStripMenuItem.Name = "companyWarehouseToolStripMenuItem";
-            this.companyWarehouseToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.companyWarehouseToolStripMenuItem.Text = "Company && Warehouse";
+            this.btnAddPartyType.Caption = "Add Party Type";
+            this.btnAddPartyType.Id = 16;
+            this.btnAddPartyType.ImageUri.Uri = "Add";
+            this.btnAddPartyType.Name = "btnAddPartyType";
+            this.btnAddPartyType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddPartyType_ItemClick);
             // 
-            // companyTransportToolStripMenuItem
+            // btnPartyList
             // 
-            this.companyTransportToolStripMenuItem.Name = "companyTransportToolStripMenuItem";
-            this.companyTransportToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.companyTransportToolStripMenuItem.Text = "Company && Transport";
+            this.btnPartyList.Caption = "Party Type List";
+            this.btnPartyList.Id = 17;
+            this.btnPartyList.ImageUri.Uri = "ListNumbers";
+            this.btnPartyList.Name = "btnPartyList";
+            this.btnPartyList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPartyList_ItemClick);
             // 
-            // goToolStripMenuItem
+            // btnAddVehicleType
             // 
-            this.goToolStripMenuItem.Name = "goToolStripMenuItem";
-            this.goToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
-            this.goToolStripMenuItem.Text = "&Go";
+            this.btnAddVehicleType.Caption = "Add Vehicle Type";
+            this.btnAddVehicleType.Id = 18;
+            this.btnAddVehicleType.ImageUri.Uri = "Add";
+            this.btnAddVehicleType.Name = "btnAddVehicleType";
+            this.btnAddVehicleType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddVehicleType_ItemClick);
             // 
-            // viewToolStripMenuItem
+            // btnVehicleList
             // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "&View";
+            this.btnVehicleList.Caption = "Vehicle Type List";
+            this.btnVehicleList.Id = 19;
+            this.btnVehicleList.ImageUri.Uri = "ListNumbers";
+            this.btnVehicleList.Name = "btnVehicleList";
+            this.btnVehicleList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVehicleList_ItemClick);
             // 
-            // reportToolStripMenuItem
+            // btnAddColourType
             // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.reportToolStripMenuItem.Text = "&Report";
+            this.btnAddColourType.Caption = "Add Colour Type";
+            this.btnAddColourType.Id = 20;
+            this.btnAddColourType.ImageUri.Uri = "Add";
+            this.btnAddColourType.Name = "btnAddColourType";
+            this.btnAddColourType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddColourType_ItemClick);
             // 
-            // settingToolStripMenuItem
+            // btnColourList
             // 
-            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.settingToolStripMenuItem.Text = "&Setting";
+            this.btnColourList.Caption = "Colour Type List";
+            this.btnColourList.Id = 21;
+            this.btnColourList.ImageUri.Uri = "ListNumbers";
+            this.btnColourList.Name = "btnColourList";
+            this.btnColourList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnColourList_ItemClick);
             // 
-            // toolToolStripMenuItem
+            // btnAddDensityType
             // 
-            this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
-            this.toolToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-            this.toolToolStripMenuItem.Text = "&Tool";
+            this.btnAddDensityType.Caption = "Add Density Type";
+            this.btnAddDensityType.Id = 22;
+            this.btnAddDensityType.ImageUri.Uri = "Add";
+            this.btnAddDensityType.Name = "btnAddDensityType";
+            this.btnAddDensityType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddDensityType_ItemClick);
             // 
-            // tsMainStrip
+            // btnDensityTypeList
             // 
-            this.tsMainStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsb_Asset});
-            this.tsMainStrip.Location = new System.Drawing.Point(0, 24);
-            this.tsMainStrip.Name = "tsMainStrip";
-            this.tsMainStrip.Size = new System.Drawing.Size(1238, 38);
-            this.tsMainStrip.TabIndex = 1;
-            this.tsMainStrip.Text = "toolStrip1";
+            this.btnDensityTypeList.Caption = "Density Type List";
+            this.btnDensityTypeList.Id = 23;
+            this.btnDensityTypeList.ImageUri.Uri = "ListNumbers";
+            this.btnDensityTypeList.Name = "btnDensityTypeList";
+            this.btnDensityTypeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDensityTypeList_ItemClick);
             // 
-            // tsb_Asset
+            // btnAddAssetMainType
             // 
-            this.tsb_Asset.Image = ((System.Drawing.Image)(resources.GetObject("tsb_Asset.Image")));
-            this.tsb_Asset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsb_Asset.Name = "tsb_Asset";
-            this.tsb_Asset.Size = new System.Drawing.Size(39, 35);
-            this.tsb_Asset.Text = "Asset";
-            this.tsb_Asset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsb_Asset.Click += new System.EventHandler(this.tsb_Asset_Click);
+            this.btnAddAssetMainType.Caption = "Add Asset Main Type";
+            this.btnAddAssetMainType.Id = 24;
+            this.btnAddAssetMainType.ImageUri.Uri = "Add";
+            this.btnAddAssetMainType.Name = "btnAddAssetMainType";
+            this.btnAddAssetMainType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddAssetMainType_ItemClick);
             // 
-            // assetTypeToolStripMenuItem
+            // btnAssetMainTypeList
             // 
-            this.assetTypeToolStripMenuItem.Name = "assetTypeToolStripMenuItem";
-            this.assetTypeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.assetTypeToolStripMenuItem.Text = "Asset Type";
+            this.btnAssetMainTypeList.Caption = "Asset Main Type List";
+            this.btnAssetMainTypeList.Id = 25;
+            this.btnAssetMainTypeList.ImageUri.Uri = "ListNumbers";
+            this.btnAssetMainTypeList.Name = "btnAssetMainTypeList";
+            this.btnAssetMainTypeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssetMainTypeList_ItemClick);
             // 
-            // assetToolStripMenuItemAsset
+            // rpAsset
             // 
-            this.assetToolStripMenuItemAsset.Name = "assetToolStripMenuItemAsset";
-            this.assetToolStripMenuItemAsset.Size = new System.Drawing.Size(160, 22);
-            this.assetToolStripMenuItemAsset.Text = "&Asset";
-            this.assetToolStripMenuItemAsset.Click += new System.EventHandler(this.assetToolStripMenuItemAsset_Click);
+            this.rpAsset.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgAsset,
+            this.rpgKit});
+            this.rpAsset.Name = "rpAsset";
+            this.rpAsset.Text = "Asset";
             // 
-            // assetTypeToolStripMenuItemMainType
+            // rpgAsset
             // 
-            this.assetTypeToolStripMenuItemMainType.Name = "assetTypeToolStripMenuItemMainType";
-            this.assetTypeToolStripMenuItemMainType.Size = new System.Drawing.Size(160, 22);
-            this.assetTypeToolStripMenuItemMainType.Text = "Asset Main Type";
+            this.rpgAsset.ItemLinks.Add(this.btnAddAsset, true);
+            this.rpgAsset.ItemLinks.Add(this.btnAssetList, true);
+            this.rpgAsset.ItemLinks.Add(this.btnExpiredAssetList, true);
+            this.rpgAsset.Name = "rpgAsset";
+            this.rpgAsset.Text = "Asset";
             // 
-            // assetMaterialToolStripMenuItemMaterial
+            // rpgKit
             // 
-            this.assetMaterialToolStripMenuItemMaterial.Name = "assetMaterialToolStripMenuItemMaterial";
-            this.assetMaterialToolStripMenuItemMaterial.Size = new System.Drawing.Size(160, 22);
-            this.assetMaterialToolStripMenuItemMaterial.Text = "Asset Material";
+            this.rpgKit.ItemLinks.Add(this.btnAddKit, true);
+            this.rpgKit.ItemLinks.Add(this.btnKitList, true);
+            this.rpgKit.Name = "rpgKit";
+            this.rpgKit.Text = "Kit";
             // 
-            // assetTypeToolStripMenuItemType
+            // rpChallan
             // 
-            this.assetTypeToolStripMenuItemType.Name = "assetTypeToolStripMenuItemType";
-            this.assetTypeToolStripMenuItemType.Size = new System.Drawing.Size(160, 22);
-            this.assetTypeToolStripMenuItemType.Text = "Asset Type";
+            this.rpChallan.Name = "rpChallan";
+            this.rpChallan.Text = "Challan";
             // 
-            // assetType1ToolStripMenuItemType1
+            // rpJobCart
             // 
-            this.assetType1ToolStripMenuItemType1.Name = "assetType1ToolStripMenuItemType1";
-            this.assetType1ToolStripMenuItemType1.Size = new System.Drawing.Size(160, 22);
-            this.assetType1ToolStripMenuItemType1.Text = "Asset Type 1";
+            this.rpJobCart.Name = "rpJobCart";
+            this.rpJobCart.Text = "Job Cart";
+            // 
+            // rpInvoice
+            // 
+            this.rpInvoice.Name = "rpInvoice";
+            this.rpInvoice.Text = "Invoice";
+            // 
+            // rpExernalVehicle
+            // 
+            this.rpExernalVehicle.Name = "rpExernalVehicle";
+            this.rpExernalVehicle.Text = "External Vehicle";
+            // 
+            // rpMaster
+            // 
+            this.rpMaster.Name = "rpMaster";
+            this.rpMaster.Text = "Master";
+            // 
+            // rpTypeMaster
+            // 
+            this.rpTypeMaster.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgAssetMainType,
+            this.rpgCompanyType,
+            this.rpgMaterialType,
+            this.rpgDesignation,
+            this.rpgAssetType,
+            this.rpgAssetTypeOne,
+            this.rpgPartyType,
+            this.rpgVehicleType,
+            this.rpgColourType,
+            this.rpgDensityType});
+            this.rpTypeMaster.Name = "rpTypeMaster";
+            this.rpTypeMaster.Text = "Type Master";
+            // 
+            // rpgAssetMainType
+            // 
+            this.rpgAssetMainType.ItemLinks.Add(this.btnAddAssetMainType, true);
+            this.rpgAssetMainType.ItemLinks.Add(this.btnAssetMainTypeList, true);
+            this.rpgAssetMainType.Name = "rpgAssetMainType";
+            this.rpgAssetMainType.Text = "Asset Main Type";
+            // 
+            // rpgCompanyType
+            // 
+            this.rpgCompanyType.ItemLinks.Add(this.btnAddCompanyType, true);
+            this.rpgCompanyType.ItemLinks.Add(this.btnCompanyTypeList, true);
+            this.rpgCompanyType.Name = "rpgCompanyType";
+            this.rpgCompanyType.Text = "Company Type";
+            // 
+            // rpgMaterialType
+            // 
+            this.rpgMaterialType.ItemLinks.Add(this.btnAddMaterialType, true);
+            this.rpgMaterialType.ItemLinks.Add(this.btnMaterialTypeList, true);
+            this.rpgMaterialType.Name = "rpgMaterialType";
+            this.rpgMaterialType.Text = "Materail Type";
+            // 
+            // rpgDesignation
+            // 
+            this.rpgDesignation.ItemLinks.Add(this.btnAddDesigantion, true);
+            this.rpgDesignation.ItemLinks.Add(this.btnDesignationList, true);
+            this.rpgDesignation.Name = "rpgDesignation";
+            this.rpgDesignation.Text = "Designation";
+            // 
+            // rpgAssetType
+            // 
+            this.rpgAssetType.ItemLinks.Add(this.btnAssetType, true);
+            this.rpgAssetType.ItemLinks.Add(this.btnAssetTypeList, true);
+            this.rpgAssetType.Name = "rpgAssetType";
+            this.rpgAssetType.Text = "Asset Type";
+            // 
+            // rpgAssetTypeOne
+            // 
+            this.rpgAssetTypeOne.ItemLinks.Add(this.btnAddAssetType1, true);
+            this.rpgAssetTypeOne.ItemLinks.Add(this.btnAssetType1List, true);
+            this.rpgAssetTypeOne.Name = "rpgAssetTypeOne";
+            this.rpgAssetTypeOne.Text = "Type 1";
+            // 
+            // rpgPartyType
+            // 
+            this.rpgPartyType.ItemLinks.Add(this.btnAddPartyType);
+            this.rpgPartyType.ItemLinks.Add(this.btnPartyList, true);
+            this.rpgPartyType.Name = "rpgPartyType";
+            this.rpgPartyType.Text = "Party Type";
+            // 
+            // rpgVehicleType
+            // 
+            this.rpgVehicleType.ItemLinks.Add(this.btnAddVehicleType, true);
+            this.rpgVehicleType.ItemLinks.Add(this.btnVehicleList, true);
+            this.rpgVehicleType.Name = "rpgVehicleType";
+            this.rpgVehicleType.Text = "Vehicle Type";
+            // 
+            // rpgColourType
+            // 
+            this.rpgColourType.ItemLinks.Add(this.btnAddColourType, true);
+            this.rpgColourType.ItemLinks.Add(this.btnColourList, true);
+            this.rpgColourType.Name = "rpgColourType";
+            this.rpgColourType.Text = "Colour Type";
+            // 
+            // rpgDensityType
+            // 
+            this.rpgDensityType.ItemLinks.Add(this.btnAddDensityType);
+            this.rpgDensityType.ItemLinks.Add(this.btnDensityTypeList, true);
+            this.rpgDensityType.Name = "rpgDensityType";
+            this.rpgDensityType.Text = "Density Type";
+            // 
+            // rpSettings
+            // 
+            this.rpSettings.Name = "rpSettings";
+            this.rpSettings.Text = "Settings";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAddCompanyType, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnCompanyTypeList, true);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Company Type";
             // 
             // frmDashboard
             // 
+            this.AllowDraggingByPageCategory = DevExpress.Utils.DefaultBoolean.False;
+            this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1238, 533);
-            this.Controls.Add(this.tsMainStrip);
-            this.Controls.Add(this.mnuMain);
+            this.Controls.Add(this.ribbonControl1);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.mnuMain;
             this.Name = "frmDashboard";
+            this.Ribbon = this.ribbonControl1;
+            this.RibbonVisibility = DevExpress.XtraBars.Ribbon.RibbonVisibility.Visible;
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.mnuMain.ResumeLayout(false);
-            this.mnuMain.PerformLayout();
-            this.tsMainStrip.ResumeLayout(false);
-            this.tsMainStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,36 +493,53 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip mnuMain;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem partyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem siteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vehicleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem companyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem associationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kitToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem companyWarehouseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem goToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem companyTransportToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip tsMainStrip;
-        private System.Windows.Forms.ToolStripButton tsb_Asset;
-        private System.Windows.Forms.ToolStripMenuItem assetToolStripMenuItemAsset;
-        private System.Windows.Forms.ToolStripMenuItem assetTypeToolStripMenuItemMainType;
-        private System.Windows.Forms.ToolStripMenuItem assetMaterialToolStripMenuItemMaterial;
-        private System.Windows.Forms.ToolStripMenuItem assetTypeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assetTypeToolStripMenuItemType;
-        private System.Windows.Forms.ToolStripMenuItem assetType1ToolStripMenuItemType1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpAsset;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAsset;
+        private DevExpress.XtraBars.BarButtonItem btnAddAsset;
+        private DevExpress.XtraBars.BarButtonItem btnAssetList;
+        private DevExpress.XtraBars.BarButtonItem btnExpiredAssetList;
+        private DevExpress.XtraBars.BarButtonItem btnAddKit;
+        private DevExpress.XtraBars.BarButtonItem btnKitList;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgKit;
+        private DevExpress.XtraBars.BarButtonItem btnAddCompanyType;
+        private DevExpress.XtraBars.BarButtonItem btnCompanyTypeList;
+        private DevExpress.XtraBars.BarButtonItem btnAddMaterialType;
+        private DevExpress.XtraBars.BarButtonItem btnMaterialTypeList;
+        private DevExpress.XtraBars.BarButtonItem btnAddDesigantion;
+        private DevExpress.XtraBars.BarButtonItem btnDesignationList;
+        private DevExpress.XtraBars.BarButtonItem btnAssetType;
+        private DevExpress.XtraBars.BarButtonItem btnAssetTypeList;
+        private DevExpress.XtraBars.BarButtonItem btnAddAssetType1;
+        private DevExpress.XtraBars.BarButtonItem btnAssetType1List;
+        private DevExpress.XtraBars.BarButtonItem btnAddPartyType;
+        private DevExpress.XtraBars.BarButtonItem btnPartyList;
+        private DevExpress.XtraBars.BarButtonItem btnAddVehicleType;
+        private DevExpress.XtraBars.BarButtonItem btnVehicleList;
+        private DevExpress.XtraBars.BarButtonItem btnAddColourType;
+        private DevExpress.XtraBars.BarButtonItem btnColourList;
+        private DevExpress.XtraBars.BarButtonItem btnAddDensityType;
+        private DevExpress.XtraBars.BarButtonItem btnDensityTypeList;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpChallan;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpJobCart;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpInvoice;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpExernalVehicle;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpMaster;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpTypeMaster;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgCompanyType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMaterialType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDesignation;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAssetType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAssetTypeOne;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPartyType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgVehicleType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgColourType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDensityType;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpSettings;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btnAddAssetMainType;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAssetMainType;
+        private DevExpress.XtraBars.BarButtonItem btnAssetMainTypeList;
+
     }
 }

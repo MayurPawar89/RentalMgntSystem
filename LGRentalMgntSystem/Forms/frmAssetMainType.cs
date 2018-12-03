@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
-namespace LGRentalMgntSystem.Forms
+namespace LGRentalMgntSystem
 {
-    public partial class frmAssetMainType : Form
+    public partial class frmAssetMainType : DevExpress.XtraEditors.XtraForm
     {
         public frmAssetMainType()
         {
             InitializeComponent();
         }
+        
     }
 }
