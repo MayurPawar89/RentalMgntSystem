@@ -25,6 +25,14 @@ namespace LGRentalMgntSystem
             AssetMainType=9
 
         }
+    public enum MainMasterType
+    {
+        Company=1,
+        Crew=2,
+        Party=3,
+        Gaffer=4,
+        Location=5
+    }
     public partial class frmDashboard : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmDashboard()
@@ -36,13 +44,24 @@ namespace LGRentalMgntSystem
 
         private void ShowAsset()
         {
-            frmAsset frmAsset = new frmAsset();
-            frmAsset.ShowDialog();
+            //frmAsset frmAsset = new frmAsset();
+            //frmAsset.ShowDialog();
         }
 
         private void btnAddAsset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ShowAsset();
+        }
+
+        #region "Type Master"
+        private void btnAddAssetMainType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            showMasterForm(MasterType.AssetMainType);
+        }
+
+        private void btnAssetMainTypeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            showMaster(MasterType.AssetMainType);
         }
 
         private void btnAddCompanyType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -95,14 +114,14 @@ namespace LGRentalMgntSystem
             showMaster(MasterType.AssetType1);
         }
 
-        private void btnPartyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            showMaster(MasterType.PartyType);
-        }
-
         private void btnAddPartyType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             showMasterForm(MasterType.PartyType);
+        }
+
+        private void btnPartyList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            showMaster(MasterType.PartyType);
         }
 
         private void btnAddVehicleType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -130,6 +149,11 @@ namespace LGRentalMgntSystem
             showMasterForm(MasterType.DensityType);
         }
 
+        private void btnDensityTypeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            showMaster(MasterType.DensityType);
+        }
+
         public bool showMasterForm(MasterType MasterType)
         {
             bool _result = false;
@@ -148,7 +172,7 @@ namespace LGRentalMgntSystem
                             frmAssetMaster = new frmAssetMaster();
                             frmAssetMaster.MasterType = MasterType.CompanyType;
                             frmAssetMaster.ShowDialog();
-                            _result= frmAssetMaster.IsMasterSave;
+                            _result = frmAssetMaster.IsMasterSave;
                             if (frmAssetMaster != null)
                             {
                                 frmAssetMaster.Dispose();
@@ -322,7 +346,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
-                
+
                 throw;
             }
 
@@ -382,7 +406,7 @@ namespace LGRentalMgntSystem
                             frmAssetMasterList = new LGRentalMgntSystem.Forms.frmAssetList();
                             frmAssetMasterList.MasterType = MasterType.Designation;
                             frmAssetMasterList.ShowDialog();
-                            
+
                             if (frmAssetMasterList != null)
                             {
                                 frmAssetMasterList.Dispose();
@@ -521,19 +545,64 @@ namespace LGRentalMgntSystem
 
         }
 
-        private void btnDensityTypeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        #endregion
+
+        #region "Master"
+        private void btnAddCompanyMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            showMaster(MasterType.DensityType);
+            frmMasterAddCompany frmAddCompany = new frmMasterAddCompany();
+            frmAddCompany.ShowDialog();
         }
 
-        private void btnAddAssetMainType_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnCompanyMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            showMasterForm(MasterType.AssetMainType);
+            frmMasterListCompany frmCompanyList = new frmMasterListCompany();
+            frmCompanyList.ShowDialog();
         }
 
-        private void btnAssetMainTypeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnAddCrewMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            showMaster(MasterType.AssetMainType);
+            frmMasterAddCrew frmAddCrew = new frmMasterAddCrew();
+            frmAddCrew.ShowDialog();
         }
+
+        private void btnCrewMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnAddPartyMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnPartyMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnAddGafferMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnGafferMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnAddLocationMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnLocationMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        } 
+        #endregion
+        
+
+        
     }
 }

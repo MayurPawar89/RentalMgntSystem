@@ -85,8 +85,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtAssetCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rentalSystemDataSet1 = new LGRentalMgntSystem.RentalSystemDataSet();
             this.tsMain.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalSystemDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // tsMain
@@ -617,6 +619,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Asset Code : ";
             // 
+            // rentalSystemDataSet1
+            // 
+            this.rentalSystemDataSet1.DataSetName = "RentalSystemDataSet";
+            this.rentalSystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // frmAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -637,6 +644,7 @@
             this.tsMain.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rentalSystemDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -700,5 +708,6 @@
         private System.Windows.Forms.ComboBox cmbAssetType;
         private System.Windows.Forms.ComboBox cmbAssetmaterialType;
         private System.Windows.Forms.ComboBox cmbAssetTypeName;
+        private RentalSystemDataSet rentalSystemDataSet1;
     }
 }

@@ -63,6 +63,16 @@ namespace LGRentalMgntSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddImage {
+            get {
+                object obj = ResourceManager.GetObject("AddImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnBackground {
             get {
                 object obj = ResourceManager.GetObject("btnBackground", resourceCulture);
@@ -76,6 +86,26 @@ namespace LGRentalMgntSystem.Properties {
         internal static System.Drawing.Bitmap Buttons {
             get {
                 object obj = ResourceManager.GetObject("Buttons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DefultImage {
+            get {
+                object obj = ResourceManager.GetObject("DefultImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnlBackground {
+            get {
+                object obj = ResourceManager.GetObject("pnlBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

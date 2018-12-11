@@ -184,10 +184,9 @@ namespace LGRentalMgntSystem.Forms
                     dv.RowFilter = fileter;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show(ex.Message);
             }
         }
 

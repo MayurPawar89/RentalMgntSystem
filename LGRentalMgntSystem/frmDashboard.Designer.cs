@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnAddAsset = new DevExpress.XtraBars.BarButtonItem();
             this.btnAssetList = new DevExpress.XtraBars.BarButtonItem();
@@ -54,6 +55,8 @@
             this.btnDensityTypeList = new DevExpress.XtraBars.BarButtonItem();
             this.btnAddAssetMainType = new DevExpress.XtraBars.BarButtonItem();
             this.btnAssetMainTypeList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddCompanyMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCompanyMasterList = new DevExpress.XtraBars.BarButtonItem();
             this.rpAsset = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgAsset = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgKit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,6 +65,11 @@
             this.rpInvoice = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpExernalVehicle = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpMaster = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpgCompanyMaster = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgCrewMaster = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgPartyMaster = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgGafferMaster = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgLocationMaster = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpTypeMaster = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgAssetMainType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgCompanyType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -75,6 +83,15 @@
             this.rpgDensityType = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpSettings = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnAddCrewMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCrewMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddPartyMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPartyMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddGafferMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGafferMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddLocationMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLocationMasterList = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,9 +126,19 @@
             this.btnAddDensityType,
             this.btnDensityTypeList,
             this.btnAddAssetMainType,
-            this.btnAssetMainTypeList});
+            this.btnAssetMainTypeList,
+            this.btnAddCompanyMaster,
+            this.btnCompanyMasterList,
+            this.btnAddCrewMaster,
+            this.btnCrewMasterList,
+            this.btnAddPartyMaster,
+            this.btnPartyMasterList,
+            this.btnAddGafferMaster,
+            this.btnGafferMasterList,
+            this.btnAddLocationMaster,
+            this.btnLocationMasterList});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 26;
+            this.ribbonControl1.MaxItemId = 48;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpAsset,
@@ -323,6 +350,22 @@
             this.btnAssetMainTypeList.Name = "btnAssetMainTypeList";
             this.btnAssetMainTypeList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssetMainTypeList_ItemClick);
             // 
+            // btnAddCompanyMaster
+            // 
+            this.btnAddCompanyMaster.Caption = "Add Company";
+            this.btnAddCompanyMaster.Id = 38;
+            this.btnAddCompanyMaster.ImageUri.Uri = "Add";
+            this.btnAddCompanyMaster.Name = "btnAddCompanyMaster";
+            this.btnAddCompanyMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddCompanyMaster_ItemClick);
+            // 
+            // btnCompanyMasterList
+            // 
+            this.btnCompanyMasterList.Caption = "Company List";
+            this.btnCompanyMasterList.Id = 39;
+            this.btnCompanyMasterList.ImageUri.Uri = "ListNumbers";
+            this.btnCompanyMasterList.Name = "btnCompanyMasterList";
+            this.btnCompanyMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCompanyMasterList_ItemClick);
+            // 
             // rpAsset
             // 
             this.rpAsset.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -368,8 +411,49 @@
             // 
             // rpMaster
             // 
+            this.rpMaster.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpgCompanyMaster,
+            this.rpgCrewMaster,
+            this.rpgPartyMaster,
+            this.rpgGafferMaster,
+            this.rpgLocationMaster});
             this.rpMaster.Name = "rpMaster";
             this.rpMaster.Text = "Master";
+            // 
+            // rpgCompanyMaster
+            // 
+            this.rpgCompanyMaster.ItemLinks.Add(this.btnAddCompanyMaster, true);
+            this.rpgCompanyMaster.ItemLinks.Add(this.btnCompanyMasterList, true);
+            this.rpgCompanyMaster.Name = "rpgCompanyMaster";
+            this.rpgCompanyMaster.Text = "Company";
+            // 
+            // rpgCrewMaster
+            // 
+            this.rpgCrewMaster.ItemLinks.Add(this.btnAddCrewMaster);
+            this.rpgCrewMaster.ItemLinks.Add(this.btnCrewMasterList);
+            this.rpgCrewMaster.Name = "rpgCrewMaster";
+            this.rpgCrewMaster.Text = "Crew";
+            // 
+            // rpgPartyMaster
+            // 
+            this.rpgPartyMaster.ItemLinks.Add(this.btnAddPartyMaster);
+            this.rpgPartyMaster.ItemLinks.Add(this.btnPartyMasterList);
+            this.rpgPartyMaster.Name = "rpgPartyMaster";
+            this.rpgPartyMaster.Text = "Party";
+            // 
+            // rpgGafferMaster
+            // 
+            this.rpgGafferMaster.ItemLinks.Add(this.btnAddGafferMaster);
+            this.rpgGafferMaster.ItemLinks.Add(this.btnGafferMasterList);
+            this.rpgGafferMaster.Name = "rpgGafferMaster";
+            this.rpgGafferMaster.Text = "Gaffer";
+            // 
+            // rpgLocationMaster
+            // 
+            this.rpgLocationMaster.ItemLinks.Add(this.btnAddLocationMaster);
+            this.rpgLocationMaster.ItemLinks.Add(this.btnLocationMasterList);
+            this.rpgLocationMaster.Name = "rpgLocationMaster";
+            this.rpgLocationMaster.Text = "Location";
             // 
             // rpTypeMaster
             // 
@@ -469,6 +553,85 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Company Type";
             // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnAddCompanyType, true);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnCompanyTypeList, true);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Company Type";
+            // 
+            // btnAddCrewMaster
+            // 
+            this.btnAddCrewMaster.Caption = "Add Crew";
+            this.btnAddCrewMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddCrewMaster.Glyph")));
+            this.btnAddCrewMaster.Id = 40;
+            this.btnAddCrewMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddCrewMaster.LargeGlyph")));
+            this.btnAddCrewMaster.Name = "btnAddCrewMaster";
+            this.btnAddCrewMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddCrewMaster_ItemClick);
+            // 
+            // btnCrewMasterList
+            // 
+            this.btnCrewMasterList.Caption = "Crew List";
+            this.btnCrewMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCrewMasterList.Glyph")));
+            this.btnCrewMasterList.Id = 41;
+            this.btnCrewMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCrewMasterList.LargeGlyph")));
+            this.btnCrewMasterList.Name = "btnCrewMasterList";
+            this.btnCrewMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCrewMasterList_ItemClick);
+            // 
+            // btnAddPartyMaster
+            // 
+            this.btnAddPartyMaster.Caption = "Add Party";
+            this.btnAddPartyMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddPartyMaster.Glyph")));
+            this.btnAddPartyMaster.Id = 42;
+            this.btnAddPartyMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddPartyMaster.LargeGlyph")));
+            this.btnAddPartyMaster.Name = "btnAddPartyMaster";
+            this.btnAddPartyMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddPartyMaster_ItemClick);
+            // 
+            // btnPartyMasterList
+            // 
+            this.btnPartyMasterList.Caption = "Party List";
+            this.btnPartyMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPartyMasterList.Glyph")));
+            this.btnPartyMasterList.Id = 43;
+            this.btnPartyMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnPartyMasterList.LargeGlyph")));
+            this.btnPartyMasterList.Name = "btnPartyMasterList";
+            this.btnPartyMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPartyMasterList_ItemClick);
+            // 
+            // btnAddGafferMaster
+            // 
+            this.btnAddGafferMaster.Caption = "Add Gaffer";
+            this.btnAddGafferMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddGafferMaster.Glyph")));
+            this.btnAddGafferMaster.Id = 44;
+            this.btnAddGafferMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddGafferMaster.LargeGlyph")));
+            this.btnAddGafferMaster.Name = "btnAddGafferMaster";
+            this.btnAddGafferMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddGafferMaster_ItemClick);
+            // 
+            // btnGafferMasterList
+            // 
+            this.btnGafferMasterList.Caption = "Gaffer List";
+            this.btnGafferMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnGafferMasterList.Glyph")));
+            this.btnGafferMasterList.Id = 45;
+            this.btnGafferMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnGafferMasterList.LargeGlyph")));
+            this.btnGafferMasterList.Name = "btnGafferMasterList";
+            this.btnGafferMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGafferMasterList_ItemClick);
+            // 
+            // btnAddLocationMaster
+            // 
+            this.btnAddLocationMaster.Caption = "Add Location";
+            this.btnAddLocationMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddLocationMaster.Glyph")));
+            this.btnAddLocationMaster.Id = 46;
+            this.btnAddLocationMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddLocationMaster.LargeGlyph")));
+            this.btnAddLocationMaster.Name = "btnAddLocationMaster";
+            this.btnAddLocationMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddLocationMaster_ItemClick);
+            // 
+            // btnLocationMasterList
+            // 
+            this.btnLocationMasterList.Caption = "Location List";
+            this.btnLocationMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLocationMasterList.Glyph")));
+            this.btnLocationMasterList.Id = 47;
+            this.btnLocationMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLocationMasterList.LargeGlyph")));
+            this.btnLocationMasterList.Name = "btnLocationMasterList";
+            this.btnLocationMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLocationMasterList_ItemClick);
+            // 
             // frmDashboard
             // 
             this.AllowDraggingByPageCategory = DevExpress.Utils.DefaultBoolean.False;
@@ -540,6 +703,22 @@
         private DevExpress.XtraBars.BarButtonItem btnAddAssetMainType;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgAssetMainType;
         private DevExpress.XtraBars.BarButtonItem btnAssetMainTypeList;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgCompanyMaster;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgCrewMaster;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPartyMaster;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgGafferMaster;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgLocationMaster;
+        private DevExpress.XtraBars.BarButtonItem btnAddCompanyMaster;
+        private DevExpress.XtraBars.BarButtonItem btnCompanyMasterList;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnAddCrewMaster;
+        private DevExpress.XtraBars.BarButtonItem btnCrewMasterList;
+        private DevExpress.XtraBars.BarButtonItem btnAddPartyMaster;
+        private DevExpress.XtraBars.BarButtonItem btnPartyMasterList;
+        private DevExpress.XtraBars.BarButtonItem btnAddGafferMaster;
+        private DevExpress.XtraBars.BarButtonItem btnGafferMasterList;
+        private DevExpress.XtraBars.BarButtonItem btnAddLocationMaster;
+        private DevExpress.XtraBars.BarButtonItem btnLocationMasterList;
 
     }
 }

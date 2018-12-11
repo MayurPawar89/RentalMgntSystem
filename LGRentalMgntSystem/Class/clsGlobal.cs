@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LGRentalMgntSystem.Class
+namespace LGRentalMgntSystem
 {
-    static class clsGlobal
+    public static class clsGlobal
     {
         public static string _sMessageboxCaption = string.Empty;
         public static string MessageboxCaption

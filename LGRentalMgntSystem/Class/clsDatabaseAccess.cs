@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LGRentalMgntSystem.Class
+namespace LGRentalMgntSystem
 {
     class DatabaseAccess
     {

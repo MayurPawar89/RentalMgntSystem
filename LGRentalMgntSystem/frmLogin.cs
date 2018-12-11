@@ -68,10 +68,9 @@ namespace LGRentalMgntSystem
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show("Error: "+ex.ToString(), sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
