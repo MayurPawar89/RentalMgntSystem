@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LGRentalMgntSystem
 {
@@ -47,8 +48,8 @@ namespace LGRentalMgntSystem
         public string sStaffCode { get; set; }
         public string sStaffName { get; set; }
         public string sStaffAbbrivation { get; set; }
-        public Int64 dtDOB { get; set; }
-        public Int32 sAge { get; set; }
+        public DateTime dtDOB { get; set; }
+        public string sAge { get; set; }
         public string sGender { get; set; }
         public string sPhoneNo { get; set; }
         public string sPermanentAddressLine1 { get; set; }
@@ -84,9 +85,9 @@ namespace LGRentalMgntSystem
         #endregion
 
         #region "Method"
-        public Int64 InsertUpdateCompanyMaster()
+        public Int64 InsertUpdateStaffMaster()
         {
-            Int64 _nCompanyID = 0;
+            Int64 _nStaffID = 0;
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
             Object objValue = null;
@@ -139,11 +140,11 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@imgPhoto", this.imgPhoto, ParameterDirection.Input, SqlDbType.Image);    
 
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Execute("lgsp_INUP_CompanyMasters", oDBParameter, out objValue);
+                oDBAccess.Execute("lgsp_INUP_CompanyStaff", oDBParameter, out objValue);
                 oDBAccess.CloseConnection(false);
                 if (objValue != null)
                 {
-                    _nCompanyID = Convert.ToInt64(objValue);
+                    _nStaffID = Convert.ToInt64(objValue);
                 }
             }
             catch (Exception)
@@ -163,12 +164,11 @@ namespace LGRentalMgntSystem
                 }
             }
 
-            return _nCompanyID;
+            return _nStaffID;
         }
 
-        public DataSet GetCompanyInformation(Int64 nStaffID)
+        public DataTable GetStaffInformation(Int64 nStaffID)
         {
-            DataSet ds = null;
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
             DataTable _dt = null;
@@ -179,7 +179,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.clear();
                 oDBParameter.Add("@nStaffID", nStaffID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Retrive("lgsp_Get_CompanyDetails", oDBParameter, out ds);
+                oDBAccess.Retrive("lgsp_Get_StaffDetails", oDBParameter, out _dt);
                 oDBAccess.CloseConnection(false);
 
             }
@@ -201,10 +201,10 @@ namespace LGRentalMgntSystem
                 }
             }
 
-            return ds;
+            return _dt;
         }
 
-        public DataTable GetCompanylist(Int64 nStaffID)
+        public DataTable GetStafflist(Int64 nStaffID)
         {
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
@@ -216,7 +216,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.clear();
                 oDBParameter.Add("@nStaffID", nStaffID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Retrive("lgsp_Get_CompanyListDetails", oDBParameter, out _dt);
+                oDBAccess.Retrive("lgsp_Get_StaffListDetails", oDBParameter, out _dt);
                 oDBAccess.CloseConnection(false);
 
             }

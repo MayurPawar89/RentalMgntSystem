@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddCompany));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblCompanyTransportID = new DevExpress.XtraEditors.LabelControl();
@@ -316,18 +318,16 @@
             this.txtDocumentDate.Location = new System.Drawing.Point(455, 46);
             this.txtDocumentDate.Name = "txtDocumentDate";
             this.txtDocumentDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("txtDocumentDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.txtDocumentDate.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.False;
             this.txtDocumentDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDocumentDate.Properties.ContextImage = ((System.Drawing.Image)(resources.GetObject("txtDocumentDate.Properties.ContextImage")));
             this.txtDocumentDate.Properties.ContextImageAlignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtDocumentDate.Properties.DisplayFormat.FormatString = "";
-            this.txtDocumentDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtDocumentDate.Properties.EditFormat.FormatString = "";
-            this.txtDocumentDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtDocumentDate.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.txtDocumentDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtDocumentDate.Size = new System.Drawing.Size(200, 20);
+            this.txtDocumentDate.Properties.ShowMonthHeaders = false;
+            this.txtDocumentDate.Properties.ShowPopupShadow = false;
+            this.txtDocumentDate.Properties.ShowToday = false;
+            this.txtDocumentDate.Size = new System.Drawing.Size(200, 22);
             this.txtDocumentDate.TabIndex = 23;
             // 
             // groupControl2
@@ -372,12 +372,14 @@
             this.btnWHAddSupervisor.Properties.Appearance.Options.UseBackColor = true;
             this.btnWHAddSupervisor.Properties.AutoHeight = false;
             this.btnWHAddSupervisor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddSupervisor.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddSupervisor.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnWHAddSupervisor.Size = new System.Drawing.Size(22, 18);
             this.btnWHAddSupervisor.TabIndex = 62;
             // 
             // cmbWarehouseSupervisor
             // 
+            this.cmbWarehouseSupervisor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWarehouseSupervisor.FormattingEnabled = true;
             this.cmbWarehouseSupervisor.Location = new System.Drawing.Point(456, 22);
             this.cmbWarehouseSupervisor.Name = "cmbWarehouseSupervisor";
@@ -539,7 +541,7 @@
             this.btnWHAddPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnWHAddPhone.Properties.AutoHeight = false;
             this.btnWHAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnWHAddPhone.Size = new System.Drawing.Size(22, 18);
             this.btnWHAddPhone.TabIndex = 48;
             this.btnWHAddPhone.Click += new System.EventHandler(this.btnWHAddPhone_Click);
@@ -572,6 +574,8 @@
             // 
             // cmbWHCity
             // 
+            this.cmbWHCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWHCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWHCity.FormattingEnabled = true;
             this.cmbWHCity.Location = new System.Drawing.Point(99, 119);
             this.cmbWHCity.Name = "cmbWHCity";
@@ -588,6 +592,8 @@
             // 
             // cmbWHCState
             // 
+            this.cmbWHCState.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWHCState.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWHCState.FormattingEnabled = true;
             this.cmbWHCState.Location = new System.Drawing.Point(99, 142);
             this.cmbWHCState.Name = "cmbWHCState";
@@ -604,6 +610,8 @@
             // 
             // cmbWHCountry
             // 
+            this.cmbWHCountry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWHCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWHCountry.FormattingEnabled = true;
             this.cmbWHCountry.Location = new System.Drawing.Point(99, 187);
             this.cmbWHCountry.Name = "cmbWHCountry";
@@ -622,6 +630,8 @@
             // 
             this.txtWHPincode.Location = new System.Drawing.Point(99, 165);
             this.txtWHPincode.Name = "txtWHPincode";
+            this.txtWHPincode.Properties.Mask.EditMask = "\\d{1,6}";
+            this.txtWHPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPincode.Size = new System.Drawing.Size(200, 20);
             this.txtWHPincode.TabIndex = 42;
             // 
@@ -874,7 +884,7 @@
             this.btnAddCompanySignatory.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddCompanySignatory.Properties.AutoHeight = false;
             this.btnAddCompanySignatory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanySignatory.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanySignatory.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnAddCompanySignatory.Size = new System.Drawing.Size(22, 18);
             this.btnAddCompanySignatory.TabIndex = 88;
             // 
@@ -917,16 +927,16 @@
             this.dtCompanyFormedOn.Location = new System.Drawing.Point(120, 90);
             this.dtCompanyFormedOn.Name = "dtCompanyFormedOn";
             this.dtCompanyFormedOn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtCompanyFormedOn.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            this.dtCompanyFormedOn.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.False;
             this.dtCompanyFormedOn.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtCompanyFormedOn.Properties.ContextImage = ((System.Drawing.Image)(resources.GetObject("dtCompanyFormedOn.Properties.ContextImage")));
             this.dtCompanyFormedOn.Properties.ContextImageAlignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.dtCompanyFormedOn.Properties.EditFormat.FormatString = "";
-            this.dtCompanyFormedOn.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dtCompanyFormedOn.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dtCompanyFormedOn.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dtCompanyFormedOn.Size = new System.Drawing.Size(200, 20);
+            this.dtCompanyFormedOn.Properties.ShowMonthHeaders = false;
+            this.dtCompanyFormedOn.Properties.ShowPopupShadow = false;
+            this.dtCompanyFormedOn.Properties.ShowToday = false;
+            this.dtCompanyFormedOn.Size = new System.Drawing.Size(200, 22);
             this.dtCompanyFormedOn.TabIndex = 25;
             // 
             // labelControl13
@@ -1146,7 +1156,7 @@
             this.btnAddCompanyPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddCompanyPhone.Properties.AutoHeight = false;
             this.btnAddCompanyPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanyPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanyPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnAddCompanyPhone.Size = new System.Drawing.Size(22, 18);
             this.btnAddCompanyPhone.TabIndex = 48;
             this.btnAddCompanyPhone.Click += new System.EventHandler(this.btnAddCompanyPhone_Click);
@@ -1181,6 +1191,8 @@
             // 
             // cmbCompCityMaster
             // 
+            this.cmbCompCityMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompCityMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCompCityMaster.FormattingEnabled = true;
             this.cmbCompCityMaster.Location = new System.Drawing.Point(100, 166);
             this.cmbCompCityMaster.Name = "cmbCompCityMaster";
@@ -1197,6 +1209,8 @@
             // 
             // cmbCompStateMaster
             // 
+            this.cmbCompStateMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompStateMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCompStateMaster.FormattingEnabled = true;
             this.cmbCompStateMaster.Location = new System.Drawing.Point(100, 190);
             this.cmbCompStateMaster.Name = "cmbCompStateMaster";
@@ -1213,6 +1227,8 @@
             // 
             // cmbCompCountryMaster
             // 
+            this.cmbCompCountryMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompCountryMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCompCountryMaster.FormattingEnabled = true;
             this.cmbCompCountryMaster.Location = new System.Drawing.Point(100, 237);
             this.cmbCompCountryMaster.Name = "cmbCompCountryMaster";
@@ -1229,6 +1245,8 @@
             // 
             // cmbCompanySignatory
             // 
+            this.cmbCompanySignatory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompanySignatory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCompanySignatory.FormattingEnabled = true;
             this.cmbCompanySignatory.Location = new System.Drawing.Point(451, 69);
             this.cmbCompanySignatory.Name = "cmbCompanySignatory";
@@ -1245,6 +1263,8 @@
             // 
             // cmbCompanyType
             // 
+            this.cmbCompanyType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompanyType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCompanyType.FormattingEnabled = true;
             this.cmbCompanyType.Location = new System.Drawing.Point(450, 46);
             this.cmbCompanyType.Name = "cmbCompanyType";
@@ -1293,6 +1313,8 @@
             // 
             this.txtPincode.Location = new System.Drawing.Point(101, 214);
             this.txtPincode.Name = "txtPincode";
+            this.txtPincode.Properties.Mask.EditMask = "\\d{1,6}";
+            this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(200, 20);
             this.txtPincode.TabIndex = 71;
             // 
@@ -1326,6 +1348,7 @@
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(200, 20);
             this.txtCompanyName.TabIndex = 66;
+            this.txtCompanyName.EditValueChanged += new System.EventHandler(this.txtCompanyName_EditValueChanged);
             // 
             // labelControl2
             // 

@@ -267,40 +267,36 @@ namespace LGRentalMgntSystem
                     DataTable dtCityMaster = dsCompanyMaster.Tables[2];
                     DataTable dtCountryMaster = dsCompanyMaster.Tables[3];
 
-                    cmbCompanyType.DataSource = dtCompanyType.Clone();
+                    cmbCompanyType.DataSource = dtCompanyType;
                     cmbCompanyType.DisplayMember = "sCompanyTypeName";
                     cmbCompanyType.ValueMember = "nCompanyTypeID";
 
-                    cmbCompStateMaster.DataSource = dtStateMaster.Clone();
+                    cmbCompStateMaster.DataSource = dtStateMaster;
                     cmbCompStateMaster.DisplayMember = "StateName";
                     cmbCompStateMaster.ValueMember = "StateName";
                     cmbCompStateMaster.Text = "Maharashtra";
 
-                    cmbCompCityMaster.DataSource = dtCityMaster.Clone();
+                    cmbCompCityMaster.DataSource = dtCityMaster;
                     cmbCompCityMaster.DisplayMember = "CityName";
                     cmbCompCityMaster.ValueMember = "CityName";
                     cmbCompCityMaster.Text = "Mumbai";
 
-                    cmbCompCountryMaster.DataSource = dtCountryMaster.Clone();
+                    cmbCompCountryMaster.DataSource = dtCountryMaster;
                     cmbCompCountryMaster.DisplayMember = "sCountryName";
                     cmbCompCountryMaster.ValueMember = "sCountryName";
                     cmbCompCountryMaster.Text = "India";
 
-                    cmbWHCountry.DataSource = dtCompanyType.Clone();
-                    cmbWHCountry.DisplayMember = "sCompanyTypeName";
-                    cmbWHCountry.ValueMember = "nCompanyTypeID";
-
-                    cmbWHCState.DataSource = dtStateMaster.Clone();
+                    cmbWHCState.DataSource = dtStateMaster.Copy();
                     cmbWHCState.DisplayMember = "StateName";
                     cmbWHCState.ValueMember = "StateName";
                     cmbWHCState.Text = "Maharashtra";
 
-                    cmbWHCity.DataSource = dtCityMaster.Clone();
+                    cmbWHCity.DataSource = dtCityMaster.Copy();
                     cmbWHCity.DisplayMember = "CityName";
                     cmbWHCity.ValueMember = "CityName";
                     cmbWHCity.Text = "Mumbai";
 
-                    cmbWHCountry.DataSource = dtCountryMaster.Clone();
+                    cmbWHCountry.DataSource = dtCountryMaster.Copy();
                     cmbWHCountry.DisplayMember = "sCountryName";
                     cmbWHCountry.ValueMember = "sCountryName";
                     cmbWHCountry.Text = "India";
@@ -771,7 +767,10 @@ namespace LGRentalMgntSystem
             SaveCompanyDetails();
         }
 
-        
+        private void txtCompanyName_EditValueChanged(object sender, EventArgs e)
+        {
+            txtCompanyAbbrivation.Text= clsGlobal.GenerateAbbrivation(txtCompanyName.Text.Trim());
+        }
 
         
     }

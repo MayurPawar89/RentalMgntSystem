@@ -568,7 +568,8 @@ namespace LGRentalMgntSystem
 
         private void btnCrewMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterListCrewMember frmCrewList = new frmMasterListCrewMember();
+            frmCrewList.ShowDialog();
         }
 
         private void btnAddPartyMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

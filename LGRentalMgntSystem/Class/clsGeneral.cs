@@ -117,6 +117,41 @@ namespace LGRentalMgntSystem
 
             return _dsCompanyMaster;
         }
+
+        public DataSet GetCrewMaster()
+        {
+            DatabaseAccess oDBAccess = null;
+            DatabaseParameters oDBParameter = null;
+            DataSet _dsCompanyMaster = null;
+            try
+            {
+                oDBAccess = new DatabaseAccess();
+                oDBParameter = new DatabaseParameters();
+                oDBAccess.OpenConnection(false);
+                oDBAccess.Retrive("lgsp_Get_CrewMasterData", out _dsCompanyMaster);
+                oDBAccess.CloseConnection(false);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
+            }
+
+            return _dsCompanyMaster;
+        }
         #endregion
     }
 }

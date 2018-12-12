@@ -36,7 +36,23 @@ namespace LGRentalMgntSystem
             set { clsGlobal._sUserDesignation = value; }
         }
 
-        
+        public static string GenerateAbbrivation(string stext)
+        {
+            string sAbbrivation = string.Empty;
+            string[] sFullName = stext.Split(' ');
+            foreach (var item in sFullName)
+            {
+                if (item.All(char.IsDigit))
+                {
+                    sAbbrivation = sAbbrivation + item.ToString();
+                }
+                else
+                {
+                    sAbbrivation = sAbbrivation + item[0].ToString().ToUpper();
+                }
+            }
+            return sAbbrivation;
+        }
         
     }
     
