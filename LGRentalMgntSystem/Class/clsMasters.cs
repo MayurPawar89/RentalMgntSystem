@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LGRentalMgntSystem.Class
 {
@@ -70,8 +71,10 @@ namespace LGRentalMgntSystem.Class
                     nMasterID = Convert.ToInt64(objValue);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
             return nMasterID;
@@ -101,8 +104,10 @@ namespace LGRentalMgntSystem.Class
                     nMasterID = Convert.ToInt32(objValue);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
 
             return nMasterID;
@@ -124,8 +129,10 @@ namespace LGRentalMgntSystem.Class
                 oDBAccess.CloseConnection(false);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             return dt;
         }
@@ -145,8 +152,10 @@ namespace LGRentalMgntSystem.Class
                 oDBAccess.CloseConnection(false);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             return dt;
         }

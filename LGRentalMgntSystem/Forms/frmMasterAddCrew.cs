@@ -39,8 +39,9 @@ namespace LGRentalMgntSystem
                 oclsGeneral = new clsGeneral();
                 txtEmployeeCode.Text = "EMP/" + Convert.ToString(oclsGeneral.GetSequenceNumber(MainMasterType.Crew.GetHashCode()));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             finally
@@ -92,8 +93,9 @@ namespace LGRentalMgntSystem
                     cmbEmpDesignation.ValueMember = "nDesignationID";
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             finally
@@ -205,8 +207,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
@@ -226,10 +228,10 @@ namespace LGRentalMgntSystem
             try
             {
                 string sPhone1 = Convert.ToString(txtPhone1.Text.Trim());
-                string sPhone2 = Convert.ToString(txtPhone2.Text.Trim());
-                string sPhone3 = Convert.ToString(txtPhone3.Text.Trim());
-                string sPhone4 = Convert.ToString(txtPhone4.Text.Trim());
-                string sPhone5 = Convert.ToString(txtPhone5.Text.Trim());
+                string sPhone2 = Convert.ToString(txtPhone4.Text.Trim());
+                string sPhone3 = Convert.ToString(txtPhone5.Text.Trim());
+                string sPhone4 = Convert.ToString(txtPhone3.Text.Trim());
+                string sPhone5 = Convert.ToString(txtPhone2.Text.Trim());
                 string sPhoneAll = string.Empty;
                 if (sPhone1 != "")
                 {
@@ -319,6 +321,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -334,8 +337,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                throw;
             }
         }
 
@@ -345,6 +348,7 @@ namespace LGRentalMgntSystem
             DataTable dtStaffDetails = null;
             try
             {
+                clsStaffMaster = new StaffMaster();
                 dtStaffDetails = clsStaffMaster.GetStaffInformation(nStaffID);
 
                 if (dtStaffDetails != null && dtStaffDetails.Rows.Count > 0)
@@ -388,6 +392,15 @@ namespace LGRentalMgntSystem
                     txtLic3No.Text = Convert.ToString(dtStaffDetails.Rows[0]["sThirdLicenseNumber"]);
                     dtLic3RenewDate.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtThirdLicenseRenewalDate"]);
 
+                    string[] sPhoneAll = Convert.ToString(dtStaffDetails.Rows[0]["sPhoneNo"]).Split(',');
+                    if (sPhoneAll.Length > 0)
+                    {
+                        int nCompPanelCount = GetPanelCount(sPhoneAll.Length);
+                        for (int i = 0; i < nCompPanelCount; i++)
+                        {
+                            ShowHidePhonePanel(sPhoneAll[i], i + 1);
+                        }
+                    }
                     byte[] empImage = null;
                     if (dtStaffDetails.Rows[0]["sPhoto"] != DBNull.Value)
                     {
@@ -400,11 +413,26 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                throw;
             }
         }
-
+        private int GetPanelCount(int nStringLength)
+        {
+            int nPanelCount = 0;
+            if (nStringLength <= 5)
+            {
+                switch (nStringLength)
+                {
+                    case 1: nPanelCount = 1; break;
+                    case 2: nPanelCount = 2; break;
+                    case 3: nPanelCount = 3; break;
+                    case 4: nPanelCount = 4; break;
+                    case 5: nPanelCount = 5; break;
+                }
+            }
+            return nPanelCount;
+        }
         private void dtEmpBirthdate_EditValueChanged(object sender, EventArgs e)
         {
             try
@@ -417,8 +445,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
     }

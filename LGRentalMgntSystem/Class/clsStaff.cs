@@ -147,8 +147,10 @@ namespace LGRentalMgntSystem
                     _nStaffID = Convert.ToInt64(objValue);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             finally
             {

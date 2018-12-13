@@ -120,6 +120,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -138,6 +139,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             finally
@@ -190,6 +192,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             finally

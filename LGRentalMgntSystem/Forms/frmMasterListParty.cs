@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace LGRentalMgntSystem
 {
-    public partial class frmMasterListCrewMember : DevExpress.XtraEditors.XtraForm
+    public partial class frmMasterListParty : DevExpress.XtraEditors.XtraForm
     {
-        public frmMasterListCrewMember()
+        public frmMasterListParty()
         {
             InitializeComponent();
         }
-        private void FillCrewMasterList()
+        private void FillPartyMasterList()
         {
-            StaffMaster clsStaffMaster = null;
+            PartyMaster clsPartyMaster = null;
             DataTable dt = null;
             try
             {
-                clsStaffMaster = new StaffMaster();
-                dt = clsStaffMaster.GetStafflist(0);
+                clsPartyMaster = new PartyMaster();
+                dt = clsPartyMaster.GetPartylist(0);
                 if (dt != null)
                 {
-                    gvCrewList.GridControl.DataSource = dt;
-                    gvCrewList.Columns[1].Visible = false;
-                    gvCrewList.Columns[8].Visible = false;
+                    gvPartyList.GridControl.DataSource = dt;
+                    gvPartyList.Columns[1].Visible = false;
+                    gvPartyList.Columns[9].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -36,16 +36,11 @@ namespace LGRentalMgntSystem
                 MessageBox.Show("Error Company List: " + ex.ToString(), clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void frmMasterListCrewMember_Load(object sender, EventArgs e)
-        {
-            FillCrewMasterList();
-        }
         private void txtSearch_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
-                DataView dv = (DataView)gvCrewList.DataSource;
+                DataView dv = (DataView)gvPartyList.DataSource;
                 //Company Code, Company Name, Country, State, City, Warehouse Supervisor, Company Type, Abbreviation
                 string sSearchText = txtSearch.Text;
                 string fileter = "";
@@ -65,8 +60,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                throw;
             }
         }
 
@@ -76,7 +71,7 @@ namespace LGRentalMgntSystem
             {
                 if (e.Column.Caption == "Delete")
                 {
-                    bool val = Convert.ToBoolean(gvCrewList.GetRowCellValue(e.RowHandle, "IsUsed"));
+                    bool val = Convert.ToBoolean(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed"));
                     if (val)
                     {
                         DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -90,7 +85,6 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -101,17 +95,17 @@ namespace LGRentalMgntSystem
             {
                 if (e.Column.Caption == "Edit")
                 {
-                    Int64 nCompanyID = 0;
-                    var row = gvCrewList.GetFocusedDataRow();
+                    Int64 nPartyID = 0;
+                    var row = gvPartyList.GetFocusedDataRow();
 
-                    nCompanyID = Convert.ToInt64(row[1]);
-                    frmMasterAddCrew frmMaster = new frmMasterAddCrew(nCompanyID);
+                    nPartyID = Convert.ToInt64(row[1]);
+                    frmMasterAddParty frmMaster = new frmMasterAddParty(nPartyID);
                     frmMaster.ShowDialog();
-                    FillCrewMasterList();
+                    FillPartyMasterList();
                 }
                 if (e.Column.Caption == "Delete")
                 {
-                    var row = gvCrewList.GetFocusedDataRow();
+                    var row = gvPartyList.GetFocusedDataRow();
                     int n = Convert.ToInt32(row[7]);
                     if (n == 1)
                     {
@@ -125,14 +119,18 @@ namespace LGRentalMgntSystem
                     //oclsMaster.nMasterID = Convert.ToInt64(row[1]);
                     //oclsMaster.MasterType = this.MasterType;
                     //oclsMaster.DeleteMaster();
-                    FillCrewMasterList();
+                    FillPartyMasterList();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+        }
+
+        private void frmMasterListParty_Load(object sender, EventArgs e)
+        {
+            FillPartyMasterList();
         }
     }
 }

@@ -29,17 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddCrew));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbBloodGroup = new System.Windows.Forms.ComboBox();
@@ -79,16 +76,16 @@
             this.cmbEmpDesignation = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlPhoneFive = new System.Windows.Forms.Panel();
-            this.txtPhone3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone5 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
             this.pnlPhoneFour = new System.Windows.Forms.Panel();
-            this.txtPhone2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone4 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
             this.pnlPhoneThree = new System.Windows.Forms.Panel();
-            this.txtPhone4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
             this.pnlPhoneTwo = new System.Windows.Forms.Panel();
-            this.txtPhone5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPhone2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.pnlPhoneOne = new System.Windows.Forms.Panel();
             this.btnAddPhone = new DevExpress.XtraEditors.ButtonEdit();
@@ -137,9 +134,9 @@
             this.dtLic1RenewDate = new DevExpress.XtraEditors.DateEdit();
             this.dtLic2RenewDate = new DevExpress.XtraEditors.DateEdit();
             this.dtLic3RenewDate = new DevExpress.XtraEditors.DateEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployeemage.Properties)).BeginInit();
@@ -158,13 +155,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtEmpBirthdate.Properties)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlPhoneFive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone3.Properties)).BeginInit();
-            this.pnlPhoneFour.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).BeginInit();
-            this.pnlPhoneThree.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone4.Properties)).BeginInit();
-            this.pnlPhoneTwo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone5.Properties)).BeginInit();
+            this.pnlPhoneFour.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone4.Properties)).BeginInit();
+            this.pnlPhoneThree.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone3.Properties)).BeginInit();
+            this.pnlPhoneTwo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).BeginInit();
             this.pnlPhoneOne.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone1.Properties)).BeginInit();
@@ -192,42 +189,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtLic2RenewDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.ContentImage = global::LGRentalMgntSystem.Properties.Resources.pnlBackground;
-            this.panelControl1.Controls.Add(this.pictureEdit1);
-            this.panelControl1.Controls.Add(this.lblFormHeader);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(774, 35);
-            this.panelControl1.TabIndex = 71;
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(2, 2);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(28, 31);
-            this.pictureEdit1.TabIndex = 5;
-            // 
-            // lblFormHeader
-            // 
-            this.lblFormHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormHeader.Location = new System.Drawing.Point(36, 9);
-            this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(142, 18);
-            this.lblFormHeader.TabIndex = 3;
-            this.lblFormHeader.Text = "Add New Company ";
             // 
             // panel1
             // 
@@ -593,7 +558,7 @@
             this.dtEmpBirthdate.Location = new System.Drawing.Point(302, 76);
             this.dtEmpBirthdate.Name = "dtEmpBirthdate";
             this.dtEmpBirthdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.dtEmpBirthdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtEmpBirthdate.Properties.ShowMonthHeaders = false;
@@ -648,7 +613,7 @@
             // 
             // pnlPhoneFive
             // 
-            this.pnlPhoneFive.Controls.Add(this.txtPhone3);
+            this.pnlPhoneFive.Controls.Add(this.txtPhone5);
             this.pnlPhoneFive.Controls.Add(this.labelControl40);
             this.pnlPhoneFive.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPhoneFive.Location = new System.Drawing.Point(0, 93);
@@ -657,18 +622,18 @@
             this.pnlPhoneFive.TabIndex = 4;
             this.pnlPhoneFive.Visible = false;
             // 
-            // txtPhone3
+            // txtPhone5
             // 
-            this.txtPhone3.Location = new System.Drawing.Point(87, 2);
-            this.txtPhone3.Name = "txtPhone3";
-            this.txtPhone3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPhone3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPhone3.Properties.Mask.EditMask = "\\d{1,20}";
-            this.txtPhone3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtPhone3.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtPhone3.Properties.MaxLength = 20;
-            this.txtPhone3.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone3.TabIndex = 55;
+            this.txtPhone5.Location = new System.Drawing.Point(87, 2);
+            this.txtPhone5.Name = "txtPhone5";
+            this.txtPhone5.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPhone5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPhone5.Properties.Mask.EditMask = "\\d{1,20}";
+            this.txtPhone5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtPhone5.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtPhone5.Properties.MaxLength = 20;
+            this.txtPhone5.Size = new System.Drawing.Size(200, 20);
+            this.txtPhone5.TabIndex = 55;
             // 
             // labelControl40
             // 
@@ -680,7 +645,7 @@
             // 
             // pnlPhoneFour
             // 
-            this.pnlPhoneFour.Controls.Add(this.txtPhone2);
+            this.pnlPhoneFour.Controls.Add(this.txtPhone4);
             this.pnlPhoneFour.Controls.Add(this.labelControl41);
             this.pnlPhoneFour.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPhoneFour.Location = new System.Drawing.Point(0, 70);
@@ -688,38 +653,6 @@
             this.pnlPhoneFour.Size = new System.Drawing.Size(328, 23);
             this.pnlPhoneFour.TabIndex = 3;
             this.pnlPhoneFour.Visible = false;
-            // 
-            // txtPhone2
-            // 
-            this.txtPhone2.Location = new System.Drawing.Point(87, 1);
-            this.txtPhone2.Name = "txtPhone2";
-            this.txtPhone2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPhone2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPhone2.Properties.Mask.EditMask = "\\d{1,20}";
-            this.txtPhone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtPhone2.Properties.MaxLength = 20;
-            this.txtPhone2.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone2.TabIndex = 53;
-            // 
-            // labelControl41
-            // 
-            this.labelControl41.Location = new System.Drawing.Point(16, 4);
-            this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(69, 13);
-            this.labelControl41.TabIndex = 52;
-            this.labelControl41.Text = "Phone No. 4 : ";
-            // 
-            // pnlPhoneThree
-            // 
-            this.pnlPhoneThree.Controls.Add(this.txtPhone4);
-            this.pnlPhoneThree.Controls.Add(this.labelControl39);
-            this.pnlPhoneThree.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPhoneThree.Location = new System.Drawing.Point(0, 47);
-            this.pnlPhoneThree.Name = "pnlPhoneThree";
-            this.pnlPhoneThree.Size = new System.Drawing.Size(328, 23);
-            this.pnlPhoneThree.TabIndex = 2;
-            this.pnlPhoneThree.Visible = false;
             // 
             // txtPhone4
             // 
@@ -732,7 +665,39 @@
             this.txtPhone4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone4.Properties.MaxLength = 20;
             this.txtPhone4.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone4.TabIndex = 51;
+            this.txtPhone4.TabIndex = 53;
+            // 
+            // labelControl41
+            // 
+            this.labelControl41.Location = new System.Drawing.Point(16, 4);
+            this.labelControl41.Name = "labelControl41";
+            this.labelControl41.Size = new System.Drawing.Size(69, 13);
+            this.labelControl41.TabIndex = 52;
+            this.labelControl41.Text = "Phone No. 4 : ";
+            // 
+            // pnlPhoneThree
+            // 
+            this.pnlPhoneThree.Controls.Add(this.txtPhone3);
+            this.pnlPhoneThree.Controls.Add(this.labelControl39);
+            this.pnlPhoneThree.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlPhoneThree.Location = new System.Drawing.Point(0, 47);
+            this.pnlPhoneThree.Name = "pnlPhoneThree";
+            this.pnlPhoneThree.Size = new System.Drawing.Size(328, 23);
+            this.pnlPhoneThree.TabIndex = 2;
+            this.pnlPhoneThree.Visible = false;
+            // 
+            // txtPhone3
+            // 
+            this.txtPhone3.Location = new System.Drawing.Point(87, 1);
+            this.txtPhone3.Name = "txtPhone3";
+            this.txtPhone3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPhone3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPhone3.Properties.Mask.EditMask = "\\d{1,20}";
+            this.txtPhone3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtPhone3.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtPhone3.Properties.MaxLength = 20;
+            this.txtPhone3.Size = new System.Drawing.Size(200, 20);
+            this.txtPhone3.TabIndex = 51;
             // 
             // labelControl39
             // 
@@ -744,7 +709,7 @@
             // 
             // pnlPhoneTwo
             // 
-            this.pnlPhoneTwo.Controls.Add(this.txtPhone5);
+            this.pnlPhoneTwo.Controls.Add(this.txtPhone2);
             this.pnlPhoneTwo.Controls.Add(this.labelControl34);
             this.pnlPhoneTwo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPhoneTwo.Location = new System.Drawing.Point(0, 24);
@@ -753,18 +718,18 @@
             this.pnlPhoneTwo.TabIndex = 1;
             this.pnlPhoneTwo.Visible = false;
             // 
-            // txtPhone5
+            // txtPhone2
             // 
-            this.txtPhone5.Location = new System.Drawing.Point(87, 1);
-            this.txtPhone5.Name = "txtPhone5";
-            this.txtPhone5.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPhone5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPhone5.Properties.Mask.EditMask = "\\d{1,20}";
-            this.txtPhone5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtPhone5.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtPhone5.Properties.MaxLength = 20;
-            this.txtPhone5.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone5.TabIndex = 49;
+            this.txtPhone2.Location = new System.Drawing.Point(87, 1);
+            this.txtPhone2.Name = "txtPhone2";
+            this.txtPhone2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPhone2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtPhone2.Properties.Mask.EditMask = "\\d{1,20}";
+            this.txtPhone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtPhone2.Properties.MaxLength = 20;
+            this.txtPhone2.Size = new System.Drawing.Size(200, 20);
+            this.txtPhone2.TabIndex = 49;
             // 
             // labelControl34
             // 
@@ -793,7 +758,7 @@
             this.btnAddPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddPhone.Properties.AutoHeight = false;
             this.btnAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnAddPhone.Size = new System.Drawing.Size(22, 18);
             this.btnAddPhone.TabIndex = 48;
             this.btnAddPhone.Click += new System.EventHandler(this.btnAddPhone_Click);
@@ -1129,7 +1094,7 @@
             this.dtEmpDOJ.Location = new System.Drawing.Point(449, 247);
             this.dtEmpDOJ.Name = "dtEmpDOJ";
             this.dtEmpDOJ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpDOJ.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpDOJ.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.dtEmpDOJ.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtEmpDOJ.Properties.ShowMonthHeaders = false;
@@ -1144,7 +1109,7 @@
             this.dtUnionRenewDate.Location = new System.Drawing.Point(449, 467);
             this.dtUnionRenewDate.Name = "dtUnionRenewDate";
             this.dtUnionRenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtUnionRenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtUnionRenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.dtUnionRenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtUnionRenewDate.Properties.ShowMonthHeaders = false;
@@ -1159,7 +1124,7 @@
             this.dtLic1RenewDate.Location = new System.Drawing.Point(449, 489);
             this.dtLic1RenewDate.Name = "dtLic1RenewDate";
             this.dtLic1RenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic1RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic1RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.dtLic1RenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtLic1RenewDate.Properties.ShowMonthHeaders = false;
@@ -1174,7 +1139,7 @@
             this.dtLic2RenewDate.Location = new System.Drawing.Point(449, 515);
             this.dtLic2RenewDate.Name = "dtLic2RenewDate";
             this.dtLic2RenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic2RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic2RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.dtLic2RenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtLic2RenewDate.Properties.ShowMonthHeaders = false;
@@ -1189,7 +1154,7 @@
             this.dtLic3RenewDate.Location = new System.Drawing.Point(449, 541);
             this.dtLic3RenewDate.Name = "dtLic3RenewDate";
             this.dtLic3RenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic3RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic3RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.dtLic3RenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtLic3RenewDate.Properties.ShowMonthHeaders = false;
@@ -1197,6 +1162,41 @@
             this.dtLic3RenewDate.Properties.ShowToday = false;
             this.dtLic3RenewDate.Size = new System.Drawing.Size(200, 22);
             this.dtLic3RenewDate.TabIndex = 156;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.ContentImage = global::LGRentalMgntSystem.Properties.Resources.pnlBackground;
+            this.panelControl1.Controls.Add(this.pictureEdit1);
+            this.panelControl1.Controls.Add(this.lblFormHeader);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(774, 35);
+            this.panelControl1.TabIndex = 71;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(2, 2);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(28, 31);
+            this.pictureEdit1.TabIndex = 5;
+            // 
+            // lblFormHeader
+            // 
+            this.lblFormHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormHeader.Location = new System.Drawing.Point(36, 9);
+            this.lblFormHeader.Name = "lblFormHeader";
+            this.lblFormHeader.Size = new System.Drawing.Size(109, 18);
+            this.lblFormHeader.TabIndex = 3;
+            this.lblFormHeader.Text = "Add New Crew";
             // 
             // frmMasterAddCrew
             // 
@@ -1211,10 +1211,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Crew Member";
             this.Load += new System.EventHandler(this.frmMasterAddCrew_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1235,16 +1231,16 @@
             this.panel3.ResumeLayout(false);
             this.pnlPhoneFive.ResumeLayout(false);
             this.pnlPhoneFive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone5.Properties)).EndInit();
             this.pnlPhoneFour.ResumeLayout(false);
             this.pnlPhoneFour.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone4.Properties)).EndInit();
             this.pnlPhoneThree.ResumeLayout(false);
             this.pnlPhoneThree.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone3.Properties)).EndInit();
             this.pnlPhoneTwo.ResumeLayout(false);
             this.pnlPhoneTwo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhone5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).EndInit();
             this.pnlPhoneOne.ResumeLayout(false);
             this.pnlPhoneOne.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddPhone.Properties)).EndInit();
@@ -1273,6 +1269,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtLic2RenewDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1321,16 +1321,16 @@
         private DevExpress.XtraEditors.MemoEdit txtAddressLine1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlPhoneTwo;
-        private DevExpress.XtraEditors.TextEdit txtPhone5;
+        private DevExpress.XtraEditors.TextEdit txtPhone2;
         private DevExpress.XtraEditors.LabelControl labelControl34;
         private System.Windows.Forms.Panel pnlPhoneThree;
-        private DevExpress.XtraEditors.TextEdit txtPhone4;
+        private DevExpress.XtraEditors.TextEdit txtPhone3;
         private DevExpress.XtraEditors.LabelControl labelControl39;
         private System.Windows.Forms.Panel pnlPhoneFive;
-        private DevExpress.XtraEditors.TextEdit txtPhone3;
+        private DevExpress.XtraEditors.TextEdit txtPhone5;
         private DevExpress.XtraEditors.LabelControl labelControl40;
         private System.Windows.Forms.Panel pnlPhoneFour;
-        private DevExpress.XtraEditors.TextEdit txtPhone2;
+        private DevExpress.XtraEditors.TextEdit txtPhone4;
         private DevExpress.XtraEditors.LabelControl labelControl41;
         private System.Windows.Forms.Panel pnlPhoneOne;
         private DevExpress.XtraEditors.ButtonEdit btnAddPhone;

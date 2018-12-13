@@ -346,8 +346,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                throw;
             }
 
             return _result;
@@ -537,8 +537,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                throw;
             }
 
             return _result;
@@ -574,12 +574,14 @@ namespace LGRentalMgntSystem
 
         private void btnAddPartyMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterAddParty frmAddParty = new frmMasterAddParty();
+            frmAddParty.ShowDialog();
         }
 
         private void btnPartyMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterListParty frmPartyList = new frmMasterListParty();
+            frmPartyList.ShowDialog();
         }
 
         private void btnAddGafferMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

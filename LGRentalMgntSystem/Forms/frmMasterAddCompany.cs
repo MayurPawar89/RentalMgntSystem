@@ -302,8 +302,9 @@ namespace LGRentalMgntSystem
                     cmbWHCountry.Text = "India";
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             finally
@@ -324,8 +325,9 @@ namespace LGRentalMgntSystem
                 oclsGeneral = new clsGeneral();
                 txtCompanyCode.Text = "CMP/" + Convert.ToString(oclsGeneral.GetSequenceNumber(MainMasterType.Company.GetHashCode()));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             finally
@@ -571,8 +573,8 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
-                
-                throw;
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
@@ -757,6 +759,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             return nresult;

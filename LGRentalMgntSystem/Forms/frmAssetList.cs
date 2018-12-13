@@ -106,8 +106,8 @@ namespace LGRentalMgntSystem.Forms
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                throw;
             }
         }
 
@@ -156,8 +156,8 @@ namespace LGRentalMgntSystem.Forms
             }
             catch (Exception)
             {
-                
-                throw;
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
@@ -186,7 +186,8 @@ namespace LGRentalMgntSystem.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
@@ -223,7 +224,8 @@ namespace LGRentalMgntSystem.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             //var row=gvMasterList.GetRowCellValue(e.RowHandle,gvMasterList.Columns[3]);
             //if (row == "Cloth")
