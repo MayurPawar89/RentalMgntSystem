@@ -51,10 +51,9 @@ namespace LGRentalMgntSystem
                 string fileter = "";
                 if (sSearchText != "")
                 {
-                    fileter = dv.Table.Columns["sCompanyCode"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sCompanyName"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sCountry"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sState"].Caption + " Like '%" + sSearchText + "%' OR "
+                    fileter = dv.Table.Columns["sStaffCode"].Caption + " Like '%" + sSearchText + "%' OR "
+                        + dv.Table.Columns["sStaffName"].Caption + " Like '%" + sSearchText + "%' OR "
+                        + dv.Table.Columns["sCompanyCode"].Caption + " Like '%" + sSearchText + "%' OR "
                         + dv.Table.Columns["sCity"].Caption + " Like '%" + sSearchText + "%'";
                     dv.RowFilter = fileter;
                 }

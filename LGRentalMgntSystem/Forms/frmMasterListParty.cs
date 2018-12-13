@@ -46,9 +46,9 @@ namespace LGRentalMgntSystem
                 string fileter = "";
                 if (sSearchText != "")
                 {
-                    fileter = dv.Table.Columns["sCompanyCode"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sCompanyName"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sCountry"].Caption + " Like '%" + sSearchText + "%' OR "
+                    fileter = dv.Table.Columns["sPartyCode"].Caption + " Like '%" + sSearchText + "%' OR "
+                        + dv.Table.Columns["sPartyName"].Caption + " Like '%" + sSearchText + "%' OR "
+                        + dv.Table.Columns["sPartyTypeName"].Caption + " Like '%" + sSearchText + "%' OR "
                         + dv.Table.Columns["sState"].Caption + " Like '%" + sSearchText + "%' OR "
                         + dv.Table.Columns["sCity"].Caption + " Like '%" + sSearchText + "%'";
                     dv.RowFilter = fileter;

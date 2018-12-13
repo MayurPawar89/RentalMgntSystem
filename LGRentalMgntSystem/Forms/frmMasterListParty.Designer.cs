@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterListParty));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -45,17 +45,17 @@
             this.gcRowNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPartyID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPartyCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcsPartyType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPartyName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPhoneNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcsPartyType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcCity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcState = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcPhoneNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcIsUsed = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gcCity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
@@ -96,10 +96,9 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(14, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(766, 16);
+            this.labelControl2.Size = new System.Drawing.Size(389, 16);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Search By : Company Code, Company Name, Country, State, City, Warehouse Superviso" +
-    "r, Company Type, Abbreviation";
+            this.labelControl2.Text = "Search By : Party Code, Party Name, Party Type, State, City";
             // 
             // txtSearch
             // 
@@ -108,6 +107,7 @@
             this.txtSearch.Properties.MaxLength = 100;
             this.txtSearch.Size = new System.Drawing.Size(271, 20);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.EditValueChanged += new System.EventHandler(this.txtSearch_EditValueChanged);
             // 
             // lblTypeName
             // 
@@ -224,16 +224,6 @@
             this.gcPartyCode.Visible = true;
             this.gcPartyCode.VisibleIndex = 2;
             // 
-            // gcsPartyType
-            // 
-            this.gcsPartyType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcsPartyType.AppearanceHeader.Options.UseFont = true;
-            this.gcsPartyType.Caption = "Party Type";
-            this.gcsPartyType.FieldName = "sPartyTypeName";
-            this.gcsPartyType.Name = "gcsPartyType";
-            this.gcsPartyType.Visible = true;
-            this.gcsPartyType.VisibleIndex = 3;
-            // 
             // gcPartyName
             // 
             this.gcPartyName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -244,15 +234,35 @@
             this.gcPartyName.Visible = true;
             this.gcPartyName.VisibleIndex = 4;
             // 
-            // gcPhoneNo
+            // gcsPartyType
             // 
-            this.gcPhoneNo.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPhoneNo.AppearanceHeader.Options.UseFont = true;
-            this.gcPhoneNo.Caption = "Phone No";
-            this.gcPhoneNo.FieldName = "sPhoneNo";
-            this.gcPhoneNo.Name = "gcPhoneNo";
-            this.gcPhoneNo.Visible = true;
-            this.gcPhoneNo.VisibleIndex = 5;
+            this.gcsPartyType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcsPartyType.AppearanceHeader.Options.UseFont = true;
+            this.gcsPartyType.Caption = "Party Type";
+            this.gcsPartyType.FieldName = "sPartyTypeName";
+            this.gcsPartyType.Name = "gcsPartyType";
+            this.gcsPartyType.Visible = true;
+            this.gcsPartyType.VisibleIndex = 3;
+            // 
+            // gcEmail
+            // 
+            this.gcEmail.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcEmail.AppearanceHeader.Options.UseFont = true;
+            this.gcEmail.Caption = "Email";
+            this.gcEmail.FieldName = "sEmail";
+            this.gcEmail.Name = "gcEmail";
+            this.gcEmail.Visible = true;
+            this.gcEmail.VisibleIndex = 6;
+            // 
+            // gcCity
+            // 
+            this.gcCity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcCity.AppearanceHeader.Options.UseFont = true;
+            this.gcCity.Caption = "City";
+            this.gcCity.FieldName = "sCity";
+            this.gcCity.Name = "gcCity";
+            this.gcCity.Visible = true;
+            this.gcCity.VisibleIndex = 7;
             // 
             // gcState
             // 
@@ -263,6 +273,16 @@
             this.gcState.Name = "gcState";
             this.gcState.Visible = true;
             this.gcState.VisibleIndex = 8;
+            // 
+            // gcPhoneNo
+            // 
+            this.gcPhoneNo.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcPhoneNo.AppearanceHeader.Options.UseFont = true;
+            this.gcPhoneNo.Caption = "Phone No";
+            this.gcPhoneNo.FieldName = "sPhoneNo";
+            this.gcPhoneNo.Name = "gcPhoneNo";
+            this.gcPhoneNo.Visible = true;
+            this.gcPhoneNo.VisibleIndex = 5;
             // 
             // gcIsUsed
             // 
@@ -290,7 +310,7 @@
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -309,29 +329,9 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // gcCity
-            // 
-            this.gcCity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcCity.AppearanceHeader.Options.UseFont = true;
-            this.gcCity.Caption = "City";
-            this.gcCity.FieldName = "sCity";
-            this.gcCity.Name = "gcCity";
-            this.gcCity.Visible = true;
-            this.gcCity.VisibleIndex = 7;
-            // 
-            // gcEmail
-            // 
-            this.gcEmail.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcEmail.AppearanceHeader.Options.UseFont = true;
-            this.gcEmail.Caption = "Email";
-            this.gcEmail.FieldName = "sEmail";
-            this.gcEmail.Name = "gcEmail";
-            this.gcEmail.Visible = true;
-            this.gcEmail.VisibleIndex = 6;
             // 
             // frmMasterListParty
             // 
