@@ -63,7 +63,7 @@ namespace LGRentalMgntSystem
                     dv.RowFilter = fileter;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
