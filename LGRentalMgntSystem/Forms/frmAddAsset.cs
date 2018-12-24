@@ -691,28 +691,44 @@ namespace LGRentalMgntSystem
                 }
                 else
                 {
-                    //string sValue = string.Empty;
-                    //num = dtAssetCode.Rows.Count;
-                    //num++;
-                    //sValue = num.ToString();
-                    //if (num < 1000)
-                    //{
-                    //    sValue = num.ToString("000");
-                    //}
-                    //MessageBox.Show("Value: " + sValue);
-                    DataRow drAsset = dtAssetCode.NewRow();
-                    drAsset["nSequenceNo"] = sValue;
-                    drAsset["sInitialCode"] = txtAssetCode.Text.Trim();
-                    drAsset["sUniqueCode"] = txtAssetCode.Text.Trim() + num.ToString();
-                    drAsset["barcode"] = BarcodeImage;
-                    drAsset["dtShelfLife"] = Convert.ToDateTime(dtShelfLife.Text.ToString());
-                    drAsset["sShelfLifeUnit"] = txtShelfLifeUnit.Text.Trim().ToString();
-                    drAsset["dtRetirementDate"] = Convert.ToDateTime(dtRetirementDate.Text.ToString());
-                    drAsset["RowNo"] = num;
-                    dtAssetCode.Rows.Add(drAsset);
-                    gvAssetList.GridControl.DataSource = dtAssetCode;
-                    gvAssetList.Columns[1].Visible = false;
-                    gvAssetList.Columns[6].Visible = false;
+                    if (btnAddBarcodeDetails.Text.ToLower() == "edit")
+                    {
+                        DataRow[] drSelected = dtAssetCode.Select("RowNo=" + lblSelectedRow.Text);
+                        foreach (DataRow drAsset in drSelected)
+                        {
+                            drAsset["barcode"] = BarcodeImage;
+                            drAsset["dtShelfLife"] = Convert.ToDateTime(dtShelfLife.Text.ToString());
+                            drAsset["sShelfLifeUnit"] = txtShelfLifeUnit.Text.Trim().ToString();
+                            drAsset["dtRetirementDate"] = Convert.ToDateTime(dtRetirementDate.Text.ToString());
+                        }
+                        dtAssetCode.AcceptChanges();
+                        gvAssetList.RefreshData();
+                    }
+                    else
+                    {
+                        //string sValue = string.Empty;
+                        //num = dtAssetCode.Rows.Count;
+                        //num++;
+                        //sValue = num.ToString();
+                        //if (num < 1000)
+                        //{
+                        //    sValue = num.ToString("000");
+                        //}
+                        //MessageBox.Show("Value: " + sValue);
+                        DataRow drAsset = dtAssetCode.NewRow();
+                        drAsset["nSequenceNo"] = sValue;
+                        drAsset["sInitialCode"] = txtAssetCode.Text.Trim();
+                        drAsset["sUniqueCode"] = txtAssetCode.Text.Trim() + num.ToString();
+                        drAsset["barcode"] = BarcodeImage;
+                        drAsset["dtShelfLife"] = Convert.ToDateTime(dtShelfLife.Text.ToString());
+                        drAsset["sShelfLifeUnit"] = txtShelfLifeUnit.Text.Trim().ToString();
+                        drAsset["dtRetirementDate"] = Convert.ToDateTime(dtRetirementDate.Text.ToString());
+                        drAsset["RowNo"] = num;
+                        dtAssetCode.Rows.Add(drAsset);
+                        gvAssetList.GridControl.DataSource = dtAssetCode;
+                        gvAssetList.Columns[1].Visible = false;
+                        gvAssetList.Columns[6].Visible = false;
+                    }
                 }
                 ClearAssetCodeDetails();
             }
@@ -987,6 +1003,7 @@ namespace LGRentalMgntSystem
                     lblAssetCodeID.Text = Convert.ToString(row[1]);
                     lblInitialCode.Text = Convert.ToString(row[3]);
                     lblSequenceNo.Text = Convert.ToString(row[4]);
+                    lblSelectedRow.Text = Convert.ToString(row[0]);
                     btnAddBarcodeDetails.Text = "Edit";
                     if (barcodeImage.Length > 0)
                     {

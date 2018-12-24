@@ -137,6 +137,7 @@
             this.txtAssetDescription = new DevExpress.XtraEditors.MemoEdit();
             this.pnlSave = new System.Windows.Forms.Panel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.lblSelectedRow = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -406,6 +407,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblSelectedRow);
             this.panel2.Controls.Add(this.lblInitialCode);
             this.panel2.Controls.Add(this.lblAssetCodeID);
             this.panel2.Controls.Add(this.picBarcodeImage);
@@ -1194,6 +1196,15 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // lblSelectedRow
+            // 
+            this.lblSelectedRow.Location = new System.Drawing.Point(889, 42);
+            this.lblSelectedRow.Name = "lblSelectedRow";
+            this.lblSelectedRow.Size = new System.Drawing.Size(6, 13);
+            this.lblSelectedRow.TabIndex = 201;
+            this.lblSelectedRow.Text = "0";
+            this.lblSelectedRow.Visible = false;
+            // 
             // frmAddAsset
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1362,5 +1373,6 @@
         private DevExpress.XtraEditors.LabelControl lblInitialCode;
         private DevExpress.XtraEditors.LabelControl lblAssetCodeID;
         private DevExpress.XtraEditors.SimpleButton btnUpdateAsset;
+        private DevExpress.XtraEditors.LabelControl lblSelectedRow;
     }
 }
