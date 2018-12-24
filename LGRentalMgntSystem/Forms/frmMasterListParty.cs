@@ -71,7 +71,9 @@ namespace LGRentalMgntSystem
             {
                 if (e.Column.Caption == "Delete")
                 {
-                    bool val = Convert.ToBoolean(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed"));
+                    int nVal = Convert.ToString(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvPartyListgvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+
+                    bool val = Convert.ToBoolean(nVal);
                     if (val)
                     {
                         DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -106,7 +108,7 @@ namespace LGRentalMgntSystem
                 if (e.Column.Caption == "Delete")
                 {
                     var row = gvPartyList.GetFocusedDataRow();
-                    int n = Convert.ToInt32(row["IsUsed"]);
+                    
                     if (n == 1)
                     {
                         return;

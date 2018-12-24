@@ -157,7 +157,7 @@ namespace LGRentalMgntSystem
                         int nStatus=0;
                         if (objValue != null)
                         {
-                            nStatus = Convert.ToInt32(objValue);
+                            nStatus = Convert.ToInt32(objStatus);
                         }
                         if (nStatus<=0)
                         {

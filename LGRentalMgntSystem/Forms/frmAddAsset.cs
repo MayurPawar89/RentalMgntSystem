@@ -907,7 +907,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Save : " + ex.Message, clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Save : " + ex.Message, clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -951,7 +951,9 @@ namespace LGRentalMgntSystem
             {
                 if (e.Column.Caption == "Delete")
                 {
-                    bool val = Convert.ToBoolean(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed"));
+                    int nVal = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+                    
+                    bool val = Convert.ToBoolean(nVal);
                     if (val)
                     {
                         DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -996,7 +998,8 @@ namespace LGRentalMgntSystem
                 if (e.Column.Caption == "Delete")
                 {
                     var row = gvAssetList.GetFocusedDataRow();
-                    int n = Convert.ToInt32(row["IsUsed"]);
+                    int n = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+                    
                     if (n == 1)
                     {
                         return;

@@ -286,8 +286,8 @@ namespace LGRentalMgntSystem
                     Int64 nKitID = 0;
                     var row = gvAssetList.GetFocusedDataRow();
 
-                    lblKitID.Text = Convert.ToString(row[1]);
-                    lblKitAssetID.Text = Convert.ToString(row[2]);
+                    lblKitAssetID.Text = Convert.ToString(row[1]);
+                    lblKitID.Text = Convert.ToString(row[2]);
                     lblAssetID.Text = Convert.ToString(row[3]);
                     lblAssetCodeID.Text = Convert.ToString(row[4]);
                     lblAssetCodeName.Text = Convert.ToString(row[7]);
@@ -306,7 +306,8 @@ namespace LGRentalMgntSystem
                 if (e.Column.Caption == "Delete")
                 {
                     var row = gvAssetList.GetFocusedDataRow();
-                    int n = Convert.ToInt32(row["IsUsed"]);
+                    int n = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+
                     if (n == 1)
                     {
                         return;
