@@ -57,6 +57,14 @@
             this.btnAssetMainTypeList = new DevExpress.XtraBars.BarButtonItem();
             this.btnAddCompanyMaster = new DevExpress.XtraBars.BarButtonItem();
             this.btnCompanyMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddCrewMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCrewMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddPartyMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPartyMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddGafferMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGafferMasterList = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAddLocationMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLocationMasterList = new DevExpress.XtraBars.BarButtonItem();
             this.rpAsset = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgAsset = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgKit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -84,14 +92,6 @@
             this.rpSettings = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnAddCrewMaster = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCrewMasterList = new DevExpress.XtraBars.BarButtonItem();
-            this.btnAddPartyMaster = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPartyMasterList = new DevExpress.XtraBars.BarButtonItem();
-            this.btnAddGafferMaster = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGafferMasterList = new DevExpress.XtraBars.BarButtonItem();
-            this.btnAddLocationMaster = new DevExpress.XtraBars.BarButtonItem();
-            this.btnLocationMasterList = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +168,7 @@
             this.btnAssetList.Id = 2;
             this.btnAssetList.ImageUri.Uri = "ListNumbers";
             this.btnAssetList.Name = "btnAssetList";
+            this.btnAssetList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAssetList_ItemClick);
             // 
             // btnExpiredAssetList
             // 
@@ -175,6 +176,7 @@
             this.btnExpiredAssetList.Id = 3;
             this.btnExpiredAssetList.ImageUri.Uri = "ListNumbers";
             this.btnExpiredAssetList.Name = "btnExpiredAssetList";
+            this.btnExpiredAssetList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExpiredAssetList_ItemClick);
             // 
             // btnAddKit
             // 
@@ -182,6 +184,7 @@
             this.btnAddKit.Id = 4;
             this.btnAddKit.ImageUri.Uri = "Add";
             this.btnAddKit.Name = "btnAddKit";
+            this.btnAddKit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddKit_ItemClick);
             // 
             // btnKitList
             // 
@@ -189,6 +192,7 @@
             this.btnKitList.Id = 5;
             this.btnKitList.ImageUri.Uri = "ListNumbers";
             this.btnKitList.Name = "btnKitList";
+            this.btnKitList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKitList_ItemClick);
             // 
             // btnAddCompanyType
             // 
@@ -365,6 +369,78 @@
             this.btnCompanyMasterList.ImageUri.Uri = "ListNumbers";
             this.btnCompanyMasterList.Name = "btnCompanyMasterList";
             this.btnCompanyMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCompanyMasterList_ItemClick);
+            // 
+            // btnAddCrewMaster
+            // 
+            this.btnAddCrewMaster.Caption = "Add Crew";
+            this.btnAddCrewMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddCrewMaster.Glyph")));
+            this.btnAddCrewMaster.Id = 40;
+            this.btnAddCrewMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddCrewMaster.LargeGlyph")));
+            this.btnAddCrewMaster.Name = "btnAddCrewMaster";
+            this.btnAddCrewMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddCrewMaster_ItemClick);
+            // 
+            // btnCrewMasterList
+            // 
+            this.btnCrewMasterList.Caption = "Crew List";
+            this.btnCrewMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCrewMasterList.Glyph")));
+            this.btnCrewMasterList.Id = 41;
+            this.btnCrewMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCrewMasterList.LargeGlyph")));
+            this.btnCrewMasterList.Name = "btnCrewMasterList";
+            this.btnCrewMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCrewMasterList_ItemClick);
+            // 
+            // btnAddPartyMaster
+            // 
+            this.btnAddPartyMaster.Caption = "Add Party";
+            this.btnAddPartyMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddPartyMaster.Glyph")));
+            this.btnAddPartyMaster.Id = 42;
+            this.btnAddPartyMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddPartyMaster.LargeGlyph")));
+            this.btnAddPartyMaster.Name = "btnAddPartyMaster";
+            this.btnAddPartyMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddPartyMaster_ItemClick);
+            // 
+            // btnPartyMasterList
+            // 
+            this.btnPartyMasterList.Caption = "Party List";
+            this.btnPartyMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPartyMasterList.Glyph")));
+            this.btnPartyMasterList.Id = 43;
+            this.btnPartyMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnPartyMasterList.LargeGlyph")));
+            this.btnPartyMasterList.Name = "btnPartyMasterList";
+            this.btnPartyMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPartyMasterList_ItemClick);
+            // 
+            // btnAddGafferMaster
+            // 
+            this.btnAddGafferMaster.Caption = "Add Gaffer";
+            this.btnAddGafferMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddGafferMaster.Glyph")));
+            this.btnAddGafferMaster.Id = 44;
+            this.btnAddGafferMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddGafferMaster.LargeGlyph")));
+            this.btnAddGafferMaster.Name = "btnAddGafferMaster";
+            this.btnAddGafferMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddGafferMaster_ItemClick);
+            // 
+            // btnGafferMasterList
+            // 
+            this.btnGafferMasterList.Caption = "Gaffer List";
+            this.btnGafferMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnGafferMasterList.Glyph")));
+            this.btnGafferMasterList.Id = 45;
+            this.btnGafferMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnGafferMasterList.LargeGlyph")));
+            this.btnGafferMasterList.Name = "btnGafferMasterList";
+            this.btnGafferMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGafferMasterList_ItemClick);
+            // 
+            // btnAddLocationMaster
+            // 
+            this.btnAddLocationMaster.Caption = "Add Location";
+            this.btnAddLocationMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddLocationMaster.Glyph")));
+            this.btnAddLocationMaster.Id = 46;
+            this.btnAddLocationMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddLocationMaster.LargeGlyph")));
+            this.btnAddLocationMaster.Name = "btnAddLocationMaster";
+            this.btnAddLocationMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddLocationMaster_ItemClick);
+            // 
+            // btnLocationMasterList
+            // 
+            this.btnLocationMasterList.Caption = "Location List";
+            this.btnLocationMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLocationMasterList.Glyph")));
+            this.btnLocationMasterList.Id = 47;
+            this.btnLocationMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLocationMasterList.LargeGlyph")));
+            this.btnLocationMasterList.Name = "btnLocationMasterList";
+            this.btnLocationMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLocationMasterList_ItemClick);
             // 
             // rpAsset
             // 
@@ -559,78 +635,6 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnCompanyTypeList, true);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Company Type";
-            // 
-            // btnAddCrewMaster
-            // 
-            this.btnAddCrewMaster.Caption = "Add Crew";
-            this.btnAddCrewMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddCrewMaster.Glyph")));
-            this.btnAddCrewMaster.Id = 40;
-            this.btnAddCrewMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddCrewMaster.LargeGlyph")));
-            this.btnAddCrewMaster.Name = "btnAddCrewMaster";
-            this.btnAddCrewMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddCrewMaster_ItemClick);
-            // 
-            // btnCrewMasterList
-            // 
-            this.btnCrewMasterList.Caption = "Crew List";
-            this.btnCrewMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCrewMasterList.Glyph")));
-            this.btnCrewMasterList.Id = 41;
-            this.btnCrewMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnCrewMasterList.LargeGlyph")));
-            this.btnCrewMasterList.Name = "btnCrewMasterList";
-            this.btnCrewMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCrewMasterList_ItemClick);
-            // 
-            // btnAddPartyMaster
-            // 
-            this.btnAddPartyMaster.Caption = "Add Party";
-            this.btnAddPartyMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddPartyMaster.Glyph")));
-            this.btnAddPartyMaster.Id = 42;
-            this.btnAddPartyMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddPartyMaster.LargeGlyph")));
-            this.btnAddPartyMaster.Name = "btnAddPartyMaster";
-            this.btnAddPartyMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddPartyMaster_ItemClick);
-            // 
-            // btnPartyMasterList
-            // 
-            this.btnPartyMasterList.Caption = "Party List";
-            this.btnPartyMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPartyMasterList.Glyph")));
-            this.btnPartyMasterList.Id = 43;
-            this.btnPartyMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnPartyMasterList.LargeGlyph")));
-            this.btnPartyMasterList.Name = "btnPartyMasterList";
-            this.btnPartyMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPartyMasterList_ItemClick);
-            // 
-            // btnAddGafferMaster
-            // 
-            this.btnAddGafferMaster.Caption = "Add Gaffer";
-            this.btnAddGafferMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddGafferMaster.Glyph")));
-            this.btnAddGafferMaster.Id = 44;
-            this.btnAddGafferMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddGafferMaster.LargeGlyph")));
-            this.btnAddGafferMaster.Name = "btnAddGafferMaster";
-            this.btnAddGafferMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddGafferMaster_ItemClick);
-            // 
-            // btnGafferMasterList
-            // 
-            this.btnGafferMasterList.Caption = "Gaffer List";
-            this.btnGafferMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnGafferMasterList.Glyph")));
-            this.btnGafferMasterList.Id = 45;
-            this.btnGafferMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnGafferMasterList.LargeGlyph")));
-            this.btnGafferMasterList.Name = "btnGafferMasterList";
-            this.btnGafferMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGafferMasterList_ItemClick);
-            // 
-            // btnAddLocationMaster
-            // 
-            this.btnAddLocationMaster.Caption = "Add Location";
-            this.btnAddLocationMaster.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAddLocationMaster.Glyph")));
-            this.btnAddLocationMaster.Id = 46;
-            this.btnAddLocationMaster.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAddLocationMaster.LargeGlyph")));
-            this.btnAddLocationMaster.Name = "btnAddLocationMaster";
-            this.btnAddLocationMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddLocationMaster_ItemClick);
-            // 
-            // btnLocationMasterList
-            // 
-            this.btnLocationMasterList.Caption = "Location List";
-            this.btnLocationMasterList.Glyph = ((System.Drawing.Image)(resources.GetObject("btnLocationMasterList.Glyph")));
-            this.btnLocationMasterList.Id = 47;
-            this.btnLocationMasterList.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnLocationMasterList.LargeGlyph")));
-            this.btnLocationMasterList.Name = "btnLocationMasterList";
-            this.btnLocationMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLocationMasterList_ItemClick);
             // 
             // frmDashboard
             // 

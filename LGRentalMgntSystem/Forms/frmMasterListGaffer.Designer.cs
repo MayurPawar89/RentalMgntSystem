@@ -1,6 +1,6 @@
 ﻿namespace LGRentalMgntSystem
 {
-    partial class frmMasterListCrewMember
+    partial class frmMasterListGaffer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterListCrewMember));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterListGaffer));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
@@ -40,32 +40,30 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtSearch = new DevExpress.XtraEditors.TextEdit();
             this.lblTypeName = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gvCrewList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvGafferList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcRowNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcStaffID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcStaffCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCompanyCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcStaffName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPhoneNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcGafferID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcGafferCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcGafferName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcState = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcDailyWages = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcPhone = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcIsUsed = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCrewList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvGafferList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
@@ -80,8 +78,8 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1110, 35);
-            this.panelControl1.TabIndex = 62;
+            this.panelControl1.Size = new System.Drawing.Size(739, 35);
+            this.panelControl1.TabIndex = 65;
             // 
             // pictureEdit1
             // 
@@ -101,9 +99,9 @@
             this.lblFormHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormHeader.Location = new System.Drawing.Point(36, 9);
             this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(71, 18);
+            this.lblFormHeader.Size = new System.Drawing.Size(84, 18);
             this.lblFormHeader.TabIndex = 3;
-            this.lblFormHeader.Text = "Crew List";
+            this.lblFormHeader.Text = "Gaffer  List";
             // 
             // panelControl4
             // 
@@ -114,14 +112,14 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 35);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1110, 62);
-            this.panelControl4.TabIndex = 63;
+            this.panelControl4.Size = new System.Drawing.Size(739, 62);
+            this.panelControl4.TabIndex = 66;
             // 
             // btnSearch
             // 
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSearch.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSearch.Location = new System.Drawing.Point(462, 28);
+            this.btnSearch.Location = new System.Drawing.Point(338, 29);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(110, 25);
             this.btnSearch.TabIndex = 3;
@@ -133,18 +131,17 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(14, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(405, 16);
+            this.labelControl2.Size = new System.Drawing.Size(245, 16);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Search By : Staff Code, Company Code, Staff Name, State, City";
+            this.labelControl2.Text = "Search By : Code, Name, Abbreviation";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(185, 31);
+            this.txtSearch.Location = new System.Drawing.Point(61, 32);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.MaxLength = 100;
             this.txtSearch.Size = new System.Drawing.Size(271, 20);
             this.txtSearch.TabIndex = 1;
-            this.txtSearch.EditValueChanged += new System.EventHandler(this.txtSearch_EditValueChanged);
             // 
             // lblTypeName
             // 
@@ -154,55 +151,46 @@
             this.lblTypeName.TabIndex = 0;
             this.lblTypeName.Text = "Search : ";
             // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.gridControl1);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 97);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1110, 496);
-            this.panelControl2.TabIndex = 64;
-            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
-            this.gridControl1.MainView = this.gvCrewList;
+            this.gridControl1.Location = new System.Drawing.Point(0, 97);
+            this.gridControl1.MainView = this.gvGafferList;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEdit,
             this.btnDelete});
-            this.gridControl1.Size = new System.Drawing.Size(1106, 492);
-            this.gridControl1.TabIndex = 0;
+            this.gridControl1.Size = new System.Drawing.Size(739, 358);
+            this.gridControl1.TabIndex = 69;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvCrewList});
+            this.gvGafferList});
             // 
-            // gvCrewList
+            // gvGafferList
             // 
-            this.gvCrewList.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
-            this.gvCrewList.Appearance.SelectedRow.Options.UseForeColor = true;
-            this.gvCrewList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvGafferList.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
+            this.gvGafferList.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gvGafferList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcRowNo,
-            this.gcStaffID,
-            this.gcStaffCode,
-            this.gcCompanyCode,
-            this.gcStaffName,
-            this.gcPhoneNo,
+            this.gcGafferID,
+            this.gcGafferCode,
+            this.gcGafferName,
+            this.gcState,
             this.gcCity,
-            this.gcDailyWages,
+            this.gcPhone,
+            this.gcEmail,
             this.gcIsUsed,
             this.gcEdit,
-            this.gdDelete});
-            this.gvCrewList.GridControl = this.gridControl1;
-            this.gvCrewList.Name = "gvCrewList";
-            this.gvCrewList.OptionsBehavior.Editable = false;
-            this.gvCrewList.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
-            this.gvCrewList.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
-            this.gvCrewList.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvCrewList.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
-            this.gvCrewList.OptionsView.ShowGroupPanel = false;
-            this.gvCrewList.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvCompanyList_RowCellClick);
-            this.gvCrewList.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gvCompanyList_CustomRowCellEdit);
+            this.gcDelete});
+            this.gvGafferList.GridControl = this.gridControl1;
+            this.gvGafferList.Name = "gvGafferList";
+            this.gvGafferList.OptionsBehavior.Editable = false;
+            this.gvGafferList.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gvGafferList.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
+            this.gvGafferList.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvGafferList.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
+            this.gvGafferList.OptionsView.ShowGroupPanel = false;
+            this.gvGafferList.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvGafferList_RowCellClick);
+            this.gvGafferList.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gvGafferList_CustomRowCellEdit);
             // 
             // gcRowNo
             // 
@@ -214,55 +202,45 @@
             this.gcRowNo.Visible = true;
             this.gcRowNo.VisibleIndex = 0;
             // 
-            // gcStaffID
+            // gcGafferID
             // 
-            this.gcStaffID.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcStaffID.AppearanceHeader.Options.UseFont = true;
-            this.gcStaffID.Caption = "nStaffID";
-            this.gcStaffID.FieldName = "nStaffID";
-            this.gcStaffID.Name = "gcStaffID";
-            this.gcStaffID.Visible = true;
-            this.gcStaffID.VisibleIndex = 1;
+            this.gcGafferID.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcGafferID.AppearanceHeader.Options.UseFont = true;
+            this.gcGafferID.Caption = "gcGafferID";
+            this.gcGafferID.FieldName = "nGafferID";
+            this.gcGafferID.Name = "gcGafferID";
+            this.gcGafferID.Visible = true;
+            this.gcGafferID.VisibleIndex = 1;
             // 
-            // gcStaffCode
+            // gcGafferCode
             // 
-            this.gcStaffCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcStaffCode.AppearanceHeader.Options.UseFont = true;
-            this.gcStaffCode.Caption = "Staff. Code";
-            this.gcStaffCode.FieldName = "sStaffCode";
-            this.gcStaffCode.Name = "gcStaffCode";
-            this.gcStaffCode.Visible = true;
-            this.gcStaffCode.VisibleIndex = 2;
+            this.gcGafferCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcGafferCode.AppearanceHeader.Options.UseFont = true;
+            this.gcGafferCode.Caption = "Gaffer Code";
+            this.gcGafferCode.FieldName = "sGafferCode";
+            this.gcGafferCode.Name = "gcGafferCode";
+            this.gcGafferCode.Visible = true;
+            this.gcGafferCode.VisibleIndex = 2;
             // 
-            // gcCompanyCode
+            // gcGafferName
             // 
-            this.gcCompanyCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcCompanyCode.AppearanceHeader.Options.UseFont = true;
-            this.gcCompanyCode.Caption = "Comp. Code";
-            this.gcCompanyCode.FieldName = "sCompanyCode";
-            this.gcCompanyCode.Name = "gcCompanyCode";
-            this.gcCompanyCode.Visible = true;
-            this.gcCompanyCode.VisibleIndex = 3;
+            this.gcGafferName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcGafferName.AppearanceHeader.Options.UseFont = true;
+            this.gcGafferName.Caption = "Gaffer Name";
+            this.gcGafferName.FieldName = "sGafferName";
+            this.gcGafferName.Name = "gcGafferName";
+            this.gcGafferName.Visible = true;
+            this.gcGafferName.VisibleIndex = 3;
             // 
-            // gcStaffName
+            // gcState
             // 
-            this.gcStaffName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcStaffName.AppearanceHeader.Options.UseFont = true;
-            this.gcStaffName.Caption = "Staff Name";
-            this.gcStaffName.FieldName = "sStaffName";
-            this.gcStaffName.Name = "gcStaffName";
-            this.gcStaffName.Visible = true;
-            this.gcStaffName.VisibleIndex = 4;
-            // 
-            // gcPhoneNo
-            // 
-            this.gcPhoneNo.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPhoneNo.AppearanceHeader.Options.UseFont = true;
-            this.gcPhoneNo.Caption = "Phone No";
-            this.gcPhoneNo.FieldName = "sPhoneNo";
-            this.gcPhoneNo.Name = "gcPhoneNo";
-            this.gcPhoneNo.Visible = true;
-            this.gcPhoneNo.VisibleIndex = 5;
+            this.gcState.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcState.AppearanceHeader.Options.UseFont = true;
+            this.gcState.Caption = "State";
+            this.gcState.FieldName = "sState";
+            this.gcState.Name = "gcState";
+            this.gcState.Visible = true;
+            this.gcState.VisibleIndex = 7;
             // 
             // gcCity
             // 
@@ -274,15 +252,25 @@
             this.gcCity.Visible = true;
             this.gcCity.VisibleIndex = 6;
             // 
-            // gcDailyWages
+            // gcPhone
             // 
-            this.gcDailyWages.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcDailyWages.AppearanceHeader.Options.UseFont = true;
-            this.gcDailyWages.Caption = "Daily Wages";
-            this.gcDailyWages.FieldName = "sDailyWages";
-            this.gcDailyWages.Name = "gcDailyWages";
-            this.gcDailyWages.Visible = true;
-            this.gcDailyWages.VisibleIndex = 7;
+            this.gcPhone.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcPhone.AppearanceHeader.Options.UseFont = true;
+            this.gcPhone.Caption = "Phone No";
+            this.gcPhone.FieldName = "sPhoneNo";
+            this.gcPhone.Name = "gcPhone";
+            this.gcPhone.Visible = true;
+            this.gcPhone.VisibleIndex = 4;
+            // 
+            // gcEmail
+            // 
+            this.gcEmail.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcEmail.AppearanceHeader.Options.UseFont = true;
+            this.gcEmail.Caption = "Email";
+            this.gcEmail.FieldName = "sEmail";
+            this.gcEmail.Name = "gcEmail";
+            this.gcEmail.Visible = true;
+            this.gcEmail.VisibleIndex = 5;
             // 
             // gcIsUsed
             // 
@@ -314,16 +302,16 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // gdDelete
+            // gcDelete
             // 
-            this.gdDelete.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gdDelete.AppearanceHeader.Options.UseFont = true;
-            this.gdDelete.Caption = "Delete";
-            this.gdDelete.ColumnEdit = this.btnDelete;
-            this.gdDelete.Name = "gdDelete";
-            this.gdDelete.Visible = true;
-            this.gdDelete.VisibleIndex = 10;
-            this.gdDelete.Width = 85;
+            this.gcDelete.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcDelete.AppearanceHeader.Options.UseFont = true;
+            this.gcDelete.Caption = "Delete";
+            this.gcDelete.ColumnEdit = this.btnDelete;
+            this.gcDelete.Name = "gcDelete";
+            this.gcDelete.Visible = true;
+            this.gcDelete.VisibleIndex = 10;
+            this.gcDelete.Width = 85;
             // 
             // btnDelete
             // 
@@ -333,19 +321,27 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // frmMasterListCrewMember
+            // gridColumn9
+            // 
+            this.gridColumn9.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridColumn9.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn9.Caption = "Sr. No.";
+            this.gridColumn9.FieldName = "RowNo";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            // 
+            // frmMasterListGaffer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 593);
-            this.Controls.Add(this.panelControl2);
+            this.ClientSize = new System.Drawing.Size(739, 455);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl1);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMasterListCrewMember";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmMasterListCrewMember_Load);
+            this.Name = "frmMasterListGaffer";
+            this.Load += new System.EventHandler(this.frmMasterListGaffer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -354,10 +350,8 @@
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCrewList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvGafferList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
@@ -375,21 +369,21 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtSearch;
         private DevExpress.XtraEditors.LabelControl lblTypeName;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvCrewList;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvGafferList;
         private DevExpress.XtraGrid.Columns.GridColumn gcRowNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gcStaffID;
-        private DevExpress.XtraGrid.Columns.GridColumn gcStaffCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gcCompanyCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gcStaffName;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPhoneNo;
+        private DevExpress.XtraGrid.Columns.GridColumn gcGafferID;
+        private DevExpress.XtraGrid.Columns.GridColumn gcGafferCode;
+        private DevExpress.XtraGrid.Columns.GridColumn gcGafferName;
+        private DevExpress.XtraGrid.Columns.GridColumn gcState;
         private DevExpress.XtraGrid.Columns.GridColumn gcCity;
-        private DevExpress.XtraGrid.Columns.GridColumn gcDailyWages;
+        private DevExpress.XtraGrid.Columns.GridColumn gcPhone;
+        private DevExpress.XtraGrid.Columns.GridColumn gcEmail;
         private DevExpress.XtraGrid.Columns.GridColumn gcIsUsed;
         private DevExpress.XtraGrid.Columns.GridColumn gcEdit;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEdit;
-        private DevExpress.XtraGrid.Columns.GridColumn gdDelete;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn gcDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
     }
 }

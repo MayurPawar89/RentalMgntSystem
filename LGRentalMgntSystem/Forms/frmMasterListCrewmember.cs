@@ -111,7 +111,7 @@ namespace LGRentalMgntSystem
                 if (e.Column.Caption == "Delete")
                 {
                     var row = gvCrewList.GetFocusedDataRow();
-                    int n = Convert.ToInt32(row[7]);
+                    int n = Convert.ToInt32(row["IsUsed"]);
                     if (n == 1)
                     {
                         return;
@@ -119,6 +119,16 @@ namespace LGRentalMgntSystem
                     if (MessageBox.Show("Do you want to delete?", clsGlobal._sMessageboxCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     {
                         return;
+                    }
+                    clsGeneral oclsGeneral = new clsGeneral();
+                    if (oclsGeneral.GetDeleteMasterType(MainMasterType.Crew.GetHashCode(), Convert.ToInt64(row[1])) > 0)
+                    {
+                        MessageBox.Show("Crew member details deleted successfully.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    if (oclsGeneral != null)
+                    {
+                        oclsGeneral.Dispose();
+                        oclsGeneral = null;
                     }
                     //clsMasters oclsMaster = new clsMasters();
                     //oclsMaster.nMasterID = Convert.ToInt64(row[1]);

@@ -1,6 +1,6 @@
 ﻿namespace LGRentalMgntSystem
 {
-    partial class frmMasterListCrewMember
+    partial class frmMainAssetList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterListCrewMember));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainAssetList));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
@@ -40,18 +41,19 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtSearch = new DevExpress.XtraEditors.TextEdit();
             this.lblTypeName = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gvCrewList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvAssetList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcRowNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcStaffID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcStaffCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCompanyCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcStaffName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPhoneNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcDailyWages = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAssetID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAssetName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAbbrivation = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcsAssetType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcReorderDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcRate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcIsUsed = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcShowAsset = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnShowAsset = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gcEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,10 +64,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCrewList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAssetList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowAsset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
@@ -80,8 +81,8 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1110, 35);
-            this.panelControl1.TabIndex = 62;
+            this.panelControl1.Size = new System.Drawing.Size(1002, 35);
+            this.panelControl1.TabIndex = 65;
             // 
             // pictureEdit1
             // 
@@ -101,9 +102,9 @@
             this.lblFormHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormHeader.Location = new System.Drawing.Point(36, 9);
             this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(71, 18);
+            this.lblFormHeader.Size = new System.Drawing.Size(73, 18);
             this.lblFormHeader.TabIndex = 3;
-            this.lblFormHeader.Text = "Crew List";
+            this.lblFormHeader.Text = "Asset List";
             // 
             // panelControl4
             // 
@@ -114,8 +115,8 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 35);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1110, 62);
-            this.panelControl4.TabIndex = 63;
+            this.panelControl4.Size = new System.Drawing.Size(1002, 62);
+            this.panelControl4.TabIndex = 66;
             // 
             // btnSearch
             // 
@@ -133,9 +134,9 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(14, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(405, 16);
+            this.labelControl2.Size = new System.Drawing.Size(239, 16);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Search By : Staff Code, Company Code, Staff Name, State, City";
+            this.labelControl2.Text = "Search By : Asset Name, Abbrivation";
             // 
             // txtSearch
             // 
@@ -154,55 +155,48 @@
             this.lblTypeName.TabIndex = 0;
             this.lblTypeName.Text = "Search : ";
             // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.gridControl1);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 97);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1110, 496);
-            this.panelControl2.TabIndex = 64;
-            // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 2);
-            this.gridControl1.MainView = this.gvCrewList;
+            this.gridControl1.Location = new System.Drawing.Point(0, 97);
+            this.gridControl1.MainView = this.gvAssetList;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEdit,
-            this.btnDelete});
-            this.gridControl1.Size = new System.Drawing.Size(1106, 492);
-            this.gridControl1.TabIndex = 0;
+            this.btnDelete,
+            this.btnShowAsset});
+            this.gridControl1.Size = new System.Drawing.Size(1002, 375);
+            this.gridControl1.TabIndex = 67;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvCrewList});
+            this.gvAssetList});
             // 
-            // gvCrewList
+            // gvAssetList
             // 
-            this.gvCrewList.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
-            this.gvCrewList.Appearance.SelectedRow.Options.UseForeColor = true;
-            this.gvCrewList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvAssetList.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
+            this.gvAssetList.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gvAssetList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcRowNo,
-            this.gcStaffID,
-            this.gcStaffCode,
-            this.gcCompanyCode,
-            this.gcStaffName,
-            this.gcPhoneNo,
-            this.gcCity,
-            this.gcDailyWages,
+            this.gcAssetID,
+            this.gcAssetName,
+            this.gcAbbrivation,
+            this.gcsAssetType,
+            this.gcCompanyName,
+            this.gcReorderDate,
+            this.gcRate,
             this.gcIsUsed,
+            this.gcShowAsset,
             this.gcEdit,
             this.gdDelete});
-            this.gvCrewList.GridControl = this.gridControl1;
-            this.gvCrewList.Name = "gvCrewList";
-            this.gvCrewList.OptionsBehavior.Editable = false;
-            this.gvCrewList.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
-            this.gvCrewList.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
-            this.gvCrewList.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvCrewList.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
-            this.gvCrewList.OptionsView.ShowGroupPanel = false;
-            this.gvCrewList.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvCompanyList_RowCellClick);
-            this.gvCrewList.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gvCompanyList_CustomRowCellEdit);
+            this.gvAssetList.GridControl = this.gridControl1;
+            this.gvAssetList.Name = "gvAssetList";
+            this.gvAssetList.OptionsBehavior.Editable = false;
+            this.gvAssetList.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gvAssetList.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
+            this.gvAssetList.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvAssetList.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
+            this.gvAssetList.OptionsView.ShowGroupPanel = false;
+            this.gvAssetList.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvAssetList_RowCellClick);
+            this.gvAssetList.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gvAssetList_CustomRowCellEdit);
             // 
             // gcRowNo
             // 
@@ -214,75 +208,75 @@
             this.gcRowNo.Visible = true;
             this.gcRowNo.VisibleIndex = 0;
             // 
-            // gcStaffID
+            // gcAssetID
             // 
-            this.gcStaffID.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcStaffID.AppearanceHeader.Options.UseFont = true;
-            this.gcStaffID.Caption = "nStaffID";
-            this.gcStaffID.FieldName = "nStaffID";
-            this.gcStaffID.Name = "gcStaffID";
-            this.gcStaffID.Visible = true;
-            this.gcStaffID.VisibleIndex = 1;
+            this.gcAssetID.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcAssetID.AppearanceHeader.Options.UseFont = true;
+            this.gcAssetID.Caption = "gcAssetID";
+            this.gcAssetID.FieldName = "nAssetID";
+            this.gcAssetID.Name = "gcAssetID";
+            this.gcAssetID.Visible = true;
+            this.gcAssetID.VisibleIndex = 1;
             // 
-            // gcStaffCode
+            // gcAssetName
             // 
-            this.gcStaffCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcStaffCode.AppearanceHeader.Options.UseFont = true;
-            this.gcStaffCode.Caption = "Staff. Code";
-            this.gcStaffCode.FieldName = "sStaffCode";
-            this.gcStaffCode.Name = "gcStaffCode";
-            this.gcStaffCode.Visible = true;
-            this.gcStaffCode.VisibleIndex = 2;
+            this.gcAssetName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcAssetName.AppearanceHeader.Options.UseFont = true;
+            this.gcAssetName.Caption = "Asset Name";
+            this.gcAssetName.FieldName = "sAssetName";
+            this.gcAssetName.Name = "gcAssetName";
+            this.gcAssetName.Visible = true;
+            this.gcAssetName.VisibleIndex = 2;
             // 
-            // gcCompanyCode
+            // gcAbbrivation
             // 
-            this.gcCompanyCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcCompanyCode.AppearanceHeader.Options.UseFont = true;
-            this.gcCompanyCode.Caption = "Comp. Code";
-            this.gcCompanyCode.FieldName = "sCompanyCode";
-            this.gcCompanyCode.Name = "gcCompanyCode";
-            this.gcCompanyCode.Visible = true;
-            this.gcCompanyCode.VisibleIndex = 3;
+            this.gcAbbrivation.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcAbbrivation.AppearanceHeader.Options.UseFont = true;
+            this.gcAbbrivation.Caption = "Abbrivation";
+            this.gcAbbrivation.FieldName = "sAssetAbbrivation";
+            this.gcAbbrivation.Name = "gcAbbrivation";
+            this.gcAbbrivation.Visible = true;
+            this.gcAbbrivation.VisibleIndex = 4;
             // 
-            // gcStaffName
+            // gcsAssetType
             // 
-            this.gcStaffName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcStaffName.AppearanceHeader.Options.UseFont = true;
-            this.gcStaffName.Caption = "Staff Name";
-            this.gcStaffName.FieldName = "sStaffName";
-            this.gcStaffName.Name = "gcStaffName";
-            this.gcStaffName.Visible = true;
-            this.gcStaffName.VisibleIndex = 4;
+            this.gcsAssetType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcsAssetType.AppearanceHeader.Options.UseFont = true;
+            this.gcsAssetType.Caption = "Asset Type";
+            this.gcsAssetType.FieldName = "sAssetType";
+            this.gcsAssetType.Name = "gcsAssetType";
+            this.gcsAssetType.Visible = true;
+            this.gcsAssetType.VisibleIndex = 3;
             // 
-            // gcPhoneNo
+            // gcCompanyName
             // 
-            this.gcPhoneNo.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPhoneNo.AppearanceHeader.Options.UseFont = true;
-            this.gcPhoneNo.Caption = "Phone No";
-            this.gcPhoneNo.FieldName = "sPhoneNo";
-            this.gcPhoneNo.Name = "gcPhoneNo";
-            this.gcPhoneNo.Visible = true;
-            this.gcPhoneNo.VisibleIndex = 5;
+            this.gcCompanyName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcCompanyName.AppearanceHeader.Options.UseFont = true;
+            this.gcCompanyName.Caption = "Company Name";
+            this.gcCompanyName.FieldName = "sCompanyName";
+            this.gcCompanyName.Name = "gcCompanyName";
+            this.gcCompanyName.Visible = true;
+            this.gcCompanyName.VisibleIndex = 5;
             // 
-            // gcCity
+            // gcReorderDate
             // 
-            this.gcCity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcCity.AppearanceHeader.Options.UseFont = true;
-            this.gcCity.Caption = "City";
-            this.gcCity.FieldName = "sCity";
-            this.gcCity.Name = "gcCity";
-            this.gcCity.Visible = true;
-            this.gcCity.VisibleIndex = 6;
+            this.gcReorderDate.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcReorderDate.AppearanceHeader.Options.UseFont = true;
+            this.gcReorderDate.Caption = "Re-Order Date";
+            this.gcReorderDate.FieldName = "dtReorderDate";
+            this.gcReorderDate.Name = "gcReorderDate";
+            this.gcReorderDate.Visible = true;
+            this.gcReorderDate.VisibleIndex = 6;
             // 
-            // gcDailyWages
+            // gcRate
             // 
-            this.gcDailyWages.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcDailyWages.AppearanceHeader.Options.UseFont = true;
-            this.gcDailyWages.Caption = "Daily Wages";
-            this.gcDailyWages.FieldName = "sDailyWages";
-            this.gcDailyWages.Name = "gcDailyWages";
-            this.gcDailyWages.Visible = true;
-            this.gcDailyWages.VisibleIndex = 7;
+            this.gcRate.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcRate.AppearanceHeader.Options.UseFont = true;
+            this.gcRate.Caption = "Rate";
+            this.gcRate.FieldName = "sRate";
+            this.gcRate.Name = "gcRate";
+            this.gcRate.Visible = true;
+            this.gcRate.VisibleIndex = 7;
             // 
             // gcIsUsed
             // 
@@ -295,6 +289,24 @@
             this.gcIsUsed.VisibleIndex = 8;
             this.gcIsUsed.Width = 73;
             // 
+            // gcShowAsset
+            // 
+            this.gcShowAsset.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcShowAsset.AppearanceHeader.Options.UseFont = true;
+            this.gcShowAsset.Caption = "Show Asset";
+            this.gcShowAsset.ColumnEdit = this.btnShowAsset;
+            this.gcShowAsset.Name = "gcShowAsset";
+            this.gcShowAsset.Visible = true;
+            this.gcShowAsset.VisibleIndex = 9;
+            // 
+            // btnShowAsset
+            // 
+            this.btnShowAsset.AutoHeight = false;
+            this.btnShowAsset.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnShowAsset.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnShowAsset.Name = "btnShowAsset";
+            this.btnShowAsset.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // gcEdit
             // 
             this.gcEdit.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -303,14 +315,14 @@
             this.gcEdit.ColumnEdit = this.btnEdit;
             this.gcEdit.Name = "gcEdit";
             this.gcEdit.Visible = true;
-            this.gcEdit.VisibleIndex = 9;
+            this.gcEdit.VisibleIndex = 10;
             this.gcEdit.Width = 91;
             // 
             // btnEdit
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -322,30 +334,29 @@
             this.gdDelete.ColumnEdit = this.btnDelete;
             this.gdDelete.Name = "gdDelete";
             this.gdDelete.Visible = true;
-            this.gdDelete.VisibleIndex = 10;
+            this.gdDelete.VisibleIndex = 11;
             this.gdDelete.Width = 85;
             // 
             // btnDelete
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // frmMasterListCrewMember
+            // frmMainAssetList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 593);
-            this.Controls.Add(this.panelControl2);
+            this.ClientSize = new System.Drawing.Size(1002, 472);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl1);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMasterListCrewMember";
+            this.Name = "frmMainAssetList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmMasterListCrewMember_Load);
+            this.Load += new System.EventHandler(this.frmMainAssetList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -354,10 +365,9 @@
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCrewList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAssetList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowAsset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
@@ -375,21 +385,22 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtSearch;
         private DevExpress.XtraEditors.LabelControl lblTypeName;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvCrewList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvAssetList;
         private DevExpress.XtraGrid.Columns.GridColumn gcRowNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gcStaffID;
-        private DevExpress.XtraGrid.Columns.GridColumn gcStaffCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gcCompanyCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gcStaffName;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPhoneNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gcCity;
-        private DevExpress.XtraGrid.Columns.GridColumn gcDailyWages;
+        private DevExpress.XtraGrid.Columns.GridColumn gcAssetID;
+        private DevExpress.XtraGrid.Columns.GridColumn gcAssetName;
+        private DevExpress.XtraGrid.Columns.GridColumn gcAbbrivation;
+        private DevExpress.XtraGrid.Columns.GridColumn gcsAssetType;
+        private DevExpress.XtraGrid.Columns.GridColumn gcCompanyName;
+        private DevExpress.XtraGrid.Columns.GridColumn gcReorderDate;
+        private DevExpress.XtraGrid.Columns.GridColumn gcRate;
+        private DevExpress.XtraGrid.Columns.GridColumn gcShowAsset;
         private DevExpress.XtraGrid.Columns.GridColumn gcIsUsed;
         private DevExpress.XtraGrid.Columns.GridColumn gcEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEdit;
         private DevExpress.XtraGrid.Columns.GridColumn gdDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnShowAsset;
     }
 }

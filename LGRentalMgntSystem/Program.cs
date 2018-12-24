@@ -16,6 +16,7 @@ namespace LGRentalMgntSystem
         {
             try
             {
+                clsGlobal._sMessageboxCaption = System.Configuration.ConfigurationManager.AppSettings["MessageboxCaption"];
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new frmLogin());

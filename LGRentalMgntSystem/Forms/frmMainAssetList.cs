@@ -10,47 +10,53 @@ using System.Windows.Forms;
 
 namespace LGRentalMgntSystem
 {
-    public partial class frmMasterListParty : DevExpress.XtraEditors.XtraForm
+    public partial class frmMainAssetList : DevExpress.XtraEditors.XtraForm
     {
-        public frmMasterListParty()
+        public frmMainAssetList()
         {
             InitializeComponent();
         }
-        private void FillPartyMasterList()
+
+        private void frmMainAssetList_Load(object sender, EventArgs e)
         {
-            PartyMaster clsPartyMaster = null;
+            FillAssetList();
+        }
+
+        private void FillAssetList()
+        {
+            AssetMaster oAssetMaster = null;
             DataTable dt = null;
             try
             {
-                clsPartyMaster = new PartyMaster();
-                dt = clsPartyMaster.GetPartylist(0);
-                if (dt != null)
+                oAssetMaster = new AssetMaster();
+                dt = oAssetMaster.GetAssetList(0);
+                if (dt!=null)
                 {
-                    gvPartyList.GridControl.DataSource = dt;
-                    gvPartyList.Columns[1].Visible = false;
-                    gvPartyList.Columns[9].Visible = false;
+                    gvAssetList.GridControl.DataSource = dt;
+                    gvAssetList.Columns[1].Visible = false;
+                    gvAssetList.Columns[8].Visible = false;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Company List: " + ex.ToString(), clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
         }
+
         private void txtSearch_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
-                DataView dv = (DataView)gvPartyList.DataSource;
+                DataView dv = (DataView)gvAssetList.DataSource;
                 //Company Code, Company Name, Country, State, City, Warehouse Supervisor, Company Type, Abbreviation
                 string sSearchText = txtSearch.Text;
                 string fileter = "";
                 if (sSearchText != "")
                 {
-                    fileter = dv.Table.Columns["sPartyCode"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sPartyName"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sPartyTypeName"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sState"].Caption + " Like '%" + sSearchText + "%' OR "
-                        + dv.Table.Columns["sCity"].Caption + " Like '%" + sSearchText + "%'";
+                    fileter = dv.Table.Columns["sAssetName"].Caption + " Like '%" + sSearchText + "%' OR "
+                        + dv.Table.Columns["sAssetAbbrivation"].Caption + " Like '%" + sSearchText + "%'";
                     dv.RowFilter = fileter;
                 }
                 else
@@ -58,20 +64,20 @@ namespace LGRentalMgntSystem
                     dv.RowFilter = fileter;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                throw;
             }
         }
 
-        private void gvCompanyList_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
+        private void gvAssetList_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
         {
             try
             {
                 if (e.Column.Caption == "Delete")
                 {
-                    bool val = Convert.ToBoolean(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed"));
+                    bool val = Convert.ToBoolean(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed"));
                     if (val)
                     {
                         DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -85,27 +91,28 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
 
-        private void gvCompanyList_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        private void gvAssetList_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             try
             {
                 if (e.Column.Caption == "Edit")
                 {
-                    Int64 nPartyID = 0;
-                    var row = gvPartyList.GetFocusedDataRow();
+                    Int64 nAssetID = 0;
+                    var row = gvAssetList.GetFocusedDataRow();
 
-                    nPartyID = Convert.ToInt64(row[1]);
-                    frmMasterAddParty frmMaster = new frmMasterAddParty(nPartyID);
-                    frmMaster.ShowDialog();
-                    FillPartyMasterList();
+                    nAssetID = Convert.ToInt64(row[1]);
+                    frmAddAsset frmAsset = new frmAddAsset(nAssetID);
+                    frmAsset.ShowDialog();
+                    FillAssetList();
                 }
                 if (e.Column.Caption == "Delete")
                 {
-                    var row = gvPartyList.GetFocusedDataRow();
+                    var row = gvAssetList.GetFocusedDataRow();
                     int n = Convert.ToInt32(row["IsUsed"]);
                     if (n == 1)
                     {
@@ -115,32 +122,27 @@ namespace LGRentalMgntSystem
                     {
                         return;
                     }
-                    clsGeneral oclsGeneral = new clsGeneral();
-                    if (oclsGeneral.GetDeleteMasterType(MainMasterType.Party.GetHashCode(), Convert.ToInt64(row[1])) > 0)
-                    {
-                        MessageBox.Show("Party details deleted successfully.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    if (oclsGeneral!=null)
-                    {
-                        oclsGeneral.Dispose();
-                        oclsGeneral = null;
-                    }
                     //clsMasters oclsMaster = new clsMasters();
                     //oclsMaster.nMasterID = Convert.ToInt64(row[1]);
                     //oclsMaster.MasterType = this.MasterType;
                     //oclsMaster.DeleteMaster();
-                    FillPartyMasterList();
+                    FillAssetList();
+                }
+                if (e.Column.Caption == "Show Asset")
+                {
+                    Int64 nAssetID = 0;
+                    var row = gvAssetList.GetFocusedDataRow();
+
+                    nAssetID = Convert.ToInt64(row[1]);
+                    frmMainAssetCodeList oFrmAssetCodeList = new frmMainAssetCodeList(nAssetID);
+                    oFrmAssetCodeList.ShowDialog();
+                    FillAssetList();
                 }
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error : " + ex, clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void frmMasterListParty_Load(object sender, EventArgs e)
-        {
-            FillPartyMasterList();
         }
     }
 }

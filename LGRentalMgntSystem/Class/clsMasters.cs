@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LGRentalMgntSystem.Class
+namespace LGRentalMgntSystem
 {
     class clsMasters
     {
@@ -73,10 +73,23 @@ namespace LGRentalMgntSystem.Class
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
+            }
             return nMasterID;
         }
 
@@ -106,10 +119,23 @@ namespace LGRentalMgntSystem.Class
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
+            }
             return nMasterID;
         }
 
@@ -131,8 +157,22 @@ namespace LGRentalMgntSystem.Class
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
             }
             return dt;
         }
@@ -146,7 +186,7 @@ namespace LGRentalMgntSystem.Class
                 oDBAccess = new DatabaseAccess();
                 oDBParameter = new DatabaseParameters();
                 oDBParameter.clear();
-                oDBParameter.Add("@nMasterType", nMasterType, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@nMasterType", nMasterType, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
                 oDBAccess.Retrive("lgsp_Get_AllMastersData", oDBParameter, out dt);
                 oDBAccess.CloseConnection(false);
@@ -154,8 +194,61 @@ namespace LGRentalMgntSystem.Class
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
+            }
+            return dt;
+        }
+
+        public DataTable GetMasterTypeDataBbValue(Int32 nMasterType,string sSearchString="")
+        {
+            DataTable dt = null;
+            DatabaseAccess oDBAccess = null;
+            DatabaseParameters oDBParameter = null;
+            try
+            {
+                oDBAccess = new DatabaseAccess();
+                oDBParameter = new DatabaseParameters();
+                oDBParameter.clear();
+                oDBParameter.Add("@nMasterType", nMasterType, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@sSearchString", sSearchString, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBAccess.OpenConnection(false);
+                oDBAccess.Retrive("lgsp_Get_AllMastersData_Search", oDBParameter, out dt);
+                oDBAccess.CloseConnection(false);
+
+            }
+            catch (Exception ex)
+            {
+                oDBAccess.CloseConnection(false);
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
             }
             return dt;
         }

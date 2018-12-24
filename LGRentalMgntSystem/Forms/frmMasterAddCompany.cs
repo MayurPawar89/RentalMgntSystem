@@ -27,6 +27,7 @@ namespace LGRentalMgntSystem
         {
             InitializeComponent();
             lblCompanyID.Text = Convert.ToString(nCompanyID);
+            lblFormHeader.Text = "Edit Company";
             fillMasterData();
             //GetAndSetSequence();
             txtCompanyName.Focus();
@@ -442,6 +443,8 @@ namespace LGRentalMgntSystem
         private void frmMasterAddCompany_Load(object sender, EventArgs e)
         {
             rdImageFormat.Checked = true;
+            dtCompanyFormedOn.EditValue = DateTime.Now;
+            txtDocumentDate.EditValue = DateTime.Now;
             if (Convert.ToInt64(lblCompanyID.Text)>0)
             {
                 FillCompanyDetails(Convert.ToInt64(lblCompanyID.Text));
@@ -567,6 +570,7 @@ namespace LGRentalMgntSystem
                         {
                             rdTextFormat.Checked = true;
                             sTermsAndCondition = Convert.ToString(dtCompImageDetails.Rows[0]["sTermsAndCondition"]);
+                            txtTermsCondition.Text = sTermsAndCondition;
                         }
                     }
                 }
@@ -597,6 +601,7 @@ namespace LGRentalMgntSystem
 
         public Int64 SaveCompanyDetails()
         {
+            
             Int64 nresult = 0;
             CompanyMaster clsCompanyMaster = null;
             try
@@ -767,12 +772,63 @@ namespace LGRentalMgntSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveCompanyDetails();
+            if (ValidateForm())
+            {
+                SaveCompanyDetails();
+            }
         }
 
+        public bool ValidateForm()
+        {
+            bool bIsValidForm = true  ;
+            if (txtCompanyName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter company name.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtCompanyName.Focus();
+                return bIsValidForm;
+            }
+            if (cmbCompanyType.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter company type.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                cmbCompanyType.Focus();
+                return bIsValidForm;
+            }
+            return bIsValidForm;
+        }
         private void txtCompanyName_EditValueChanged(object sender, EventArgs e)
         {
             txtCompanyAbbrivation.Text= clsGlobal.GenerateAbbrivation(txtCompanyName.Text.Trim());
+        }
+
+        private void btnAddCompanySignatory_Click(object sender, EventArgs e)
+        {
+            clsMasters clsMaster = null;
+            try
+            {
+                clsMaster = new clsMasters();
+                Int64 nSignatoryID = 0;
+                DataTable dtMaster = clsMaster.GetMasterTypeDataBbValue(MasterType.Designation.GetHashCode(), "Signatory");
+                if (dtMaster != null && dtMaster.Rows.Count > 0)
+                {
+                    nSignatoryID = Convert.ToInt64(dtMaster.Rows[0]["TypeID"]);
+                }
+                frmMasterAddCrew frmMasterCrew = new frmMasterAddCrew();
+                frmMasterCrew.nSignatoryID = nSignatoryID;
+                frmMasterCrew.ShowDialog(this);
+
+                FillSignatoryInfo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+        }
+
+        private void FillSignatoryInfo()
+        {
         }
 
         

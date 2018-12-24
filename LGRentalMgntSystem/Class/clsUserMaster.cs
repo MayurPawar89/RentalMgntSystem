@@ -91,6 +91,7 @@ namespace LGRentalMgntSystem.Class
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), "Rental System LoginSP", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             return bIsValidUser;

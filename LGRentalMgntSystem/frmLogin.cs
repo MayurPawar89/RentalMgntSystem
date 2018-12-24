@@ -17,6 +17,8 @@ namespace LGRentalMgntSystem
         public frmLogin()
         {
             InitializeComponent();
+            //txtUsername.Text = "admin";
+            //txtPassword.Text = "admin123";
             sMessageboxCaption = System.Configuration.ConfigurationManager.AppSettings["MessageboxCaption"];
         }
 

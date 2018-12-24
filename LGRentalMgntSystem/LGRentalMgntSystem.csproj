@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -121,12 +121,27 @@
     <Compile Include="Class\clsCompany.cs" />
     <Compile Include="Class\clsDatabaseAccess.cs" />
     <Compile Include="Class\clsEncryption.cs" />
+    <Compile Include="Class\clsGafferMaster.cs" />
     <Compile Include="Class\clsGeneral.cs" />
     <Compile Include="Class\clsGlobal.cs" />
+    <Compile Include="Class\clsKit.cs" />
+    <Compile Include="Class\clsLocationMaster.cs" />
     <Compile Include="Class\clsMasters.cs" />
     <Compile Include="Class\clsPartyMaster.cs" />
     <Compile Include="Class\clsStaff.cs" />
     <Compile Include="Class\clsUserMaster.cs" />
+    <Compile Include="Forms\frmAddAsset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddAsset.Designer.cs">
+      <DependentUpon>frmAddAsset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddKit.Designer.cs">
+      <DependentUpon>frmAddKit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAsset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +166,30 @@
     <Compile Include="Forms\frmAssetMaster.Designer.cs">
       <DependentUpon>frmAssetMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMainAssetCodeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainAssetCodeList.Designer.cs">
+      <DependentUpon>frmMainAssetCodeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainAssetList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainAssetList.Designer.cs">
+      <DependentUpon>frmMainAssetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainKitAssetList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainKitAssetList.Designer.cs">
+      <DependentUpon>frmMainKitAssetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainKitList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainKitList.Designer.cs">
+      <DependentUpon>frmMainKitList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMasterAddCompany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +201,18 @@
     </Compile>
     <Compile Include="Forms\frmMasterAddCrew.Designer.cs">
       <DependentUpon>frmMasterAddCrew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMasterAddGaffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMasterAddGaffer.Designer.cs">
+      <DependentUpon>frmMasterAddGaffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMasterAddLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMasterAddLocation.Designer.cs">
+      <DependentUpon>frmMasterAddLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMasterAddParty.cs">
       <SubType>Form</SubType>
@@ -180,6 +231,18 @@
     </Compile>
     <Compile Include="Forms\frmMasterListCrewMember.Designer.cs">
       <DependentUpon>frmMasterListCrewMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMasterListGaffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMasterListGaffer.Designer.cs">
+      <DependentUpon>frmMasterListGaffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMasterListLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMasterListLocation.Designer.cs">
+      <DependentUpon>frmMasterListLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMasterListParty.cs">
       <SubType>Form</SubType>
@@ -206,6 +269,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RentalSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\frmAddAsset.resx">
+      <DependentUpon>frmAddAsset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddKit.resx">
+      <DependentUpon>frmAddKit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAsset.resx">
       <DependentUpon>frmAsset.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,11 +287,29 @@
     <EmbeddedResource Include="Forms\frmAssetMaster.resx">
       <DependentUpon>frmAssetMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainAssetCodeList.resx">
+      <DependentUpon>frmMainAssetCodeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainAssetList.resx">
+      <DependentUpon>frmMainAssetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainKitAssetList.resx">
+      <DependentUpon>frmMainKitAssetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainKitList.resx">
+      <DependentUpon>frmMainKitList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMasterAddCompany.resx">
       <DependentUpon>frmMasterAddCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMasterAddCrew.resx">
       <DependentUpon>frmMasterAddCrew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMasterAddGaffer.resx">
+      <DependentUpon>frmMasterAddGaffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMasterAddLocation.resx">
+      <DependentUpon>frmMasterAddLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMasterAddParty.resx">
       <DependentUpon>frmMasterAddParty.cs</DependentUpon>
@@ -232,6 +319,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMasterListCrewmember.resx">
       <DependentUpon>frmMasterListCrewMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMasterListGaffer.resx">
+      <DependentUpon>frmMasterListGaffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMasterListLocation.resx">
+      <DependentUpon>frmMasterListLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMasterListParty.resx">
       <DependentUpon>frmMasterListParty.cs</DependentUpon>

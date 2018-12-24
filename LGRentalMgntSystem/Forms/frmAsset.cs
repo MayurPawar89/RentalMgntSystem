@@ -49,36 +49,36 @@ namespace LGRentalMgntSystem
             try
             {
                 oAssetMaster = new AssetMaster();
-                oAssetMaster.nAssetID = 0;
-                oAssetMaster.sAssetName = txtAssetName.Text.Trim();
-                oAssetMaster.sAssetDescription = txtAssetDescription.Text.Trim();
-                oAssetMaster.sAssetShortDescription = txtAssetShortDescription.Text.Trim();
-                oAssetMaster.nCompanyID = Convert.ToInt64(cmbCompanyList.SelectedValue);
-                //oAssetMaster.nBarcodeID = Convert.ToInt64(txtAssetBarcode.Text.Trim());
-                oAssetMaster.nAssetMainTypeID = Convert.ToInt64(cmbAssetTypeName.SelectedValue);
-                oAssetMaster.sAssetSize = txtAssetSize.Text.Trim();
-                oAssetMaster.sAssetCapacity = txtAssetCapacity.Text.Trim();
-                oAssetMaster.sAssetDensity = txtAssetDensity.Text.Trim();
-                oAssetMaster.sAssetQuality = txtAssetQuality.Text.Trim();
-                oAssetMaster.nAssetMaterialID = Convert.ToInt64(cmbAssetmaterialType.SelectedValue);
-                oAssetMaster.sAssetMake = txtAssetMake.Text.Trim();
-                oAssetMaster.nAssetTypeID = Convert.ToInt64(cmbAssetType.SelectedValue);
-                oAssetMaster.nAssetTypeOneID = Convert.ToInt64(cmbAssetType1.SelectedValue);
-                oAssetMaster.sAssetWeight = txtAssetWeight.Text.Trim();
-                oAssetMaster.sAssetPackingDimention = txtAssetPackingDimention.Text.Trim();
-                oAssetMaster.sAssetShelfLife = txtAssetShelfLife.Text.Trim();
-                oAssetMaster.sAssetShelfLifeUnit = cmbAssetShelfLifeUnit.Text.Trim();
-                oAssetMaster.sAssetHSN_SACCode = txtAssetHSNOrSACCode.Text.Trim();
-                oAssetMaster.sAssetVendor = txtAssetVendor.Text.Trim();
-                oAssetMaster.sAssetReorderTime = txtAssetReorderTime.Text.Trim();
-                oAssetMaster.dtAssetDateOFIntroduction =Convert.ToDateTime(dtpIntroductionDate.Text.ToString());
-                oAssetMaster.dtAssetDateOfRetirement = Convert.ToDateTime(dtpRetirementDate.Text.ToString());
-                oAssetMaster.sAssetRate = txtAssetRate.Text.Trim();
-                oAssetMaster.sAssetRentalRate = txtAssetRentalRate.Text.Trim();
-                oAssetMaster.sAssetAbbrivation = GenerateAbbrivation(txtAssetName.Text.Trim());
-                oAssetMaster.sAssetCode = GenerateCode();
+                //oAssetMaster.nAssetID = 0;
+                //oAssetMaster.sAssetName = txtAssetName.Text.Trim();
+                //oAssetMaster.sAssetDescription = txtAssetDescription.Text.Trim();
+                //oAssetMaster.sAssetShortDescription = txtAssetShortDescription.Text.Trim();
+                //oAssetMaster.nCompanyID = Convert.ToInt64(cmbCompanyList.SelectedValue);
+                ////oAssetMaster.nBarcodeID = Convert.ToInt64(txtAssetBarcode.Text.Trim());
+                //oAssetMaster.nAssetMainTypeID = Convert.ToInt64(cmbAssetTypeName.SelectedValue);
+                //oAssetMaster.sAssetSize = txtAssetSize.Text.Trim();
+                //oAssetMaster.sAssetCapacity = txtAssetCapacity.Text.Trim();
+                //oAssetMaster.sAssetDensity = txtAssetDensity.Text.Trim();
+                //oAssetMaster.sAssetQuality = txtAssetQuality.Text.Trim();
+                //oAssetMaster.nAssetMaterialID = Convert.ToInt64(cmbAssetmaterialType.SelectedValue);
+                //oAssetMaster.sAssetMake = txtAssetMake.Text.Trim();
+                //oAssetMaster.nAssetTypeID = Convert.ToInt64(cmbAssetType.SelectedValue);
+                //oAssetMaster.nAssetTypeOneID = Convert.ToInt64(cmbAssetType1.SelectedValue);
+                //oAssetMaster.sAssetWeight = txtAssetWeight.Text.Trim();
+                //oAssetMaster.sAssetPackingDimention = txtAssetPackingDimention.Text.Trim();
+                //oAssetMaster.sAssetShelfLife = txtAssetShelfLife.Text.Trim();
+                //oAssetMaster.sAssetShelfLifeUnit = cmbAssetShelfLifeUnit.Text.Trim();
+                //oAssetMaster.sAssetHSN_SACCode = txtAssetHSNOrSACCode.Text.Trim();
+                //oAssetMaster.sAssetVendor = txtAssetVendor.Text.Trim();
+                //oAssetMaster.sAssetReorderTime = txtAssetReorderTime.Text.Trim();
+                //oAssetMaster.dtAssetDateOFIntroduction =Convert.ToDateTime(dtpIntroductionDate.Text.ToString());
+                //oAssetMaster.dtAssetDateOfRetirement = Convert.ToDateTime(dtpRetirementDate.Text.ToString());
+                //oAssetMaster.sAssetRate = txtAssetRate.Text.Trim();
+                //oAssetMaster.sAssetRentalRate = txtAssetRentalRate.Text.Trim();
+                //oAssetMaster.sAssetAbbrivation = GenerateAbbrivation(txtAssetName.Text.Trim());
+                //oAssetMaster.sAssetCode = GenerateCode();
 
-                nAssetID= oAssetMaster.InsertUpdateAsset();
+                //nAssetID= oAssetMaster.InsertUpdateAsset();
             }
             catch (Exception ex)
             {

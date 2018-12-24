@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace LGRentalMgntSystem
 {
-    class PartyMaster
+    class GafferMaster
     {
-        #region "Constructor & Distructor"
+         #region "Constructor & Distructor"
         private bool disposed = false;
-        public PartyMaster()
+        public GafferMaster()
         {
         }
 
@@ -34,18 +34,21 @@ namespace LGRentalMgntSystem
             disposed = true;
         }
 
-        ~PartyMaster()
+        ~GafferMaster()
         {
             Dispose(false);
         }
         #endregion
 
         #region "Properties"
-        public Int64 nPartyID { get; set; }
-        public Int64 nPartyTypeID { get; set; }
-        public string sPartyName { get; set; }
-        public string sPartyCode { get; set; }
-        public string sPartyAbbrivation { get; set; }
+        public Int64 nGafferID { get; set; }
+        public Int64 nGafferTypeID { get; set; }
+        public string sGafferName { get; set; }
+        public string sGafferCode { get; set; }
+        public string sGafferAbbrivation { get; set; }
+        public string sGafferGender { get; set; }
+        public DateTime dtGafferDOB { get; set; }
+        public string sGafferAge { get; set; }
         public string sAddressLine1 { get; set; }
         public string sAddressLine2 { get; set; }
         public string sCity { get; set; }
@@ -53,25 +56,16 @@ namespace LGRentalMgntSystem
         public string sCountry { get; set; }
         public string sPincode { get; set; }
         public string sEmail { get; set; }
-        public string sFax { get; set; }
         public string sAllPhoneNo { get; set; }
-
-        public string sBillToAddressLine1 { get; set; }
-        public string sBillToAddressLine2 { get; set; }
-        public string sBillToPincode { get; set; }
-
-        public string sShipToAddressLine1 { get; set; }
-        public string sShipToAddressLine2 { get; set; }
-        public string sShipToPincode { get; set; }
-        public string sGSTNo { get; set; }
-        public string sPANNo { get; set; }
-        public string sTANNo { get; set; }
+        public string sUserName { get; set; }
+        public string sPassword { get; set; }
+        public string sPin { get; set; }
         #endregion
 
         #region "Method"
-        public Int64 InsertUpdatePartyMaster()
+        public Int64 InsertUpdateGafferMaster()
         {
-            Int64 _nPartyID = 0;
+            Int64 _nGafferID = 0;
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
             Object objValue = null;
@@ -80,37 +74,31 @@ namespace LGRentalMgntSystem
                 oDBAccess = new DatabaseAccess();
                 oDBParameter = new DatabaseParameters();
                 oDBParameter.clear();
-                oDBParameter.Add("@nPartyID", this.nPartyID, ParameterDirection.InputOutput, SqlDbType.BigInt);
-                oDBParameter.Add("@sPartyCode", this.sPartyCode, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sPartyName", this.sPartyName, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sPartyAbbrivation", this.sPartyAbbrivation, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@nPartyTypeID", this.nPartyTypeID, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@nGafferID", this.nGafferID, ParameterDirection.InputOutput, SqlDbType.BigInt);
+                oDBParameter.Add("@sGafferCode", this.sGafferCode, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sGafferName", this.sGafferName, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sGafferAbbrivation", this.sGafferAbbrivation, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sGender", this.sGafferGender, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@dtDOB", this.dtGafferDOB, ParameterDirection.Input, SqlDbType.DateTime);
+                oDBParameter.Add("@sAge", this.sGafferAge, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAddressLine1", this.sAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAddressLine2", this.sAddressLine2, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sCity", this.sCity, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sState", this.sState, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sPincode", this.sCountry, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sCountry", this.sPincode, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sPincode", this.sPincode, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sCountry", this.sCountry, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sEmail", this.sEmail, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sFax", this.sFax, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAllPhoneNo", this.sAllPhoneNo, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sBillToAddressLine1", this.sBillToAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sBillToAddressLine2", this.sBillToAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sBillToPincode", this.sBillToAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sShipToAddressLine1", this.sShipToAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sShipToAddressLine2", this.sShipToAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sShipToPincode", this.sShipToPincode, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sGSTNO", this.sGSTNo, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sPANNO", this.sPANNo, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sTANNO", this.sTANNo, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sUserName", this.sUserName, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sPassword", this.sPassword, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sPin", this.sPin, ParameterDirection.Input, SqlDbType.VarChar);
 
-                
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Execute("lgsp_INUP_PartyMaster", oDBParameter, out objValue);
+                oDBAccess.Execute("lgsp_INUP_GafferMaster", oDBParameter, out objValue);
                 oDBAccess.CloseConnection(false);
                 if (objValue != null)
                 {
-                    _nPartyID = Convert.ToInt64(objValue);
+                    _nGafferID = Convert.ToInt64(objValue);
                 }
             }
             catch (Exception ex)
@@ -121,22 +109,22 @@ namespace LGRentalMgntSystem
             }
             finally
             {
-                if (oDBAccess!=null)
+                if (oDBAccess != null)
                 {
                     oDBAccess.Dispose();
                     oDBAccess = null;
                 }
-                if (oDBParameter!=null)
+                if (oDBParameter != null)
                 {
                     oDBParameter.Dispose();
                     oDBParameter = null;
                 }
             }
 
-            return _nPartyID;
+            return _nGafferID;
         }
 
-        public DataTable GetPartyInformation(Int64 nPartyID)
+        public DataTable GetGafferInformation(Int64 nGafferID)
         {
             DataSet ds = null;
             DatabaseAccess oDBAccess = null;
@@ -147,11 +135,11 @@ namespace LGRentalMgntSystem
                 oDBAccess = new DatabaseAccess();
                 oDBParameter = new DatabaseParameters();
                 oDBParameter.clear();
-                oDBParameter.Add("@nPartyID", nPartyID, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@nGafferID",nGafferID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Retrive("lgsp_Get_PartyDetails", oDBParameter, out _dt);
+                oDBAccess.Retrive("lgsp_Get_GafferDetails", oDBParameter, out _dt);
                 oDBAccess.CloseConnection(false);
-                
+
             }
             catch (Exception ex)
             {
@@ -175,7 +163,7 @@ namespace LGRentalMgntSystem
             return _dt;
         }
 
-        public DataTable GetPartylist(Int64 nPartyID)
+        public DataTable GetGafferlist(Int64 nGafferID)
         {
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
@@ -185,9 +173,9 @@ namespace LGRentalMgntSystem
                 oDBAccess = new DatabaseAccess();
                 oDBParameter = new DatabaseParameters();
                 oDBParameter.clear();
-                oDBParameter.Add("@nPartyID", nPartyID, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@nGafferID", nGafferID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Retrive("lgsp_Get_PartyListDetails", oDBParameter, out _dt);
+                oDBAccess.Retrive("lgsp_Get_GafferListDetails", oDBParameter, out _dt);
                 oDBAccess.CloseConnection(false);
 
             }

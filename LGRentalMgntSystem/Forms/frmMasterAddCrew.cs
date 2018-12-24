@@ -30,7 +30,7 @@ namespace LGRentalMgntSystem
             GetAndSetSequence();
             txtEmployeeName.Focus();
         }
-
+        public Int64 nSignatoryID { get; set; }
         private void GetAndSetSequence()
         {
             clsGeneral oclsGeneral = null;
@@ -91,6 +91,9 @@ namespace LGRentalMgntSystem
                     cmbEmpDesignation.DataSource = dtDesignation;
                     cmbEmpDesignation.DisplayMember = "sDesignationName";
                     cmbEmpDesignation.ValueMember = "nDesignationID";
+
+                    
+
                 }
             }
             catch (Exception ex)
@@ -219,9 +222,37 @@ namespace LGRentalMgntSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SaveCrewMember();
+            if (ValidateForm())
+            {
+                SaveCrewMember();
+            }
         }
-
+        public bool ValidateForm()
+        {
+            bool bIsValidForm = true;
+            if (txtEmployeeName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter employee name.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtEmployeeName.Focus();
+                return bIsValidForm;
+            }
+            if (cmbEmpDesignation.Text.Trim()=="")
+            {
+                 MessageBox.Show("Please select designation.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                cmbEmpDesignation.Focus();
+                return bIsValidForm;
+            }
+            if (cmbEmpCompany.Text.Trim() == "")
+            {
+                MessageBox.Show("Please select company.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                cmbEmpCompany.Focus();
+                return bIsValidForm;
+            }
+            return bIsValidForm;
+        }
         private void SaveCrewMember()
         {
             StaffMaster clsStaffMaster = null;
@@ -330,9 +361,22 @@ namespace LGRentalMgntSystem
         {
             try
             {
+                dtEmpBirthdate.EditValueChanged-=dtEmpBirthdate_EditValueChanged;
+                dtEmpBirthdate.EditValue = DateTime.Now;
+                dtEmpBirthdate.EditValueChanged += dtEmpBirthdate_EditValueChanged;
+
+                dtEmpDOJ.EditValue = DateTime.Now;
+                dtLic1RenewDate.EditValue = DateTime.Now;
+                dtLic2RenewDate.EditValue = DateTime.Now;
+                dtLic3RenewDate.EditValue = DateTime.Now;
+                dtUnionRenewDate.EditValue = DateTime.Now;
                 if (Convert.ToInt64(lblEmployeeID.Text) > 0)
                 {
                     FillCrewMemberDetails(Convert.ToInt64(lblEmployeeID.Text));
+                }
+                if (nSignatoryID != 0)
+                {
+                    cmbEmpDesignation.SelectedValue = nSignatoryID;
                 }
             }
             catch (Exception ex)

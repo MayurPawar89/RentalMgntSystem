@@ -1,6 +1,6 @@
 ﻿namespace LGRentalMgntSystem
 {
-    partial class frmMasterListParty
+    partial class frmMainKitList
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterListParty));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainKitList));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
@@ -41,17 +42,18 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gvPartyList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvKitList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcRowNo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPartyID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPartyCode = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPartyName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcsPartyType = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcCity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcState = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPhoneNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcKitID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcKitCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcKitName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAbbrivation = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcKitDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAssignStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcCurrentStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcIsUsed = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcShowAsset = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnShowAsset = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gcEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,7 +65,8 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPartyList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvKitList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowAsset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
@@ -77,14 +80,14 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 35);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(808, 62);
-            this.panelControl4.TabIndex = 65;
+            this.panelControl4.Size = new System.Drawing.Size(830, 62);
+            this.panelControl4.TabIndex = 68;
             // 
             // btnSearch
             // 
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSearch.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSearch.Location = new System.Drawing.Point(462, 28);
+            this.btnSearch.Location = new System.Drawing.Point(341, 28);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(110, 25);
             this.btnSearch.TabIndex = 3;
@@ -96,13 +99,13 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(14, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(389, 16);
+            this.labelControl2.Size = new System.Drawing.Size(279, 16);
             this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Search By : Party Code, Party Name, Party Type, State, City";
+            this.labelControl2.Text = "Search By : Kit Code, Kit Name, Abbrivation";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(185, 31);
+            this.txtSearch.Location = new System.Drawing.Point(64, 31);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Properties.MaxLength = 100;
             this.txtSearch.Size = new System.Drawing.Size(271, 20);
@@ -127,8 +130,8 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(808, 35);
-            this.panelControl1.TabIndex = 64;
+            this.panelControl1.Size = new System.Drawing.Size(830, 35);
+            this.panelControl1.TabIndex = 67;
             // 
             // pictureEdit1
             // 
@@ -148,51 +151,52 @@
             this.lblFormHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormHeader.Location = new System.Drawing.Point(36, 9);
             this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(73, 18);
+            this.lblFormHeader.Size = new System.Drawing.Size(53, 18);
             this.lblFormHeader.TabIndex = 3;
-            this.lblFormHeader.Text = "Party List";
+            this.lblFormHeader.Text = "Kit List";
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 97);
-            this.gridControl1.MainView = this.gvPartyList;
+            this.gridControl1.MainView = this.gvKitList;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEdit,
-            this.btnDelete});
-            this.gridControl1.Size = new System.Drawing.Size(808, 322);
-            this.gridControl1.TabIndex = 66;
+            this.btnDelete,
+            this.btnShowAsset});
+            this.gridControl1.Size = new System.Drawing.Size(830, 344);
+            this.gridControl1.TabIndex = 69;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPartyList});
+            this.gvKitList});
             // 
-            // gvPartyList
+            // gvKitList
             // 
-            this.gvPartyList.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
-            this.gvPartyList.Appearance.SelectedRow.Options.UseForeColor = true;
-            this.gvPartyList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvKitList.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Transparent;
+            this.gvKitList.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gvKitList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gcRowNo,
-            this.gcPartyID,
-            this.gcPartyCode,
-            this.gcPartyName,
-            this.gcsPartyType,
-            this.gcEmail,
-            this.gcCity,
-            this.gcState,
-            this.gcPhoneNo,
+            this.gcKitID,
+            this.gcKitCode,
+            this.gcKitName,
+            this.gcAbbrivation,
+            this.gcKitDescription,
+            this.gcAssignStatus,
+            this.gcCurrentStatus,
             this.gcIsUsed,
+            this.gcShowAsset,
             this.gcEdit,
             this.gdDelete});
-            this.gvPartyList.GridControl = this.gridControl1;
-            this.gvPartyList.Name = "gvPartyList";
-            this.gvPartyList.OptionsBehavior.Editable = false;
-            this.gvPartyList.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
-            this.gvPartyList.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
-            this.gvPartyList.OptionsView.EnableAppearanceEvenRow = true;
-            this.gvPartyList.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
-            this.gvPartyList.OptionsView.ShowGroupPanel = false;
-            this.gvPartyList.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvCompanyList_RowCellClick);
-            this.gvPartyList.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gvCompanyList_CustomRowCellEdit);
+            this.gvKitList.GridControl = this.gridControl1;
+            this.gvKitList.Name = "gvKitList";
+            this.gvKitList.OptionsBehavior.Editable = false;
+            this.gvKitList.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
+            this.gvKitList.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
+            this.gvKitList.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvKitList.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
+            this.gvKitList.OptionsView.ShowGroupPanel = false;
+            this.gvKitList.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvKitList_RowCellClick);
+            this.gvKitList.CustomRowCellEdit += new DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventHandler(this.gvKitList_CustomRowCellEdit);
             // 
             // gcRowNo
             // 
@@ -204,85 +208,75 @@
             this.gcRowNo.Visible = true;
             this.gcRowNo.VisibleIndex = 0;
             // 
-            // gcPartyID
+            // gcKitID
             // 
-            this.gcPartyID.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPartyID.AppearanceHeader.Options.UseFont = true;
-            this.gcPartyID.Caption = "gcPartyID";
-            this.gcPartyID.FieldName = "nPartyID";
-            this.gcPartyID.Name = "gcPartyID";
-            this.gcPartyID.Visible = true;
-            this.gcPartyID.VisibleIndex = 1;
+            this.gcKitID.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcKitID.AppearanceHeader.Options.UseFont = true;
+            this.gcKitID.Caption = "gcKitID";
+            this.gcKitID.FieldName = "nKitID";
+            this.gcKitID.Name = "gcKitID";
+            this.gcKitID.Visible = true;
+            this.gcKitID.VisibleIndex = 1;
             // 
-            // gcPartyCode
+            // gcKitCode
             // 
-            this.gcPartyCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPartyCode.AppearanceHeader.Options.UseFont = true;
-            this.gcPartyCode.Caption = "Party Code";
-            this.gcPartyCode.FieldName = "sPartyCode";
-            this.gcPartyCode.Name = "gcPartyCode";
-            this.gcPartyCode.Visible = true;
-            this.gcPartyCode.VisibleIndex = 2;
+            this.gcKitCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcKitCode.AppearanceHeader.Options.UseFont = true;
+            this.gcKitCode.Caption = "Kit Code";
+            this.gcKitCode.FieldName = "sKitCode";
+            this.gcKitCode.Name = "gcKitCode";
+            this.gcKitCode.Visible = true;
+            this.gcKitCode.VisibleIndex = 3;
             // 
-            // gcPartyName
+            // gcKitName
             // 
-            this.gcPartyName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPartyName.AppearanceHeader.Options.UseFont = true;
-            this.gcPartyName.Caption = "Party Name";
-            this.gcPartyName.FieldName = "sPartyName";
-            this.gcPartyName.Name = "gcPartyName";
-            this.gcPartyName.Visible = true;
-            this.gcPartyName.VisibleIndex = 4;
+            this.gcKitName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcKitName.AppearanceHeader.Options.UseFont = true;
+            this.gcKitName.Caption = "Kit Name";
+            this.gcKitName.FieldName = "sKitName";
+            this.gcKitName.Name = "gcKitName";
+            this.gcKitName.Visible = true;
+            this.gcKitName.VisibleIndex = 2;
             // 
-            // gcsPartyType
+            // gcAbbrivation
             // 
-            this.gcsPartyType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcsPartyType.AppearanceHeader.Options.UseFont = true;
-            this.gcsPartyType.Caption = "Party Type";
-            this.gcsPartyType.FieldName = "sPartyTypeName";
-            this.gcsPartyType.Name = "gcsPartyType";
-            this.gcsPartyType.Visible = true;
-            this.gcsPartyType.VisibleIndex = 3;
+            this.gcAbbrivation.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcAbbrivation.AppearanceHeader.Options.UseFont = true;
+            this.gcAbbrivation.Caption = "Abbrivation";
+            this.gcAbbrivation.FieldName = "sKitAbbrivation";
+            this.gcAbbrivation.Name = "gcAbbrivation";
+            this.gcAbbrivation.Visible = true;
+            this.gcAbbrivation.VisibleIndex = 4;
             // 
-            // gcEmail
+            // gcKitDescription
             // 
-            this.gcEmail.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcEmail.AppearanceHeader.Options.UseFont = true;
-            this.gcEmail.Caption = "Email";
-            this.gcEmail.FieldName = "sEmail";
-            this.gcEmail.Name = "gcEmail";
-            this.gcEmail.Visible = true;
-            this.gcEmail.VisibleIndex = 6;
+            this.gcKitDescription.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcKitDescription.AppearanceHeader.Options.UseFont = true;
+            this.gcKitDescription.Caption = "sKitDescription";
+            this.gcKitDescription.FieldName = "sKitDescription";
+            this.gcKitDescription.Name = "gcKitDescription";
+            this.gcKitDescription.Visible = true;
+            this.gcKitDescription.VisibleIndex = 5;
             // 
-            // gcCity
+            // gcAssignStatus
             // 
-            this.gcCity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcCity.AppearanceHeader.Options.UseFont = true;
-            this.gcCity.Caption = "City";
-            this.gcCity.FieldName = "sCity";
-            this.gcCity.Name = "gcCity";
-            this.gcCity.Visible = true;
-            this.gcCity.VisibleIndex = 7;
+            this.gcAssignStatus.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcAssignStatus.AppearanceHeader.Options.UseFont = true;
+            this.gcAssignStatus.Caption = "Assign Status";
+            this.gcAssignStatus.FieldName = "sAssignStatus";
+            this.gcAssignStatus.Name = "gcAssignStatus";
+            this.gcAssignStatus.Visible = true;
+            this.gcAssignStatus.VisibleIndex = 6;
             // 
-            // gcState
+            // gcCurrentStatus
             // 
-            this.gcState.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcState.AppearanceHeader.Options.UseFont = true;
-            this.gcState.Caption = "State";
-            this.gcState.FieldName = "sState";
-            this.gcState.Name = "gcState";
-            this.gcState.Visible = true;
-            this.gcState.VisibleIndex = 8;
-            // 
-            // gcPhoneNo
-            // 
-            this.gcPhoneNo.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gcPhoneNo.AppearanceHeader.Options.UseFont = true;
-            this.gcPhoneNo.Caption = "Phone No";
-            this.gcPhoneNo.FieldName = "sPhoneNo";
-            this.gcPhoneNo.Name = "gcPhoneNo";
-            this.gcPhoneNo.Visible = true;
-            this.gcPhoneNo.VisibleIndex = 5;
+            this.gcCurrentStatus.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcCurrentStatus.AppearanceHeader.Options.UseFont = true;
+            this.gcCurrentStatus.Caption = "Current Status";
+            this.gcCurrentStatus.FieldName = "sCurrentStatus";
+            this.gcCurrentStatus.Name = "gcCurrentStatus";
+            this.gcCurrentStatus.Visible = true;
+            this.gcCurrentStatus.VisibleIndex = 7;
             // 
             // gcIsUsed
             // 
@@ -292,8 +286,26 @@
             this.gcIsUsed.FieldName = "IsUsed";
             this.gcIsUsed.Name = "gcIsUsed";
             this.gcIsUsed.Visible = true;
-            this.gcIsUsed.VisibleIndex = 9;
+            this.gcIsUsed.VisibleIndex = 8;
             this.gcIsUsed.Width = 73;
+            // 
+            // gcShowAsset
+            // 
+            this.gcShowAsset.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcShowAsset.AppearanceHeader.Options.UseFont = true;
+            this.gcShowAsset.Caption = "Show Asset";
+            this.gcShowAsset.ColumnEdit = this.btnShowAsset;
+            this.gcShowAsset.Name = "gcShowAsset";
+            this.gcShowAsset.Visible = true;
+            this.gcShowAsset.VisibleIndex = 9;
+            // 
+            // btnShowAsset
+            // 
+            this.btnShowAsset.AutoHeight = false;
+            this.btnShowAsset.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnShowAsset.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.btnShowAsset.Name = "btnShowAsset";
+            this.btnShowAsset.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // gcEdit
             // 
@@ -310,7 +322,7 @@
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -329,22 +341,22 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // frmMasterListParty
+            // frmMainKitList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 419);
+            this.ClientSize = new System.Drawing.Size(830, 441);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl1);
             this.MinimizeBox = false;
-            this.Name = "frmMasterListParty";
+            this.Name = "frmMainKitList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmMasterListParty_Load);
+            this.Load += new System.EventHandler(this.frmMainKitList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
@@ -354,7 +366,8 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPartyList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvKitList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnShowAsset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
@@ -373,20 +386,21 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl lblFormHeader;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvPartyList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvKitList;
         private DevExpress.XtraGrid.Columns.GridColumn gcRowNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPartyID;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPartyCode;
-        private DevExpress.XtraGrid.Columns.GridColumn gcsPartyType;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPartyName;
-        private DevExpress.XtraGrid.Columns.GridColumn gcPhoneNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gcState;
+        private DevExpress.XtraGrid.Columns.GridColumn gcKitID;
+        private DevExpress.XtraGrid.Columns.GridColumn gcKitName;
+        private DevExpress.XtraGrid.Columns.GridColumn gcAbbrivation;
+        private DevExpress.XtraGrid.Columns.GridColumn gcKitCode;
+        private DevExpress.XtraGrid.Columns.GridColumn gcKitDescription;
+        private DevExpress.XtraGrid.Columns.GridColumn gcAssignStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn gcCurrentStatus;
         private DevExpress.XtraGrid.Columns.GridColumn gcIsUsed;
+        private DevExpress.XtraGrid.Columns.GridColumn gcShowAsset;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnShowAsset;
         private DevExpress.XtraGrid.Columns.GridColumn gcEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnEdit;
         private DevExpress.XtraGrid.Columns.GridColumn gdDelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
-        private DevExpress.XtraGrid.Columns.GridColumn gcEmail;
-        private DevExpress.XtraGrid.Columns.GridColumn gcCity;
     }
 }

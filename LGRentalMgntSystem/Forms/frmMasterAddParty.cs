@@ -295,9 +295,30 @@ namespace LGRentalMgntSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SavePartyMember();
+            if (ValidateForm())
+            {
+                SavePartyMember(); 
+            }
         }
-
+        public bool ValidateForm()
+        {
+            bool bIsValidForm = true;
+            if (txtPartyName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter party name.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtPartyName.Focus();
+                return bIsValidForm;
+            }
+            if (cmbPartyType.Text=="")
+            {
+                MessageBox.Show("Please select party type.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                cmbPartyType.Focus();
+                return bIsValidForm;
+            }
+            return bIsValidForm;
+        }
         private void SavePartyMember()
         {
             PartyMaster clsPartyMaster = null;

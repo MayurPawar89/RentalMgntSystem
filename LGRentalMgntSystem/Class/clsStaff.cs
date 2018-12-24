@@ -149,6 +149,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -187,6 +188,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -224,6 +226,7 @@ namespace LGRentalMgntSystem
             }
             catch (Exception ex)
             {
+                oDBAccess.CloseConnection(false);
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

@@ -1209,7 +1209,6 @@
             this.Name = "frmMasterAddCrew";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Crew Member";
             this.Load += new System.EventHandler(this.frmMasterAddCrew_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

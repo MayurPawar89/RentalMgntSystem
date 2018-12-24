@@ -887,6 +887,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanySignatory.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnAddCompanySignatory.Size = new System.Drawing.Size(22, 18);
             this.btnAddCompanySignatory.TabIndex = 88;
+            this.btnAddCompanySignatory.Click += new System.EventHandler(this.btnAddCompanySignatory_Click);
             // 
             // pnlMain
             // 
@@ -1454,7 +1455,6 @@
             this.Name = "frmMasterAddCompany";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Company Details";
             this.Load += new System.EventHandler(this.frmMasterAddCompany_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

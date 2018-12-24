@@ -33,6 +33,14 @@ namespace LGRentalMgntSystem
         Gaffer=4,
         Location=5
     }
+
+    public enum TransactionType
+    {
+        Asset=0,
+        Kit=1,
+        Challan=2,
+        JobCart=3
+    }
     public partial class frmDashboard : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmDashboard()
@@ -40,17 +48,35 @@ namespace LGRentalMgntSystem
             InitializeComponent();
         }
 
-        
-
-        private void ShowAsset()
-        {
-            //frmAsset frmAsset = new frmAsset();
-            //frmAsset.ShowDialog();
-        }
-
         private void btnAddAsset_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ShowAsset();
+            frmAddAsset frmAsset = new frmAddAsset();
+            frmAsset.ShowDialog();
+        }
+
+        private void btnAssetList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMainAssetList frmAssetList = new frmMainAssetList();
+            frmAssetList.ShowDialog();
+        }
+
+        private void btnExpiredAssetList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Work is Progrss...");
+        }
+
+        private void btnAddKit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmAddKit frmAddKit = new frmAddKit();
+            frmAddKit.ShowDialog();
+            //MessageBox.Show("Work is Progrss...");
+        }
+
+        private void btnKitList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmMainKitList frmMainKitList = new frmMainKitList();
+            frmMainKitList.ShowDialog();
+            //MessageBox.Show("Work is Progrss...");
         }
 
         #region "Type Master"
@@ -586,24 +612,32 @@ namespace LGRentalMgntSystem
 
         private void btnAddGafferMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterAddGaffer ofrmMasterAddGaffer = new frmMasterAddGaffer();
+            ofrmMasterAddGaffer.ShowDialog();
         }
 
         private void btnGafferMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterListGaffer frmGafferList = new frmMasterListGaffer();
+            frmGafferList.ShowDialog();
         }
 
         private void btnAddLocationMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterAddLocation ofrmMasterAddLocation = new frmMasterAddLocation();
+            ofrmMasterAddLocation.ShowDialog();
         }
 
         private void btnLocationMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmMasterListLocation ofrmMasterListLocation = new frmMasterListLocation();
+            ofrmMasterListLocation.ShowDialog();
         } 
         #endregion
+
+        
+
+        
         
 
         
