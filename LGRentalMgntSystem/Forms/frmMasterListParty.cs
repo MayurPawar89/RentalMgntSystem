@@ -71,7 +71,7 @@ namespace LGRentalMgntSystem
             {
                 if (e.Column.Caption == "Delete")
                 {
-                    int nVal = Convert.ToString(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvPartyListgvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+                    int nVal = Convert.ToString(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
 
                     bool val = Convert.ToBoolean(nVal);
                     if (val)
@@ -108,7 +108,8 @@ namespace LGRentalMgntSystem
                 if (e.Column.Caption == "Delete")
                 {
                     var row = gvPartyList.GetFocusedDataRow();
-                    
+                    int n = Convert.ToString(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvPartyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+
                     if (n == 1)
                     {
                         return;

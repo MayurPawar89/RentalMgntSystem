@@ -211,7 +211,7 @@ namespace LGRentalMgntSystem.Forms
                 //}
                 if (e.Column.Caption == "Delete")
                 {
-                    int nVal = Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+                    int nVal = Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
 
                     bool val = Convert.ToBoolean(nVal);
                     if (val)

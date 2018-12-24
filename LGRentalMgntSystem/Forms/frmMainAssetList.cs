@@ -77,7 +77,7 @@ namespace LGRentalMgntSystem
             {
                 if (e.Column.Caption == "Delete")
                 {
-                    int nVal = Convert.ToString(gvCompanyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvCompanyList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+                    int nVal = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
 
                     bool val = Convert.ToBoolean(nVal);
                     if (val)
