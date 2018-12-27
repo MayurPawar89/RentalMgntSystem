@@ -256,6 +256,12 @@ namespace LGRentalMgntSystem
 
         private void fillMasterData()
         {
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            txtWHCountry.Text = "India";
+            txtWHCity.Text = "Mumbai";
+            txtWHState.Text = "Maharashtra";
             clsGeneral oclsGeneral = null;
             try
             {
@@ -264,43 +270,48 @@ namespace LGRentalMgntSystem
                 if (dsCompanyMaster!=null && dsCompanyMaster.Tables.Count>0)
                 {
                     DataTable dtCompanyType = dsCompanyMaster.Tables[0];
-                    DataTable dtStateMaster = dsCompanyMaster.Tables[1];
-                    DataTable dtCityMaster = dsCompanyMaster.Tables[2];
-                    DataTable dtCountryMaster = dsCompanyMaster.Tables[3];
+                    //DataTable dtStateMaster = dsCompanyMaster.Tables[1];
+                    //DataTable dtCityMaster = dsCompanyMaster.Tables[2];
+                    //DataTable dtCountryMaster = dsCompanyMaster.Tables[3];
+
+                    DataRow drCompanyType = dtCompanyType.NewRow();
+                    drCompanyType["nCompanyTypeID"] = "0";
+                    drCompanyType["sCompanyTypeName"]="";
+                    dtCompanyType.Rows.InsertAt(drCompanyType, 0);
 
                     cmbCompanyType.DataSource = dtCompanyType;
                     cmbCompanyType.DisplayMember = "sCompanyTypeName";
                     cmbCompanyType.ValueMember = "nCompanyTypeID";
 
-                    cmbCompStateMaster.DataSource = dtStateMaster;
-                    cmbCompStateMaster.DisplayMember = "StateName";
-                    cmbCompStateMaster.ValueMember = "StateName";
-                    cmbCompStateMaster.Text = "Maharashtra";
+                    //cmbCompStateMaster.DataSource = dtStateMaster;
+                    //cmbCompStateMaster.DisplayMember = "StateName";
+                    //cmbCompStateMaster.ValueMember = "StateName";
+                    //cmbCompStateMaster.Text = "Maharashtra";
 
-                    cmbCompCityMaster.DataSource = dtCityMaster;
-                    cmbCompCityMaster.DisplayMember = "CityName";
-                    cmbCompCityMaster.ValueMember = "CityName";
-                    cmbCompCityMaster.Text = "Mumbai";
+                    //cmbCompCityMaster.DataSource = dtCityMaster;
+                    //cmbCompCityMaster.DisplayMember = "CityName";
+                    //cmbCompCityMaster.ValueMember = "CityName";
+                    //cmbCompCityMaster.Text = "Mumbai";
 
-                    cmbCompCountryMaster.DataSource = dtCountryMaster;
-                    cmbCompCountryMaster.DisplayMember = "sCountryName";
-                    cmbCompCountryMaster.ValueMember = "sCountryName";
-                    cmbCompCountryMaster.Text = "India";
+                    //cmbCompCountryMaster.DataSource = dtCountryMaster;
+                    //cmbCompCountryMaster.DisplayMember = "sCountryName";
+                    //cmbCompCountryMaster.ValueMember = "sCountryName";
+                    //cmbCompCountryMaster.Text = "India";
 
-                    cmbWHCState.DataSource = dtStateMaster.Copy();
-                    cmbWHCState.DisplayMember = "StateName";
-                    cmbWHCState.ValueMember = "StateName";
-                    cmbWHCState.Text = "Maharashtra";
+                    //cmbWHCState.DataSource = dtStateMaster.Copy();
+                    //cmbWHCState.DisplayMember = "StateName";
+                    //cmbWHCState.ValueMember = "StateName";
+                    //cmbWHCState.Text = "Maharashtra";
 
-                    cmbWHCity.DataSource = dtCityMaster.Copy();
-                    cmbWHCity.DisplayMember = "CityName";
-                    cmbWHCity.ValueMember = "CityName";
-                    cmbWHCity.Text = "Mumbai";
+                    //cmbWHCity.DataSource = dtCityMaster.Copy();
+                    //cmbWHCity.DisplayMember = "CityName";
+                    //cmbWHCity.ValueMember = "CityName";
+                    //cmbWHCity.Text = "Mumbai";
 
-                    cmbWHCountry.DataSource = dtCountryMaster.Copy();
-                    cmbWHCountry.DisplayMember = "sCountryName";
-                    cmbWHCountry.ValueMember = "sCountryName";
-                    cmbWHCountry.Text = "India";
+                    //cmbWHCountry.DataSource = dtCountryMaster.Copy();
+                    //cmbWHCountry.DisplayMember = "sCountryName";
+                    //cmbWHCountry.ValueMember = "sCountryName";
+                    //cmbWHCountry.Text = "India";
                 }
             }
             catch (Exception ex)
@@ -445,10 +456,14 @@ namespace LGRentalMgntSystem
             rdImageFormat.Checked = true;
             dtCompanyFormedOn.EditValue = DateTime.Now;
             txtDocumentDate.EditValue = DateTime.Now;
+            FillSignatoryInfo();
+            FillWarehouseSuperintendentInfo();
+
             if (Convert.ToInt64(lblCompanyID.Text)>0)
             {
                 FillCompanyDetails(Convert.ToInt64(lblCompanyID.Text));
             }
+            //clsGlobal.SetDateFormat(dtCompanyFormedOn);
         }
 
         private void FillCompanyDetails(Int64 nCompanyID)
@@ -484,9 +499,9 @@ namespace LGRentalMgntSystem
                         cmbCompanySignatory.SelectedValue = Convert.ToInt64(dtCompDetails.Rows[0]["nCompanySignatory"]);
                         txtAddressLine1.Text = Convert.ToString(dtCompDetails.Rows[0]["sAddressLine1"]);
                         txtAddressLine2.Text = Convert.ToString(dtCompDetails.Rows[0]["sAddressLine2"]);
-                        cmbCompCityMaster.Text = Convert.ToString(dtCompDetails.Rows[0]["sCity"]);
-                        cmbCompStateMaster.Text = Convert.ToString(dtCompDetails.Rows[0]["sState"]);
-                        cmbCompCountryMaster.Text = Convert.ToString(dtCompDetails.Rows[0]["sCountry"]);
+                        txtCity.Text = Convert.ToString(dtCompDetails.Rows[0]["sCity"]);
+                        txtState.Text = Convert.ToString(dtCompDetails.Rows[0]["sState"]);
+                        txtCountry.Text = Convert.ToString(dtCompDetails.Rows[0]["sCountry"]);
                         txtPincode.Text = Convert.ToString(dtCompDetails.Rows[0]["sPincode"]);
                         txtEmail.Text = Convert.ToString(dtCompDetails.Rows[0]["sEmail"]);
                         txtWebsiteURL.Text = Convert.ToString(dtCompDetails.Rows[0]["sWebsite"]);
@@ -519,11 +534,11 @@ namespace LGRentalMgntSystem
                     {
                         txtWHAddressLine1.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sWarehouseAddressLine1"]);
                         txtWHAddressLine2.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sWarehouseAddressLine2"]);
-                        cmbWHCity.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sCity"]);
-                        cmbWHCState.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sState"]);
-                        cmbWHCountry.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sCountry"]);
+                        txtWHCity.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sCity"]);
+                        txtWHState.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sState"]);
+                        txtWHCountry.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sCountry"]);
                         txtWHPincode.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sPincode"]);
-                        cmbWarehouseSupervisor.Text = Convert.ToString(dtCompWHDetails.Rows[0]["nSupervisorID"]);
+                        cmbWarehouseSupervisor.SelectedValue = Convert.ToInt64(dtCompWHDetails.Rows[0]["nSupervisorID"]);
 
                         string[] sWHPhoneAll = Convert.ToString(dtCompWHDetails.Rows[0]["sPhoneNo"]).Split(',');
                         if (sWHPhoneAll.Length > 0)
@@ -671,9 +686,9 @@ namespace LGRentalMgntSystem
                 clsCompanyMaster.nCompSignatoryID = Convert.ToInt64(cmbCompanySignatory.SelectedValue);
                 clsCompanyMaster.sCompAddressLine1 = Convert.ToString(txtAddressLine1.Text.Trim());
                 clsCompanyMaster.sCompAddressLine2 = Convert.ToString(txtAddressLine2.Text.Trim());
-                clsCompanyMaster.sCompCity = Convert.ToString(cmbCompCityMaster.Text.Trim());
-                clsCompanyMaster.sCompState = Convert.ToString(cmbCompStateMaster.Text.Trim());
-                clsCompanyMaster.sCompCountry = Convert.ToString(cmbCompCountryMaster.Text.Trim());
+                clsCompanyMaster.sCompCity = Convert.ToString(txtCity.Text.Trim());
+                clsCompanyMaster.sCompState = Convert.ToString(txtState.Text.Trim());
+                clsCompanyMaster.sCompCountry = Convert.ToString(txtCountry.Text.Trim());
                 clsCompanyMaster.sCompPincode = Convert.ToString(txtPincode.Text.Trim());
                 clsCompanyMaster.sCompEmail = Convert.ToString(txtEmail.Text.Trim());
                 clsCompanyMaster.sCompWebsite = Convert.ToString(txtWebsiteURL.Text.Trim());
@@ -692,9 +707,9 @@ namespace LGRentalMgntSystem
 
                 clsCompanyMaster.sWHAddressLine1 = Convert.ToString(txtWHAddressLine1.Text.Trim());
                 clsCompanyMaster.sWHAddressLine2 = Convert.ToString(txtWHAddressLine2.Text.Trim());
-                clsCompanyMaster.sWHCity = Convert.ToString(cmbWHCity.Text.Trim());
-                clsCompanyMaster.sWHState = Convert.ToString(cmbWHCState.Text.Trim());
-                clsCompanyMaster.sWHCountry = Convert.ToString(cmbWHCountry.Text.Trim());
+                clsCompanyMaster.sWHCity = Convert.ToString(txtCity.Text.Trim());
+                clsCompanyMaster.sWHState = Convert.ToString(txtState.Text.Trim());
+                clsCompanyMaster.sWHCountry = Convert.ToString(txtCountry.Text.Trim());
                 clsCompanyMaster.sWHPincode = Convert.ToString(txtWHPincode.Text.Trim());
                 clsCompanyMaster.nWHSupervisorID = Convert.ToInt64(cmbWarehouseSupervisor.SelectedValue);
                 clsCompanyMaster.sWHAllPhoneNo = sWHPhoneAll;
@@ -756,6 +771,7 @@ namespace LGRentalMgntSystem
                 if (nCompanyID!=0)
                 {
                     MessageBox.Show("Company is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
                 }
                 else
                 {
@@ -829,8 +845,163 @@ namespace LGRentalMgntSystem
 
         private void FillSignatoryInfo()
         {
+            CompanyMaster oCompanyMaster = null;
+            DataTable dt = null;
+            try
+            {
+                oCompanyMaster = new CompanyMaster();
+                dt = oCompanyMaster.GetListData("signatory");
+                if (dt!=null&& dt.Rows.Count>0)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["ID"] = 0;
+                    dr["Code"] = "";
+                    dt.Rows.InsertAt(dr, 0);
+
+                    cmbCompanySignatory.DataSource = dt;
+                    cmbCompanySignatory.DisplayMember = "Code";
+                    cmbCompanySignatory.ValueMember = "ID";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (oCompanyMaster!=null)
+                {
+                    oCompanyMaster.Dispose();
+                    oCompanyMaster = null;
+                }
+
+            }
         }
 
+        private void FillWarehouseSuperintendentInfo()
+        {
+            CompanyMaster oCompanyMaster = null;
+            DataTable dt = null;
+            try
+            {
+                oCompanyMaster = new CompanyMaster();
+                dt = oCompanyMaster.GetListData("Warehouse Superintendent");
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["ID"] = 0;
+                    dr["Code"] = "";
+                    dt.Rows.InsertAt(dr, 0);
+
+                    cmbWarehouseSupervisor.DataSource = dt;
+                    cmbWarehouseSupervisor.DisplayMember = "Code";
+                    cmbWarehouseSupervisor.ValueMember = "ID";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                if (oCompanyMaster != null)
+                {
+                    oCompanyMaster.Dispose();
+                    oCompanyMaster = null;
+                }
+
+            }
+        }
+
+        private void ClearForm()
+        {
+            GetAndSetSequence();
+            txtCompanyAbbrivation.Text = string.Empty;
+            txtCompanyName.Text = string.Empty;
+            cmbCompanyType.SelectedValue = 0;
+            cmbCompanySignatory.SelectedValue = 0;
+            txtAddressLine1.Text = string.Empty;
+            txtAddressLine2.Text = string.Empty;
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            txtCountry.Text = "India";
+            txtPincode.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtWebsiteURL.Text = string.Empty;
+            txtFaxNo.Text = string.Empty;
+            txtHSN_SAVCode.Text = string.Empty;
+            txtGSTNo.Text = string.Empty;
+            txtPANNo.Text = string.Empty;
+            dtCompanyFormedOn.EditValue = DateTime.Now;
+
+            txtPhone1.Text = string.Empty;
+            txtPhone2.Text = string.Empty;
+            txtPhone3.Text = string.Empty;
+            txtPhone4.Text = string.Empty;
+            txtPhone5.Text = string.Empty;
+
+            txtTransporterID.Text = string.Empty;
+            txtDocumentName.Text = string.Empty;
+            txtDocumentNumber.Text = string.Empty;
+            txtDocumentDate.EditValue = DateTime.Now;
+
+            txtWHAddressLine1.Text = string.Empty;
+            txtWHAddressLine2.Text = string.Empty;
+            txtWHCity.Text = "Mumbai";
+            txtWHState.Text = "Maharashtra";
+            txtWHCountry.Text = "India";
+            txtWHPincode.Text = string.Empty;
+            cmbWarehouseSupervisor.SelectedValue = 0;
+
+            txtWHPhone1.Text = string.Empty;
+            txtWHPhone2.Text = string.Empty;
+            txtWHPhone3.Text = string.Empty;
+            txtWHPhone4.Text = string.Empty;
+            txtWHPhone5.Text = string.Empty;
+
+            rdImageFormat.Checked = true;
+            if (picFooterImage != null)
+            {
+                picFooterImage.Image = null;
+            }
+            if (picHeaderImage != null)
+            {
+                picHeaderImage.Image = null;
+            }
+            if (picTermsCondition != null)
+            {
+                picTermsCondition.Image = null;
+            }
+            if (txtTermsCondition.Text!="")
+            {
+                txtTermsCondition.Text = "";
+            }
+        }
+
+        private void btnWHAddSupervisor_Click(object sender, EventArgs e)
+        {
+            clsMasters clsMaster = null;
+            try
+            {
+                clsMaster = new clsMasters();
+                Int64 nSignatoryID = 0;
+                DataTable dtMaster = clsMaster.GetMasterTypeDataBbValue(MasterType.Designation.GetHashCode(), "Warehouse Superintendent");
+                if (dtMaster != null && dtMaster.Rows.Count > 0)
+                {
+                    nSignatoryID = Convert.ToInt64(dtMaster.Rows[0]["TypeID"]);
+                }
+                frmMasterAddCrew frmMasterCrew = new frmMasterAddCrew();
+                frmMasterCrew.nSignatoryID = nSignatoryID;
+                frmMasterCrew.ShowDialog(this);
+
+                FillWarehouseSuperintendentInfo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
         
     }
 }

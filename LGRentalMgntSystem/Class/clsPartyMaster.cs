@@ -89,8 +89,8 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@sAddressLine2", this.sAddressLine2, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sCity", this.sCity, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sState", this.sState, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sPincode", this.sCountry, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@sCountry", this.sPincode, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sPincode", this.sPincode, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sCountry", this.sCountry, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sEmail", this.sEmail, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sFax", this.sFax, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAllPhoneNo", this.sAllPhoneNo, ParameterDirection.Input, SqlDbType.VarChar);

@@ -51,7 +51,7 @@ namespace LGRentalMgntSystem
         public Int64 nAssetVendorID { get; set; }
         public Int64 nDensityID { get; set; }
         public Int64 nColorID { get; set; }
-        public Int64 nHSNCodeID { get; set; }
+        public string sHSNCode { get; set; }
         public string sAssetName { get; set; }
         public string sAssetCode { get; set; }
         public string sAssetAbbrivation { get; set; }
@@ -100,7 +100,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@nAssetVendorID", this.nAssetVendorID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@nDensityID", this.nDensityID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@nColorID", this.nColorID, ParameterDirection.Input, SqlDbType.BigInt);
-                oDBParameter.Add("@nHSNCodeID", this.nHSNCodeID, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@sHSNCode", this.sHSNCode, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAssetName", this.sAssetName, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sAssetAbbrivation", this.sAssetAbbrivation, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sDescription", this.sAssetDescription, ParameterDirection.Input, SqlDbType.VarChar);

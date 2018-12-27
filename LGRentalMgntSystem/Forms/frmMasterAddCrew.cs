@@ -56,6 +56,9 @@ namespace LGRentalMgntSystem
 
         private void fillMasterData()
         {
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
             clsGeneral oclsGeneral = null;
             try
             {
@@ -64,29 +67,39 @@ namespace LGRentalMgntSystem
                 if (dsCrew != null && dsCrew.Tables.Count > 0)
                 {
                     DataTable dtCompanyType = dsCrew.Tables[0];
-                    DataTable dtStateMaster = dsCrew.Tables[1];
-                    DataTable dtCityMaster = dsCrew.Tables[2];
-                    DataTable dtCountryMaster = dsCrew.Tables[3];
+                    //DataTable dtStateMaster = dsCrew.Tables[1];
+                    //DataTable dtCityMaster = dsCrew.Tables[2];
+                    //DataTable dtCountryMaster = dsCrew.Tables[3];
                     DataTable dtDesignation = dsCrew.Tables[4];
+
+                    DataRow drComp = dtCompanyType.NewRow();
+                    drComp["nCompanyID"] = 0;
+                    drComp["sCompanyName"] = "";
+                    dtCompanyType.Rows.InsertAt(drComp, 0);
+
+                    DataRow drDesg = dtDesignation.NewRow();
+                    drDesg["nDesignationID"] = 0;
+                    drDesg["sDesignationName"] = "";
+                    dtDesignation.Rows.InsertAt(drDesg, 0);
 
                     cmbEmpCompany.DataSource = dtCompanyType;
                     cmbEmpCompany.DisplayMember = "sCompanyName";
                     cmbEmpCompany.ValueMember = "nCompanyID";
 
-                    cmbStateMaster.DataSource = dtStateMaster;
-                    cmbStateMaster.DisplayMember = "StateName";
-                    cmbStateMaster.ValueMember = "StateName";
-                    cmbStateMaster.Text = "Maharashtra";
+                    //cmbStateMaster.DataSource = dtStateMaster;
+                    //cmbStateMaster.DisplayMember = "StateName";
+                    //cmbStateMaster.ValueMember = "StateName";
+                    //cmbStateMaster.Text = "Maharashtra";
 
-                    cmbCityMaster.DataSource = dtCityMaster;
-                    cmbCityMaster.DisplayMember = "CityName";
-                    cmbCityMaster.ValueMember = "CityName";
-                    cmbCityMaster.Text = "Mumbai";
+                    //cmbCityMaster.DataSource = dtCityMaster;
+                    //cmbCityMaster.DisplayMember = "CityName";
+                    //cmbCityMaster.ValueMember = "CityName";
+                    //cmbCityMaster.Text = "Mumbai";
 
-                    cmbCountryMaster.DataSource = dtCountryMaster;
-                    cmbCountryMaster.DisplayMember = "sCountryName";
-                    cmbCountryMaster.ValueMember = "sCountryName";
-                    cmbCountryMaster.Text = "India";
+                    //cmbCountryMaster.DataSource = dtCountryMaster;
+                    //cmbCountryMaster.DisplayMember = "sCountryName";
+                    //cmbCountryMaster.ValueMember = "sCountryName";
+                    //cmbCountryMaster.Text = "India";
 
                     cmbEmpDesignation.DataSource = dtDesignation;
                     cmbEmpDesignation.DisplayMember = "sDesignationName";
@@ -314,9 +327,9 @@ namespace LGRentalMgntSystem
                 clsStaffMaster.sPermanentDistTown = Convert.ToString(txtDistrictTownVillage.Text.Trim());
                 clsStaffMaster.sAddressLine1 = Convert.ToString(txtAddressLine1.Text.Trim());
                 clsStaffMaster.sAddressLine2 = Convert.ToString(txtAddressLine2.Text.Trim());
-                clsStaffMaster.sCity = Convert.ToString(cmbCityMaster.Text.Trim());
-                clsStaffMaster.sState = Convert.ToString(cmbStateMaster.Text.Trim());
-                clsStaffMaster.sCountry = Convert.ToString(cmbCountryMaster.Text.Trim());
+                clsStaffMaster.sCity = Convert.ToString(txtCity.Text.Trim());
+                clsStaffMaster.sState = Convert.ToString(txtState.Text.Trim());
+                clsStaffMaster.sCountry = Convert.ToString(txtCountry.Text.Trim());
                 clsStaffMaster.sPincode = Convert.ToString(txtPincode.Text.Trim());
                 clsStaffMaster.sEmail = Convert.ToString(txtEmail.Text.Trim());
                 clsStaffMaster.dtDOJ = Convert.ToDateTime(dtEmpBirthdate.Text.ToString());
@@ -344,6 +357,7 @@ namespace LGRentalMgntSystem
                 if (nCrewMemberID != 0)
                 {
                     MessageBox.Show("Crew member is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
                 }
                 else
                 {
@@ -408,9 +422,9 @@ namespace LGRentalMgntSystem
                     txtEmpAge.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAge"]);
                     txtAddressLine1.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAddressLine1"]);
                     txtAddressLine2.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAddressLine2"]);
-                    cmbCityMaster.Text = Convert.ToString(dtStaffDetails.Rows[0]["sCity"]);
-                    cmbStateMaster.Text = Convert.ToString(dtStaffDetails.Rows[0]["sState"]);
-                    cmbCountryMaster.Text = Convert.ToString(dtStaffDetails.Rows[0]["sCountry"]);
+                    txtCity.Text = Convert.ToString(dtStaffDetails.Rows[0]["sCity"]);
+                    txtState.Text = Convert.ToString(dtStaffDetails.Rows[0]["sState"]);
+                    txtCountry.Text = Convert.ToString(dtStaffDetails.Rows[0]["sCountry"]);
                     txtPincode.Text = Convert.ToString(dtStaffDetails.Rows[0]["sPincode"]);
                     txtEmail.Text = Convert.ToString(dtStaffDetails.Rows[0]["sEmail"]);
                     txtPermanentAddressLine1.Text = Convert.ToString(dtStaffDetails.Rows[0]["sPermanentAddressLine1"]);
@@ -491,6 +505,57 @@ namespace LGRentalMgntSystem
             {
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+        }
+
+        public void ClearForm()
+        {
+            txtEmployeeName.Text = string.Empty;
+            cmbEmpDesignation.SelectedValue = 0;
+            cmbEmpCompany.SelectedValue = 0;
+            txtEmpAbbrivation.Text = string.Empty;
+            cmbGender.SelectedValue = "";
+            dtEmpBirthdate.EditValue = DateTime.Now;
+            txtEmpAge.Text = string.Empty;
+            txtAddressLine1.Text = string.Empty;
+            txtAddressLine2.Text = string.Empty;
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            txtPincode.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtPermanentAddressLine1.Text = string.Empty;
+            txtPermanentAddressLine2.Text = string.Empty;
+            txtPermanentPincode.Text = string.Empty;
+            txtDistrictTownVillage.Text = string.Empty;
+            dtEmpDOJ.EditValue = DateTime.Now;
+            txtGSTNNo.Text = string.Empty;
+            txtPANNo.Text = string.Empty;
+            txtAadharNo.Text = string.Empty;
+            txtReferenceBy.Text = string.Empty;
+            txtAllergies.Text = string.Empty;
+            cmbBloodGroup.Text = string.Empty;
+            txtWorkedSince.Text = string.Empty;
+            txtDailyWages.Text = string.Empty;
+            txtSalary.Text = string.Empty;
+            txtUnionID.Text = string.Empty;
+            dtUnionRenewDate.EditValue = DateTime.Now;
+            txtlic1No.Text = string.Empty;
+            dtLic1RenewDate.EditValue = DateTime.Now;
+            txtLic2No.Text = string.Empty;
+            dtLic2RenewDate.EditValue = DateTime.Now;
+            txtLic3No.Text = string.Empty;
+            dtLic3RenewDate.EditValue = DateTime.Now;
+
+            txtPhone1.Text = string.Empty;
+            txtPhone2.Text = string.Empty;
+            txtPhone3.Text = string.Empty;
+            txtPhone4.Text = string.Empty;
+            txtPhone5.Text = string.Empty;
+            GetAndSetSequence();
+            if (picEmployeemage != null)
+            {
+                picEmployeemage.Image = null;
             }
         }
     }

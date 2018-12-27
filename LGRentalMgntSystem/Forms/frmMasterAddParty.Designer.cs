@@ -40,7 +40,6 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtFaxNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtEmailID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.txtShipToAddressLine2 = new DevExpress.XtraEditors.MemoEdit();
@@ -79,11 +78,8 @@
             this.txtBillToAddressLine1 = new DevExpress.XtraEditors.MemoEdit();
             this.txtAddressLine2 = new DevExpress.XtraEditors.MemoEdit();
             this.cmbCityMaster = new System.Windows.Forms.ComboBox();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.cmbStateMaster = new System.Windows.Forms.ComboBox();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.cmbCountryMaster = new System.Windows.Forms.ComboBox();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtPincode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
@@ -97,13 +93,19 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPartyCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.txtState = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmailID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToAddressLine2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToPincode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToAddressLine1.Properties)).BeginInit();
@@ -131,6 +133,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyAbbrivation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -170,11 +176,17 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.txtCity);
+            this.panel1.Controls.Add(this.labelControl14);
+            this.panel1.Controls.Add(this.txtCountry);
+            this.panel1.Controls.Add(this.labelControl15);
+            this.panel1.Controls.Add(this.txtState);
+            this.panel1.Controls.Add(this.labelControl19);
             this.panel1.Controls.Add(this.lblPartyID);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.txtFaxNo);
             this.panel1.Controls.Add(this.labelControl6);
-            this.panel1.Controls.Add(this.txtEmailID);
             this.panel1.Controls.Add(this.labelControl13);
             this.panel1.Controls.Add(this.labelControl10);
             this.panel1.Controls.Add(this.txtShipToAddressLine2);
@@ -197,11 +209,8 @@
             this.panel1.Controls.Add(this.txtBillToAddressLine1);
             this.panel1.Controls.Add(this.txtAddressLine2);
             this.panel1.Controls.Add(this.cmbCityMaster);
-            this.panel1.Controls.Add(this.labelControl18);
             this.panel1.Controls.Add(this.cmbStateMaster);
-            this.panel1.Controls.Add(this.labelControl17);
             this.panel1.Controls.Add(this.cmbCountryMaster);
-            this.panel1.Controls.Add(this.labelControl16);
             this.panel1.Controls.Add(this.txtPincode);
             this.panel1.Controls.Add(this.labelControl26);
             this.panel1.Controls.Add(this.labelControl27);
@@ -264,13 +273,6 @@
             this.labelControl6.Size = new System.Drawing.Size(48, 13);
             this.labelControl6.TabIndex = 169;
             this.labelControl6.Text = "Fax No. : ";
-            // 
-            // txtEmailID
-            // 
-            this.txtEmailID.Location = new System.Drawing.Point(98, 252);
-            this.txtEmailID.Name = "txtEmailID";
-            this.txtEmailID.Size = new System.Drawing.Size(200, 20);
-            this.txtEmailID.TabIndex = 168;
             // 
             // labelControl13
             // 
@@ -632,67 +634,46 @@
             this.cmbCityMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbCityMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCityMaster.FormattingEnabled = true;
-            this.cmbCityMaster.Location = new System.Drawing.Point(97, 156);
+            this.cmbCityMaster.Location = new System.Drawing.Point(623, 324);
             this.cmbCityMaster.Name = "cmbCityMaster";
             this.cmbCityMaster.Size = new System.Drawing.Size(201, 21);
             this.cmbCityMaster.TabIndex = 141;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(66, 159);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(29, 13);
-            this.labelControl18.TabIndex = 140;
-            this.labelControl18.Text = "City : ";
+            this.cmbCityMaster.Visible = false;
             // 
             // cmbStateMaster
             // 
             this.cmbStateMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbStateMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbStateMaster.FormattingEnabled = true;
-            this.cmbStateMaster.Location = new System.Drawing.Point(97, 180);
+            this.cmbStateMaster.Location = new System.Drawing.Point(623, 348);
             this.cmbStateMaster.Name = "cmbStateMaster";
             this.cmbStateMaster.Size = new System.Drawing.Size(201, 21);
             this.cmbStateMaster.TabIndex = 139;
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Location = new System.Drawing.Point(59, 183);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(36, 13);
-            this.labelControl17.TabIndex = 138;
-            this.labelControl17.Text = "State : ";
+            this.cmbStateMaster.Visible = false;
             // 
             // cmbCountryMaster
             // 
             this.cmbCountryMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbCountryMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCountryMaster.FormattingEnabled = true;
-            this.cmbCountryMaster.Location = new System.Drawing.Point(97, 227);
+            this.cmbCountryMaster.Location = new System.Drawing.Point(623, 373);
             this.cmbCountryMaster.Name = "cmbCountryMaster";
             this.cmbCountryMaster.Size = new System.Drawing.Size(201, 21);
             this.cmbCountryMaster.TabIndex = 137;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(46, 230);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(49, 13);
-            this.labelControl16.TabIndex = 136;
-            this.labelControl16.Text = "Country : ";
+            this.cmbCountryMaster.Visible = false;
             // 
             // txtPincode
             // 
-            this.txtPincode.Location = new System.Drawing.Point(98, 204);
+            this.txtPincode.Location = new System.Drawing.Point(98, 227);
             this.txtPincode.Name = "txtPincode";
-            this.txtPincode.Properties.Mask.EditMask = "\\d{1,6}";
+            this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(200, 20);
             this.txtPincode.TabIndex = 135;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(48, 207);
+            this.labelControl26.Location = new System.Drawing.Point(48, 230);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(47, 13);
             this.labelControl26.TabIndex = 134;
@@ -787,6 +768,65 @@
             this.labelControl2.TabIndex = 121;
             this.labelControl2.Text = "Party Code : ";
             // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(98, 202);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.MaxLength = 20;
+            this.txtCity.Size = new System.Drawing.Size(198, 20);
+            this.txtCity.TabIndex = 178;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(62, 202);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(29, 13);
+            this.labelControl14.TabIndex = 177;
+            this.labelControl14.Text = "City : ";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(99, 156);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.MaxLength = 20;
+            this.txtCountry.Size = new System.Drawing.Size(198, 20);
+            this.txtCountry.TabIndex = 176;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(43, 159);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(49, 13);
+            this.labelControl15.TabIndex = 175;
+            this.labelControl15.Text = "Country : ";
+            // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(98, 179);
+            this.txtState.Name = "txtState";
+            this.txtState.Properties.MaxLength = 20;
+            this.txtState.Size = new System.Drawing.Size(198, 20);
+            this.txtState.TabIndex = 174;
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(55, 181);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(36, 13);
+            this.labelControl19.TabIndex = 173;
+            this.labelControl19.Text = "State : ";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(100, 252);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.txtEmail.Properties.Mask.EditMask = "[a-zA-Z0-9.-]+@[a-zA-Z0-9-]+\\.[A-Za-z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtEmail.Properties.MaxLength = 50;
+            this.txtEmail.Size = new System.Drawing.Size(194, 20);
+            this.txtEmail.TabIndex = 179;
+            // 
             // frmMasterAddParty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,7 +846,6 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmailID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToAddressLine2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToPincode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToAddressLine1.Properties)).EndInit();
@@ -839,6 +878,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyAbbrivation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -865,11 +908,8 @@
         private DevExpress.XtraEditors.MemoEdit txtBillToAddressLine1;
         private DevExpress.XtraEditors.MemoEdit txtAddressLine2;
         private System.Windows.Forms.ComboBox cmbCityMaster;
-        private DevExpress.XtraEditors.LabelControl labelControl18;
         private System.Windows.Forms.ComboBox cmbStateMaster;
-        private DevExpress.XtraEditors.LabelControl labelControl17;
         private System.Windows.Forms.ComboBox cmbCountryMaster;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.TextEdit txtPincode;
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private DevExpress.XtraEditors.LabelControl labelControl27;
@@ -877,7 +917,6 @@
         private DevExpress.XtraEditors.MemoEdit txtAddressLine1;
         private DevExpress.XtraEditors.TextEdit txtFaxNo;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit txtEmailID;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.MemoEdit txtShipToAddressLine2;
@@ -912,5 +951,12 @@
         private DevExpress.XtraEditors.LabelControl lblPartyID;
         private DevExpress.XtraEditors.TextEdit txtGSTNo;
         private DevExpress.XtraEditors.TextEdit txtPartyName;
+        private DevExpress.XtraEditors.TextEdit txtCity;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.TextEdit txtCountry;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.TextEdit txtState;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
     }
 }

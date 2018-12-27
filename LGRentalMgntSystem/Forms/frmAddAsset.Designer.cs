@@ -56,6 +56,7 @@
             this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSelectedRow = new DevExpress.XtraEditors.LabelControl();
             this.lblInitialCode = new DevExpress.XtraEditors.LabelControl();
             this.lblAssetCodeID = new DevExpress.XtraEditors.LabelControl();
             this.picBarcodeImage = new DevExpress.XtraEditors.PictureEdit();
@@ -78,7 +79,6 @@
             this.dtReorderTime = new DevExpress.XtraEditors.DateEdit();
             this.cmbPartyVendor = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbHSNCode = new System.Windows.Forms.ComboBox();
             this.txtPower = new DevExpress.XtraEditors.TextEdit();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
             this.txtPlug = new DevExpress.XtraEditors.TextEdit();
@@ -137,7 +137,7 @@
             this.txtAssetDescription = new DevExpress.XtraEditors.MemoEdit();
             this.pnlSave = new System.Windows.Forms.Panel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.lblSelectedRow = new DevExpress.XtraEditors.LabelControl();
+            this.txtHSNCode = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -184,6 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAssetAbbrivation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssetDescription.Properties)).BeginInit();
             this.pnlSave.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHSNCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -261,7 +262,7 @@
             this.btnEdit,
             this.btnDelete});
             this.gridControl1.Size = new System.Drawing.Size(1204, 219);
-            this.gridControl1.TabIndex = 67;
+            this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvAssetList});
             // 
@@ -429,6 +430,15 @@
             this.panel2.Size = new System.Drawing.Size(1204, 70);
             this.panel2.TabIndex = 193;
             // 
+            // lblSelectedRow
+            // 
+            this.lblSelectedRow.Location = new System.Drawing.Point(889, 42);
+            this.lblSelectedRow.Name = "lblSelectedRow";
+            this.lblSelectedRow.Size = new System.Drawing.Size(6, 13);
+            this.lblSelectedRow.TabIndex = 201;
+            this.lblSelectedRow.Text = "0";
+            this.lblSelectedRow.Visible = false;
+            // 
             // lblInitialCode
             // 
             this.lblInitialCode.Location = new System.Drawing.Point(860, 42);
@@ -453,7 +463,7 @@
             this.picBarcodeImage.Name = "picBarcodeImage";
             this.picBarcodeImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picBarcodeImage.Size = new System.Drawing.Size(189, 57);
-            this.picBarcodeImage.TabIndex = 198;
+            this.picBarcodeImage.TabIndex = 0;
             // 
             // lblAssetID
             // 
@@ -498,7 +508,7 @@
             this.btnAddBarcodeDetails.Location = new System.Drawing.Point(613, 28);
             this.btnAddBarcodeDetails.Name = "btnAddBarcodeDetails";
             this.btnAddBarcodeDetails.Size = new System.Drawing.Size(133, 22);
-            this.btnAddBarcodeDetails.TabIndex = 193;
+            this.btnAddBarcodeDetails.TabIndex = 4;
             this.btnAddBarcodeDetails.Text = "Add";
             this.btnAddBarcodeDetails.Click += new System.EventHandler(this.btnAddBarcodeDetails_Click);
             // 
@@ -507,7 +517,7 @@
             this.txtShelfLifeUnit.Location = new System.Drawing.Point(613, 5);
             this.txtShelfLifeUnit.Name = "txtShelfLifeUnit";
             this.txtShelfLifeUnit.Size = new System.Drawing.Size(133, 20);
-            this.txtShelfLifeUnit.TabIndex = 192;
+            this.txtShelfLifeUnit.TabIndex = 3;
             // 
             // labelControl1
             // 
@@ -546,7 +556,7 @@
             this.dtRetirementDate.Properties.ShowPopupShadow = false;
             this.dtRetirementDate.Properties.ShowToday = false;
             this.dtRetirementDate.Size = new System.Drawing.Size(146, 22);
-            this.dtRetirementDate.TabIndex = 144;
+            this.dtRetirementDate.TabIndex = 2;
             // 
             // dtShelfLife
             // 
@@ -561,7 +571,7 @@
             this.dtShelfLife.Properties.ShowPopupShadow = false;
             this.dtShelfLife.Properties.ShowToday = false;
             this.dtShelfLife.Size = new System.Drawing.Size(146, 22);
-            this.dtShelfLife.TabIndex = 142;
+            this.dtShelfLife.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -573,13 +583,13 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.txtHSNCode);
             this.groupControl2.Controls.Add(this.btnUpdateAsset);
             this.groupControl2.Controls.Add(this.txtReorderDays);
             this.groupControl2.Controls.Add(this.labelControl7);
             this.groupControl2.Controls.Add(this.dtReorderTime);
             this.groupControl2.Controls.Add(this.cmbPartyVendor);
             this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Controls.Add(this.cmbHSNCode);
             this.groupControl2.Controls.Add(this.txtPower);
             this.groupControl2.Controls.Add(this.labelControl40);
             this.groupControl2.Controls.Add(this.txtPlug);
@@ -661,7 +671,7 @@
             this.txtReorderDays.Name = "txtReorderDays";
             this.txtReorderDays.Properties.ReadOnly = true;
             this.txtReorderDays.Size = new System.Drawing.Size(146, 20);
-            this.txtReorderDays.TabIndex = 195;
+            this.txtReorderDays.TabIndex = 7;
             // 
             // labelControl7
             // 
@@ -685,7 +695,7 @@
             this.dtReorderTime.Properties.ShowPopupShadow = false;
             this.dtReorderTime.Properties.ShowToday = false;
             this.dtReorderTime.Size = new System.Drawing.Size(146, 22);
-            this.dtReorderTime.TabIndex = 193;
+            this.dtReorderTime.TabIndex = 5;
             this.dtReorderTime.EditValueChanged += new System.EventHandler(this.dtReorderTime_EditValueChanged);
             // 
             // cmbPartyVendor
@@ -694,7 +704,7 @@
             this.cmbPartyVendor.Location = new System.Drawing.Point(84, 153);
             this.cmbPartyVendor.Name = "cmbPartyVendor";
             this.cmbPartyVendor.Size = new System.Drawing.Size(146, 21);
-            this.cmbPartyVendor.TabIndex = 192;
+            this.cmbPartyVendor.TabIndex = 3;
             // 
             // labelControl5
             // 
@@ -704,20 +714,12 @@
             this.labelControl5.TabIndex = 191;
             this.labelControl5.Text = "Vendor : ";
             // 
-            // cmbHSNCode
-            // 
-            this.cmbHSNCode.FormattingEnabled = true;
-            this.cmbHSNCode.Location = new System.Drawing.Point(343, 127);
-            this.cmbHSNCode.Name = "cmbHSNCode";
-            this.cmbHSNCode.Size = new System.Drawing.Size(146, 21);
-            this.cmbHSNCode.TabIndex = 190;
-            // 
             // txtPower
             // 
             this.txtPower.Location = new System.Drawing.Point(1118, 128);
             this.txtPower.Name = "txtPower";
             this.txtPower.Size = new System.Drawing.Size(75, 20);
-            this.txtPower.TabIndex = 189;
+            this.txtPower.TabIndex = 28;
             // 
             // labelControl40
             // 
@@ -732,7 +734,7 @@
             this.txtPlug.Location = new System.Drawing.Point(1118, 102);
             this.txtPlug.Name = "txtPlug";
             this.txtPlug.Size = new System.Drawing.Size(75, 20);
-            this.txtPlug.TabIndex = 187;
+            this.txtPlug.TabIndex = 27;
             // 
             // labelControl41
             // 
@@ -747,7 +749,7 @@
             this.txtAmps.Location = new System.Drawing.Point(988, 155);
             this.txtAmps.Name = "txtAmps";
             this.txtAmps.Size = new System.Drawing.Size(75, 20);
-            this.txtAmps.TabIndex = 185;
+            this.txtAmps.TabIndex = 26;
             // 
             // labelControl42
             // 
@@ -762,7 +764,7 @@
             this.txtCore.Location = new System.Drawing.Point(988, 128);
             this.txtCore.Name = "txtCore";
             this.txtCore.Size = new System.Drawing.Size(75, 20);
-            this.txtCore.TabIndex = 183;
+            this.txtCore.TabIndex = 25;
             // 
             // labelControl43
             // 
@@ -777,7 +779,7 @@
             this.txtLength.Location = new System.Drawing.Point(988, 102);
             this.txtLength.Name = "txtLength";
             this.txtLength.Size = new System.Drawing.Size(75, 20);
-            this.txtLength.TabIndex = 181;
+            this.txtLength.TabIndex = 24;
             // 
             // labelControl44
             // 
@@ -792,7 +794,7 @@
             this.txtAttachment.Location = new System.Drawing.Point(1040, 21);
             this.txtAttachment.Name = "txtAttachment";
             this.txtAttachment.Size = new System.Drawing.Size(153, 48);
-            this.txtAttachment.TabIndex = 179;
+            this.txtAttachment.TabIndex = 22;
             // 
             // cmbDensity
             // 
@@ -802,7 +804,7 @@
             this.cmbDensity.Location = new System.Drawing.Point(578, 153);
             this.cmbDensity.Name = "cmbDensity";
             this.cmbDensity.Size = new System.Drawing.Size(118, 21);
-            this.cmbDensity.TabIndex = 178;
+            this.cmbDensity.TabIndex = 15;
             this.cmbDensity.SelectedIndexChanged += new System.EventHandler(this.cmbDensity_SelectedIndexChanged);
             this.cmbDensity.Leave += new System.EventHandler(this.cmbDensity_Leave);
             // 
@@ -819,7 +821,7 @@
             this.txtAttachmentName.Location = new System.Drawing.Point(1040, 75);
             this.txtAttachmentName.Name = "txtAttachmentName";
             this.txtAttachmentName.Size = new System.Drawing.Size(153, 20);
-            this.txtAttachmentName.TabIndex = 176;
+            this.txtAttachmentName.TabIndex = 23;
             // 
             // labelControl37
             // 
@@ -842,7 +844,7 @@
             this.txtSpan.Location = new System.Drawing.Point(789, 155);
             this.txtSpan.Name = "txtSpan";
             this.txtSpan.Size = new System.Drawing.Size(133, 20);
-            this.txtSpan.TabIndex = 172;
+            this.txtSpan.TabIndex = 21;
             // 
             // labelControl39
             // 
@@ -858,7 +860,7 @@
             this.txtWattage.Location = new System.Drawing.Point(789, 128);
             this.txtWattage.Name = "txtWattage";
             this.txtWattage.Size = new System.Drawing.Size(133, 20);
-            this.txtWattage.TabIndex = 170;
+            this.txtWattage.TabIndex = 20;
             // 
             // labelControl35
             // 
@@ -873,7 +875,7 @@
             this.txtWeight.Location = new System.Drawing.Point(789, 103);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(133, 20);
-            this.txtWeight.TabIndex = 166;
+            this.txtWeight.TabIndex = 19;
             // 
             // labelControl33
             // 
@@ -888,7 +890,7 @@
             this.txtDimention.Location = new System.Drawing.Point(789, 77);
             this.txtDimention.Name = "txtDimention";
             this.txtDimention.Size = new System.Drawing.Size(133, 20);
-            this.txtDimention.TabIndex = 164;
+            this.txtDimention.TabIndex = 18;
             // 
             // labelControl32
             // 
@@ -903,7 +905,7 @@
             this.txtQuality.Location = new System.Drawing.Point(789, 52);
             this.txtQuality.Name = "txtQuality";
             this.txtQuality.Size = new System.Drawing.Size(133, 20);
-            this.txtQuality.TabIndex = 162;
+            this.txtQuality.TabIndex = 17;
             this.txtQuality.EditValueChanged += new System.EventHandler(this.txtQuality_EditValueChanged);
             this.txtQuality.Leave += new System.EventHandler(this.txtQuality_Leave);
             // 
@@ -920,7 +922,7 @@
             this.txtSizeHeight.Location = new System.Drawing.Point(789, 25);
             this.txtSizeHeight.Name = "txtSizeHeight";
             this.txtSizeHeight.Size = new System.Drawing.Size(133, 20);
-            this.txtSizeHeight.TabIndex = 160;
+            this.txtSizeHeight.TabIndex = 16;
             this.txtSizeHeight.EditValueChanged += new System.EventHandler(this.txtSizeHeight_EditValueChanged);
             this.txtSizeHeight.Leave += new System.EventHandler(this.txtSizeHeight_Leave);
             // 
@@ -940,7 +942,7 @@
             this.cmbColor.Location = new System.Drawing.Point(578, 126);
             this.cmbColor.Name = "cmbColor";
             this.cmbColor.Size = new System.Drawing.Size(118, 21);
-            this.cmbColor.TabIndex = 158;
+            this.cmbColor.TabIndex = 14;
             // 
             // labelControl16
             // 
@@ -955,7 +957,7 @@
             this.txtAssetMake.Location = new System.Drawing.Point(343, 179);
             this.txtAssetMake.Name = "txtAssetMake";
             this.txtAssetMake.Size = new System.Drawing.Size(146, 20);
-            this.txtAssetMake.TabIndex = 156;
+            this.txtAssetMake.TabIndex = 9;
             this.txtAssetMake.EditValueChanged += new System.EventHandler(this.txtAssetMake_EditValueChanged);
             this.txtAssetMake.Leave += new System.EventHandler(this.txtAssetMake_Leave);
             // 
@@ -975,7 +977,7 @@
             this.cmbType1.Location = new System.Drawing.Point(578, 100);
             this.cmbType1.Name = "cmbType1";
             this.cmbType1.Size = new System.Drawing.Size(118, 21);
-            this.cmbType1.TabIndex = 154;
+            this.cmbType1.TabIndex = 13;
             // 
             // labelControl17
             // 
@@ -993,7 +995,7 @@
             this.cmbMaterialType.Location = new System.Drawing.Point(578, 75);
             this.cmbMaterialType.Name = "cmbMaterialType";
             this.cmbMaterialType.Size = new System.Drawing.Size(118, 21);
-            this.cmbMaterialType.TabIndex = 152;
+            this.cmbMaterialType.TabIndex = 12;
             // 
             // labelControl18
             // 
@@ -1011,7 +1013,7 @@
             this.cmbType.Location = new System.Drawing.Point(578, 51);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(118, 21);
-            this.cmbType.TabIndex = 150;
+            this.cmbType.TabIndex = 11;
             this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             this.cmbType.Leave += new System.EventHandler(this.cmbType_Leave);
             // 
@@ -1031,7 +1033,7 @@
             this.cmbMainType.Location = new System.Drawing.Point(578, 23);
             this.cmbMainType.Name = "cmbMainType";
             this.cmbMainType.Size = new System.Drawing.Size(118, 21);
-            this.cmbMainType.TabIndex = 148;
+            this.cmbMainType.TabIndex = 10;
             this.cmbMainType.SelectedIndexChanged += new System.EventHandler(this.cmbMainType_SelectedIndexChanged);
             // 
             // labelControl20
@@ -1047,7 +1049,7 @@
             this.txtAssetRate.Location = new System.Drawing.Point(343, 153);
             this.txtAssetRate.Name = "txtAssetRate";
             this.txtAssetRate.Size = new System.Drawing.Size(146, 20);
-            this.txtAssetRate.TabIndex = 146;
+            this.txtAssetRate.TabIndex = 8;
             // 
             // labelControl21
             // 
@@ -1070,7 +1072,7 @@
             this.txtReorderQuantity.Location = new System.Drawing.Point(343, 102);
             this.txtReorderQuantity.Name = "txtReorderQuantity";
             this.txtReorderQuantity.Size = new System.Drawing.Size(146, 20);
-            this.txtReorderQuantity.TabIndex = 142;
+            this.txtReorderQuantity.TabIndex = 6;
             // 
             // labelControl23
             // 
@@ -1095,7 +1097,7 @@
             this.dtIntroductionDate.Properties.ShowPopupShadow = false;
             this.dtIntroductionDate.Properties.ShowToday = false;
             this.dtIntroductionDate.Size = new System.Drawing.Size(146, 22);
-            this.dtIntroductionDate.TabIndex = 140;
+            this.dtIntroductionDate.TabIndex = 4;
             // 
             // labelControl24
             // 
@@ -1119,7 +1121,7 @@
             this.cmbCompanyMst.Location = new System.Drawing.Point(84, 75);
             this.cmbCompanyMst.Name = "cmbCompanyMst";
             this.cmbCompanyMst.Size = new System.Drawing.Size(146, 21);
-            this.cmbCompanyMst.TabIndex = 135;
+            this.cmbCompanyMst.TabIndex = 1;
             // 
             // labelControl26
             // 
@@ -1142,7 +1144,7 @@
             this.txtAssetName.Location = new System.Drawing.Point(84, 23);
             this.txtAssetName.Name = "txtAssetName";
             this.txtAssetName.Size = new System.Drawing.Size(146, 20);
-            this.txtAssetName.TabIndex = 130;
+            this.txtAssetName.TabIndex = 0;
             this.txtAssetName.EditValueChanged += new System.EventHandler(this.txtAssetName_EditValueChanged);
             // 
             // labelControl28
@@ -1159,7 +1161,7 @@
             this.txtAssetAbbrivation.Name = "txtAssetAbbrivation";
             this.txtAssetAbbrivation.Properties.ReadOnly = true;
             this.txtAssetAbbrivation.Size = new System.Drawing.Size(146, 20);
-            this.txtAssetAbbrivation.TabIndex = 126;
+            this.txtAssetAbbrivation.TabIndex = 1;
             // 
             // labelControl29
             // 
@@ -1174,7 +1176,7 @@
             this.txtAssetDescription.Location = new System.Drawing.Point(84, 102);
             this.txtAssetDescription.Name = "txtAssetDescription";
             this.txtAssetDescription.Size = new System.Drawing.Size(146, 46);
-            this.txtAssetDescription.TabIndex = 132;
+            this.txtAssetDescription.TabIndex = 2;
             // 
             // pnlSave
             // 
@@ -1192,18 +1194,16 @@
             this.btnSave.Location = new System.Drawing.Point(552, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lblSelectedRow
+            // txtHSNCode
             // 
-            this.lblSelectedRow.Location = new System.Drawing.Point(889, 42);
-            this.lblSelectedRow.Name = "lblSelectedRow";
-            this.lblSelectedRow.Size = new System.Drawing.Size(6, 13);
-            this.lblSelectedRow.TabIndex = 201;
-            this.lblSelectedRow.Text = "0";
-            this.lblSelectedRow.Visible = false;
+            this.txtHSNCode.Location = new System.Drawing.Point(344, 127);
+            this.txtHSNCode.Name = "txtHSNCode";
+            this.txtHSNCode.Size = new System.Drawing.Size(146, 20);
+            this.txtHSNCode.TabIndex = 7;
             // 
             // frmAddAsset
             // 
@@ -1265,6 +1265,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAssetAbbrivation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssetDescription.Properties)).EndInit();
             this.pnlSave.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtHSNCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1335,7 +1336,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl43;
         private DevExpress.XtraEditors.TextEdit txtLength;
         private DevExpress.XtraEditors.LabelControl labelControl44;
-        private System.Windows.Forms.ComboBox cmbHSNCode;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtShelfLifeUnit;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -1374,5 +1374,6 @@
         private DevExpress.XtraEditors.LabelControl lblAssetCodeID;
         private DevExpress.XtraEditors.SimpleButton btnUpdateAsset;
         private DevExpress.XtraEditors.LabelControl lblSelectedRow;
+        private DevExpress.XtraEditors.TextEdit txtHSNCode;
     }
 }

@@ -37,10 +37,6 @@ namespace LGRentalMgntSystem
 
                 if (Convert.ToInt64(lblGafferID.Text) > 0)
                 {
-                    txtGafferUserName.Enabled = false;
-                    txtGafferPassword.Enabled = false;
-                    txtGafferConfirmPassword.Enabled = false;
-                    txtGafferPin.Enabled = false;
                     FillGafferMemberDetails(Convert.ToInt64(lblGafferID.Text));
                 }
             }
@@ -52,47 +48,50 @@ namespace LGRentalMgntSystem
         }
         private void FillMasterData()
         {
-            clsGeneral oclsGeneral = null;
-            try
-            {
-                oclsGeneral = new clsGeneral();
-                DataSet dsGaffer = oclsGeneral.GetGafferMaster();
-                if (dsGaffer != null && dsGaffer.Tables.Count > 0)
-                {
-                    DataTable dtStateMaster = dsGaffer.Tables[0];
-                    DataTable dtCityMaster = dsGaffer.Tables[1];
-                    DataTable dtCountryMaster = dsGaffer.Tables[2];
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            //clsGeneral oclsGeneral = null;
+            //try
+            //{
+            //    oclsGeneral = new clsGeneral();
+            //    DataSet dsGaffer = oclsGeneral.GetGafferMaster();
+            //    if (dsGaffer != null && dsGaffer.Tables.Count > 0)
+            //    {
+            //        DataTable dtStateMaster = dsGaffer.Tables[0];
+            //        DataTable dtCityMaster = dsGaffer.Tables[1];
+            //        DataTable dtCountryMaster = dsGaffer.Tables[2];
 
-                    cmbStateMaster.DataSource = dtStateMaster;
-                    cmbStateMaster.DisplayMember = "StateName";
-                    cmbStateMaster.ValueMember = "StateName";
-                    cmbStateMaster.Text = "Maharashtra";
+            //        cmbStateMaster.DataSource = dtStateMaster;
+            //        cmbStateMaster.DisplayMember = "StateName";
+            //        cmbStateMaster.ValueMember = "StateName";
+            //        cmbStateMaster.Text = "Maharashtra";
 
-                    cmbCityMaster.DataSource = dtCityMaster;
-                    cmbCityMaster.DisplayMember = "CityName";
-                    cmbCityMaster.ValueMember = "CityName";
-                    cmbCityMaster.Text = "Mumbai";
+            //        cmbCityMaster.DataSource = dtCityMaster;
+            //        cmbCityMaster.DisplayMember = "CityName";
+            //        cmbCityMaster.ValueMember = "CityName";
+            //        cmbCityMaster.Text = "Mumbai";
 
-                    cmbCountryMaster.DataSource = dtCountryMaster;
-                    cmbCountryMaster.DisplayMember = "sCountryName";
-                    cmbCountryMaster.ValueMember = "sCountryName";
-                    cmbCountryMaster.Text = "India";
+            //        cmbCountryMaster.DataSource = dtCountryMaster;
+            //        cmbCountryMaster.DisplayMember = "sCountryName";
+            //        cmbCountryMaster.ValueMember = "sCountryName";
+            //        cmbCountryMaster.Text = "India";
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            finally
-            {
-                if (oclsGeneral != null)
-                {
-                    oclsGeneral.Dispose();
-                    oclsGeneral = null;
-                }
-            }
+            //}
+            //finally
+            //{
+            //    if (oclsGeneral != null)
+            //    {
+            //        oclsGeneral.Dispose();
+            //        oclsGeneral = null;
+            //    }
+            //}
         }
         private void GetAndSetSequence()
         {
@@ -136,9 +135,9 @@ namespace LGRentalMgntSystem
                     txtGafferAge.Text = Convert.ToString(dtGafferDetails.Rows[0]["sAge"]);
                     txtAddressLine1.Text = Convert.ToString(dtGafferDetails.Rows[0]["sAddressLine1"]);
                     txtAddressLine2.Text = Convert.ToString(dtGafferDetails.Rows[0]["sAddressLine2"]);
-                    cmbCityMaster.Text = Convert.ToString(dtGafferDetails.Rows[0]["sCity"]);
-                    cmbStateMaster.Text = Convert.ToString(dtGafferDetails.Rows[0]["sState"]);
-                    cmbCountryMaster.Text = Convert.ToString(dtGafferDetails.Rows[0]["sCountry"]);
+                    txtCity.Text = Convert.ToString(dtGafferDetails.Rows[0]["sCity"]);
+                    txtState.Text = Convert.ToString(dtGafferDetails.Rows[0]["sState"]);
+                    txtCountry.Text = Convert.ToString(dtGafferDetails.Rows[0]["sCountry"]);
                     txtPincode.Text = Convert.ToString(dtGafferDetails.Rows[0]["sPincode"]);
                     txtEmail.Text = Convert.ToString(dtGafferDetails.Rows[0]["sEmail"]);
                     txtGafferUserName.Text = Convert.ToString(dtGafferDetails.Rows[0]["sLoginName"]);
@@ -320,9 +319,9 @@ namespace LGRentalMgntSystem
                 oclsGafferMaster.sGafferAge = Convert.ToString(txtGafferAge.Text.Trim()); 
                 oclsGafferMaster.sAddressLine1 = Convert.ToString(txtAddressLine1.Text.Trim());
                 oclsGafferMaster.sAddressLine2 = Convert.ToString(txtAddressLine2.Text.Trim());
-                oclsGafferMaster.sCity = Convert.ToString(cmbCityMaster.Text.Trim());
-                oclsGafferMaster.sState = Convert.ToString(cmbStateMaster.Text.Trim());
-                oclsGafferMaster.sCountry = Convert.ToString(cmbCountryMaster.Text.Trim());
+                oclsGafferMaster.sCity = Convert.ToString(txtCity.Text.Trim());
+                oclsGafferMaster.sState = Convert.ToString(txtState.Text.Trim());
+                oclsGafferMaster.sCountry = Convert.ToString(txtCountry.Text.Trim());
                 oclsGafferMaster.sPincode = Convert.ToString(txtPincode.Text.Trim());
                 oclsGafferMaster.sEmail = Convert.ToString(txtEmail.Text.Trim());
                 oclsGafferMaster.sAllPhoneNo = sPhoneAll;
@@ -335,6 +334,7 @@ namespace LGRentalMgntSystem
                 if (nGafferMemberID != 0)
                 {
                     MessageBox.Show("Gaffer is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
                 }
                 else
                 {
@@ -392,6 +392,35 @@ namespace LGRentalMgntSystem
         private void txtGafferName_EditValueChanged(object sender, EventArgs e)
         {
             txtGafferAbbrivation.Text = clsGlobal.GenerateAbbrivation(txtGafferName.Text.Trim());
+        }
+
+        private void ClearForm()
+        {
+            txtGafferCode.Text = string.Empty;
+            txtGafferName.Text = string.Empty;
+            txtGafferAbbrivation.Text = string.Empty;
+            cmbGender.Text = string.Empty;
+            dtGafferBirthdate.EditValue = DateTime.Now;
+            txtGafferAge.Text = string.Empty;
+            txtAddressLine1.Text = string.Empty;
+            txtAddressLine2.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtState.Text = string.Empty;
+            txtCountry.Text = string.Empty;
+            txtPincode.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtGafferUserName.Text = string.Empty;
+            txtGafferPin.Text = string.Empty;
+            txtGafferPassword.Text = string.Empty;
+            txtGafferConfirmPassword.Text = string.Empty;
+
+            txtPhone1.Text = string.Empty;
+            txtPhone2.Text = string.Empty;
+            txtPhone3.Text = string.Empty;
+            txtPhone4.Text = string.Empty;
+            txtPhone5.Text = string.Empty;
+
+            GetAndSetSequence();
         }
     }
 }

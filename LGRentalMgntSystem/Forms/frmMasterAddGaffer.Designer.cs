@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddGaffer));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
@@ -39,6 +39,7 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtState = new DevExpress.XtraEditors.TextEdit();
             this.dtGafferBirthdate = new DevExpress.XtraEditors.DateEdit();
             this.lblGafferID = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -71,11 +72,9 @@
             this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddressLine2 = new DevExpress.XtraEditors.MemoEdit();
             this.cmbCityMaster = new System.Windows.Forms.ComboBox();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.cmbStateMaster = new System.Windows.Forms.ComboBox();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.cmbCountryMaster = new System.Windows.Forms.ComboBox();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.txtPincode = new DevExpress.XtraEditors.TextEdit();
@@ -92,12 +91,17 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtGafferName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -126,6 +130,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferAbbrivation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -194,6 +200,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtCity);
+            this.panel2.Controls.Add(this.labelControl18);
+            this.panel2.Controls.Add(this.txtCountry);
+            this.panel2.Controls.Add(this.labelControl16);
+            this.panel2.Controls.Add(this.txtState);
             this.panel2.Controls.Add(this.dtGafferBirthdate);
             this.panel2.Controls.Add(this.lblGafferID);
             this.panel2.Controls.Add(this.groupControl1);
@@ -202,11 +213,9 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.txtAddressLine2);
             this.panel2.Controls.Add(this.cmbCityMaster);
-            this.panel2.Controls.Add(this.labelControl18);
             this.panel2.Controls.Add(this.cmbStateMaster);
             this.panel2.Controls.Add(this.labelControl17);
             this.panel2.Controls.Add(this.cmbCountryMaster);
-            this.panel2.Controls.Add(this.labelControl16);
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.labelControl25);
             this.panel2.Controls.Add(this.txtPincode);
@@ -229,13 +238,21 @@
             this.panel2.Size = new System.Drawing.Size(524, 399);
             this.panel2.TabIndex = 74;
             // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(93, 205);
+            this.txtState.Name = "txtState";
+            this.txtState.Properties.MaxLength = 20;
+            this.txtState.Size = new System.Drawing.Size(153, 20);
+            this.txtState.TabIndex = 129;
+            // 
             // dtGafferBirthdate
             // 
             this.dtGafferBirthdate.EditValue = null;
             this.dtGafferBirthdate.Location = new System.Drawing.Point(238, 57);
             this.dtGafferBirthdate.Name = "dtGafferBirthdate";
             this.dtGafferBirthdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtGafferBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtGafferBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.dtGafferBirthdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtGafferBirthdate.Properties.ShowMonthHeaders = false;
@@ -510,7 +527,7 @@
             this.btnAddPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddPhone.Properties.AutoHeight = false;
             this.btnAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnAddPhone.Size = new System.Drawing.Size(22, 18);
             this.btnAddPhone.TabIndex = 48;
             this.btnAddPhone.Click += new System.EventHandler(this.btnAddPhone_Click);
@@ -548,32 +565,26 @@
             this.cmbCityMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbCityMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCityMaster.FormattingEnabled = true;
-            this.cmbCityMaster.Location = new System.Drawing.Point(93, 181);
+            this.cmbCityMaster.Location = new System.Drawing.Point(353, 206);
             this.cmbCityMaster.Name = "cmbCityMaster";
             this.cmbCityMaster.Size = new System.Drawing.Size(154, 21);
             this.cmbCityMaster.TabIndex = 99;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(57, 184);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(29, 13);
-            this.labelControl18.TabIndex = 98;
-            this.labelControl18.Text = "City : ";
+            this.cmbCityMaster.Visible = false;
             // 
             // cmbStateMaster
             // 
             this.cmbStateMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbStateMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbStateMaster.FormattingEnabled = true;
-            this.cmbStateMaster.Location = new System.Drawing.Point(93, 205);
+            this.cmbStateMaster.Location = new System.Drawing.Point(353, 230);
             this.cmbStateMaster.Name = "cmbStateMaster";
             this.cmbStateMaster.Size = new System.Drawing.Size(154, 21);
             this.cmbStateMaster.TabIndex = 97;
+            this.cmbStateMaster.Visible = false;
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(50, 208);
+            this.labelControl17.Location = new System.Drawing.Point(50, 207);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(36, 13);
             this.labelControl17.TabIndex = 96;
@@ -584,23 +595,20 @@
             this.cmbCountryMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbCountryMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCountryMaster.FormattingEnabled = true;
-            this.cmbCountryMaster.Location = new System.Drawing.Point(93, 252);
+            this.cmbCountryMaster.Location = new System.Drawing.Point(353, 277);
             this.cmbCountryMaster.Name = "cmbCountryMaster";
             this.cmbCountryMaster.Size = new System.Drawing.Size(154, 21);
             this.cmbCountryMaster.TabIndex = 95;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(37, 255);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(49, 13);
-            this.labelControl16.TabIndex = 94;
-            this.labelControl16.Text = "Country : ";
+            this.cmbCountryMaster.Visible = false;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(93, 276);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.txtEmail.Properties.Mask.EditMask = "[a-zA-Z0-9.-]+@[a-zA-Z0-9-]+\\.[A-Za-z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtEmail.Properties.MaxLength = 50;
             this.txtEmail.Size = new System.Drawing.Size(153, 20);
             this.txtEmail.TabIndex = 93;
             // 
@@ -614,16 +622,16 @@
             // 
             // txtPincode
             // 
-            this.txtPincode.Location = new System.Drawing.Point(93, 229);
+            this.txtPincode.Location = new System.Drawing.Point(93, 252);
             this.txtPincode.Name = "txtPincode";
-            this.txtPincode.Properties.Mask.EditMask = "\\d{1,6}";
+            this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(153, 20);
             this.txtPincode.TabIndex = 91;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(39, 232);
+            this.labelControl26.Location = new System.Drawing.Point(39, 255);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(47, 13);
             this.labelControl26.TabIndex = 90;
@@ -724,6 +732,38 @@
             this.labelControl1.TabIndex = 67;
             this.labelControl1.Text = "Name : ";
             // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(94, 182);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.MaxLength = 20;
+            this.txtCountry.Size = new System.Drawing.Size(153, 20);
+            this.txtCountry.TabIndex = 132;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(38, 185);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(49, 13);
+            this.labelControl16.TabIndex = 131;
+            this.labelControl16.Text = "Country : ";
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(93, 228);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.MaxLength = 20;
+            this.txtCity.Size = new System.Drawing.Size(153, 20);
+            this.txtCity.TabIndex = 134;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(57, 228);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(29, 13);
+            this.labelControl18.TabIndex = 133;
+            this.labelControl18.Text = "City : ";
+            // 
             // frmMasterAddGaffer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -744,6 +784,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -778,6 +819,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferAbbrivation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -811,12 +854,7 @@
         private DevExpress.XtraEditors.TextEdit txtPhone1;
         private DevExpress.XtraEditors.LabelControl labelControl42;
         private DevExpress.XtraEditors.MemoEdit txtAddressLine2;
-        private System.Windows.Forms.ComboBox cmbCityMaster;
-        private DevExpress.XtraEditors.LabelControl labelControl18;
-        private System.Windows.Forms.ComboBox cmbStateMaster;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private System.Windows.Forms.ComboBox cmbCountryMaster;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.TextEdit txtPincode;
@@ -845,5 +883,13 @@
         private DevExpress.XtraEditors.LabelControl lblGafferID;
         private DevExpress.XtraEditors.DateEdit dtGafferBirthdate;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.TextEdit txtState;
+        private System.Windows.Forms.ComboBox cmbCityMaster;
+        private System.Windows.Forms.ComboBox cmbStateMaster;
+        private System.Windows.Forms.ComboBox cmbCountryMaster;
+        private DevExpress.XtraEditors.TextEdit txtCity;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.TextEdit txtCountry;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
     }
 }

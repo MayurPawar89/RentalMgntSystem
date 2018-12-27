@@ -271,7 +271,18 @@ namespace LGRentalMgntSystem
             cmbAssetList.SelectedValue = 0;
             txtAssetCode.Text = "";
         }
-
+        private void ClearKit()
+        {
+            txtKitName.Text = "";
+            txtAbbrivation.Text = "";
+            txtKitDescription.Text = "";
+            if (picBarcodeImage != null)
+            {
+                picBarcodeImage.Image = null;
+            }
+            GetAndSetSequence();
+            FillAssetCode();
+        }
         private void gvAssetList_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
         {
 
@@ -419,15 +430,16 @@ namespace LGRentalMgntSystem
                 Int64 nKitID = oKitMaster.InsertUpdateKitDetails(bIsSaveKit_Asset);
                 if (nKitID == 0)
                 {
-                    MessageBox.Show("Kit details not saved.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Kit details not saved.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (nKitID == 2)
                 {
-                    MessageBox.Show("Kit code already present. Please change asset code.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Kit code already present. Please change asset code.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("kit details saved successfuly", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Kit details saved successfuly", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearKit();
                 }
             }
             catch (Exception ex)

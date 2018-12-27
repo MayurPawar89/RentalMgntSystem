@@ -43,7 +43,8 @@ namespace LGRentalMgntSystem
         public string sMasterName { get; set; }
         public Int64 nMasterMainID { get; set; }
         public MasterType MasterType { get; set; }
-
+        public bool IsAllowAccess { get; set; }
+        public bool IsAllowSignatory { get; set; }
 
         public Int64 InsertUpdateMaster()
         {
@@ -60,6 +61,8 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@sMasterName", this.sMasterName, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@nMasterMainID", this.nMasterMainID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@nMasterType", this.MasterType.GetHashCode(), ParameterDirection.Input, SqlDbType.Int);
+                oDBParameter.Add("@bIsAllowAccess", this.IsAllowAccess, ParameterDirection.Input, SqlDbType.Bit);
+                oDBParameter.Add("@bIsAllowSignatory", this.IsAllowSignatory, ParameterDirection.Input, SqlDbType.Bit);
                 oDBParameter.Add("@nReturnID", 0, ParameterDirection.InputOutput, SqlDbType.Int);
 
 

@@ -265,6 +265,45 @@ namespace LGRentalMgntSystem
 
             return _dt;
         }
+
+        public DataTable GetListData(string sListType)
+        {
+            DatabaseAccess oDBAccess = null;
+            DatabaseParameters oDBParameter = null;
+            DataTable _dt = null;
+            try
+            {
+                oDBAccess = new DatabaseAccess();
+                oDBParameter = new DatabaseParameters();
+                oDBParameter.clear();
+                oDBParameter.Add("@sListType", sListType, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBAccess.OpenConnection(false);
+                oDBAccess.Retrive("lgsp_Get_ListData", oDBParameter, out _dt);
+                oDBAccess.CloseConnection(false);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (oDBAccess != null)
+                {
+                    oDBAccess.Dispose();
+                    oDBAccess = null;
+                }
+                if (oDBParameter != null)
+                {
+                    oDBParameter.Dispose();
+                    oDBParameter = null;
+                }
+            }
+
+            return _dt;
+        }
+
+
         #endregion
     }
 }

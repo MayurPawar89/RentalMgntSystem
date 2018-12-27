@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterListLocation));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gvLocationList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -38,6 +38,7 @@
             this.gcnLocationID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcLocationCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcAddressLine1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCountry = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcPincode = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,7 +55,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
-            this.gcAddressLine1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLocationList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
@@ -148,6 +148,16 @@
             this.gcDescription.Visible = true;
             this.gcDescription.VisibleIndex = 4;
             // 
+            // gcAddressLine1
+            // 
+            this.gcAddressLine1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcAddressLine1.AppearanceHeader.Options.UseFont = true;
+            this.gcAddressLine1.Caption = "Address";
+            this.gcAddressLine1.FieldName = "sAddressLine1";
+            this.gcAddressLine1.Name = "gcAddressLine1";
+            this.gcAddressLine1.Visible = true;
+            this.gcAddressLine1.VisibleIndex = 3;
+            // 
             // gcCountry
             // 
             this.gcCountry.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -156,7 +166,7 @@
             this.gcCountry.FieldName = "sCountry";
             this.gcCountry.Name = "gcCountry";
             this.gcCountry.Visible = true;
-            this.gcCountry.VisibleIndex = 8;
+            this.gcCountry.VisibleIndex = 7;
             // 
             // gcCity
             // 
@@ -166,7 +176,7 @@
             this.gcCity.FieldName = "sCity";
             this.gcCity.Name = "gcCity";
             this.gcCity.Visible = true;
-            this.gcCity.VisibleIndex = 7;
+            this.gcCity.VisibleIndex = 6;
             // 
             // gcPincode
             // 
@@ -186,7 +196,7 @@
             this.gcIsUsed.FieldName = "IsUsed";
             this.gcIsUsed.Name = "gcIsUsed";
             this.gcIsUsed.Visible = true;
-            this.gcIsUsed.VisibleIndex = 9;
+            this.gcIsUsed.VisibleIndex = 8;
             this.gcIsUsed.Width = 73;
             // 
             // gcEdit
@@ -204,7 +214,7 @@
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -223,7 +233,7 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -309,14 +319,6 @@
             this.lblFormHeader.Size = new System.Drawing.Size(96, 18);
             this.lblFormHeader.TabIndex = 3;
             this.lblFormHeader.Text = "Location List";
-            // 
-            // gcAddressLine1
-            // 
-            this.gcAddressLine1.Caption = "Address";
-            this.gcAddressLine1.FieldName = "sAddressLine1";
-            this.gcAddressLine1.Name = "gcAddressLine1";
-            this.gcAddressLine1.Visible = true;
-            this.gcAddressLine1.VisibleIndex = 3;
             // 
             // frmMasterListLocation
             // 

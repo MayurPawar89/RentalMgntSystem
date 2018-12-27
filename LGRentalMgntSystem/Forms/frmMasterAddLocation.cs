@@ -21,47 +21,50 @@ namespace LGRentalMgntSystem
 
         private void FillMasterData()
         {
-            clsGeneral oclsGeneral = null;
-            try
-            {
-                oclsGeneral = new clsGeneral();
-                DataSet dsGaffer = oclsGeneral.GetGafferMaster();
-                if (dsGaffer != null && dsGaffer.Tables.Count > 0)
-                {
-                    DataTable dtStateMaster = dsGaffer.Tables[0];
-                    DataTable dtCityMaster = dsGaffer.Tables[1];
-                    DataTable dtCountryMaster = dsGaffer.Tables[2];
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            //clsGeneral oclsGeneral = null;
+            //try
+            //{
+            //    oclsGeneral = new clsGeneral();
+            //    DataSet dsGaffer = oclsGeneral.GetGafferMaster();
+            //    if (dsGaffer != null && dsGaffer.Tables.Count > 0)
+            //    {
+            //        DataTable dtStateMaster = dsGaffer.Tables[0];
+            //        DataTable dtCityMaster = dsGaffer.Tables[1];
+            //        DataTable dtCountryMaster = dsGaffer.Tables[2];
 
-                    cmbStateMaster.DataSource = dtStateMaster;
-                    cmbStateMaster.DisplayMember = "StateName";
-                    cmbStateMaster.ValueMember = "StateName";
-                    cmbStateMaster.Text = "Maharashtra";
+            //        cmbStateMaster.DataSource = dtStateMaster;
+            //        cmbStateMaster.DisplayMember = "StateName";
+            //        cmbStateMaster.ValueMember = "StateName";
+            //        cmbStateMaster.Text = "Maharashtra";
 
-                    cmbCityMaster.DataSource = dtCityMaster;
-                    cmbCityMaster.DisplayMember = "CityName";
-                    cmbCityMaster.ValueMember = "CityName";
-                    cmbCityMaster.Text = "Mumbai";
+            //        cmbCityMaster.DataSource = dtCityMaster;
+            //        cmbCityMaster.DisplayMember = "CityName";
+            //        cmbCityMaster.ValueMember = "CityName";
+            //        cmbCityMaster.Text = "Mumbai";
 
-                    cmbCountryMaster.DataSource = dtCountryMaster;
-                    cmbCountryMaster.DisplayMember = "sCountryName";
-                    cmbCountryMaster.ValueMember = "sCountryName";
-                    cmbCountryMaster.Text = "India";
+            //        cmbCountryMaster.DataSource = dtCountryMaster;
+            //        cmbCountryMaster.DisplayMember = "sCountryName";
+            //        cmbCountryMaster.ValueMember = "sCountryName";
+            //        cmbCountryMaster.Text = "India";
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            finally
-            {
-                if (oclsGeneral != null)
-                {
-                    oclsGeneral.Dispose();
-                    oclsGeneral = null;
-                }
-            }
+            //}
+            //finally
+            //{
+            //    if (oclsGeneral != null)
+            //    {
+            //        oclsGeneral.Dispose();
+            //        oclsGeneral = null;
+            //    }
+            //}
         }
         private void GetAndSetSequence()
         {
@@ -125,9 +128,9 @@ namespace LGRentalMgntSystem
                     txtDescription.Text = Convert.ToString(dtLocationDetails.Rows[0]["sDescription"]);
                     txtAddressLine1.Text = Convert.ToString(dtLocationDetails.Rows[0]["sAddressLine1"]);
                     txtAddressLine2.Text = Convert.ToString(dtLocationDetails.Rows[0]["sAddressLine2"]);
-                    cmbCityMaster.Text = Convert.ToString(dtLocationDetails.Rows[0]["sCity"]);
-                    cmbStateMaster.Text = Convert.ToString(dtLocationDetails.Rows[0]["sState"]);
-                    cmbCountryMaster.Text = Convert.ToString(dtLocationDetails.Rows[0]["sCountry"]);
+                    txtCity.Text = Convert.ToString(dtLocationDetails.Rows[0]["sCity"]);
+                    txtState.Text = Convert.ToString(dtLocationDetails.Rows[0]["sState"]);
+                    txtCountry.Text = Convert.ToString(dtLocationDetails.Rows[0]["sCountry"]);
                     txtPincode.Text = Convert.ToString(dtLocationDetails.Rows[0]["sPincode"]);
                     txtVilageDistTown.Text = Convert.ToString(dtLocationDetails.Rows[0]["sVlgDstTwn"]);
                 }
@@ -159,9 +162,9 @@ namespace LGRentalMgntSystem
                 oclsLocationMaster.sDescription = Convert.ToString(txtDescription.Text.Trim());
                 oclsLocationMaster.sAddressLine1 = Convert.ToString(txtAddressLine1.Text.Trim());
                 oclsLocationMaster.sAddressLine2 = Convert.ToString(txtAddressLine2.Text.Trim());
-                oclsLocationMaster.sCity = Convert.ToString(cmbCityMaster.Text.Trim());
-                oclsLocationMaster.sState = Convert.ToString(cmbStateMaster.Text.Trim());
-                oclsLocationMaster.sCountry = Convert.ToString(cmbCountryMaster.Text.Trim());
+                oclsLocationMaster.sCity = Convert.ToString(txtCity.Text.Trim());
+                oclsLocationMaster.sState = Convert.ToString(txtState.Text.Trim());
+                oclsLocationMaster.sCountry = Convert.ToString(txtCountry.Text.Trim());
                 oclsLocationMaster.sPincode = Convert.ToString(txtPincode.Text.Trim());
                 oclsLocationMaster.sVillageDistTown= Convert.ToString(txtVilageDistTown.Text.Trim());
 
@@ -169,11 +172,12 @@ namespace LGRentalMgntSystem
 
                 if (nLocationID != 0)
                 {
-                    MessageBox.Show("Gaffer is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Location is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearControl();
                 }
                 else
                 {
-                    MessageBox.Show("Error while saving gaffer.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error while saving location.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -194,6 +198,19 @@ namespace LGRentalMgntSystem
             }
 
             return bIsValidForm;
+        }
+        public void ClearControl()
+        {
+            txtDescription.Text = "";
+            txtAbbrivation.Text = "";
+            txtAddressLine1.Text = "";
+            txtAddressLine2.Text = "";
+            txtVilageDistTown.Text = "";
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            txtPincode.Text = "";
+            GetAndSetSequence();
         }
     }
 }

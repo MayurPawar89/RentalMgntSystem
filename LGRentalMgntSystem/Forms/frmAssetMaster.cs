@@ -23,6 +23,8 @@ namespace LGRentalMgntSystem
         public bool IsMasterSave { get; set; }
         public Int64 nTypeID { get; set; }
         public string sTypeName { get; set; }
+        public bool bIsAllowAccess { get; set; }
+        public bool bIsAllowSignatory { get; set; }
         public Int64 nMainTypeID { get; set; }
         private void frmAssetMaster_Load(object sender, EventArgs e)
         {
@@ -33,6 +35,7 @@ namespace LGRentalMgntSystem
                 {
                     case MasterType.CompanyType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Company Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -41,6 +44,7 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.MaterialType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Material Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -49,35 +53,60 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.Designation:
                         {
+                            this.Height = 186;
                             lblFormHeader.Text = "Designation";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
+                            if (bIsAllowAccess)
+                            {
+                                rdAllowAccessYes.Checked=true;
+                                rdAllowAccessNo.Checked = false;
+                            }
+                            else if (bIsAllowAccess==false)
+                            {
+                                rdAllowAccessYes.Checked=false;
+                                rdAllowAccessNo.Checked = true;
+                            }
+                            if (bIsAllowSignatory)
+                            {
+                                rdAllowSignatoryYes.Checked = true;
+                                rdAllowSignatoryNo.Checked = false;
+                            }
+                            else if (bIsAllowSignatory == false)
+                            {
+                                rdAllowSignatoryYes.Checked = false;
+                                rdAllowSignatoryNo.Checked = true;
+                            }
+                            pnlAllowSettings.Visible = true;
                             break;
                         }
                     case MasterType.AssetType:
                         {
+                            this.Height = 170;
                             lblFormHeader.Text = "Asset Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            FillAssetMaintype();
                             cmbAssetMainType.SelectedValue = nMainTypeID;
-                            FillAssetMaintype(); 
                             pnlAssetMainType.Visible = true; 
                             
                             break;
                         }
                     case MasterType.AssetType1:
                         {
+                            this.Height = 170;
                             lblFormHeader.Text = "Asset Type1";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
-                            cmbAssetMainType.SelectedValue = nMainTypeID;
                             FillAssetMaintype();
+                            cmbAssetMainType.SelectedValue = nMainTypeID;
                             pnlAssetMainType.Visible = true;
                             break;
                         }
                     case MasterType.PartyType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Party Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -86,6 +115,7 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.VehicleType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Vehicle Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -94,6 +124,7 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.ColourType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Colour Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -102,6 +133,7 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.DensityType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Density Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -110,6 +142,7 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.AssetMainType:
                         {
+                            this.Height = 140;
                             lblFormHeader.Text = "Asset Main Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
@@ -133,6 +166,11 @@ namespace LGRentalMgntSystem
             {
                 clsMaster = new clsMasters();
                 dtAssetMainMaster = clsMaster.GetAssetMainMasterType(1);
+                DataRow dr = dtAssetMainMaster.NewRow();
+                dr["nAssetMainTypeID"]=0;
+                dr["sAssetType"] = "";
+                dtAssetMainMaster.Rows.InsertAt(dr, 0);
+
                 cmbAssetMainType.DataSource = dtAssetMainMaster;
                 cmbAssetMainType.DisplayMember = "sAssetType";
                 cmbAssetMainType.ValueMember = "nAssetMainTypeID";
@@ -175,18 +213,45 @@ namespace LGRentalMgntSystem
             clsMasters clsMaster = null;
             try
             {
+                bool bIsAllowAccess = false;
+                bool bIsAllowSignatory = false;
+                if (rdAllowAccessYes.Checked)
+                {
+                    bIsAllowAccess = true;
+                }
+                else if(rdAllowAccessNo.Checked)
+                {
+                    bIsAllowAccess = false;
+                }
+
+                if (rdAllowSignatoryYes.Checked)
+                {
+                    bIsAllowSignatory = true;
+                }
+                else if (rdAllowSignatoryNo.Checked)
+                {
+                    bIsAllowSignatory = false;
+                }
                 clsMaster = new clsMasters();
                 clsMaster.MasterType = this.MasterType;
                 clsMaster.nMasterID = Convert.ToInt64(lblTypeID.Text);
                 clsMaster.nMasterMainID = Convert.ToInt64(cmbAssetMainType.SelectedValue);
                 clsMaster.sMasterName = txtMainTypeName.Text.Trim();
-                if(clsMaster.InsertUpdateMaster()==-1)
+                clsMaster.IsAllowAccess = bIsAllowAccess;
+                clsMaster.IsAllowSignatory = bIsAllowSignatory;
+                Int64 nResult=clsMaster.InsertUpdateMaster();
+                if(nResult==-1)
                 {
                     MessageBox.Show("Error while saving " + lblFormHeader.Text + ".", sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else 
+                else if (nResult == 2)
+                {
+                    MessageBox.Show(lblFormHeader.Text + " is already exists.", sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
                 {
                     MessageBox.Show(lblFormHeader.Text + " is saved successfully.", sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
                 }
 
             }
@@ -202,6 +267,12 @@ namespace LGRentalMgntSystem
                     clsMaster = null;
                 }
             }
+        }
+
+        private void ClearForm()
+        {
+            txtMainTypeName.Text = string.Empty;
+            cmbAssetMainType.SelectedValue = 0;
         }
     }
 }

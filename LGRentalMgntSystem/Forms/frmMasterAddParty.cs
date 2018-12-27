@@ -31,6 +31,9 @@ namespace LGRentalMgntSystem
 
         private void fillMasterData()
         {
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
             clsGeneral oclsGeneral = null;
             try
             {
@@ -39,28 +42,33 @@ namespace LGRentalMgntSystem
                 if (dsParty != null && dsParty.Tables.Count > 0)
                 {
                     DataTable dtPartyType = dsParty.Tables[0];
-                    DataTable dtStateMaster = dsParty.Tables[1];
-                    DataTable dtCityMaster = dsParty.Tables[2];
-                    DataTable dtCountryMaster = dsParty.Tables[3];
+                    //DataTable dtStateMaster = dsParty.Tables[1];
+                    //DataTable dtCityMaster = dsParty.Tables[2];
+                    //DataTable dtCountryMaster = dsParty.Tables[3];
+
+                    DataRow drParty = dtPartyType.NewRow();
+                    drParty["nPartyTypeID"] = 0;
+                    drParty["sPartyTypeName"] = "";
+                    dtPartyType.Rows.InsertAt(drParty, 0);
 
                     cmbPartyType.DataSource = dtPartyType;
                     cmbPartyType.DisplayMember = "sPartyTypeName";
                     cmbPartyType.ValueMember = "nPartyTypeID";
 
-                    cmbStateMaster.DataSource = dtStateMaster;
-                    cmbStateMaster.DisplayMember = "StateName";
-                    cmbStateMaster.ValueMember = "StateName";
-                    cmbStateMaster.Text = "Maharashtra";
+                    //cmbStateMaster.DataSource = dtStateMaster;
+                    //cmbStateMaster.DisplayMember = "StateName";
+                    //cmbStateMaster.ValueMember = "StateName";
+                    //cmbStateMaster.Text = "Maharashtra";
 
-                    cmbCityMaster.DataSource = dtCityMaster;
-                    cmbCityMaster.DisplayMember = "CityName";
-                    cmbCityMaster.ValueMember = "CityName";
-                    cmbCityMaster.Text = "Mumbai";
+                    //cmbCityMaster.DataSource = dtCityMaster;
+                    //cmbCityMaster.DisplayMember = "CityName";
+                    //cmbCityMaster.ValueMember = "CityName";
+                    //cmbCityMaster.Text = "Mumbai";
 
-                    cmbCountryMaster.DataSource = dtCountryMaster;
-                    cmbCountryMaster.DisplayMember = "sCountryName";
-                    cmbCountryMaster.ValueMember = "sCountryName";
-                    cmbCountryMaster.Text = "India";
+                    //cmbCountryMaster.DataSource = dtCountryMaster;
+                    //cmbCountryMaster.DisplayMember = "sCountryName";
+                    //cmbCountryMaster.ValueMember = "sCountryName";
+                    //cmbCountryMaster.Text = "India";
                    
                 }
             }
@@ -136,11 +144,11 @@ namespace LGRentalMgntSystem
                     cmbPartyType.SelectedValue = Convert.ToString(dtPartyDetails.Rows[0]["nPartyType"]);
                     txtAddressLine1.Text = Convert.ToString(dtPartyDetails.Rows[0]["sAddressLine1"]);
                     txtAddressLine2.Text = Convert.ToString(dtPartyDetails.Rows[0]["sAddressLine2"]);
-                    cmbCityMaster.Text = Convert.ToString(dtPartyDetails.Rows[0]["sCity"]);
-                    cmbStateMaster.Text = Convert.ToString(dtPartyDetails.Rows[0]["sState"]);
-                    cmbCountryMaster.Text = Convert.ToString(dtPartyDetails.Rows[0]["sCountry"]);
+                    txtCity.Text = Convert.ToString(dtPartyDetails.Rows[0]["sCity"]);
+                    txtState.Text = Convert.ToString(dtPartyDetails.Rows[0]["sState"]);
+                    txtCountry.Text = Convert.ToString(dtPartyDetails.Rows[0]["sCountry"]);
                     txtPincode.Text = Convert.ToString(dtPartyDetails.Rows[0]["sPincode"]);
-                    txtEmailID.Text = Convert.ToString(dtPartyDetails.Rows[0]["sEmail"]);
+                    txtEmail.Text = Convert.ToString(dtPartyDetails.Rows[0]["sEmail"]);
                     txtFaxNo.Text = Convert.ToString(dtPartyDetails.Rows[0]["sFax"]);
                     txtBillToAddressLine1.Text = Convert.ToString(dtPartyDetails.Rows[0]["sBillToAddressLine1"]);
                     txtBillToAddressLine2.Text = Convert.ToString(dtPartyDetails.Rows[0]["sBillToAddressLine2"]);
@@ -359,11 +367,11 @@ namespace LGRentalMgntSystem
                 clsPartyMaster.sPartyAbbrivation = Convert.ToString(txtPartyAbbrivation.Text.Trim());
                 clsPartyMaster.sAddressLine1 = Convert.ToString(txtAddressLine1.Text.Trim());
                 clsPartyMaster.sAddressLine2 = Convert.ToString(txtAddressLine2.Text.Trim());
-                clsPartyMaster.sCity = Convert.ToString(cmbCityMaster.Text.Trim());
-                clsPartyMaster.sState = Convert.ToString(cmbStateMaster.Text.Trim());
-                clsPartyMaster.sCountry = Convert.ToString(cmbCountryMaster.Text.Trim());
+                clsPartyMaster.sCity = Convert.ToString(txtCity.Text.Trim());
+                clsPartyMaster.sState = Convert.ToString(txtState.Text.Trim());
+                clsPartyMaster.sCountry = Convert.ToString(txtCountry.Text.Trim());
                 clsPartyMaster.sPincode = Convert.ToString(txtPincode.Text.Trim());
-                clsPartyMaster.sEmail = Convert.ToString(txtEmailID.Text.Trim());
+                clsPartyMaster.sEmail = Convert.ToString(txtEmail.Text.Trim());
                 clsPartyMaster.sAllPhoneNo = sPhoneAll;
                 clsPartyMaster.sFax = Convert.ToString (txtFaxNo.Text.ToString());
                 clsPartyMaster.sGSTNo = Convert.ToString(txtGSTNo.Text.Trim());
@@ -381,6 +389,7 @@ namespace LGRentalMgntSystem
                 if (nCrewMemberID != 0)
                 {
                     MessageBox.Show("Party is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
                 }
                 else
                 {
@@ -392,6 +401,38 @@ namespace LGRentalMgntSystem
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+        }
+
+        public void ClearForm()
+        {
+            txtPartyAbbrivation.Text = string.Empty;
+            txtPartyName.Text = string.Empty;
+            cmbPartyType.SelectedValue = 0;
+            txtAddressLine1.Text = string.Empty;
+            txtAddressLine2.Text = string.Empty;
+            txtCountry.Text = "India";
+            txtCity.Text = "Mumbai";
+            txtState.Text = "Maharashtra";
+            txtPincode.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtFaxNo.Text = string.Empty;
+            txtBillToAddressLine1.Text = string.Empty;
+            txtBillToAddressLine2.Text = string.Empty;
+            txtBillToPincode.Text = string.Empty;
+            txtShipToAddressLine1.Text = string.Empty;
+            txtShipToAddressLine1.Text = string.Empty;
+            txtShipToPincode.Text = string.Empty;
+            txtGSTNo.Text = string.Empty;
+            txtPANNo.Text = string.Empty;
+            txtTANNo.Text = string.Empty;
+
+            txtPhone1.Text = string.Empty;
+            txtPhone2.Text = string.Empty;
+            txtPhone3.Text = string.Empty;
+            txtPhone4.Text = string.Empty;
+            txtPhone5.Text = string.Empty;
+
+            GetAndSetSequence();
         }
     }
 }

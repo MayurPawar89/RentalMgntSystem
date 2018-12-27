@@ -44,6 +44,7 @@ namespace LGRentalMgntSystem
                     FillAssetDetails(Convert.ToInt64(lblAssetID.Text));
                     EnableDisableCodeControl(Convert.ToInt64(lblAssetID.Text));
                 }
+                txtAssetName.Focus();
             }
             catch (Exception ex)
             {
@@ -75,7 +76,7 @@ namespace LGRentalMgntSystem
                         cmbPartyVendor.SelectedValue = Convert.ToInt64(dtAssetDetails.Rows[0]["nAssetVendorID"]);
                         cmbDensity.SelectedValue = Convert.ToInt64(dtAssetDetails.Rows[0]["nDensityID"]);
                         cmbColor.SelectedValue = Convert.ToInt64(dtAssetDetails.Rows[0]["nColorID"]);
-                        cmbHSNCode.SelectedValue = Convert.ToInt64(dtAssetDetails.Rows[0]["nHSNCodeID"]);
+                        txtHSNCode.Text = Convert.ToString(dtAssetDetails.Rows[0]["sHSNCode"]);
                         txtAssetName.Text = Convert.ToString(dtAssetDetails.Rows[0]["sAssetName"]);
                         txtAssetAbbrivation.Text = Convert.ToString(dtAssetDetails.Rows[0]["sAssetAbbrivation"]);
                         txtAssetDescription.Text = Convert.ToString(dtAssetDetails.Rows[0]["sDescription"]);
@@ -176,6 +177,7 @@ namespace LGRentalMgntSystem
                     DataTable dtMaterialType = dsMaster.Tables[2].Copy();
                     DataTable dtColorType = dsMaster.Tables[3].Copy();
                     DataTable dtDensity = dsMaster.Tables[4].Copy();
+                    DataTable dtVendor = dsMaster.Tables[5].Copy();
 
                     DataRow drMainType = dtMainType.NewRow();
                     drMainType["ID"] = 0;
@@ -203,6 +205,11 @@ namespace LGRentalMgntSystem
                     drDensity["Code"] = "";
                     dtDensity.Rows.InsertAt(drDensity, 0);
 
+                    DataRow drVendor = dtVendor.NewRow();
+                    drVendor["ID"] = 0;
+                    drVendor["Code"] = "";
+                    dtVendor.Rows.InsertAt(drVendor, 0);
+
                     cmbMainType.DataSource = dtMainType;
                     cmbMainType.DisplayMember = "Code";
                     cmbMainType.ValueMember = "ID";
@@ -225,6 +232,9 @@ namespace LGRentalMgntSystem
                     cmbDensity.ValueMember = "ID";
                     cmbDensity.SelectedIndexChanged += cmbDensity_SelectedIndexChanged;
 
+                    cmbPartyVendor.DataSource = dtVendor;
+                    cmbPartyVendor.DisplayMember = "Code";
+                    cmbPartyVendor.ValueMember = "ID";
                 }
             }
             catch (Exception ex)
@@ -753,7 +763,41 @@ namespace LGRentalMgntSystem
             lblSequenceNo.Text = "0";
             btnAddBarcodeDetails.Text = "Add";
         }
-
+        private void ClearAssetDetails()
+        {
+            cmbCompanyMst.SelectedValue = 0;
+            cmbMainType.SelectedValue = 0;
+            cmbType.SelectedValue = 0;
+            cmbType1.SelectedValue = 0;
+            cmbMaterialType.SelectedValue = 0;
+            cmbPartyVendor.SelectedValue = 0;
+            cmbDensity.SelectedValue = 0;
+            cmbColor.SelectedValue = 0;
+            txtHSNCode.Text = "";
+            txtAssetName.Text = "";
+            txtAssetAbbrivation.Text = "";
+            txtAssetDescription.Text = "";
+            dtIntroductionDate.EditValue = DateTime.Now;
+            dtReorderTime.EditValue = DateTime.Now;
+            txtReorderDays.Text = "";
+            txtReorderQuantity.Text = "";
+            txtAssetRate.Text = "";
+            txtAssetMake.Text = "";
+            txtSizeHeight.Text = "";
+            txtQuality.Text = "";
+            txtDimention.Text = "";
+            txtWeight.Text = "";
+            txtWattage.Text = "";
+            txtSpan.Text = "";
+            txtAttachment.Text = "";
+            txtAttachmentName.Text = "";
+            txtLength.Text = "";
+            txtCore.Text = "";
+            txtAmps.Text = "";
+            txtPlug.Text = "";
+            txtPower.Text = "";
+            FillAssetCode();
+        }
         private void txtSizeHeight_EditValueChanged(object sender, EventArgs e)
         {
             //if (txtSizeHeight.Text.Trim() != "")
@@ -867,7 +911,7 @@ namespace LGRentalMgntSystem
                 oAsset.nAssetVendorID = Convert.ToInt64(cmbPartyVendor.SelectedValue);
                 oAsset.nDensityID = cmbDensity.Enabled == true ? Convert.ToInt64(cmbDensity.SelectedValue) : 0;
                 oAsset.nColorID = cmbColor.Enabled == true ? Convert.ToInt64(cmbColor.SelectedValue) : 0;
-                oAsset.nHSNCodeID = Convert.ToInt64(cmbHSNCode.SelectedValue);
+                oAsset.sHSNCode = Convert.ToString(txtHSNCode.Text);
                 oAsset.sAssetName = Convert.ToString(txtAssetName.Text);
                 oAsset.sAssetAbbrivation = Convert.ToString(txtAssetAbbrivation.Text);
                 oAsset.sAssetDescription = Convert.ToString(txtAssetDescription.Text);
@@ -910,15 +954,16 @@ namespace LGRentalMgntSystem
                 Int64 nAssetID = oAsset.InsertUpdateAsset(bIsSaveAsset_Code);
                 if (nAssetID == 0)
                 {
-                    MessageBox.Show("Asset details not saved.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Asset details not saved.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (nAssetID == 2)
                 {
-                    MessageBox.Show("Asset code already present. Please change asset code.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Asset code already present. Please change asset code.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Asset details saved successfuly", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Asset details saved successfully", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearAssetDetails();
                 }
             }
             catch (Exception ex)
@@ -996,10 +1041,10 @@ namespace LGRentalMgntSystem
                 {
                     var row = gvAssetList.GetFocusedDataRow();
 
-                    txtShelfLifeUnit.Text=Convert.ToString(row[11]);
-                    dtShelfLife.Text=Convert.ToString(row[10]);
-                    dtRetirementDate.Text=Convert.ToString(row[12]);
-                    byte[] barcodeImage = (byte[])row[9];
+                    txtShelfLifeUnit.Text=Convert.ToString(row[10]);
+                    dtShelfLife.Text=Convert.ToString(row[9]);
+                    dtRetirementDate.Text=Convert.ToString(row[11]);
+                    byte[] barcodeImage = (byte[])row[8];
                     lblAssetCodeID.Text = Convert.ToString(row[1]);
                     lblInitialCode.Text = Convert.ToString(row[3]);
                     lblSequenceNo.Text = Convert.ToString(row[4]);

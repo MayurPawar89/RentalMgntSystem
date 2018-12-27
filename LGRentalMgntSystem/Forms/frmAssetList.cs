@@ -35,17 +35,26 @@ namespace LGRentalMgntSystem.Forms
                 if (dt != null)
                 {
                     gvMasterList.GridControl.DataSource = dt;
-                    gvMasterList.Columns[1].Visible = false;
-                    gvMasterList.Columns[2].Visible = false;
-                    gvMasterList.Columns[7].Visible = false;
+                    gvMasterList.Columns["TypeID"].Visible = false;
+                    gvMasterList.Columns["nAssetMainTypeID"].Visible = false;
+                    gvMasterList.Columns["IsUsed"].Visible = false;
                     
                     switch (MasterType)
                     {
                         case MasterType.AssetType:
                         case MasterType.AssetType1:
-                            gvMasterList.Columns[3].Visible = true;
+                            gvMasterList.Columns["AssetType"].Visible = true;
+                            gvMasterList.Columns["AllowAccess"].Visible = false;
+                            gvMasterList.Columns["AllowSignatory"].Visible = false;
                             break;
-                        default: gvMasterList.Columns[4].Visible = false;
+                        case MasterType.Designation:
+                            gvMasterList.Columns["AssetType"].Visible = false;
+                            gvMasterList.Columns["AllowAccess"].Visible = true;
+                            gvMasterList.Columns["AllowSignatory"].Visible = true;
+                            break;
+                        default: gvMasterList.Columns["AssetType"].Visible = false;
+                            gvMasterList.Columns["AllowAccess"].Visible = false;
+                            gvMasterList.Columns["AllowSignatory"].Visible = false;
                             break;
                     }
                 }
@@ -125,6 +134,8 @@ namespace LGRentalMgntSystem.Forms
                     frmMaster.MasterType = this.MasterType;
                     frmMaster.nTypeID = Convert.ToInt64(row[1]);
                     frmMaster.sTypeName = Convert.ToString(row[3]);
+                    frmMaster.bIsAllowAccess = Convert.ToBoolean(row[5]);
+                    frmMaster.bIsAllowSignatory = Convert.ToBoolean(row[6]);
                     switch (MasterType)
                     {
                         case MasterType.AssetType:
