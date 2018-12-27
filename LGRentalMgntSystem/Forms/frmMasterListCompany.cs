@@ -29,6 +29,8 @@ namespace LGRentalMgntSystem
                 {
                     gvCompanyList.GridControl.DataSource = dt;
                     gvCompanyList.Columns[1].Visible = false;
+                    gvCompanyList.Columns["IsUsed"].Visible = false;
+
                 }
             }
             catch (Exception ex)

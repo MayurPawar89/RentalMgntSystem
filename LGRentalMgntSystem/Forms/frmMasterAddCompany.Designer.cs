@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddCompany));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblCompanyTransportID = new DevExpress.XtraEditors.LabelControl();
@@ -47,10 +47,13 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.txtDocumentDate = new DevExpress.XtraEditors.DateEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtWHCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
+            this.txtWHCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
+            this.txtWHState = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
             this.lblCompWarehouseID = new DevExpress.XtraEditors.LabelControl();
-            this.btnWHAddSupervisor = new DevExpress.XtraEditors.ButtonEdit();
-            this.cmbWarehouseSupervisor = new System.Windows.Forms.ComboBox();
-            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlWHPhone5 = new System.Windows.Forms.Panel();
             this.txtWHPhone5 = new DevExpress.XtraEditors.TextEdit();
@@ -96,10 +99,34 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rdTextFormat = new System.Windows.Forms.RadioButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlCompSign3 = new System.Windows.Forms.Panel();
+            this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbCompanySignatory3 = new System.Windows.Forms.ComboBox();
+            this.pnlCompSign2 = new System.Windows.Forms.Panel();
+            this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbCompanySignatory2 = new System.Windows.Forms.ComboBox();
+            this.pnlCompSign1 = new System.Windows.Forms.Panel();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.btnAddCompanySignatory = new DevExpress.XtraEditors.ButtonEdit();
+            this.cmbCompanySignatory1 = new System.Windows.Forms.ComboBox();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGSTNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPANNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtState = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPincode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
             this.lblCompanyID = new DevExpress.XtraEditors.LabelControl();
             this.txtCompanyAbbrivation = new DevExpress.XtraEditors.TextEdit();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
-            this.btnAddCompanySignatory = new DevExpress.XtraEditors.ButtonEdit();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlOther = new System.Windows.Forms.Panel();
             this.txtFaxNo = new DevExpress.XtraEditors.TextEdit();
@@ -107,10 +134,6 @@
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtHSN_SAVCode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtGSTNo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPANNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.pnlPhoneAll = new System.Windows.Forms.Panel();
             this.pnlPhoneTwo = new System.Windows.Forms.Panel();
@@ -130,8 +153,6 @@
             this.txtPhone1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddressLine2 = new DevExpress.XtraEditors.MemoEdit();
-            this.cmbCompanySignatory = new System.Windows.Forms.ComboBox();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.cmbCompanyType = new System.Windows.Forms.ComboBox();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtWebsiteURL = new DevExpress.XtraEditors.TextEdit();
@@ -154,22 +175,17 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.cmbCompCountryMaster = new System.Windows.Forms.ComboBox();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
-            this.txtCity = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtState = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPincode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWHCity = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWHCountry = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWHState = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlWHSupervisor3 = new System.Windows.Forms.Panel();
+            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbWarehouseSupervisor3 = new System.Windows.Forms.ComboBox();
+            this.pnlWHSupervisor2 = new System.Windows.Forms.Panel();
+            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbWarehouseSupervisor2 = new System.Windows.Forms.ComboBox();
+            this.pnlWHSupervisor1 = new System.Windows.Forms.Panel();
+            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbWarehouseSupervisor1 = new System.Windows.Forms.ComboBox();
+            this.btnWHAddSupervisor = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocumentNumber.Properties)).BeginInit();
@@ -179,7 +195,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDocumentDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWHCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWHCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWHState.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlWHPhone5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHPhone5.Properties)).BeginInit();
@@ -210,16 +228,25 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCompanyAbbrivation.Properties)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.pnlCompSign3.SuspendLayout();
+            this.pnlCompSign2.SuspendLayout();
+            this.pnlCompSign1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCompanySignatory.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPANNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPincode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCompanyAbbrivation.Properties)).BeginInit();
             this.pnlMain.SuspendLayout();
             this.pnlOther.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtCompanyFormedOn.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtCompanyFormedOn.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHSN_SAVCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPANNo.Properties)).BeginInit();
             this.pnlPhoneAll.SuspendLayout();
             this.pnlPhoneTwo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhone2.Properties)).BeginInit();
@@ -241,14 +268,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPincode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWHCity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWHCountry.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWHState.Properties)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.pnlWHSupervisor3.SuspendLayout();
+            this.pnlWHSupervisor2.SuspendLayout();
+            this.pnlWHSupervisor1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -262,7 +286,7 @@
             this.groupControl1.Controls.Add(this.txtTransporterID);
             this.groupControl1.Controls.Add(this.labelControl23);
             this.groupControl1.Controls.Add(this.txtDocumentDate);
-            this.groupControl1.Location = new System.Drawing.Point(2, 370);
+            this.groupControl1.Location = new System.Drawing.Point(2, 373);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(718, 70);
             this.groupControl1.TabIndex = 57;
@@ -336,7 +360,7 @@
             this.txtDocumentDate.Location = new System.Drawing.Point(455, 46);
             this.txtDocumentDate.Name = "txtDocumentDate";
             this.txtDocumentDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("txtDocumentDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("txtDocumentDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.txtDocumentDate.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.False;
             this.txtDocumentDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -349,6 +373,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.panel5);
             this.groupControl2.Controls.Add(this.txtWHCity);
             this.groupControl2.Controls.Add(this.labelControl43);
             this.groupControl2.Controls.Add(this.txtWHCountry);
@@ -356,67 +381,75 @@
             this.groupControl2.Controls.Add(this.txtWHState);
             this.groupControl2.Controls.Add(this.labelControl45);
             this.groupControl2.Controls.Add(this.lblCompWarehouseID);
-            this.groupControl2.Controls.Add(this.btnWHAddSupervisor);
-            this.groupControl2.Controls.Add(this.cmbWarehouseSupervisor);
-            this.groupControl2.Controls.Add(this.labelControl27);
             this.groupControl2.Controls.Add(this.panel1);
             this.groupControl2.Controls.Add(this.txtWHAddressLine2);
-            this.groupControl2.Controls.Add(this.cmbWHCity);
-            this.groupControl2.Controls.Add(this.labelControl31);
-            this.groupControl2.Controls.Add(this.cmbWHCState);
-            this.groupControl2.Controls.Add(this.labelControl32);
-            this.groupControl2.Controls.Add(this.cmbWHCountry);
-            this.groupControl2.Controls.Add(this.labelControl33);
             this.groupControl2.Controls.Add(this.txtWHPincode);
             this.groupControl2.Controls.Add(this.labelControl34);
             this.groupControl2.Controls.Add(this.labelControl35);
             this.groupControl2.Controls.Add(this.labelControl36);
             this.groupControl2.Controls.Add(this.txtWHAddressLine1);
-            this.groupControl2.Location = new System.Drawing.Point(2, 442);
+            this.groupControl2.Location = new System.Drawing.Point(2, 444);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(718, 211);
+            this.groupControl2.Size = new System.Drawing.Size(718, 210);
             this.groupControl2.TabIndex = 58;
             this.groupControl2.Text = "Warehouse Details";
             // 
+            // txtWHCity
+            // 
+            this.txtWHCity.Location = new System.Drawing.Point(100, 164);
+            this.txtWHCity.Name = "txtWHCity";
+            this.txtWHCity.Properties.MaxLength = 20;
+            this.txtWHCity.Size = new System.Drawing.Size(200, 20);
+            this.txtWHCity.TabIndex = 194;
+            // 
+            // labelControl43
+            // 
+            this.labelControl43.Location = new System.Drawing.Point(68, 165);
+            this.labelControl43.Name = "labelControl43";
+            this.labelControl43.Size = new System.Drawing.Size(29, 13);
+            this.labelControl43.TabIndex = 193;
+            this.labelControl43.Text = "City : ";
+            // 
+            // txtWHCountry
+            // 
+            this.txtWHCountry.Location = new System.Drawing.Point(100, 119);
+            this.txtWHCountry.Name = "txtWHCountry";
+            this.txtWHCountry.Properties.MaxLength = 20;
+            this.txtWHCountry.Size = new System.Drawing.Size(200, 20);
+            this.txtWHCountry.TabIndex = 192;
+            // 
+            // labelControl44
+            // 
+            this.labelControl44.Location = new System.Drawing.Point(48, 122);
+            this.labelControl44.Name = "labelControl44";
+            this.labelControl44.Size = new System.Drawing.Size(49, 13);
+            this.labelControl44.TabIndex = 191;
+            this.labelControl44.Text = "Country : ";
+            // 
+            // txtWHState
+            // 
+            this.txtWHState.Location = new System.Drawing.Point(100, 141);
+            this.txtWHState.Name = "txtWHState";
+            this.txtWHState.Properties.MaxLength = 20;
+            this.txtWHState.Size = new System.Drawing.Size(200, 20);
+            this.txtWHState.TabIndex = 190;
+            // 
+            // labelControl45
+            // 
+            this.labelControl45.Location = new System.Drawing.Point(61, 144);
+            this.labelControl45.Name = "labelControl45";
+            this.labelControl45.Size = new System.Drawing.Size(36, 13);
+            this.labelControl45.TabIndex = 189;
+            this.labelControl45.Text = "State : ";
+            // 
             // lblCompWarehouseID
             // 
-            this.lblCompWarehouseID.Location = new System.Drawing.Point(362, 52);
+            this.lblCompWarehouseID.Location = new System.Drawing.Point(34, 98);
             this.lblCompWarehouseID.Name = "lblCompWarehouseID";
             this.lblCompWarehouseID.Size = new System.Drawing.Size(6, 13);
             this.lblCompWarehouseID.TabIndex = 93;
             this.lblCompWarehouseID.Text = "0";
             this.lblCompWarehouseID.Visible = false;
-            // 
-            // btnWHAddSupervisor
-            // 
-            this.btnWHAddSupervisor.Location = new System.Drawing.Point(663, 23);
-            this.btnWHAddSupervisor.Name = "btnWHAddSupervisor";
-            this.btnWHAddSupervisor.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btnWHAddSupervisor.Properties.Appearance.Options.UseBackColor = true;
-            this.btnWHAddSupervisor.Properties.AutoHeight = false;
-            this.btnWHAddSupervisor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddSupervisor.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.btnWHAddSupervisor.Size = new System.Drawing.Size(22, 18);
-            this.btnWHAddSupervisor.TabIndex = 62;
-            this.btnWHAddSupervisor.Click += new System.EventHandler(this.btnWHAddSupervisor_Click);
-            // 
-            // cmbWarehouseSupervisor
-            // 
-            this.cmbWarehouseSupervisor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbWarehouseSupervisor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbWarehouseSupervisor.FormattingEnabled = true;
-            this.cmbWarehouseSupervisor.Location = new System.Drawing.Point(456, 22);
-            this.cmbWarehouseSupervisor.Name = "cmbWarehouseSupervisor";
-            this.cmbWarehouseSupervisor.Size = new System.Drawing.Size(201, 21);
-            this.cmbWarehouseSupervisor.TabIndex = 61;
-            // 
-            // labelControl27
-            // 
-            this.labelControl27.Location = new System.Drawing.Point(334, 26);
-            this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(119, 13);
-            this.labelControl27.TabIndex = 60;
-            this.labelControl27.Text = "Warehouse Supervisor : ";
             // 
             // panel1
             // 
@@ -425,9 +458,9 @@
             this.panel1.Controls.Add(this.pnlWHPhone3);
             this.panel1.Controls.Add(this.pnlWHPhone2);
             this.panel1.Controls.Add(this.pnlWHPhone1);
-            this.panel1.Location = new System.Drawing.Point(335, 76);
+            this.panel1.Location = new System.Drawing.Point(331, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 131);
+            this.panel1.Size = new System.Drawing.Size(351, 110);
             this.panel1.TabIndex = 50;
             // 
             // pnlWHPhone5
@@ -435,14 +468,14 @@
             this.pnlWHPhone5.Controls.Add(this.txtWHPhone5);
             this.pnlWHPhone5.Controls.Add(this.labelControl37);
             this.pnlWHPhone5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlWHPhone5.Location = new System.Drawing.Point(0, 104);
+            this.pnlWHPhone5.Location = new System.Drawing.Point(0, 87);
             this.pnlWHPhone5.Name = "pnlWHPhone5";
-            this.pnlWHPhone5.Size = new System.Drawing.Size(351, 27);
+            this.pnlWHPhone5.Size = new System.Drawing.Size(351, 23);
             this.pnlWHPhone5.TabIndex = 4;
             // 
             // txtWHPhone5
             // 
-            this.txtWHPhone5.Location = new System.Drawing.Point(120, 3);
+            this.txtWHPhone5.Location = new System.Drawing.Point(120, 1);
             this.txtWHPhone5.Name = "txtWHPhone5";
             this.txtWHPhone5.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtWHPhone5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -453,7 +486,7 @@
             // 
             // labelControl37
             // 
-            this.labelControl37.Location = new System.Drawing.Point(49, 2);
+            this.labelControl37.Location = new System.Drawing.Point(49, 5);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(69, 13);
             this.labelControl37.TabIndex = 54;
@@ -464,14 +497,14 @@
             this.pnlWHPhone4.Controls.Add(this.txtWHPhone4);
             this.pnlWHPhone4.Controls.Add(this.labelControl38);
             this.pnlWHPhone4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWHPhone4.Location = new System.Drawing.Point(0, 78);
+            this.pnlWHPhone4.Location = new System.Drawing.Point(0, 65);
             this.pnlWHPhone4.Name = "pnlWHPhone4";
-            this.pnlWHPhone4.Size = new System.Drawing.Size(351, 26);
+            this.pnlWHPhone4.Size = new System.Drawing.Size(351, 22);
             this.pnlWHPhone4.TabIndex = 3;
             // 
             // txtWHPhone4
             // 
-            this.txtWHPhone4.Location = new System.Drawing.Point(120, 3);
+            this.txtWHPhone4.Location = new System.Drawing.Point(120, 1);
             this.txtWHPhone4.Name = "txtWHPhone4";
             this.txtWHPhone4.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtWHPhone4.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -482,7 +515,7 @@
             // 
             // labelControl38
             // 
-            this.labelControl38.Location = new System.Drawing.Point(49, 6);
+            this.labelControl38.Location = new System.Drawing.Point(49, 4);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(69, 13);
             this.labelControl38.TabIndex = 52;
@@ -493,14 +526,14 @@
             this.pnlWHPhone3.Controls.Add(this.txtWHPhone3);
             this.pnlWHPhone3.Controls.Add(this.labelControl39);
             this.pnlWHPhone3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWHPhone3.Location = new System.Drawing.Point(0, 52);
+            this.pnlWHPhone3.Location = new System.Drawing.Point(0, 43);
             this.pnlWHPhone3.Name = "pnlWHPhone3";
-            this.pnlWHPhone3.Size = new System.Drawing.Size(351, 26);
+            this.pnlWHPhone3.Size = new System.Drawing.Size(351, 22);
             this.pnlWHPhone3.TabIndex = 2;
             // 
             // txtWHPhone3
             // 
-            this.txtWHPhone3.Location = new System.Drawing.Point(120, 3);
+            this.txtWHPhone3.Location = new System.Drawing.Point(120, 1);
             this.txtWHPhone3.Name = "txtWHPhone3";
             this.txtWHPhone3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtWHPhone3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -511,7 +544,7 @@
             // 
             // labelControl39
             // 
-            this.labelControl39.Location = new System.Drawing.Point(49, 6);
+            this.labelControl39.Location = new System.Drawing.Point(49, 4);
             this.labelControl39.Name = "labelControl39";
             this.labelControl39.Size = new System.Drawing.Size(69, 13);
             this.labelControl39.TabIndex = 50;
@@ -522,14 +555,14 @@
             this.pnlWHPhone2.Controls.Add(this.txtWHPhone2);
             this.pnlWHPhone2.Controls.Add(this.labelControl40);
             this.pnlWHPhone2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWHPhone2.Location = new System.Drawing.Point(0, 26);
+            this.pnlWHPhone2.Location = new System.Drawing.Point(0, 22);
             this.pnlWHPhone2.Name = "pnlWHPhone2";
-            this.pnlWHPhone2.Size = new System.Drawing.Size(351, 26);
+            this.pnlWHPhone2.Size = new System.Drawing.Size(351, 21);
             this.pnlWHPhone2.TabIndex = 1;
             // 
             // txtWHPhone2
             // 
-            this.txtWHPhone2.Location = new System.Drawing.Point(120, 3);
+            this.txtWHPhone2.Location = new System.Drawing.Point(120, 0);
             this.txtWHPhone2.Name = "txtWHPhone2";
             this.txtWHPhone2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtWHPhone2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -540,7 +573,7 @@
             // 
             // labelControl40
             // 
-            this.labelControl40.Location = new System.Drawing.Point(49, 6);
+            this.labelControl40.Location = new System.Drawing.Point(49, 2);
             this.labelControl40.Name = "labelControl40";
             this.labelControl40.Size = new System.Drawing.Size(69, 13);
             this.labelControl40.TabIndex = 48;
@@ -554,25 +587,25 @@
             this.pnlWHPhone1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlWHPhone1.Location = new System.Drawing.Point(0, 0);
             this.pnlWHPhone1.Name = "pnlWHPhone1";
-            this.pnlWHPhone1.Size = new System.Drawing.Size(351, 26);
+            this.pnlWHPhone1.Size = new System.Drawing.Size(351, 22);
             this.pnlWHPhone1.TabIndex = 0;
             // 
             // btnWHAddPhone
             // 
-            this.btnWHAddPhone.Location = new System.Drawing.Point(324, 4);
+            this.btnWHAddPhone.Location = new System.Drawing.Point(324, 3);
             this.btnWHAddPhone.Name = "btnWHAddPhone";
             this.btnWHAddPhone.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.btnWHAddPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnWHAddPhone.Properties.AutoHeight = false;
             this.btnWHAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnWHAddPhone.Size = new System.Drawing.Size(22, 18);
             this.btnWHAddPhone.TabIndex = 48;
             this.btnWHAddPhone.Click += new System.EventHandler(this.btnWHAddPhone_Click);
             // 
             // txtWHPhone1
             // 
-            this.txtWHPhone1.Location = new System.Drawing.Point(120, 3);
+            this.txtWHPhone1.Location = new System.Drawing.Point(120, 1);
             this.txtWHPhone1.Name = "txtWHPhone1";
             this.txtWHPhone1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtWHPhone1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -583,7 +616,7 @@
             // 
             // labelControl41
             // 
-            this.labelControl41.Location = new System.Drawing.Point(49, 6);
+            this.labelControl41.Location = new System.Drawing.Point(49, 4);
             this.labelControl41.Name = "labelControl41";
             this.labelControl41.Size = new System.Drawing.Size(69, 13);
             this.labelControl41.TabIndex = 46;
@@ -601,7 +634,7 @@
             this.cmbWHCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbWHCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWHCity.FormattingEnabled = true;
-            this.cmbWHCity.Location = new System.Drawing.Point(703, 44);
+            this.cmbWHCity.Location = new System.Drawing.Point(761, 614);
             this.cmbWHCity.Name = "cmbWHCity";
             this.cmbWHCity.Size = new System.Drawing.Size(201, 21);
             this.cmbWHCity.TabIndex = 48;
@@ -609,7 +642,7 @@
             // 
             // labelControl31
             // 
-            this.labelControl31.Location = new System.Drawing.Point(672, 47);
+            this.labelControl31.Location = new System.Drawing.Point(730, 617);
             this.labelControl31.Name = "labelControl31";
             this.labelControl31.Size = new System.Drawing.Size(29, 13);
             this.labelControl31.TabIndex = 47;
@@ -621,7 +654,7 @@
             this.cmbWHCState.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbWHCState.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWHCState.FormattingEnabled = true;
-            this.cmbWHCState.Location = new System.Drawing.Point(703, 67);
+            this.cmbWHCState.Location = new System.Drawing.Point(761, 637);
             this.cmbWHCState.Name = "cmbWHCState";
             this.cmbWHCState.Size = new System.Drawing.Size(201, 21);
             this.cmbWHCState.TabIndex = 46;
@@ -629,7 +662,7 @@
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(665, 70);
+            this.labelControl32.Location = new System.Drawing.Point(723, 640);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(36, 13);
             this.labelControl32.TabIndex = 45;
@@ -641,7 +674,7 @@
             this.cmbWHCountry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbWHCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbWHCountry.FormattingEnabled = true;
-            this.cmbWHCountry.Location = new System.Drawing.Point(703, 112);
+            this.cmbWHCountry.Location = new System.Drawing.Point(761, 660);
             this.cmbWHCountry.Name = "cmbWHCountry";
             this.cmbWHCountry.Size = new System.Drawing.Size(201, 21);
             this.cmbWHCountry.TabIndex = 44;
@@ -649,7 +682,7 @@
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(652, 115);
+            this.labelControl33.Location = new System.Drawing.Point(710, 663);
             this.labelControl33.Name = "labelControl33";
             this.labelControl33.Size = new System.Drawing.Size(49, 13);
             this.labelControl33.TabIndex = 43;
@@ -658,7 +691,7 @@
             // 
             // txtWHPincode
             // 
-            this.txtWHPincode.Location = new System.Drawing.Point(99, 188);
+            this.txtWHPincode.Location = new System.Drawing.Point(100, 186);
             this.txtWHPincode.Name = "txtWHPincode";
             this.txtWHPincode.Properties.Mask.EditMask = "\\d{1,6}";
             this.txtWHPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
@@ -667,7 +700,7 @@
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(50, 191);
+            this.labelControl34.Location = new System.Drawing.Point(50, 189);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(47, 13);
             this.labelControl34.TabIndex = 41;
@@ -711,6 +744,7 @@
             this.picHeaderImage.Dock = System.Windows.Forms.DockStyle.Top;
             this.picHeaderImage.Location = new System.Drawing.Point(3, 17);
             this.picHeaderImage.Name = "picHeaderImage";
+            this.picHeaderImage.Properties.NullText = "Right click to add image";
             this.picHeaderImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picHeaderImage.Size = new System.Drawing.Size(189, 117);
             this.picHeaderImage.TabIndex = 1;
@@ -731,6 +765,7 @@
             this.picFooterImage.EnterMoveNextControl = true;
             this.picFooterImage.Location = new System.Drawing.Point(3, 17);
             this.picFooterImage.Name = "picFooterImage";
+            this.picFooterImage.Properties.NullText = "Right click to add image";
             this.picFooterImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picFooterImage.Size = new System.Drawing.Size(189, 117);
             this.picFooterImage.TabIndex = 0;
@@ -788,6 +823,7 @@
             this.picTermsCondition.Location = new System.Drawing.Point(2, 2);
             this.picTermsCondition.Name = "picTermsCondition";
             this.picTermsCondition.Properties.InitialImage = ((System.Drawing.Image)(resources.GetObject("picTermsCondition.Properties.InitialImage")));
+            this.picTermsCondition.Properties.NullText = "Right click to add image";
             this.picTermsCondition.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picTermsCondition.Size = new System.Drawing.Size(185, 124);
             this.picTermsCondition.TabIndex = 1;
@@ -846,6 +882,11 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.panel4);
+            this.groupControl3.Controls.Add(this.labelControl11);
+            this.groupControl3.Controls.Add(this.txtGSTNo);
+            this.groupControl3.Controls.Add(this.labelControl10);
+            this.groupControl3.Controls.Add(this.txtPANNo);
             this.groupControl3.Controls.Add(this.txtEmail);
             this.groupControl3.Controls.Add(this.txtCity);
             this.groupControl3.Controls.Add(this.labelControl5);
@@ -859,11 +900,8 @@
             this.groupControl3.Controls.Add(this.lblCompanyID);
             this.groupControl3.Controls.Add(this.txtCompanyAbbrivation);
             this.groupControl3.Controls.Add(this.labelControl28);
-            this.groupControl3.Controls.Add(this.btnAddCompanySignatory);
             this.groupControl3.Controls.Add(this.pnlMain);
             this.groupControl3.Controls.Add(this.txtAddressLine2);
-            this.groupControl3.Controls.Add(this.cmbCompanySignatory);
-            this.groupControl3.Controls.Add(this.labelControl15);
             this.groupControl3.Controls.Add(this.cmbCompanyType);
             this.groupControl3.Controls.Add(this.labelControl14);
             this.groupControl3.Controls.Add(this.txtWebsiteURL);
@@ -875,15 +913,239 @@
             this.groupControl3.Controls.Add(this.txtCompanyCode);
             this.groupControl3.Controls.Add(this.labelControl1);
             this.groupControl3.Controls.Add(this.txtAddressLine1);
-            this.groupControl3.Location = new System.Drawing.Point(2, 38);
+            this.groupControl3.Location = new System.Drawing.Point(2, 36);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(718, 330);
+            this.groupControl3.Size = new System.Drawing.Size(718, 335);
             this.groupControl3.TabIndex = 65;
             this.groupControl3.Text = "Company Informations";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pnlCompSign3);
+            this.panel4.Controls.Add(this.pnlCompSign2);
+            this.panel4.Controls.Add(this.pnlCompSign1);
+            this.panel4.Location = new System.Drawing.Point(329, 68);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(382, 70);
+            this.panel4.TabIndex = 194;
+            // 
+            // pnlCompSign3
+            // 
+            this.pnlCompSign3.Controls.Add(this.labelControl47);
+            this.pnlCompSign3.Controls.Add(this.cmbCompanySignatory3);
+            this.pnlCompSign3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCompSign3.Location = new System.Drawing.Point(0, 47);
+            this.pnlCompSign3.Name = "pnlCompSign3";
+            this.pnlCompSign3.Size = new System.Drawing.Size(382, 23);
+            this.pnlCompSign3.TabIndex = 2;
+            this.pnlCompSign3.Visible = false;
+            // 
+            // labelControl47
+            // 
+            this.labelControl47.Location = new System.Drawing.Point(17, 5);
+            this.labelControl47.Name = "labelControl47";
+            this.labelControl47.Size = new System.Drawing.Size(99, 13);
+            this.labelControl47.TabIndex = 93;
+            this.labelControl47.Text = "Comp. Signatory 3 : ";
+            // 
+            // cmbCompanySignatory3
+            // 
+            this.cmbCompanySignatory3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompanySignatory3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCompanySignatory3.FormattingEnabled = true;
+            this.cmbCompanySignatory3.Location = new System.Drawing.Point(121, 2);
+            this.cmbCompanySignatory3.Name = "cmbCompanySignatory3";
+            this.cmbCompanySignatory3.Size = new System.Drawing.Size(201, 21);
+            this.cmbCompanySignatory3.TabIndex = 92;
+            // 
+            // pnlCompSign2
+            // 
+            this.pnlCompSign2.Controls.Add(this.labelControl46);
+            this.pnlCompSign2.Controls.Add(this.cmbCompanySignatory2);
+            this.pnlCompSign2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCompSign2.Location = new System.Drawing.Point(0, 25);
+            this.pnlCompSign2.Name = "pnlCompSign2";
+            this.pnlCompSign2.Size = new System.Drawing.Size(382, 22);
+            this.pnlCompSign2.TabIndex = 1;
+            this.pnlCompSign2.Visible = false;
+            // 
+            // labelControl46
+            // 
+            this.labelControl46.Location = new System.Drawing.Point(15, 4);
+            this.labelControl46.Name = "labelControl46";
+            this.labelControl46.Size = new System.Drawing.Size(102, 13);
+            this.labelControl46.TabIndex = 93;
+            this.labelControl46.Text = "Comp.  Signatory 2 : ";
+            // 
+            // cmbCompanySignatory2
+            // 
+            this.cmbCompanySignatory2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompanySignatory2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCompanySignatory2.FormattingEnabled = true;
+            this.cmbCompanySignatory2.Location = new System.Drawing.Point(121, 1);
+            this.cmbCompanySignatory2.Name = "cmbCompanySignatory2";
+            this.cmbCompanySignatory2.Size = new System.Drawing.Size(201, 21);
+            this.cmbCompanySignatory2.TabIndex = 92;
+            // 
+            // pnlCompSign1
+            // 
+            this.pnlCompSign1.Controls.Add(this.labelControl15);
+            this.pnlCompSign1.Controls.Add(this.btnAddCompanySignatory);
+            this.pnlCompSign1.Controls.Add(this.cmbCompanySignatory1);
+            this.pnlCompSign1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCompSign1.Location = new System.Drawing.Point(0, 0);
+            this.pnlCompSign1.Name = "pnlCompSign1";
+            this.pnlCompSign1.Size = new System.Drawing.Size(382, 25);
+            this.pnlCompSign1.TabIndex = 0;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(15, 5);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(99, 13);
+            this.labelControl15.TabIndex = 91;
+            this.labelControl15.Text = "Comp. Signatory 1 : ";
+            // 
+            // btnAddCompanySignatory
+            // 
+            this.btnAddCompanySignatory.Location = new System.Drawing.Point(328, 4);
+            this.btnAddCompanySignatory.Name = "btnAddCompanySignatory";
+            this.btnAddCompanySignatory.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCompanySignatory.Properties.Appearance.Options.UseBackColor = true;
+            this.btnAddCompanySignatory.Properties.AutoHeight = false;
+            this.btnAddCompanySignatory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanySignatory.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.btnAddCompanySignatory.Size = new System.Drawing.Size(22, 18);
+            this.btnAddCompanySignatory.TabIndex = 90;
+            this.btnAddCompanySignatory.Click += new System.EventHandler(this.btnAddCompanySignatory_Click);
+            // 
+            // cmbCompanySignatory1
+            // 
+            this.cmbCompanySignatory1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbCompanySignatory1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCompanySignatory1.FormattingEnabled = true;
+            this.cmbCompanySignatory1.Location = new System.Drawing.Point(121, 3);
+            this.cmbCompanySignatory1.Name = "cmbCompanySignatory1";
+            this.cmbCompanySignatory1.Size = new System.Drawing.Size(201, 21);
+            this.cmbCompanySignatory1.TabIndex = 89;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(49, 294);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(49, 13);
+            this.labelControl11.TabIndex = 190;
+            this.labelControl11.Text = "GST No. : ";
+            // 
+            // txtGSTNo
+            // 
+            this.txtGSTNo.Location = new System.Drawing.Point(99, 291);
+            this.txtGSTNo.Name = "txtGSTNo";
+            this.txtGSTNo.Size = new System.Drawing.Size(200, 20);
+            this.txtGSTNo.TabIndex = 191;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(48, 316);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(50, 13);
+            this.labelControl10.TabIndex = 192;
+            this.labelControl10.Text = "PAN No. : ";
+            // 
+            // txtPANNo
+            // 
+            this.txtPANNo.Location = new System.Drawing.Point(99, 313);
+            this.txtPANNo.Name = "txtPANNo";
+            this.txtPANNo.Size = new System.Drawing.Size(200, 20);
+            this.txtPANNo.TabIndex = 193;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(101, 245);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.txtEmail.Properties.Mask.EditMask = "[a-zA-Z0-9.-]+@[a-zA-Z0-9-]+\\.[A-Za-z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtEmail.Properties.MaxLength = 50;
+            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.TabIndex = 189;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(101, 200);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.MaxLength = 20;
+            this.txtCity.Size = new System.Drawing.Size(200, 20);
+            this.txtCity.TabIndex = 188;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(69, 200);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(29, 13);
+            this.labelControl5.TabIndex = 187;
+            this.labelControl5.Text = "City : ";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(101, 154);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.MaxLength = 20;
+            this.txtCountry.Size = new System.Drawing.Size(200, 20);
+            this.txtCountry.TabIndex = 186;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(49, 157);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(49, 13);
+            this.labelControl6.TabIndex = 185;
+            this.labelControl6.Text = "Country : ";
+            // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(101, 177);
+            this.txtState.Name = "txtState";
+            this.txtState.Properties.MaxLength = 20;
+            this.txtState.Size = new System.Drawing.Size(200, 20);
+            this.txtState.TabIndex = 184;
+            // 
+            // labelControl29
+            // 
+            this.labelControl29.Location = new System.Drawing.Point(62, 179);
+            this.labelControl29.Name = "labelControl29";
+            this.labelControl29.Size = new System.Drawing.Size(36, 13);
+            this.labelControl29.TabIndex = 183;
+            this.labelControl29.Text = "State : ";
+            // 
+            // labelControl30
+            // 
+            this.labelControl30.Location = new System.Drawing.Point(50, 248);
+            this.labelControl30.Name = "labelControl30";
+            this.labelControl30.Size = new System.Drawing.Size(48, 13);
+            this.labelControl30.TabIndex = 182;
+            this.labelControl30.Text = "Email ID : ";
+            // 
+            // txtPincode
+            // 
+            this.txtPincode.Location = new System.Drawing.Point(101, 222);
+            this.txtPincode.Name = "txtPincode";
+            this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
+            this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtPincode.Size = new System.Drawing.Size(200, 20);
+            this.txtPincode.TabIndex = 181;
+            // 
+            // labelControl42
+            // 
+            this.labelControl42.Location = new System.Drawing.Point(51, 225);
+            this.labelControl42.Name = "labelControl42";
+            this.labelControl42.Size = new System.Drawing.Size(47, 13);
+            this.labelControl42.TabIndex = 180;
+            this.labelControl42.Text = "Pincode : ";
+            // 
             // lblCompanyID
             // 
-            this.lblCompanyID.Location = new System.Drawing.Point(14, 310);
+            this.lblCompanyID.Location = new System.Drawing.Point(14, 138);
             this.lblCompanyID.Name = "lblCompanyID";
             this.lblCompanyID.Size = new System.Drawing.Size(6, 13);
             this.lblCompanyID.TabIndex = 91;
@@ -892,6 +1154,7 @@
             // 
             // txtCompanyAbbrivation
             // 
+            this.txtCompanyAbbrivation.Enabled = false;
             this.txtCompanyAbbrivation.Location = new System.Drawing.Point(451, 23);
             this.txtCompanyAbbrivation.Name = "txtCompanyAbbrivation";
             this.txtCompanyAbbrivation.Properties.ReadOnly = true;
@@ -906,26 +1169,13 @@
             this.labelControl28.TabIndex = 89;
             this.labelControl28.Text = "Company Abbrivation : ";
             // 
-            // btnAddCompanySignatory
-            // 
-            this.btnAddCompanySignatory.Location = new System.Drawing.Point(658, 70);
-            this.btnAddCompanySignatory.Name = "btnAddCompanySignatory";
-            this.btnAddCompanySignatory.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddCompanySignatory.Properties.Appearance.Options.UseBackColor = true;
-            this.btnAddCompanySignatory.Properties.AutoHeight = false;
-            this.btnAddCompanySignatory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanySignatory.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-            this.btnAddCompanySignatory.Size = new System.Drawing.Size(22, 18);
-            this.btnAddCompanySignatory.TabIndex = 88;
-            this.btnAddCompanySignatory.Click += new System.EventHandler(this.btnAddCompanySignatory_Click);
-            // 
             // pnlMain
             // 
             this.pnlMain.Controls.Add(this.pnlOther);
             this.pnlMain.Controls.Add(this.pnlPhoneAll);
-            this.pnlMain.Location = new System.Drawing.Point(329, 91);
+            this.pnlMain.Location = new System.Drawing.Point(330, 143);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(383, 235);
+            this.pnlMain.Size = new System.Drawing.Size(383, 190);
             this.pnlMain.TabIndex = 87;
             // 
             // pnlOther
@@ -935,14 +1185,10 @@
             this.pnlOther.Controls.Add(this.labelControl13);
             this.pnlOther.Controls.Add(this.labelControl12);
             this.pnlOther.Controls.Add(this.txtHSN_SAVCode);
-            this.pnlOther.Controls.Add(this.labelControl11);
-            this.pnlOther.Controls.Add(this.txtGSTNo);
-            this.pnlOther.Controls.Add(this.labelControl10);
-            this.pnlOther.Controls.Add(this.txtPANNo);
             this.pnlOther.Controls.Add(this.labelControl9);
             this.pnlOther.Location = new System.Drawing.Point(0, 117);
             this.pnlOther.Name = "pnlOther";
-            this.pnlOther.Size = new System.Drawing.Size(383, 115);
+            this.pnlOther.Size = new System.Drawing.Size(383, 73);
             this.pnlOther.TabIndex = 1;
             // 
             // txtFaxNo
@@ -955,10 +1201,10 @@
             // dtCompanyFormedOn
             // 
             this.dtCompanyFormedOn.EditValue = null;
-            this.dtCompanyFormedOn.Location = new System.Drawing.Point(120, 90);
+            this.dtCompanyFormedOn.Location = new System.Drawing.Point(120, 47);
             this.dtCompanyFormedOn.Name = "dtCompanyFormedOn";
             this.dtCompanyFormedOn.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtCompanyFormedOn.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtCompanyFormedOn.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.dtCompanyFormedOn.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.False;
             this.dtCompanyFormedOn.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -992,39 +1238,9 @@
             this.txtHSN_SAVCode.Size = new System.Drawing.Size(200, 20);
             this.txtHSN_SAVCode.TabIndex = 19;
             // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(69, 49);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(49, 13);
-            this.labelControl11.TabIndex = 20;
-            this.labelControl11.Text = "GST No. : ";
-            // 
-            // txtGSTNo
-            // 
-            this.txtGSTNo.Location = new System.Drawing.Point(120, 46);
-            this.txtGSTNo.Name = "txtGSTNo";
-            this.txtGSTNo.Size = new System.Drawing.Size(200, 20);
-            this.txtGSTNo.TabIndex = 21;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(68, 71);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(50, 13);
-            this.labelControl10.TabIndex = 22;
-            this.labelControl10.Text = "PAN No. : ";
-            // 
-            // txtPANNo
-            // 
-            this.txtPANNo.Location = new System.Drawing.Point(120, 68);
-            this.txtPANNo.Name = "txtPANNo";
-            this.txtPANNo.Size = new System.Drawing.Size(200, 20);
-            this.txtPANNo.TabIndex = 23;
-            // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(7, 93);
+            this.labelControl9.Location = new System.Drawing.Point(7, 50);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(111, 13);
             this.labelControl9.TabIndex = 24;
@@ -1186,7 +1402,7 @@
             this.btnAddCompanyPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddCompanyPhone.Properties.AutoHeight = false;
             this.btnAddCompanyPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanyPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanyPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnAddCompanyPhone.Size = new System.Drawing.Size(22, 18);
             this.btnAddCompanyPhone.TabIndex = 48;
             this.btnAddCompanyPhone.Click += new System.EventHandler(this.btnAddCompanyPhone_Click);
@@ -1214,28 +1430,10 @@
             // 
             // txtAddressLine2
             // 
-            this.txtAddressLine2.Location = new System.Drawing.Point(101, 117);
+            this.txtAddressLine2.Location = new System.Drawing.Point(101, 112);
             this.txtAddressLine2.Name = "txtAddressLine2";
-            this.txtAddressLine2.Size = new System.Drawing.Size(200, 46);
+            this.txtAddressLine2.Size = new System.Drawing.Size(200, 40);
             this.txtAddressLine2.TabIndex = 86;
-            // 
-            // cmbCompanySignatory
-            // 
-            this.cmbCompanySignatory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbCompanySignatory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbCompanySignatory.FormattingEnabled = true;
-            this.cmbCompanySignatory.Location = new System.Drawing.Point(451, 69);
-            this.cmbCompanySignatory.Name = "cmbCompanySignatory";
-            this.cmbCompanySignatory.Size = new System.Drawing.Size(201, 21);
-            this.cmbCompanySignatory.TabIndex = 79;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(341, 73);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(104, 13);
-            this.labelControl15.TabIndex = 78;
-            this.labelControl15.Text = "Company Signatory : ";
             // 
             // cmbCompanyType
             // 
@@ -1257,14 +1455,14 @@
             // 
             // txtWebsiteURL
             // 
-            this.txtWebsiteURL.Location = new System.Drawing.Point(101, 284);
+            this.txtWebsiteURL.Location = new System.Drawing.Point(101, 268);
             this.txtWebsiteURL.Name = "txtWebsiteURL";
             this.txtWebsiteURL.Size = new System.Drawing.Size(200, 20);
             this.txtWebsiteURL.TabIndex = 75;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(27, 287);
+            this.labelControl8.Location = new System.Drawing.Point(27, 271);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(71, 13);
             this.labelControl8.TabIndex = 74;
@@ -1272,7 +1470,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(18, 119);
+            this.labelControl4.Location = new System.Drawing.Point(18, 114);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(80, 13);
             this.labelControl4.TabIndex = 69;
@@ -1304,6 +1502,7 @@
             // 
             // txtCompanyCode
             // 
+            this.txtCompanyCode.Enabled = false;
             this.txtCompanyCode.Location = new System.Drawing.Point(101, 23);
             this.txtCompanyCode.Name = "txtCompanyCode";
             this.txtCompanyCode.Properties.ReadOnly = true;
@@ -1322,7 +1521,7 @@
             // 
             this.txtAddressLine1.Location = new System.Drawing.Point(101, 69);
             this.txtAddressLine1.Name = "txtAddressLine1";
-            this.txtAddressLine1.Size = new System.Drawing.Size(200, 46);
+            this.txtAddressLine1.Size = new System.Drawing.Size(200, 40);
             this.txtAddressLine1.TabIndex = 68;
             // 
             // panel3
@@ -1331,14 +1530,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 655);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(935, 47);
+            this.panel3.Size = new System.Drawing.Size(935, 38);
             this.panel3.TabIndex = 66;
             // 
             // btnSave
             // 
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSave.Location = new System.Drawing.Point(419, 8);
+            this.btnSave.Location = new System.Drawing.Point(419, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
             this.btnSave.TabIndex = 3;
@@ -1425,7 +1624,7 @@
             this.cmbCompCountryMaster.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmbCompCountryMaster.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCompCountryMaster.FormattingEnabled = true;
-            this.cmbCompCountryMaster.Location = new System.Drawing.Point(761, 609);
+            this.cmbCompCountryMaster.Location = new System.Drawing.Point(761, 587);
             this.cmbCompCountryMaster.Name = "cmbCompCountryMaster";
             this.cmbCompCountryMaster.Size = new System.Drawing.Size(201, 21);
             this.cmbCompCountryMaster.TabIndex = 87;
@@ -1433,150 +1632,128 @@
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(710, 612);
+            this.labelControl16.Location = new System.Drawing.Point(710, 590);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(49, 13);
             this.labelControl16.TabIndex = 86;
             this.labelControl16.Text = "Country : ";
             this.labelControl16.Visible = false;
             // 
-            // txtEmail
+            // panel5
             // 
-            this.txtEmail.Location = new System.Drawing.Point(101, 261);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
-            this.txtEmail.Properties.Mask.EditMask = "[a-zA-Z0-9.-]+@[a-zA-Z0-9-]+\\.[A-Za-z]{2,4}";
-            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtEmail.Properties.MaxLength = 50;
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 189;
+            this.panel5.Controls.Add(this.pnlWHSupervisor3);
+            this.panel5.Controls.Add(this.pnlWHSupervisor2);
+            this.panel5.Controls.Add(this.pnlWHSupervisor1);
+            this.panel5.Location = new System.Drawing.Point(319, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(365, 69);
+            this.panel5.TabIndex = 195;
             // 
-            // txtCity
+            // pnlWHSupervisor3
             // 
-            this.txtCity.Location = new System.Drawing.Point(101, 211);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Properties.MaxLength = 20;
-            this.txtCity.Size = new System.Drawing.Size(200, 20);
-            this.txtCity.TabIndex = 188;
+            this.pnlWHSupervisor3.Controls.Add(this.labelControl48);
+            this.pnlWHSupervisor3.Controls.Add(this.cmbWarehouseSupervisor3);
+            this.pnlWHSupervisor3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWHSupervisor3.Location = new System.Drawing.Point(0, 46);
+            this.pnlWHSupervisor3.Name = "pnlWHSupervisor3";
+            this.pnlWHSupervisor3.Size = new System.Drawing.Size(365, 23);
+            this.pnlWHSupervisor3.TabIndex = 2;
+            this.pnlWHSupervisor3.Visible = false;
             // 
-            // labelControl5
+            // labelControl48
             // 
-            this.labelControl5.Location = new System.Drawing.Point(62, 211);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(29, 13);
-            this.labelControl5.TabIndex = 187;
-            this.labelControl5.Text = "City : ";
+            this.labelControl48.Location = new System.Drawing.Point(4, 4);
+            this.labelControl48.Name = "labelControl48";
+            this.labelControl48.Size = new System.Drawing.Size(128, 13);
+            this.labelControl48.TabIndex = 93;
+            this.labelControl48.Text = "Warehouse Supervisor 3 : ";
             // 
-            // txtCountry
+            // cmbWarehouseSupervisor3
             // 
-            this.txtCountry.Location = new System.Drawing.Point(101, 165);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Properties.MaxLength = 20;
-            this.txtCountry.Size = new System.Drawing.Size(200, 20);
-            this.txtCountry.TabIndex = 186;
+            this.cmbWarehouseSupervisor3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbWarehouseSupervisor3.FormattingEnabled = true;
+            this.cmbWarehouseSupervisor3.Location = new System.Drawing.Point(133, 1);
+            this.cmbWarehouseSupervisor3.Name = "cmbWarehouseSupervisor3";
+            this.cmbWarehouseSupervisor3.Size = new System.Drawing.Size(201, 21);
+            this.cmbWarehouseSupervisor3.TabIndex = 92;
             // 
-            // labelControl6
+            // pnlWHSupervisor2
             // 
-            this.labelControl6.Location = new System.Drawing.Point(43, 168);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(49, 13);
-            this.labelControl6.TabIndex = 185;
-            this.labelControl6.Text = "Country : ";
+            this.pnlWHSupervisor2.Controls.Add(this.labelControl49);
+            this.pnlWHSupervisor2.Controls.Add(this.cmbWarehouseSupervisor2);
+            this.pnlWHSupervisor2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWHSupervisor2.Location = new System.Drawing.Point(0, 24);
+            this.pnlWHSupervisor2.Name = "pnlWHSupervisor2";
+            this.pnlWHSupervisor2.Size = new System.Drawing.Size(365, 22);
+            this.pnlWHSupervisor2.TabIndex = 1;
+            this.pnlWHSupervisor2.Visible = false;
             // 
-            // txtState
+            // labelControl49
             // 
-            this.txtState.Location = new System.Drawing.Point(101, 188);
-            this.txtState.Name = "txtState";
-            this.txtState.Properties.MaxLength = 20;
-            this.txtState.Size = new System.Drawing.Size(200, 20);
-            this.txtState.TabIndex = 184;
+            this.labelControl49.Location = new System.Drawing.Point(4, 3);
+            this.labelControl49.Name = "labelControl49";
+            this.labelControl49.Size = new System.Drawing.Size(128, 13);
+            this.labelControl49.TabIndex = 93;
+            this.labelControl49.Text = "Warehouse Supervisor 2 : ";
             // 
-            // labelControl29
+            // cmbWarehouseSupervisor2
             // 
-            this.labelControl29.Location = new System.Drawing.Point(55, 190);
-            this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(36, 13);
-            this.labelControl29.TabIndex = 183;
-            this.labelControl29.Text = "State : ";
+            this.cmbWarehouseSupervisor2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbWarehouseSupervisor2.FormattingEnabled = true;
+            this.cmbWarehouseSupervisor2.Location = new System.Drawing.Point(133, 0);
+            this.cmbWarehouseSupervisor2.Name = "cmbWarehouseSupervisor2";
+            this.cmbWarehouseSupervisor2.Size = new System.Drawing.Size(201, 21);
+            this.cmbWarehouseSupervisor2.TabIndex = 92;
             // 
-            // labelControl30
+            // pnlWHSupervisor1
             // 
-            this.labelControl30.Location = new System.Drawing.Point(45, 264);
-            this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(48, 13);
-            this.labelControl30.TabIndex = 182;
-            this.labelControl30.Text = "Email ID : ";
+            this.pnlWHSupervisor1.Controls.Add(this.btnWHAddSupervisor);
+            this.pnlWHSupervisor1.Controls.Add(this.cmbWarehouseSupervisor1);
+            this.pnlWHSupervisor1.Controls.Add(this.labelControl50);
+            this.pnlWHSupervisor1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWHSupervisor1.Location = new System.Drawing.Point(0, 0);
+            this.pnlWHSupervisor1.Name = "pnlWHSupervisor1";
+            this.pnlWHSupervisor1.Size = new System.Drawing.Size(365, 24);
+            this.pnlWHSupervisor1.TabIndex = 0;
             // 
-            // txtPincode
+            // labelControl50
             // 
-            this.txtPincode.Location = new System.Drawing.Point(101, 236);
-            this.txtPincode.Name = "txtPincode";
-            this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
-            this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtPincode.TabIndex = 181;
+            this.labelControl50.Location = new System.Drawing.Point(4, 6);
+            this.labelControl50.Name = "labelControl50";
+            this.labelControl50.Size = new System.Drawing.Size(128, 13);
+            this.labelControl50.TabIndex = 91;
+            this.labelControl50.Text = "Warehouse Supervisor 1 : ";
             // 
-            // labelControl42
+            // cmbWarehouseSupervisor1
             // 
-            this.labelControl42.Location = new System.Drawing.Point(48, 239);
-            this.labelControl42.Name = "labelControl42";
-            this.labelControl42.Size = new System.Drawing.Size(47, 13);
-            this.labelControl42.TabIndex = 180;
-            this.labelControl42.Text = "Pincode : ";
+            this.cmbWarehouseSupervisor1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbWarehouseSupervisor1.FormattingEnabled = true;
+            this.cmbWarehouseSupervisor1.Location = new System.Drawing.Point(133, 2);
+            this.cmbWarehouseSupervisor1.Name = "cmbWarehouseSupervisor1";
+            this.cmbWarehouseSupervisor1.Size = new System.Drawing.Size(201, 21);
+            this.cmbWarehouseSupervisor1.TabIndex = 92;
             // 
-            // txtWHCity
+            // btnWHAddSupervisor
             // 
-            this.txtWHCity.Location = new System.Drawing.Point(101, 165);
-            this.txtWHCity.Name = "txtWHCity";
-            this.txtWHCity.Properties.MaxLength = 20;
-            this.txtWHCity.Size = new System.Drawing.Size(200, 20);
-            this.txtWHCity.TabIndex = 194;
-            // 
-            // labelControl43
-            // 
-            this.labelControl43.Location = new System.Drawing.Point(62, 165);
-            this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(29, 13);
-            this.labelControl43.TabIndex = 193;
-            this.labelControl43.Text = "City : ";
-            // 
-            // txtWHCountry
-            // 
-            this.txtWHCountry.Location = new System.Drawing.Point(101, 119);
-            this.txtWHCountry.Name = "txtWHCountry";
-            this.txtWHCountry.Properties.MaxLength = 20;
-            this.txtWHCountry.Size = new System.Drawing.Size(200, 20);
-            this.txtWHCountry.TabIndex = 192;
-            // 
-            // labelControl44
-            // 
-            this.labelControl44.Location = new System.Drawing.Point(43, 122);
-            this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(49, 13);
-            this.labelControl44.TabIndex = 191;
-            this.labelControl44.Text = "Country : ";
-            // 
-            // txtWHState
-            // 
-            this.txtWHState.Location = new System.Drawing.Point(101, 142);
-            this.txtWHState.Name = "txtWHState";
-            this.txtWHState.Properties.MaxLength = 20;
-            this.txtWHState.Size = new System.Drawing.Size(200, 20);
-            this.txtWHState.TabIndex = 190;
-            // 
-            // labelControl45
-            // 
-            this.labelControl45.Location = new System.Drawing.Point(55, 144);
-            this.labelControl45.Name = "labelControl45";
-            this.labelControl45.Size = new System.Drawing.Size(36, 13);
-            this.labelControl45.TabIndex = 189;
-            this.labelControl45.Text = "State : ";
+            this.btnWHAddSupervisor.Location = new System.Drawing.Point(338, 4);
+            this.btnWHAddSupervisor.Name = "btnWHAddSupervisor";
+            this.btnWHAddSupervisor.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnWHAddSupervisor.Properties.Appearance.Options.UseBackColor = true;
+            this.btnWHAddSupervisor.Properties.AutoHeight = false;
+            this.btnWHAddSupervisor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddSupervisor.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnWHAddSupervisor.Size = new System.Drawing.Size(22, 18);
+            this.btnWHAddSupervisor.TabIndex = 93;
+            this.btnWHAddSupervisor.Click += new System.EventHandler(this.btnWHAddSupervisor_Click);
             // 
             // frmMasterAddCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 702);
+            this.ClientSize = new System.Drawing.Size(935, 693);
             this.Controls.Add(this.cmbCompCityMaster);
             this.Controls.Add(this.labelControl18);
             this.Controls.Add(this.cmbCompStateMaster);
@@ -1587,10 +1764,16 @@
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.cmbWHCity);
+            this.Controls.Add(this.labelControl31);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.cmbWHCState);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.labelControl32);
             this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.cmbWHCountry);
             this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.labelControl33);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMasterAddCompany";
@@ -1608,7 +1791,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWHCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWHCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWHState.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnlWHPhone5.ResumeLayout(false);
             this.pnlWHPhone5.PerformLayout();
@@ -1646,8 +1831,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCompanyAbbrivation.Properties)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.pnlCompSign3.ResumeLayout(false);
+            this.pnlCompSign3.PerformLayout();
+            this.pnlCompSign2.ResumeLayout(false);
+            this.pnlCompSign2.PerformLayout();
+            this.pnlCompSign1.ResumeLayout(false);
+            this.pnlCompSign1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCompanySignatory.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPANNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPincode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCompanyAbbrivation.Properties)).EndInit();
             this.pnlMain.ResumeLayout(false);
             this.pnlOther.ResumeLayout(false);
             this.pnlOther.PerformLayout();
@@ -1655,8 +1854,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtCompanyFormedOn.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtCompanyFormedOn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHSN_SAVCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPANNo.Properties)).EndInit();
             this.pnlPhoneAll.ResumeLayout(false);
             this.pnlPhoneTwo.ResumeLayout(false);
             this.pnlPhoneTwo.PerformLayout();
@@ -1684,14 +1881,14 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPincode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWHCity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWHCountry.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWHState.Properties)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.pnlWHSupervisor3.ResumeLayout(false);
+            this.pnlWHSupervisor3.PerformLayout();
+            this.pnlWHSupervisor2.ResumeLayout(false);
+            this.pnlWHSupervisor2.PerformLayout();
+            this.pnlWHSupervisor1.ResumeLayout(false);
+            this.pnlWHSupervisor1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1710,9 +1907,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.DateEdit txtDocumentDate;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.ButtonEdit btnWHAddSupervisor;
-        private System.Windows.Forms.ComboBox cmbWarehouseSupervisor;
-        private DevExpress.XtraEditors.LabelControl labelControl27;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlWHPhone5;
         private DevExpress.XtraEditors.TextEdit txtWHPhone5;
@@ -1761,7 +1955,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.TextEdit txtCompanyAbbrivation;
         private DevExpress.XtraEditors.LabelControl labelControl28;
-        private DevExpress.XtraEditors.ButtonEdit btnAddCompanySignatory;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlOther;
         private DevExpress.XtraEditors.TextEdit txtFaxNo;
@@ -1769,10 +1962,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TextEdit txtHSN_SAVCode;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit txtGSTNo;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.TextEdit txtPANNo;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private System.Windows.Forms.Panel pnlPhoneAll;
         private System.Windows.Forms.Panel pnlPhoneTwo;
@@ -1792,8 +1981,6 @@
         private DevExpress.XtraEditors.TextEdit txtPhone1;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.MemoEdit txtAddressLine2;
-        private System.Windows.Forms.ComboBox cmbCompanySignatory;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
         private System.Windows.Forms.ComboBox cmbCompanyType;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.TextEdit txtWebsiteURL;
@@ -1834,5 +2021,31 @@
         private DevExpress.XtraEditors.LabelControl labelControl44;
         private DevExpress.XtraEditors.TextEdit txtWHState;
         private DevExpress.XtraEditors.LabelControl labelControl45;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.TextEdit txtGSTNo;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.TextEdit txtPANNo;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlCompSign3;
+        private System.Windows.Forms.Panel pnlCompSign2;
+        private System.Windows.Forms.Panel pnlCompSign1;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.ButtonEdit btnAddCompanySignatory;
+        private System.Windows.Forms.ComboBox cmbCompanySignatory1;
+        private DevExpress.XtraEditors.LabelControl labelControl47;
+        private System.Windows.Forms.ComboBox cmbCompanySignatory3;
+        private DevExpress.XtraEditors.LabelControl labelControl46;
+        private System.Windows.Forms.ComboBox cmbCompanySignatory2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlWHSupervisor3;
+        private DevExpress.XtraEditors.LabelControl labelControl48;
+        private System.Windows.Forms.ComboBox cmbWarehouseSupervisor3;
+        private System.Windows.Forms.Panel pnlWHSupervisor2;
+        private DevExpress.XtraEditors.LabelControl labelControl49;
+        private System.Windows.Forms.ComboBox cmbWarehouseSupervisor2;
+        private System.Windows.Forms.Panel pnlWHSupervisor1;
+        private DevExpress.XtraEditors.LabelControl labelControl50;
+        private DevExpress.XtraEditors.ButtonEdit btnWHAddSupervisor;
+        private System.Windows.Forms.ComboBox cmbWarehouseSupervisor1;
     }
 }

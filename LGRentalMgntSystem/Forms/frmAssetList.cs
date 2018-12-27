@@ -128,7 +128,10 @@ namespace LGRentalMgntSystem.Forms
                 {
                     Int64 nTypeID = 0;
                     var row = gvMasterList.GetFocusedDataRow();
-                    
+                    if (Convert.ToString(row[3])=="Warehouse Superintendent")
+                    {
+                        return;
+                    }
                     nTypeID = Convert.ToInt64(row[1]);
                     frmAssetMaster frmMaster = new frmAssetMaster();
                     frmMaster.MasterType = this.MasterType;
@@ -150,7 +153,10 @@ namespace LGRentalMgntSystem.Forms
                 {
                     var row = gvMasterList.GetFocusedDataRow();
                     int n = Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
-
+                    if (Convert.ToString(row[3]) == "Warehouse Superintendent")
+                    {
+                        return;
+                    }
                     if (n == 1)
                     {
                         return;
@@ -219,13 +225,36 @@ namespace LGRentalMgntSystem.Forms
                 //        ritem.Buttons[0].Visible = false;
                 //        e.RepositoryItem = ritem;
                 //    }
-                //}
+                //} TypeName
                 if (e.Column.Caption == "Delete")
                 {
                     int nVal = Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+                    string sVal = Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "TypeName"));
 
                     bool val = Convert.ToBoolean(nVal);
                     if (val)
+                    {
+                        DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+                        ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+                        ritem.ReadOnly = false;
+                        ritem.Buttons[0].Enabled = false;
+                        ritem.Buttons[0].Visible = false;
+                        e.RepositoryItem = ritem;
+                    }
+                    if(sVal=="Warehouse Superintendent")
+                    {
+                        DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+                        ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+                        ritem.ReadOnly = false;
+                        ritem.Buttons[0].Enabled = false;
+                        ritem.Buttons[0].Visible = false;
+                        e.RepositoryItem = ritem;
+                    }
+                }
+                if (e.Column.Caption == "Edit")
+                {
+                    string sVal = Convert.ToString(gvMasterList.GetRowCellValue(e.RowHandle, "TypeName"));
+                    if (sVal == "Warehouse Superintendent")
                     {
                         DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
                         ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;

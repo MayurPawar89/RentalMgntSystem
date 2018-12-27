@@ -34,7 +34,7 @@ namespace LGRentalMgntSystem
             ShowHidePhonePanel();
         }
 
-        private void ShowHidePhonePanel(string sPhoneType="",string sPhoneNo="",int PhoneCount=1)
+        private void ShowHidePhonePanel(string sPhoneType = "", string sPhoneNo = "", int PhoneCount = 1)
         {
             switch (PhoneCount)
             {
@@ -251,9 +251,120 @@ namespace LGRentalMgntSystem
                     }
 
             }
-            
+
         }
 
+        private void ShowHideSignWHPanel(string sPanelType = "", Int64 nID = 0, int PhoneCount = 1)
+        {
+            switch (PhoneCount)
+            {
+                case 1:
+                    {
+                        if (sPanelType.ToLower() == "sign")
+                        {
+                            pnlCompSign1.Visible = true;
+                            pnlCompSign2.Visible = false;
+                            pnlCompSign3.Visible = false;
+                            cmbCompanySignatory1.SelectedValue = nID;
+                        }
+                        else if (sPanelType.ToLower() == "wh")
+                        {
+                            pnlWHSupervisor1.Visible = true;
+                            pnlWHSupervisor2.Visible = false;
+                            pnlWHSupervisor3.Visible = false;
+                            cmbWarehouseSupervisor1.SelectedValue = nID;
+                        }
+                        else
+                        {
+                            pnlCompSign1.Visible = true;
+                            pnlCompSign2.Visible = false;
+                            pnlCompSign3.Visible = false;
+
+                            pnlWHSupervisor1.Visible = true;
+                            pnlWHSupervisor2.Visible = false;
+                            pnlWHSupervisor3.Visible = false;
+
+                            cmbCompanySignatory1.SelectedValue = nID;
+                            cmbWarehouseSupervisor1.SelectedValue = nID;
+                        }
+                        break;
+                    }
+                case 2:
+                    {
+                        if (sPanelType.ToLower() == "sign")
+                        {
+                            pnlCompSign1.Visible = true;
+                            pnlCompSign2.Visible = true;
+                            pnlCompSign2.BringToFront();
+                            pnlCompSign3.Visible = false;
+                            cmbCompanySignatory2.SelectedValue = nID;
+                        }
+                        else if (sPanelType.ToLower() == "wh")
+                        {
+                            pnlWHSupervisor1.Visible = true;
+                            pnlWHSupervisor2.Visible = true;
+                            pnlWHSupervisor2.BringToFront();
+                            pnlWHSupervisor3.Visible = false;
+                            cmbWarehouseSupervisor2.SelectedValue = nID;
+                        }
+                        else
+                        {
+                            pnlCompSign1.Visible = true;
+                            pnlCompSign2.Visible = true;
+                            pnlCompSign2.BringToFront();
+                            pnlCompSign3.Visible = false;
+
+                            pnlWHSupervisor1.Visible = true;
+                            pnlWHSupervisor2.Visible = true;
+                            pnlWHSupervisor2.BringToFront();
+                            pnlWHSupervisor3.Visible = false;
+
+                            cmbCompanySignatory2.SelectedValue = nID;
+                            cmbWarehouseSupervisor2.SelectedValue = nID;
+
+                        }
+                        break;
+                    }
+                case 3:
+                    {
+                        if (sPanelType.ToLower() == "sign")
+                        {
+                            pnlCompSign1.Visible = true;
+                            pnlCompSign2.Visible = true;
+                            pnlCompSign3.Visible = true;
+                            pnlCompSign3.BringToFront();
+                            cmbCompanySignatory3.SelectedValue = nID;
+                        }
+                        else if (sPanelType.ToLower() == "wh")
+                        {
+                            pnlWHSupervisor1.Visible = true;
+                            pnlWHSupervisor2.Visible = true;
+                            pnlWHSupervisor3.Visible = true;
+                            pnlWHSupervisor3.BringToFront();
+
+                            cmbWarehouseSupervisor3.SelectedValue = nID;
+                        }
+                        else
+                        {
+                            pnlCompSign1.Visible = true;
+                            pnlCompSign2.Visible = true;
+                            pnlCompSign3.Visible = true;
+                            pnlCompSign3.BringToFront();
+
+                            pnlWHSupervisor1.Visible = true;
+                            pnlWHSupervisor2.Visible = true;
+                            pnlWHSupervisor3.Visible = true;
+                            pnlWHSupervisor3.BringToFront();
+
+                            cmbCompanySignatory3.SelectedValue = nID;
+                            cmbWarehouseSupervisor3.SelectedValue = nID;
+
+                        }
+                        break;
+                    }
+            }
+
+        }
         private void fillMasterData()
         {
             txtCountry.Text = "India";
@@ -266,8 +377,8 @@ namespace LGRentalMgntSystem
             try
             {
                 oclsGeneral = new clsGeneral();
-                DataSet dsCompanyMaster=oclsGeneral.GetCompanyMaster();
-                if (dsCompanyMaster!=null && dsCompanyMaster.Tables.Count>0)
+                DataSet dsCompanyMaster = oclsGeneral.GetCompanyMaster();
+                if (dsCompanyMaster != null && dsCompanyMaster.Tables.Count > 0)
                 {
                     DataTable dtCompanyType = dsCompanyMaster.Tables[0];
                     //DataTable dtStateMaster = dsCompanyMaster.Tables[1];
@@ -276,7 +387,7 @@ namespace LGRentalMgntSystem
 
                     DataRow drCompanyType = dtCompanyType.NewRow();
                     drCompanyType["nCompanyTypeID"] = "0";
-                    drCompanyType["sCompanyTypeName"]="";
+                    drCompanyType["sCompanyTypeName"] = "";
                     dtCompanyType.Rows.InsertAt(drCompanyType, 0);
 
                     cmbCompanyType.DataSource = dtCompanyType;
@@ -344,7 +455,7 @@ namespace LGRentalMgntSystem
             }
             finally
             {
-                if (oclsGeneral!=null)
+                if (oclsGeneral != null)
                 {
                     oclsGeneral.Dispose();
                     oclsGeneral = null;
@@ -417,13 +528,53 @@ namespace LGRentalMgntSystem
             }
             return nPanelCount;
         }
+        private int CheckPanelSignWHVisibility(string sCheckPanelFor)
+        {
+            int nPanelCount = 0;
+            switch (sCheckPanelFor)
+            {
+                case "Sign":
+                    {
+                        if (pnlCompSign1.Visible == true && pnlCompSign2.Visible == false && pnlCompSign3.Visible == false)
+                        {
+                            nPanelCount = 2;
+                        }
+                        else if (pnlCompSign1.Visible == true && pnlCompSign2.Visible == true && pnlCompSign3.Visible == false)
+                        {
+                            nPanelCount = 3;
+                        }
+                        else if (pnlCompSign1.Visible == true && pnlCompSign2.Visible == true && pnlCompSign3.Visible == true)
+                        {
+                            nPanelCount = 4;
+                        }
+                        break;
+                    }
+                case "WH":
+                    {
+                        if (pnlWHSupervisor1.Visible == true && pnlWHSupervisor2.Visible == false && pnlWHSupervisor3.Visible == false)
+                        {
+                            nPanelCount = 2;
+                        }
+                        else if (pnlWHSupervisor1.Visible == true && pnlWHSupervisor2.Visible == true && pnlWHSupervisor3.Visible == false)
+                        {
+                            nPanelCount = 3;
+                        }
+                        else if (pnlWHSupervisor1.Visible == true && pnlWHSupervisor2.Visible == true && pnlWHSupervisor3.Visible == true)
+                        {
+                            nPanelCount = 4;
+                        }
+                        break;
+                    }
+            }
+            return nPanelCount;
+        }
 
         private void btnWHAddPhone_Click(object sender, EventArgs e)
         {
             int nWHPhoneCount = CheckPanelVisibility("WH");
             if (nWHPhoneCount <= 5)
             {
-                ShowHidePhonePanel("WH","", nWHPhoneCount);
+                ShowHidePhonePanel("WH", "", nWHPhoneCount);
             }
         }
 
@@ -450,7 +601,7 @@ namespace LGRentalMgntSystem
                 pnlTermsImage.Visible = false;
             }
         }
-        
+
         private void frmMasterAddCompany_Load(object sender, EventArgs e)
         {
             rdImageFormat.Checked = true;
@@ -459,7 +610,7 @@ namespace LGRentalMgntSystem
             FillSignatoryInfo();
             FillWarehouseSuperintendentInfo();
 
-            if (Convert.ToInt64(lblCompanyID.Text)>0)
+            if (Convert.ToInt64(lblCompanyID.Text) > 0)
             {
                 FillCompanyDetails(Convert.ToInt64(lblCompanyID.Text));
             }
@@ -478,14 +629,14 @@ namespace LGRentalMgntSystem
             {
                 clsCompanyMaster = new CompanyMaster();
                 ds = clsCompanyMaster.GetCompanyInformation(nCompanyID);
-                if (ds!=null&&ds.Tables.Count>0)
+                if (ds != null && ds.Tables.Count > 0)
                 {
                     dtCompDetails = ds.Tables[0];
                     dtCompTransDetails = ds.Tables[1];
                     dtCompWHDetails = ds.Tables[2];
                     dtCompImageDetails = ds.Tables[3];
 
-                    if (dtCompDetails!=null&&dtCompDetails.Rows.Count>0)
+                    if (dtCompDetails != null && dtCompDetails.Rows.Count > 0)
                     {
                         lblCompanyID.Text = Convert.ToString(dtCompDetails.Rows[0]["nCompanyID"]);
                         lblCompanyInfoImageID.Text = Convert.ToString(dtCompDetails.Rows[0]["nCompanyImageInfoID"]);
@@ -496,7 +647,7 @@ namespace LGRentalMgntSystem
                         txtCompanyAbbrivation.Text = Convert.ToString(dtCompDetails.Rows[0]["sCompAbbrivation"]);
                         txtCompanyName.Text = Convert.ToString(dtCompDetails.Rows[0]["sCompanyName"]);
                         cmbCompanyType.SelectedValue = Convert.ToInt64(dtCompDetails.Rows[0]["nCompanyTypeID"]);
-                        cmbCompanySignatory.SelectedValue = Convert.ToInt64(dtCompDetails.Rows[0]["nCompanySignatory"]);
+                        //cmbCompanySignatory1.SelectedValue = Convert.ToInt64(dtCompDetails.Rows[0]["nCompanySignatory"]);
                         txtAddressLine1.Text = Convert.ToString(dtCompDetails.Rows[0]["sAddressLine1"]);
                         txtAddressLine2.Text = Convert.ToString(dtCompDetails.Rows[0]["sAddressLine2"]);
                         txtCity.Text = Convert.ToString(dtCompDetails.Rows[0]["sCity"]);
@@ -520,9 +671,19 @@ namespace LGRentalMgntSystem
                                 ShowHidePhonePanel("Company", sPhoneAll[i], i + 1);
                             }
                         }
+
+                        string[] sSignatoryAll = Convert.ToString(dtCompDetails.Rows[0]["sCompanySignatory"]).Split(',');
+                        if (sSignatoryAll.Length > 0)
+                        {
+                            int nCompPanelCount = GetPanelCount(sSignatoryAll.Length);
+                            for (int i = 0; i < nCompPanelCount; i++)
+                            {
+                                ShowHideSignWHPanel("Sign", Convert.ToInt64(sSignatoryAll[i]), i + 1);
+                            }
+                        }
                     }
 
-                    if (dtCompTransDetails!=null&&dtCompTransDetails.Rows.Count>0)
+                    if (dtCompTransDetails != null && dtCompTransDetails.Rows.Count > 0)
                     {
                         txtTransporterID.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sTransportorID"]);
                         txtDocumentName.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sDoumentName"]);
@@ -530,7 +691,7 @@ namespace LGRentalMgntSystem
                         txtDocumentDate.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sDocumentDate"]);
                     }
 
-                    if (dtCompWHDetails!=null&&dtCompWHDetails.Rows.Count>0)
+                    if (dtCompWHDetails != null && dtCompWHDetails.Rows.Count > 0)
                     {
                         txtWHAddressLine1.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sWarehouseAddressLine1"]);
                         txtWHAddressLine2.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sWarehouseAddressLine2"]);
@@ -538,7 +699,7 @@ namespace LGRentalMgntSystem
                         txtWHState.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sState"]);
                         txtWHCountry.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sCountry"]);
                         txtWHPincode.Text = Convert.ToString(dtCompWHDetails.Rows[0]["sPincode"]);
-                        cmbWarehouseSupervisor.SelectedValue = Convert.ToInt64(dtCompWHDetails.Rows[0]["nSupervisorID"]);
+                        //cmbWarehouseSupervisor1.SelectedValue = Convert.ToInt64(dtCompWHDetails.Rows[0]["nSupervisorID"]);
 
                         string[] sWHPhoneAll = Convert.ToString(dtCompWHDetails.Rows[0]["sPhoneNo"]).Split(',');
                         if (sWHPhoneAll.Length > 0)
@@ -546,12 +707,21 @@ namespace LGRentalMgntSystem
                             int nPanelCount = GetPanelCount(sWHPhoneAll.Length);
                             for (int i = 0; i < nPanelCount; i++)
                             {
-                                ShowHidePhonePanel("WH", sWHPhoneAll[i], i+1);
+                                ShowHidePhonePanel("WH", sWHPhoneAll[i], i + 1);
+                            }
+                        }
+                        string[] sSupervisorAll = Convert.ToString(dtCompWHDetails.Rows[0]["nSupervisorID"]).Split(',');
+                        if (sSupervisorAll.Length > 0)
+                        {
+                            int nCompPanelCount = GetPanelCount(sSupervisorAll.Length);
+                            for (int i = 0; i < nCompPanelCount; i++)
+                            {
+                                ShowHideSignWHPanel("WH", Convert.ToInt64(sSupervisorAll[i]), i + 1);
                             }
                         }
                     }
 
-                    if (dtCompImageDetails!=null&&dtCompImageDetails.Rows.Count>0)
+                    if (dtCompImageDetails != null && dtCompImageDetails.Rows.Count > 0)
                     {
                         byte[] HeaderImage = null;
                         byte[] FooterImage = null;
@@ -574,11 +744,11 @@ namespace LGRentalMgntSystem
                         if (Convert.ToInt32(dtCompImageDetails.Rows[0]["nTermsAndConditionType"]) == 0)
                         {
                             rdImageFormat.Checked = true;
-                            if (dtCompImageDetails.Rows[0]["imgTermsAndCondition"]!=DBNull.Value)
+                            if (dtCompImageDetails.Rows[0]["imgTermsAndCondition"] != DBNull.Value)
                             {
                                 Terms_CondImage = (byte[])dtCompImageDetails.Rows[0]["imgTermsAndCondition"];
                                 MemoryStream msTerms_CondImage = new MemoryStream(Terms_CondImage);
-                                picFooterImage.Image = Image.FromStream(msTerms_CondImage); 
+                                picFooterImage.Image = Image.FromStream(msTerms_CondImage);
                             }
                         }
                         else if (Convert.ToInt32(dtCompImageDetails.Rows[0]["nTermsAndConditionType"]) == 1)
@@ -600,7 +770,7 @@ namespace LGRentalMgntSystem
         private int GetPanelCount(int nStringLength)
         {
             int nPanelCount = 0;
-            if (nStringLength<=5)
+            if (nStringLength <= 5)
             {
                 switch (nStringLength)
                 {
@@ -608,7 +778,7 @@ namespace LGRentalMgntSystem
                     case 2: nPanelCount = 2; break;
                     case 3: nPanelCount = 3; break;
                     case 4: nPanelCount = 4; break;
-                    case 5: nPanelCount = 5; break;   
+                    case 5: nPanelCount = 5; break;
                 }
             }
             return nPanelCount;
@@ -616,7 +786,7 @@ namespace LGRentalMgntSystem
 
         public Int64 SaveCompanyDetails()
         {
-            
+
             Int64 nresult = 0;
             CompanyMaster clsCompanyMaster = null;
             try
@@ -674,6 +844,41 @@ namespace LGRentalMgntSystem
                 {
                     sWHPhoneAll += "," + sWHPhone5;
                 }
+
+                string sCompSign1 = Convert.ToString(cmbCompanySignatory1.SelectedValue);
+                string sCompSign2 = Convert.ToString(cmbCompanySignatory2.SelectedValue);
+                string sCompSign3 = Convert.ToString(cmbCompanySignatory3.SelectedValue);
+                string sCompSign = string.Empty;
+                if (sCompSign1 != "0")
+                {
+                    sCompSign += sCompSign1;
+                }
+                if (sCompSign2 != "0")
+                {
+                    sCompSign += "," + sCompSign2;
+                }
+                if (sCompSign3 != "0")
+                {
+                    sCompSign += "," + sCompSign3;
+                }
+
+                string sWHSupervisor1 = Convert.ToString(cmbWarehouseSupervisor1.SelectedValue);
+                string sWHSupervisor2 = Convert.ToString(cmbWarehouseSupervisor2.SelectedValue);
+                string sWHSupervisor3 = Convert.ToString(cmbWarehouseSupervisor3.SelectedValue);
+                string sWHSupervisor = string.Empty;
+                if (sWHSupervisor1 != "0")
+                {
+                    sWHSupervisor += sWHSupervisor1;
+                }
+                if (sWHSupervisor2 != "0")
+                {
+                    sWHSupervisor += "," + sWHSupervisor2;
+                }
+                if (sWHSupervisor3 != "0")
+                {
+                    sWHSupervisor += "," + sWHSupervisor3;
+                }
+
                 clsCompanyMaster = new CompanyMaster();
                 clsCompanyMaster.nCompanyID = Convert.ToInt64(lblCompanyID.Text);
                 clsCompanyMaster.nCompTransportID = Convert.ToInt64(lblCompanyTransportID.Text);
@@ -683,7 +888,7 @@ namespace LGRentalMgntSystem
                 clsCompanyMaster.sCompanyName = Convert.ToString(txtCompanyName.Text.Trim());
                 clsCompanyMaster.sCompAbbrivation = Convert.ToString(txtCompanyAbbrivation.Text.Trim());
                 clsCompanyMaster.nCompanyTypeID = Convert.ToInt64(cmbCompanyType.SelectedValue);
-                clsCompanyMaster.nCompSignatoryID = Convert.ToInt64(cmbCompanySignatory.SelectedValue);
+                clsCompanyMaster.sCompSignatoryID = sCompSign == "" ? "0" : sCompSign;
                 clsCompanyMaster.sCompAddressLine1 = Convert.ToString(txtAddressLine1.Text.Trim());
                 clsCompanyMaster.sCompAddressLine2 = Convert.ToString(txtAddressLine2.Text.Trim());
                 clsCompanyMaster.sCompCity = Convert.ToString(txtCity.Text.Trim());
@@ -699,7 +904,7 @@ namespace LGRentalMgntSystem
                 clsCompanyMaster.dtCompanyFormedDate = Convert.ToDateTime(dtCompanyFormedOn.Text.Trim());
                 clsCompanyMaster.sCompAllPhoneNo = sPhoneAll;
 
-                
+
                 clsCompanyMaster.sTransporterID = Convert.ToString(txtTransporterID.Text.Trim());
                 clsCompanyMaster.sTransDocumentDate = Convert.ToString(txtDocumentDate.Text.Trim());
                 clsCompanyMaster.sTransDocumentName = Convert.ToString(txtDocumentName.Text.Trim());
@@ -711,13 +916,13 @@ namespace LGRentalMgntSystem
                 clsCompanyMaster.sWHState = Convert.ToString(txtState.Text.Trim());
                 clsCompanyMaster.sWHCountry = Convert.ToString(txtCountry.Text.Trim());
                 clsCompanyMaster.sWHPincode = Convert.ToString(txtWHPincode.Text.Trim());
-                clsCompanyMaster.nWHSupervisorID = Convert.ToInt64(cmbWarehouseSupervisor.SelectedValue);
+                clsCompanyMaster.nWHSupervisorID = sWHSupervisor==""?"0":sWHSupervisor;
                 clsCompanyMaster.sWHAllPhoneNo = sWHPhoneAll;
 
                 byte[] HeaderImage = null;
                 byte[] FooterImage = null;
                 byte[] Terms_CondImage = null;
-                string sTermsAndCondition=string.Empty;
+                string sTermsAndCondition = string.Empty;
 
                 if (picHeaderImage.Image != null)
                 {
@@ -726,7 +931,7 @@ namespace LGRentalMgntSystem
                         picHeaderImage.Image.Save(ms, ImageFormat.Jpeg);
                         HeaderImage = new byte[ms.Length];
                         ms.Position = 0;
-                        ms.Read(HeaderImage, 0, HeaderImage.Length); 
+                        ms.Read(HeaderImage, 0, HeaderImage.Length);
                     }
                 }
                 if (picFooterImage.Image != null)
@@ -755,7 +960,7 @@ namespace LGRentalMgntSystem
                 }
                 clsCompanyMaster.imgCompHeader = HeaderImage;
                 clsCompanyMaster.imgCompFooter = FooterImage;
-                clsCompanyMaster.imgTerms_Condition=Terms_CondImage;
+                clsCompanyMaster.imgTerms_Condition = Terms_CondImage;
                 if (rdImageFormat.Checked)
                 {
                     clsCompanyMaster.nTerms_ConditionType = 0;
@@ -766,9 +971,9 @@ namespace LGRentalMgntSystem
                 }
                 clsCompanyMaster.sTerms_Condition = sTermsAndCondition;
 
-                Int64 nCompanyID=clsCompanyMaster.InsertUpdateCompanyMaster();
+                Int64 nCompanyID = clsCompanyMaster.InsertUpdateCompanyMaster();
 
-                if (nCompanyID!=0)
+                if (nCompanyID != 0)
                 {
                     MessageBox.Show("Company is saved successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearForm();
@@ -796,7 +1001,7 @@ namespace LGRentalMgntSystem
 
         public bool ValidateForm()
         {
-            bool bIsValidForm = true  ;
+            bool bIsValidForm = true;
             if (txtCompanyName.Text.Trim() == "")
             {
                 MessageBox.Show("Please enter company name.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -815,11 +1020,17 @@ namespace LGRentalMgntSystem
         }
         private void txtCompanyName_EditValueChanged(object sender, EventArgs e)
         {
-            txtCompanyAbbrivation.Text= clsGlobal.GenerateAbbrivation(txtCompanyName.Text.Trim());
+            txtCompanyAbbrivation.Text = clsGlobal.GenerateAbbrivation(txtCompanyName.Text.Trim());
         }
 
         private void btnAddCompanySignatory_Click(object sender, EventArgs e)
         {
+            int nCompanyPhoneCount = CheckPanelSignWHVisibility("Sign");
+            if (nCompanyPhoneCount <= 3)
+            {
+                ShowHideSignWHPanel("Sign", 0, nCompanyPhoneCount);
+            }
+            return;
             clsMasters clsMaster = null;
             try
             {
@@ -839,9 +1050,10 @@ namespace LGRentalMgntSystem
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
             }
         }
+
 
         private void FillSignatoryInfo()
         {
@@ -851,16 +1063,24 @@ namespace LGRentalMgntSystem
             {
                 oCompanyMaster = new CompanyMaster();
                 dt = oCompanyMaster.GetListData("signatory");
-                if (dt!=null&& dt.Rows.Count>0)
+                if (dt != null && dt.Rows.Count > 0)
                 {
                     DataRow dr = dt.NewRow();
                     dr["ID"] = 0;
                     dr["Code"] = "";
                     dt.Rows.InsertAt(dr, 0);
 
-                    cmbCompanySignatory.DataSource = dt;
-                    cmbCompanySignatory.DisplayMember = "Code";
-                    cmbCompanySignatory.ValueMember = "ID";
+                    cmbCompanySignatory1.DataSource = dt;
+                    cmbCompanySignatory1.DisplayMember = "Code";
+                    cmbCompanySignatory1.ValueMember = "ID";
+
+                    cmbCompanySignatory2.DataSource = dt.Copy();
+                    cmbCompanySignatory2.DisplayMember = "Code";
+                    cmbCompanySignatory2.ValueMember = "ID";
+
+                    cmbCompanySignatory3.DataSource = dt.Copy();
+                    cmbCompanySignatory3.DisplayMember = "Code";
+                    cmbCompanySignatory3.ValueMember = "ID";
                 }
             }
             catch (Exception ex)
@@ -869,7 +1089,7 @@ namespace LGRentalMgntSystem
             }
             finally
             {
-                if (oCompanyMaster!=null)
+                if (oCompanyMaster != null)
                 {
                     oCompanyMaster.Dispose();
                     oCompanyMaster = null;
@@ -893,9 +1113,17 @@ namespace LGRentalMgntSystem
                     dr["Code"] = "";
                     dt.Rows.InsertAt(dr, 0);
 
-                    cmbWarehouseSupervisor.DataSource = dt;
-                    cmbWarehouseSupervisor.DisplayMember = "Code";
-                    cmbWarehouseSupervisor.ValueMember = "ID";
+                    cmbWarehouseSupervisor1.DataSource = dt;
+                    cmbWarehouseSupervisor1.DisplayMember = "Code";
+                    cmbWarehouseSupervisor1.ValueMember = "ID";
+
+                    cmbWarehouseSupervisor2.DataSource = dt.Copy();
+                    cmbWarehouseSupervisor2.DisplayMember = "Code";
+                    cmbWarehouseSupervisor2.ValueMember = "ID";
+
+                    cmbWarehouseSupervisor3.DataSource = dt.Copy();
+                    cmbWarehouseSupervisor3.DisplayMember = "Code";
+                    cmbWarehouseSupervisor3.ValueMember = "ID";
                 }
             }
             catch (Exception ex)
@@ -915,11 +1143,9 @@ namespace LGRentalMgntSystem
 
         private void ClearForm()
         {
-            GetAndSetSequence();
             txtCompanyAbbrivation.Text = string.Empty;
             txtCompanyName.Text = string.Empty;
             cmbCompanyType.SelectedValue = 0;
-            cmbCompanySignatory.SelectedValue = 0;
             txtAddressLine1.Text = string.Empty;
             txtAddressLine2.Text = string.Empty;
             txtCity.Text = "Mumbai";
@@ -951,13 +1177,21 @@ namespace LGRentalMgntSystem
             txtWHState.Text = "Maharashtra";
             txtWHCountry.Text = "India";
             txtWHPincode.Text = string.Empty;
-            cmbWarehouseSupervisor.SelectedValue = 0;
 
             txtWHPhone1.Text = string.Empty;
             txtWHPhone2.Text = string.Empty;
             txtWHPhone3.Text = string.Empty;
             txtWHPhone4.Text = string.Empty;
             txtWHPhone5.Text = string.Empty;
+            GetAndSetSequence();
+            cmbCompanySignatory1.SelectedValue = 0;
+            cmbCompanySignatory2.SelectedValue = 0;
+            cmbCompanySignatory3.SelectedValue = 0;
+
+            cmbWarehouseSupervisor1.SelectedValue = 0;
+            cmbWarehouseSupervisor2.SelectedValue = 0;
+            cmbWarehouseSupervisor3.SelectedValue = 0;
+
 
             rdImageFormat.Checked = true;
             if (picFooterImage != null)
@@ -972,7 +1206,7 @@ namespace LGRentalMgntSystem
             {
                 picTermsCondition.Image = null;
             }
-            if (txtTermsCondition.Text!="")
+            if (txtTermsCondition.Text != "")
             {
                 txtTermsCondition.Text = "";
             }
@@ -980,6 +1214,12 @@ namespace LGRentalMgntSystem
 
         private void btnWHAddSupervisor_Click(object sender, EventArgs e)
         {
+            int nCompanyPhoneCount = CheckPanelSignWHVisibility("WH");
+            if (nCompanyPhoneCount <= 3)
+            {
+                ShowHideSignWHPanel("WH", 0, nCompanyPhoneCount);
+            }
+            return;
             clsMasters clsMaster = null;
             try
             {
@@ -1002,6 +1242,9 @@ namespace LGRentalMgntSystem
 
             }
         }
+
         
+        
+
     }
 }

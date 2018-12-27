@@ -50,7 +50,7 @@ namespace LGRentalMgntSystem
         public string sCompanyCode { get; set; }
         public string sCompAbbrivation { get; set; }
         public Int64 nCompanyTypeID { get; set; }
-        public Int64 nCompSignatoryID { get; set; }
+        public String sCompSignatoryID { get; set; }
         public string sCompAddressLine1 { get; set; }
         public string sCompAddressLine2 { get; set; }
         public string sCompCity { get; set; }
@@ -80,7 +80,7 @@ namespace LGRentalMgntSystem
         #endregion
 
         #region "Warehouse Details"
-        public Int64 nWHSupervisorID { get; set; }
+        public string nWHSupervisorID { get; set; }
         public string sWHAddressLine1 { get; set; }
         public string sWHAddressLine2 { get; set; }
         public string sWHCity { get; set; }
@@ -121,7 +121,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@sCompanyCode", this.sCompanyCode, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sCompAbbrivation", this.sCompAbbrivation, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@nCompanyTypeID", this.nCompanyTypeID, ParameterDirection.Input, SqlDbType.BigInt);
-                oDBParameter.Add("@nCompanySignatory", this.nCompSignatoryID, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@sCompanySignatory", this.sCompSignatoryID, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sCompAddressLine1", this.sCompAddressLine1, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sCompAddressLine2", this.sCompAddressLine2, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sCompCity", this.sCompCity, ParameterDirection.Input, SqlDbType.VarChar);
@@ -148,7 +148,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@sWHState", this.sWHState, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sWHCountry", this.sWHCountry, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sWHPincode", this.sWHPincode, ParameterDirection.Input, SqlDbType.VarChar);
-                oDBParameter.Add("@nWHSupervisorID", this.nWHSupervisorID, ParameterDirection.Input, SqlDbType.BigInt);
+                oDBParameter.Add("@nWHSupervisorID", this.nWHSupervisorID, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@sWHAllPhoneNo", this.sWHAllPhoneNo, ParameterDirection.Input, SqlDbType.VarChar);
 
                 oDBParameter.Add("@imgCompHeader", this.imgCompHeader, ParameterDirection.Input, SqlDbType.Image);

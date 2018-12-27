@@ -81,7 +81,11 @@ namespace LGRentalMgntSystem
         public DateTime dtSecondLicenseRenewalDate { get; set; }
         public string sThirdLicenseNumber { get; set; }
         public DateTime dtThirdLicenseRenewalDate { get; set; }
-        public byte[] imgPhoto { get; set; } 
+        public byte[] imgPhoto { get; set; }
+        public bool bIsAllowAccess { get; set; }
+        public string sUserName { get; set; }
+        public string sPin { get; set; }
+        public string sPassword { get; set; }
         #endregion
 
         #region "Method"
@@ -137,7 +141,11 @@ namespace LGRentalMgntSystem
                 oDBParameter.Add("@dtSecondLicenseRenewalDate", this.dtSecondLicenseRenewalDate, ParameterDirection.Input, SqlDbType.DateTime);
                 oDBParameter.Add("@sThirdLicenseNumber", this.sThirdLicenseNumber, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@dtThirdLicenseRenewalDate", this.dtThirdLicenseRenewalDate, ParameterDirection.Input, SqlDbType.DateTime);
-                oDBParameter.Add("@imgPhoto", this.imgPhoto, ParameterDirection.Input, SqlDbType.Image);    
+                oDBParameter.Add("@imgPhoto", this.imgPhoto, ParameterDirection.Input, SqlDbType.Image);
+                oDBParameter.Add("@bIsAllowAccess", this.bIsAllowAccess, ParameterDirection.Input, SqlDbType.Bit);
+                oDBParameter.Add("@sUserName", this.sUserName, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sPin", this.sPin, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sPassword", this.sPassword, ParameterDirection.Input, SqlDbType.VarChar);    
 
                 oDBAccess.OpenConnection(false);
                 oDBAccess.Execute("lgsp_INUP_CompanyStaff", oDBParameter, out objValue);

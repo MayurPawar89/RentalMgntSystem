@@ -274,7 +274,48 @@ namespace LGRentalMgntSystem
                 txtGafferName.Focus();
                 return bIsValidForm;
             }
-            
+            if (txtGafferUserName.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter username.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtGafferUserName.Focus();
+                return bIsValidForm;
+            }
+            if (txtGafferPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter password.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtGafferPassword.Focus();
+                return bIsValidForm;
+            }
+            if (txtGafferConfirmPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter confirm password.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtGafferConfirmPassword.Focus();
+                return bIsValidForm;
+            }
+            if (txtGafferPin.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter pin.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtGafferPin.Focus();
+                return bIsValidForm;
+            }
+            if (txtGafferPassword.Text.Length < 8)
+            {
+                MessageBox.Show("Password shold be more than 8 characters.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtGafferPassword.Focus();
+                return bIsValidForm;
+            }
+            if (txtGafferPassword.Text.Trim() != txtGafferConfirmPassword.Text.Trim())
+            {
+                MessageBox.Show("Password and confirm password not match.\nPassword & confirm password must be same.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bIsValidForm = false;
+                txtGafferPassword.Focus();
+                return bIsValidForm;
+            }
             return bIsValidForm;
         }
         private void SaveGafferMember()

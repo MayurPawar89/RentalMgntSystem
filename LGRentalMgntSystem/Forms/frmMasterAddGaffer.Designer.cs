@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddGaffer));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
@@ -39,6 +39,10 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtState = new DevExpress.XtraEditors.TextEdit();
             this.dtGafferBirthdate = new DevExpress.XtraEditors.DateEdit();
             this.lblGafferID = new DevExpress.XtraEditors.LabelControl();
@@ -91,16 +95,14 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtGafferName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCity = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties)).BeginInit();
@@ -130,8 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferAbbrivation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -238,6 +238,38 @@
             this.panel2.Size = new System.Drawing.Size(524, 399);
             this.panel2.TabIndex = 74;
             // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(93, 228);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.MaxLength = 20;
+            this.txtCity.Size = new System.Drawing.Size(153, 20);
+            this.txtCity.TabIndex = 134;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(57, 228);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(29, 13);
+            this.labelControl18.TabIndex = 133;
+            this.labelControl18.Text = "City : ";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(94, 182);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.MaxLength = 20;
+            this.txtCountry.Size = new System.Drawing.Size(153, 20);
+            this.txtCountry.TabIndex = 132;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(38, 185);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(49, 13);
+            this.labelControl16.TabIndex = 131;
+            this.labelControl16.Text = "Country : ";
+            // 
             // txtState
             // 
             this.txtState.Location = new System.Drawing.Point(93, 205);
@@ -252,7 +284,7 @@
             this.dtGafferBirthdate.Location = new System.Drawing.Point(238, 57);
             this.dtGafferBirthdate.Name = "dtGafferBirthdate";
             this.dtGafferBirthdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtGafferBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtGafferBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.dtGafferBirthdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtGafferBirthdate.Properties.ShowMonthHeaders = false;
@@ -291,6 +323,7 @@
             // 
             this.txtGafferConfirmPassword.Location = new System.Drawing.Point(342, 52);
             this.txtGafferConfirmPassword.Name = "txtGafferConfirmPassword";
+            this.txtGafferConfirmPassword.Properties.MaxLength = 15;
             this.txtGafferConfirmPassword.Properties.UseSystemPasswordChar = true;
             this.txtGafferConfirmPassword.Size = new System.Drawing.Size(143, 20);
             this.txtGafferConfirmPassword.TabIndex = 76;
@@ -307,6 +340,9 @@
             // 
             this.txtGafferPin.Location = new System.Drawing.Point(84, 52);
             this.txtGafferPin.Name = "txtGafferPin";
+            this.txtGafferPin.Properties.Mask.EditMask = "\\d{1,4}";
+            this.txtGafferPin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtGafferPin.Properties.MaxLength = 4;
             this.txtGafferPin.Size = new System.Drawing.Size(143, 20);
             this.txtGafferPin.TabIndex = 74;
             // 
@@ -322,6 +358,7 @@
             // 
             this.txtGafferPassword.Location = new System.Drawing.Point(342, 26);
             this.txtGafferPassword.Name = "txtGafferPassword";
+            this.txtGafferPassword.Properties.MaxLength = 15;
             this.txtGafferPassword.Properties.UseSystemPasswordChar = true;
             this.txtGafferPassword.Size = new System.Drawing.Size(143, 20);
             this.txtGafferPassword.TabIndex = 72;
@@ -338,6 +375,7 @@
             // 
             this.txtGafferUserName.Location = new System.Drawing.Point(84, 26);
             this.txtGafferUserName.Name = "txtGafferUserName";
+            this.txtGafferUserName.Properties.MaxLength = 20;
             this.txtGafferUserName.Size = new System.Drawing.Size(143, 20);
             this.txtGafferUserName.TabIndex = 70;
             // 
@@ -527,7 +565,7 @@
             this.btnAddPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddPhone.Properties.AutoHeight = false;
             this.btnAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnAddPhone.Size = new System.Drawing.Size(22, 18);
             this.btnAddPhone.TabIndex = 48;
             this.btnAddPhone.Click += new System.EventHandler(this.btnAddPhone_Click);
@@ -720,6 +758,7 @@
             // 
             this.txtGafferName.Location = new System.Drawing.Point(93, 11);
             this.txtGafferName.Name = "txtGafferName";
+            this.txtGafferName.Properties.MaxLength = 100;
             this.txtGafferName.Size = new System.Drawing.Size(383, 20);
             this.txtGafferName.TabIndex = 68;
             this.txtGafferName.EditValueChanged += new System.EventHandler(this.txtGafferName_EditValueChanged);
@@ -731,38 +770,6 @@
             this.labelControl1.Size = new System.Drawing.Size(37, 13);
             this.labelControl1.TabIndex = 67;
             this.labelControl1.Text = "Name : ";
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(94, 182);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Properties.MaxLength = 20;
-            this.txtCountry.Size = new System.Drawing.Size(153, 20);
-            this.txtCountry.TabIndex = 132;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(38, 185);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(49, 13);
-            this.labelControl16.TabIndex = 131;
-            this.labelControl16.Text = "Country : ";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(93, 228);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Properties.MaxLength = 20;
-            this.txtCity.Size = new System.Drawing.Size(153, 20);
-            this.txtCity.TabIndex = 134;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(57, 228);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(29, 13);
-            this.labelControl18.TabIndex = 133;
-            this.labelControl18.Text = "City : ";
             // 
             // frmMasterAddGaffer
             // 
@@ -784,6 +791,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGafferBirthdate.Properties)).EndInit();
@@ -819,8 +828,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferAbbrivation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGafferName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

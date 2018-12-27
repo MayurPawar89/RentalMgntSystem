@@ -80,6 +80,7 @@ namespace LGRentalMgntSystem
                     DataRow drDesg = dtDesignation.NewRow();
                     drDesg["nDesignationID"] = 0;
                     drDesg["sDesignationName"] = "";
+                    drDesg["SettingStatus"] = 0;
                     dtDesignation.Rows.InsertAt(drDesg, 0);
 
                     cmbEmpCompany.DataSource = dtCompanyType;
@@ -101,9 +102,11 @@ namespace LGRentalMgntSystem
                     //cmbCountryMaster.ValueMember = "sCountryName";
                     //cmbCountryMaster.Text = "India";
 
+                    cmbEmpDesignation.SelectedIndexChanged -= cmbEmpDesignation_SelectedIndexChanged;
                     cmbEmpDesignation.DataSource = dtDesignation;
                     cmbEmpDesignation.DisplayMember = "sDesignationName";
                     cmbEmpDesignation.ValueMember = "nDesignationID";
+                    cmbEmpDesignation.SelectedIndexChanged += cmbEmpDesignation_SelectedIndexChanged;
 
                     
 
@@ -121,6 +124,38 @@ namespace LGRentalMgntSystem
                     oclsGeneral.Dispose();
                     oclsGeneral = null;
                 }
+            }
+        }
+
+        void cmbEmpDesignation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Convert.ToInt64(cmbEmpDesignation.SelectedValue) != 0)
+                {
+                    bool bAllowAccess = false;
+                    DataTable dtSource = (DataTable)cmbEmpDesignation.DataSource;
+                    if (dtSource != null)
+                    {
+                        DataRow[] dr = dtSource.Select("nDesignationID=" + cmbEmpDesignation.SelectedValue);
+                        if (dr != null)
+                        {
+                            bAllowAccess = Convert.ToBoolean(dr[0]["SettingStatus"]);
+                        }
+                    }
+                    if (bAllowAccess==true)
+                    {
+                        pnlLoginDetails.Visible = true;
+                    }
+                    else
+                    {
+                        pnlLoginDetails.Visible = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -264,6 +299,51 @@ namespace LGRentalMgntSystem
                 cmbEmpCompany.Focus();
                 return bIsValidForm;
             }
+            if (pnlLoginDetails.Visible==true)
+            {
+                if (txtGafferUserName.Text.Trim() == "")
+                {
+                    MessageBox.Show("Please enter username.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bIsValidForm = false;
+                    txtGafferUserName.Focus();
+                    return bIsValidForm;
+                }
+                if (txtGafferPassword.Text.Trim() == "")
+                {
+                    MessageBox.Show("Please enter password.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bIsValidForm = false;
+                    txtGafferPassword.Focus();
+                    return bIsValidForm;
+                }
+                if (txtGafferConfirmPassword.Text.Trim() == "")
+                {
+                    MessageBox.Show("Please enter confirm password.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bIsValidForm = false;
+                    txtGafferConfirmPassword.Focus();
+                    return bIsValidForm;
+                }
+                if (txtGafferPin.Text.Trim() == "")
+                {
+                    MessageBox.Show("Please enter pin.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bIsValidForm = false;
+                    txtGafferPin.Focus();
+                    return bIsValidForm;
+                }
+                if (txtGafferPassword.Text.Length <8)
+                {
+                    MessageBox.Show("Password shold be more than 8 characters.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bIsValidForm = false;
+                    txtGafferPassword.Focus();
+                    return bIsValidForm;
+                }
+                if (txtGafferPassword.Text.Trim() != txtGafferConfirmPassword.Text.Trim())
+                {
+                    MessageBox.Show("Password and confirm password not match.\nPassword & confirm password must be same.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bIsValidForm = false;
+                    txtGafferPassword.Focus();
+                    return bIsValidForm;
+                } 
+            }
             return bIsValidForm;
         }
         private void SaveCrewMember()
@@ -351,7 +431,14 @@ namespace LGRentalMgntSystem
                 clsStaffMaster.sThirdLicenseNumber = Convert.ToString(txtLic2No.Text.Trim());
                 clsStaffMaster.dtThirdLicenseRenewalDate = Convert.ToDateTime(dtLic3RenewDate.Text.Trim());
                 clsStaffMaster.imgPhoto = EmployeeImage;
-
+                if (pnlLoginDetails.Visible==true)
+                {
+                    clsStaffMaster.bIsAllowAccess = true;
+                    clsStaffMaster.sUserName = Convert.ToString(txtGafferUserName.Text.Trim());
+                    clsStaffMaster.sPin = Convert.ToString(txtGafferPin.Text.Trim());
+                    clsStaffMaster.sPassword = Convert.ToString(clsEncryption.EncryptToBase64String(txtGafferConfirmPassword.Text.Trim())); 
+                }
+                
                 Int64 nCrewMemberID = clsStaffMaster.InsertUpdateStaffMaster();
 
                 if (nCrewMemberID != 0)
