@@ -35,6 +35,13 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.txtState = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.lblPartyID = new DevExpress.XtraEditors.LabelControl();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -93,17 +100,14 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPartyCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCity = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.txtState = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToAddressLine2.Properties)).BeginInit();
@@ -133,10 +137,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyAbbrivation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -230,6 +230,65 @@
             this.panel1.Size = new System.Drawing.Size(658, 445);
             this.panel1.TabIndex = 64;
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(100, 252);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.txtEmail.Properties.Mask.EditMask = "[a-zA-Z0-9.-]+@[a-zA-Z0-9-]+\\.[A-Za-z]{2,4}";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtEmail.Properties.MaxLength = 50;
+            this.txtEmail.Size = new System.Drawing.Size(194, 20);
+            this.txtEmail.TabIndex = 8;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(98, 202);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.MaxLength = 20;
+            this.txtCity.Size = new System.Drawing.Size(198, 20);
+            this.txtCity.TabIndex = 6;
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Location = new System.Drawing.Point(62, 202);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(29, 13);
+            this.labelControl14.TabIndex = 177;
+            this.labelControl14.Text = "City : ";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(99, 156);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.MaxLength = 20;
+            this.txtCountry.Size = new System.Drawing.Size(198, 20);
+            this.txtCountry.TabIndex = 4;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(43, 159);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(49, 13);
+            this.labelControl15.TabIndex = 175;
+            this.labelControl15.Text = "Country : ";
+            // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(98, 179);
+            this.txtState.Name = "txtState";
+            this.txtState.Properties.MaxLength = 20;
+            this.txtState.Size = new System.Drawing.Size(198, 20);
+            this.txtState.TabIndex = 5;
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Location = new System.Drawing.Point(55, 181);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(36, 13);
+            this.labelControl19.TabIndex = 173;
+            this.labelControl19.Text = "State : ";
+            // 
             // lblPartyID
             // 
             this.lblPartyID.Location = new System.Drawing.Point(610, 88);
@@ -252,10 +311,10 @@
             // 
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSave.Location = new System.Drawing.Point(552, 9);
+            this.btnSave.Location = new System.Drawing.Point(272, 9);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -264,7 +323,7 @@
             this.txtFaxNo.Location = new System.Drawing.Point(414, 252);
             this.txtFaxNo.Name = "txtFaxNo";
             this.txtFaxNo.Size = new System.Drawing.Size(200, 20);
-            this.txtFaxNo.TabIndex = 170;
+            this.txtFaxNo.TabIndex = 15;
             // 
             // labelControl6
             // 
@@ -299,7 +358,7 @@
             this.txtShipToAddressLine2.Location = new System.Drawing.Point(413, 325);
             this.txtShipToAddressLine2.Name = "txtShipToAddressLine2";
             this.txtShipToAddressLine2.Size = new System.Drawing.Size(200, 46);
-            this.txtShipToAddressLine2.TabIndex = 165;
+            this.txtShipToAddressLine2.TabIndex = 17;
             // 
             // txtShipToPincode
             // 
@@ -308,7 +367,7 @@
             this.txtShipToPincode.Properties.Mask.EditMask = "\\d{1,6}";
             this.txtShipToPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtShipToPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtShipToPincode.TabIndex = 164;
+            this.txtShipToPincode.TabIndex = 18;
             // 
             // labelControl11
             // 
@@ -335,14 +394,14 @@
             this.txtShipToAddressLine1.Location = new System.Drawing.Point(413, 277);
             this.txtShipToAddressLine1.Name = "txtShipToAddressLine1";
             this.txtShipToAddressLine1.Size = new System.Drawing.Size(200, 46);
-            this.txtShipToAddressLine1.TabIndex = 162;
+            this.txtShipToAddressLine1.TabIndex = 16;
             // 
             // txtTANNo
             // 
             this.txtTANNo.Location = new System.Drawing.Point(414, 109);
             this.txtTANNo.Name = "txtTANNo";
             this.txtTANNo.Size = new System.Drawing.Size(190, 20);
-            this.txtTANNo.TabIndex = 160;
+            this.txtTANNo.TabIndex = 14;
             // 
             // labelControl9
             // 
@@ -357,7 +416,7 @@
             this.txtPANNo.Location = new System.Drawing.Point(414, 85);
             this.txtPANNo.Name = "txtPANNo";
             this.txtPANNo.Size = new System.Drawing.Size(190, 20);
-            this.txtPANNo.TabIndex = 158;
+            this.txtPANNo.TabIndex = 13;
             // 
             // labelControl8
             // 
@@ -372,7 +431,7 @@
             this.txtGSTNo.Location = new System.Drawing.Point(414, 59);
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Size = new System.Drawing.Size(190, 20);
-            this.txtGSTNo.TabIndex = 156;
+            this.txtGSTNo.TabIndex = 12;
             // 
             // labelControl7
             // 
@@ -416,7 +475,7 @@
             this.txtPhone5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone5.Properties.MaxLength = 20;
             this.txtPhone5.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone5.TabIndex = 55;
+            this.txtPhone5.TabIndex = 0;
             // 
             // labelControl40
             // 
@@ -448,7 +507,7 @@
             this.txtPhone4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone4.Properties.MaxLength = 20;
             this.txtPhone4.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone4.TabIndex = 53;
+            this.txtPhone4.TabIndex = 0;
             // 
             // labelControl41
             // 
@@ -480,7 +539,7 @@
             this.txtPhone3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone3.Properties.MaxLength = 20;
             this.txtPhone3.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone3.TabIndex = 51;
+            this.txtPhone3.TabIndex = 0;
             // 
             // labelControl39
             // 
@@ -512,7 +571,7 @@
             this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone2.Properties.MaxLength = 20;
             this.txtPhone2.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone2.TabIndex = 49;
+            this.txtPhone2.TabIndex = 0;
             // 
             // labelControl34
             // 
@@ -543,7 +602,7 @@
             this.btnAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnAddPhone.Size = new System.Drawing.Size(22, 18);
-            this.btnAddPhone.TabIndex = 48;
+            this.btnAddPhone.TabIndex = 1;
             this.btnAddPhone.Click += new System.EventHandler(this.btnAddPhone_Click);
             // 
             // txtPhone1
@@ -557,7 +616,7 @@
             this.txtPhone1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone1.Properties.MaxLength = 20;
             this.txtPhone1.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone1.TabIndex = 47;
+            this.txtPhone1.TabIndex = 0;
             // 
             // labelControl42
             // 
@@ -584,7 +643,7 @@
             this.txtBillToAddressLine2.Location = new System.Drawing.Point(97, 325);
             this.txtBillToAddressLine2.Name = "txtBillToAddressLine2";
             this.txtBillToAddressLine2.Size = new System.Drawing.Size(200, 46);
-            this.txtBillToAddressLine2.TabIndex = 150;
+            this.txtBillToAddressLine2.TabIndex = 10;
             // 
             // txtBillToPincode
             // 
@@ -593,7 +652,7 @@
             this.txtBillToPincode.Properties.Mask.EditMask = "\\d{1,6}";
             this.txtBillToPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtBillToPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtBillToPincode.TabIndex = 147;
+            this.txtBillToPincode.TabIndex = 11;
             // 
             // labelControl1
             // 
@@ -620,14 +679,14 @@
             this.txtBillToAddressLine1.Location = new System.Drawing.Point(97, 277);
             this.txtBillToAddressLine1.Name = "txtBillToAddressLine1";
             this.txtBillToAddressLine1.Size = new System.Drawing.Size(200, 46);
-            this.txtBillToAddressLine1.TabIndex = 144;
+            this.txtBillToAddressLine1.TabIndex = 9;
             // 
             // txtAddressLine2
             // 
             this.txtAddressLine2.Location = new System.Drawing.Point(98, 107);
             this.txtAddressLine2.Name = "txtAddressLine2";
             this.txtAddressLine2.Size = new System.Drawing.Size(200, 46);
-            this.txtAddressLine2.TabIndex = 142;
+            this.txtAddressLine2.TabIndex = 3;
             // 
             // cmbCityMaster
             // 
@@ -669,7 +728,7 @@
             this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtPincode.TabIndex = 135;
+            this.txtPincode.TabIndex = 7;
             // 
             // labelControl26
             // 
@@ -700,14 +759,14 @@
             this.txtAddressLine1.Location = new System.Drawing.Point(98, 59);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(200, 46);
-            this.txtAddressLine1.TabIndex = 132;
+            this.txtAddressLine1.TabIndex = 2;
             // 
             // txtPartyName
             // 
             this.txtPartyName.Location = new System.Drawing.Point(98, 33);
             this.txtPartyName.Name = "txtPartyName";
             this.txtPartyName.Size = new System.Drawing.Size(200, 20);
-            this.txtPartyName.TabIndex = 128;
+            this.txtPartyName.TabIndex = 0;
             this.txtPartyName.EditValueChanged += new System.EventHandler(this.txtPartyName_EditValueChanged);
             // 
             // labelControl36
@@ -726,7 +785,7 @@
             this.cmbPartyType.Location = new System.Drawing.Point(414, 32);
             this.cmbPartyType.Name = "cmbPartyType";
             this.cmbPartyType.Size = new System.Drawing.Size(190, 21);
-            this.cmbPartyType.TabIndex = 126;
+            this.cmbPartyType.TabIndex = 1;
             // 
             // labelControl5
             // 
@@ -738,6 +797,7 @@
             // 
             // txtPartyAbbrivation
             // 
+            this.txtPartyAbbrivation.Enabled = false;
             this.txtPartyAbbrivation.Location = new System.Drawing.Point(414, 6);
             this.txtPartyAbbrivation.Name = "txtPartyAbbrivation";
             this.txtPartyAbbrivation.Properties.ReadOnly = true;
@@ -754,6 +814,7 @@
             // 
             // txtPartyCode
             // 
+            this.txtPartyCode.Enabled = false;
             this.txtPartyCode.Location = new System.Drawing.Point(98, 6);
             this.txtPartyCode.Name = "txtPartyCode";
             this.txtPartyCode.Properties.ReadOnly = true;
@@ -767,65 +828,6 @@
             this.labelControl2.Size = new System.Drawing.Size(64, 13);
             this.labelControl2.TabIndex = 121;
             this.labelControl2.Text = "Party Code : ";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(98, 202);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Properties.MaxLength = 20;
-            this.txtCity.Size = new System.Drawing.Size(198, 20);
-            this.txtCity.TabIndex = 178;
-            // 
-            // labelControl14
-            // 
-            this.labelControl14.Location = new System.Drawing.Point(62, 202);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(29, 13);
-            this.labelControl14.TabIndex = 177;
-            this.labelControl14.Text = "City : ";
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(99, 156);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Properties.MaxLength = 20;
-            this.txtCountry.Size = new System.Drawing.Size(198, 20);
-            this.txtCountry.TabIndex = 176;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(43, 159);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(49, 13);
-            this.labelControl15.TabIndex = 175;
-            this.labelControl15.Text = "Country : ";
-            // 
-            // txtState
-            // 
-            this.txtState.Location = new System.Drawing.Point(98, 179);
-            this.txtState.Name = "txtState";
-            this.txtState.Properties.MaxLength = 20;
-            this.txtState.Size = new System.Drawing.Size(198, 20);
-            this.txtState.TabIndex = 174;
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Location = new System.Drawing.Point(55, 181);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(36, 13);
-            this.labelControl19.TabIndex = 173;
-            this.labelControl19.Text = "State : ";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(100, 252);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
-            this.txtEmail.Properties.Mask.EditMask = "[a-zA-Z0-9.-]+@[a-zA-Z0-9-]+\\.[A-Za-z]{2,4}";
-            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtEmail.Properties.MaxLength = 50;
-            this.txtEmail.Size = new System.Drawing.Size(194, 20);
-            this.txtEmail.TabIndex = 179;
             // 
             // frmMasterAddParty
             // 
@@ -844,6 +846,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtShipToAddressLine2.Properties)).EndInit();
@@ -878,10 +884,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyAbbrivation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,16 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddCrew));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlLoginDetails = new System.Windows.Forms.Panel();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtGafferConfirmPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGafferPin = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGafferPassword = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGafferUserName = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
             this.txtCity = new DevExpress.XtraEditors.TextEdit();
             this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
             this.txtCountry = new DevExpress.XtraEditors.TextEdit();
@@ -48,8 +60,6 @@
             this.cmbBloodGroup = new System.Windows.Forms.ComboBox();
             this.lblEmployeeID = new DevExpress.XtraEditors.LabelControl();
             this.picEmployeemage = new DevExpress.XtraEditors.PictureEdit();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.txtLic3No = new DevExpress.XtraEditors.TextEdit();
@@ -138,28 +148,24 @@
             this.dtLic1RenewDate = new DevExpress.XtraEditors.DateEdit();
             this.dtLic2RenewDate = new DevExpress.XtraEditors.DateEdit();
             this.dtLic3RenewDate = new DevExpress.XtraEditors.DateEdit();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl46 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
-            this.pnlLoginDetails = new System.Windows.Forms.Panel();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.txtGafferConfirmPassword = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
-            this.txtGafferPin = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
-            this.txtGafferPassword = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
-            this.txtGafferUserName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
+            this.pnlLoginDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferConfirmPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferUserName.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployeemage.Properties)).BeginInit();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtLic3No.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLic2No.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalary.Properties)).BeginInit();
@@ -208,16 +214,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtLic2RenewDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            this.pnlLoginDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferConfirmPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferUserName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -229,6 +229,101 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(911, 549);
             this.panel1.TabIndex = 72;
+            // 
+            // pnlLoginDetails
+            // 
+            this.pnlLoginDetails.Controls.Add(this.groupControl1);
+            this.pnlLoginDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLoginDetails.Location = new System.Drawing.Point(0, 467);
+            this.pnlLoginDetails.Name = "pnlLoginDetails";
+            this.pnlLoginDetails.Size = new System.Drawing.Size(911, 81);
+            this.pnlLoginDetails.TabIndex = 128;
+            this.pnlLoginDetails.Visible = false;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.txtGafferConfirmPassword);
+            this.groupControl1.Controls.Add(this.labelControl37);
+            this.groupControl1.Controls.Add(this.txtGafferPin);
+            this.groupControl1.Controls.Add(this.labelControl47);
+            this.groupControl1.Controls.Add(this.txtGafferPassword);
+            this.groupControl1.Controls.Add(this.labelControl48);
+            this.groupControl1.Controls.Add(this.txtGafferUserName);
+            this.groupControl1.Controls.Add(this.labelControl49);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(911, 81);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Login Details";
+            // 
+            // txtGafferConfirmPassword
+            // 
+            this.txtGafferConfirmPassword.Location = new System.Drawing.Point(410, 52);
+            this.txtGafferConfirmPassword.Name = "txtGafferConfirmPassword";
+            this.txtGafferConfirmPassword.Properties.MaxLength = 15;
+            this.txtGafferConfirmPassword.Properties.UseSystemPasswordChar = true;
+            this.txtGafferConfirmPassword.Size = new System.Drawing.Size(186, 20);
+            this.txtGafferConfirmPassword.TabIndex = 3;
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Location = new System.Drawing.Point(308, 55);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(96, 13);
+            this.labelControl37.TabIndex = 75;
+            this.labelControl37.Text = "Confirm Password : ";
+            // 
+            // txtGafferPin
+            // 
+            this.txtGafferPin.Location = new System.Drawing.Point(95, 52);
+            this.txtGafferPin.Name = "txtGafferPin";
+            this.txtGafferPin.Properties.Mask.EditMask = "\\d{1,4}";
+            this.txtGafferPin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtGafferPin.Properties.MaxLength = 4;
+            this.txtGafferPin.Size = new System.Drawing.Size(186, 20);
+            this.txtGafferPin.TabIndex = 1;
+            // 
+            // labelControl47
+            // 
+            this.labelControl47.Location = new System.Drawing.Point(68, 55);
+            this.labelControl47.Name = "labelControl47";
+            this.labelControl47.Size = new System.Drawing.Size(24, 13);
+            this.labelControl47.TabIndex = 73;
+            this.labelControl47.Text = "Pin : ";
+            // 
+            // txtGafferPassword
+            // 
+            this.txtGafferPassword.Location = new System.Drawing.Point(410, 26);
+            this.txtGafferPassword.Name = "txtGafferPassword";
+            this.txtGafferPassword.Properties.MaxLength = 15;
+            this.txtGafferPassword.Properties.UseSystemPasswordChar = true;
+            this.txtGafferPassword.Size = new System.Drawing.Size(186, 20);
+            this.txtGafferPassword.TabIndex = 2;
+            // 
+            // labelControl48
+            // 
+            this.labelControl48.Location = new System.Drawing.Point(348, 29);
+            this.labelControl48.Name = "labelControl48";
+            this.labelControl48.Size = new System.Drawing.Size(56, 13);
+            this.labelControl48.TabIndex = 71;
+            this.labelControl48.Text = "Password : ";
+            // 
+            // txtGafferUserName
+            // 
+            this.txtGafferUserName.Location = new System.Drawing.Point(95, 26);
+            this.txtGafferUserName.Name = "txtGafferUserName";
+            this.txtGafferUserName.Properties.MaxLength = 20;
+            this.txtGafferUserName.Size = new System.Drawing.Size(186, 20);
+            this.txtGafferUserName.TabIndex = 0;
+            // 
+            // labelControl49
+            // 
+            this.labelControl49.Location = new System.Drawing.Point(30, 29);
+            this.labelControl49.Name = "labelControl49";
+            this.labelControl49.Size = new System.Drawing.Size(62, 13);
+            this.labelControl49.TabIndex = 69;
+            this.labelControl49.Text = "User Name : ";
             // 
             // panel2
             // 
@@ -319,7 +414,31 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(911, 467);
-            this.panel2.TabIndex = 73;
+            this.panel2.TabIndex = 0;
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelControl38.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl38.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.labelControl38.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl38.Location = new System.Drawing.Point(311, 150);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(84, 31);
+            this.labelControl38.TabIndex = 196;
+            this.labelControl38.Text = "Permanent  Address Line 2 : ";
+            // 
+            // labelControl46
+            // 
+            this.labelControl46.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelControl46.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl46.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.labelControl46.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl46.Location = new System.Drawing.Point(311, 105);
+            this.labelControl46.Name = "labelControl46";
+            this.labelControl46.Size = new System.Drawing.Size(84, 31);
+            this.labelControl46.TabIndex = 195;
+            this.labelControl46.Text = "Permanent  Address Line 1 : ";
             // 
             // txtCity
             // 
@@ -327,7 +446,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Properties.MaxLength = 20;
             this.txtCity.Size = new System.Drawing.Size(188, 20);
-            this.txtCity.TabIndex = 194;
+            this.txtCity.TabIndex = 9;
             // 
             // labelControl43
             // 
@@ -343,7 +462,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.MaxLength = 20;
             this.txtCountry.Size = new System.Drawing.Size(188, 20);
-            this.txtCountry.TabIndex = 192;
+            this.txtCountry.TabIndex = 7;
             // 
             // labelControl44
             // 
@@ -359,7 +478,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Properties.MaxLength = 20;
             this.txtState.Size = new System.Drawing.Size(188, 20);
-            this.txtState.TabIndex = 190;
+            this.txtState.TabIndex = 8;
             // 
             // labelControl45
             // 
@@ -387,7 +506,7 @@
             this.cmbBloodGroup.Location = new System.Drawing.Point(701, 276);
             this.cmbBloodGroup.Name = "cmbBloodGroup";
             this.cmbBloodGroup.Size = new System.Drawing.Size(201, 21);
-            this.cmbBloodGroup.TabIndex = 160;
+            this.cmbBloodGroup.TabIndex = 33;
             // 
             // lblEmployeeID
             // 
@@ -406,27 +525,7 @@
             this.picEmployeemage.Properties.NullText = "Right click to add image";
             this.picEmployeemage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picEmployeemage.Size = new System.Drawing.Size(114, 92);
-            this.picEmployeemage.TabIndex = 158;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnSave);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 584);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(911, 47);
-            this.panel4.TabIndex = 157;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSave.Location = new System.Drawing.Point(325, 8);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.picEmployeemage.TabIndex = 34;
             // 
             // labelControl30
             // 
@@ -450,7 +549,7 @@
             this.txtLic3No.Name = "txtLic3No";
             this.txtLic3No.Properties.MaxLength = 15;
             this.txtLic3No.Size = new System.Drawing.Size(188, 20);
-            this.txtLic3No.TabIndex = 154;
+            this.txtLic3No.TabIndex = 17;
             // 
             // labelControl24
             // 
@@ -474,7 +573,7 @@
             this.txtLic2No.Name = "txtLic2No";
             this.txtLic2No.Properties.MaxLength = 15;
             this.txtLic2No.Size = new System.Drawing.Size(188, 20);
-            this.txtLic2No.TabIndex = 150;
+            this.txtLic2No.TabIndex = 16;
             // 
             // labelControl21
             // 
@@ -492,7 +591,7 @@
             this.txtSalary.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtSalary.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtSalary.Size = new System.Drawing.Size(200, 20);
-            this.txtSalary.TabIndex = 147;
+            this.txtSalary.TabIndex = 26;
             // 
             // labelControl22
             // 
@@ -525,7 +624,7 @@
             this.txtDailyWages.Properties.Mask.EditMask = "\\d{1,8}";
             this.txtDailyWages.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDailyWages.Size = new System.Drawing.Size(188, 20);
-            this.txtDailyWages.TabIndex = 141;
+            this.txtDailyWages.TabIndex = 13;
             // 
             // labelControl19
             // 
@@ -541,7 +640,7 @@
             this.txtUnionID.Name = "txtUnionID";
             this.txtUnionID.Properties.MaxLength = 15;
             this.txtUnionID.Size = new System.Drawing.Size(188, 20);
-            this.txtUnionID.TabIndex = 139;
+            this.txtUnionID.TabIndex = 14;
             // 
             // txtlic1No
             // 
@@ -549,7 +648,7 @@
             this.txtlic1No.Name = "txtlic1No";
             this.txtlic1No.Properties.MaxLength = 15;
             this.txtlic1No.Size = new System.Drawing.Size(188, 20);
-            this.txtlic1No.TabIndex = 140;
+            this.txtlic1No.TabIndex = 15;
             // 
             // labelControl20
             // 
@@ -573,7 +672,7 @@
             this.txtAllergies.Name = "txtAllergies";
             this.txtAllergies.Properties.MaxLength = 20;
             this.txtAllergies.Size = new System.Drawing.Size(200, 20);
-            this.txtAllergies.TabIndex = 135;
+            this.txtAllergies.TabIndex = 32;
             // 
             // labelControl10
             // 
@@ -589,7 +688,7 @@
             this.txtWorkedSince.Name = "txtWorkedSince";
             this.txtWorkedSince.Properties.MaxLength = 10;
             this.txtWorkedSince.Size = new System.Drawing.Size(200, 20);
-            this.txtWorkedSince.TabIndex = 134;
+            this.txtWorkedSince.TabIndex = 25;
             // 
             // txtReferenceBy
             // 
@@ -597,7 +696,7 @@
             this.txtReferenceBy.Name = "txtReferenceBy";
             this.txtReferenceBy.Properties.MaxLength = 20;
             this.txtReferenceBy.Size = new System.Drawing.Size(200, 20);
-            this.txtReferenceBy.TabIndex = 130;
+            this.txtReferenceBy.TabIndex = 31;
             // 
             // labelControl12
             // 
@@ -616,7 +715,7 @@
             this.txtAadharNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtAadharNo.Properties.MaxLength = 14;
             this.txtAadharNo.Size = new System.Drawing.Size(190, 20);
-            this.txtAadharNo.TabIndex = 128;
+            this.txtAadharNo.TabIndex = 12;
             // 
             // labelControl13
             // 
@@ -648,14 +747,14 @@
             this.dtEmpBirthdate.Location = new System.Drawing.Point(263, 76);
             this.dtEmpBirthdate.Name = "dtEmpBirthdate";
             this.dtEmpBirthdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.dtEmpBirthdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtEmpBirthdate.Properties.ShowMonthHeaders = false;
             this.dtEmpBirthdate.Properties.ShowPopupShadow = false;
             this.dtEmpBirthdate.Properties.ShowToday = false;
             this.dtEmpBirthdate.Size = new System.Drawing.Size(146, 22);
-            this.dtEmpBirthdate.TabIndex = 124;
+            this.dtEmpBirthdate.TabIndex = 4;
             this.dtEmpBirthdate.EditValueChanged += new System.EventHandler(this.dtEmpBirthdate_EditValueChanged);
             // 
             // cmbGender
@@ -668,7 +767,7 @@
             this.cmbGender.Location = new System.Drawing.Point(96, 76);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(93, 21);
-            this.cmbGender.TabIndex = 122;
+            this.cmbGender.TabIndex = 3;
             // 
             // cmbEmpCompany
             // 
@@ -678,7 +777,7 @@
             this.cmbEmpCompany.Location = new System.Drawing.Point(416, 51);
             this.cmbEmpCompany.Name = "cmbEmpCompany";
             this.cmbEmpCompany.Size = new System.Drawing.Size(190, 21);
-            this.cmbEmpCompany.TabIndex = 121;
+            this.cmbEmpCompany.TabIndex = 2;
             // 
             // cmbEmpDesignation
             // 
@@ -688,7 +787,7 @@
             this.cmbEmpDesignation.Location = new System.Drawing.Point(96, 52);
             this.cmbEmpDesignation.Name = "cmbEmpDesignation";
             this.cmbEmpDesignation.Size = new System.Drawing.Size(189, 21);
-            this.cmbEmpDesignation.TabIndex = 120;
+            this.cmbEmpDesignation.TabIndex = 1;
             // 
             // panel3
             // 
@@ -724,7 +823,7 @@
             this.txtPhone5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone5.Properties.MaxLength = 20;
             this.txtPhone5.Size = new System.Drawing.Size(167, 20);
-            this.txtPhone5.TabIndex = 55;
+            this.txtPhone5.TabIndex = 0;
             // 
             // labelControl40
             // 
@@ -756,7 +855,7 @@
             this.txtPhone4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone4.Properties.MaxLength = 20;
             this.txtPhone4.Size = new System.Drawing.Size(167, 20);
-            this.txtPhone4.TabIndex = 53;
+            this.txtPhone4.TabIndex = 0;
             // 
             // labelControl41
             // 
@@ -788,7 +887,7 @@
             this.txtPhone3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone3.Properties.MaxLength = 20;
             this.txtPhone3.Size = new System.Drawing.Size(167, 20);
-            this.txtPhone3.TabIndex = 51;
+            this.txtPhone3.TabIndex = 0;
             // 
             // labelControl39
             // 
@@ -820,7 +919,7 @@
             this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone2.Properties.MaxLength = 20;
             this.txtPhone2.Size = new System.Drawing.Size(167, 20);
-            this.txtPhone2.TabIndex = 49;
+            this.txtPhone2.TabIndex = 0;
             // 
             // labelControl34
             // 
@@ -849,9 +948,9 @@
             this.btnAddPhone.Properties.Appearance.Options.UseBackColor = true;
             this.btnAddPhone.Properties.AutoHeight = false;
             this.btnAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnAddPhone.Size = new System.Drawing.Size(22, 18);
-            this.btnAddPhone.TabIndex = 48;
+            this.btnAddPhone.TabIndex = 1;
             this.btnAddPhone.Click += new System.EventHandler(this.btnAddPhone_Click);
             // 
             // txtPhone1
@@ -865,7 +964,7 @@
             this.txtPhone1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone1.Properties.MaxLength = 20;
             this.txtPhone1.Size = new System.Drawing.Size(167, 20);
-            this.txtPhone1.TabIndex = 47;
+            this.txtPhone1.TabIndex = 0;
             // 
             // labelControl42
             // 
@@ -888,7 +987,7 @@
             this.txtGSTNNo.Location = new System.Drawing.Point(409, 270);
             this.txtGSTNNo.Name = "txtGSTNNo";
             this.txtGSTNNo.Size = new System.Drawing.Size(200, 20);
-            this.txtGSTNNo.TabIndex = 116;
+            this.txtGSTNNo.TabIndex = 23;
             // 
             // labelControl33
             // 
@@ -906,14 +1005,14 @@
             this.txtPANNo.Properties.Mask.EditMask = "[A-Za-z]{5}\\d{4}[A-Za-z]{1}";
             this.txtPANNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPANNo.Size = new System.Drawing.Size(200, 20);
-            this.txtPANNo.TabIndex = 118;
+            this.txtPANNo.TabIndex = 24;
             // 
             // txtPermanentAddressLine2
             // 
             this.txtPermanentAddressLine2.Location = new System.Drawing.Point(409, 152);
             this.txtPermanentAddressLine2.Name = "txtPermanentAddressLine2";
             this.txtPermanentAddressLine2.Size = new System.Drawing.Size(200, 46);
-            this.txtPermanentAddressLine2.TabIndex = 114;
+            this.txtPermanentAddressLine2.TabIndex = 19;
             // 
             // txtDistrictTownVillage
             // 
@@ -921,7 +1020,7 @@
             this.txtDistrictTownVillage.Name = "txtDistrictTownVillage";
             this.txtDistrictTownVillage.Properties.MaxLength = 20;
             this.txtDistrictTownVillage.Size = new System.Drawing.Size(200, 20);
-            this.txtDistrictTownVillage.TabIndex = 107;
+            this.txtDistrictTownVillage.TabIndex = 21;
             // 
             // labelControl35
             // 
@@ -938,7 +1037,7 @@
             this.txtPermanentPincode.Properties.Mask.EditMask = "\\d{1,6}";
             this.txtPermanentPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPermanentPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtPermanentPincode.TabIndex = 105;
+            this.txtPermanentPincode.TabIndex = 20;
             // 
             // labelControl36
             // 
@@ -953,14 +1052,14 @@
             this.txtPermanentAddressLine1.Location = new System.Drawing.Point(409, 104);
             this.txtPermanentAddressLine1.Name = "txtPermanentAddressLine1";
             this.txtPermanentAddressLine1.Size = new System.Drawing.Size(200, 46);
-            this.txtPermanentAddressLine1.TabIndex = 102;
+            this.txtPermanentAddressLine1.TabIndex = 18;
             // 
             // txtAddressLine2
             // 
             this.txtAddressLine2.Location = new System.Drawing.Point(96, 150);
             this.txtAddressLine2.Name = "txtAddressLine2";
             this.txtAddressLine2.Size = new System.Drawing.Size(188, 46);
-            this.txtAddressLine2.TabIndex = 100;
+            this.txtAddressLine2.TabIndex = 6;
             // 
             // cmbCityMaster
             // 
@@ -1031,7 +1130,7 @@
             this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Properties.MaxLength = 50;
             this.txtEmail.Size = new System.Drawing.Size(188, 20);
-            this.txtEmail.TabIndex = 93;
+            this.txtEmail.TabIndex = 11;
             // 
             // labelControl25
             // 
@@ -1048,7 +1147,7 @@
             this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(188, 20);
-            this.txtPincode.TabIndex = 91;
+            this.txtPincode.TabIndex = 10;
             // 
             // labelControl26
             // 
@@ -1079,10 +1178,11 @@
             this.txtAddressLine1.Location = new System.Drawing.Point(96, 102);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(188, 46);
-            this.txtAddressLine1.TabIndex = 88;
+            this.txtAddressLine1.TabIndex = 5;
             // 
             // txtEmpAge
             // 
+            this.txtEmpAge.Enabled = false;
             this.txtEmpAge.Location = new System.Drawing.Point(478, 78);
             this.txtEmpAge.Name = "txtEmpAge";
             this.txtEmpAge.Properties.ReadOnly = true;
@@ -1131,6 +1231,7 @@
             // 
             // txtEmpAbbrivation
             // 
+            this.txtEmpAbbrivation.Enabled = false;
             this.txtEmpAbbrivation.Location = new System.Drawing.Point(416, 29);
             this.txtEmpAbbrivation.Name = "txtEmpAbbrivation";
             this.txtEmpAbbrivation.Properties.ReadOnly = true;
@@ -1147,6 +1248,7 @@
             // 
             // txtEmployeeCode
             // 
+            this.txtEmployeeCode.Enabled = false;
             this.txtEmployeeCode.Location = new System.Drawing.Point(96, 29);
             this.txtEmployeeCode.Name = "txtEmployeeCode";
             this.txtEmployeeCode.Properties.ReadOnly = true;
@@ -1167,7 +1269,7 @@
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Properties.MaxLength = 100;
             this.txtEmployeeName.Size = new System.Drawing.Size(509, 20);
-            this.txtEmployeeName.TabIndex = 68;
+            this.txtEmployeeName.TabIndex = 0;
             this.txtEmployeeName.EditValueChanged += new System.EventHandler(this.txtEmployeeName_EditValueChanged);
             // 
             // labelControl1
@@ -1184,14 +1286,14 @@
             this.dtEmpDOJ.Location = new System.Drawing.Point(409, 247);
             this.dtEmpDOJ.Name = "dtEmpDOJ";
             this.dtEmpDOJ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpDOJ.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtEmpDOJ.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.dtEmpDOJ.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtEmpDOJ.Properties.ShowMonthHeaders = false;
             this.dtEmpDOJ.Properties.ShowPopupShadow = false;
             this.dtEmpDOJ.Properties.ShowToday = false;
             this.dtEmpDOJ.Size = new System.Drawing.Size(146, 22);
-            this.dtEmpDOJ.TabIndex = 80;
+            this.dtEmpDOJ.TabIndex = 22;
             // 
             // dtUnionRenewDate
             // 
@@ -1199,14 +1301,14 @@
             this.dtUnionRenewDate.Location = new System.Drawing.Point(408, 363);
             this.dtUnionRenewDate.Name = "dtUnionRenewDate";
             this.dtUnionRenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtUnionRenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtUnionRenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.dtUnionRenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtUnionRenewDate.Properties.ShowMonthHeaders = false;
             this.dtUnionRenewDate.Properties.ShowPopupShadow = false;
             this.dtUnionRenewDate.Properties.ShowToday = false;
             this.dtUnionRenewDate.Size = new System.Drawing.Size(200, 22);
-            this.dtUnionRenewDate.TabIndex = 145;
+            this.dtUnionRenewDate.TabIndex = 27;
             // 
             // dtLic1RenewDate
             // 
@@ -1214,14 +1316,14 @@
             this.dtLic1RenewDate.Location = new System.Drawing.Point(408, 385);
             this.dtLic1RenewDate.Name = "dtLic1RenewDate";
             this.dtLic1RenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic1RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic1RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.dtLic1RenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtLic1RenewDate.Properties.ShowMonthHeaders = false;
             this.dtLic1RenewDate.Properties.ShowPopupShadow = false;
             this.dtLic1RenewDate.Properties.ShowToday = false;
             this.dtLic1RenewDate.Size = new System.Drawing.Size(200, 22);
-            this.dtLic1RenewDate.TabIndex = 146;
+            this.dtLic1RenewDate.TabIndex = 28;
             // 
             // dtLic2RenewDate
             // 
@@ -1229,14 +1331,14 @@
             this.dtLic2RenewDate.Location = new System.Drawing.Point(408, 411);
             this.dtLic2RenewDate.Name = "dtLic2RenewDate";
             this.dtLic2RenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic2RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic2RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.dtLic2RenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtLic2RenewDate.Properties.ShowMonthHeaders = false;
             this.dtLic2RenewDate.Properties.ShowPopupShadow = false;
             this.dtLic2RenewDate.Properties.ShowToday = false;
             this.dtLic2RenewDate.Size = new System.Drawing.Size(200, 22);
-            this.dtLic2RenewDate.TabIndex = 152;
+            this.dtLic2RenewDate.TabIndex = 29;
             // 
             // dtLic3RenewDate
             // 
@@ -1244,14 +1346,34 @@
             this.dtLic3RenewDate.Location = new System.Drawing.Point(408, 437);
             this.dtLic3RenewDate.Name = "dtLic3RenewDate";
             this.dtLic3RenewDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic3RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtLic3RenewDate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.dtLic3RenewDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtLic3RenewDate.Properties.ShowMonthHeaders = false;
             this.dtLic3RenewDate.Properties.ShowPopupShadow = false;
             this.dtLic3RenewDate.Properties.ShowToday = false;
             this.dtLic3RenewDate.Size = new System.Drawing.Size(200, 22);
-            this.dtLic3RenewDate.TabIndex = 156;
+            this.dtLic3RenewDate.TabIndex = 30;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnSave);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 584);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(911, 47);
+            this.panel4.TabIndex = 157;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSave.Location = new System.Drawing.Point(325, 8);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 31);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panelControl1
             // 
@@ -1288,125 +1410,6 @@
             this.lblFormHeader.TabIndex = 3;
             this.lblFormHeader.Text = "Add New Crew";
             // 
-            // labelControl46
-            // 
-            this.labelControl46.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelControl46.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl46.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.labelControl46.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl46.Location = new System.Drawing.Point(311, 105);
-            this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(84, 31);
-            this.labelControl46.TabIndex = 195;
-            this.labelControl46.Text = "Permanent  Address Line 1 : ";
-            // 
-            // labelControl38
-            // 
-            this.labelControl38.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelControl38.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl38.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.labelControl38.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl38.Location = new System.Drawing.Point(311, 150);
-            this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(84, 31);
-            this.labelControl38.TabIndex = 196;
-            this.labelControl38.Text = "Permanent  Address Line 2 : ";
-            // 
-            // pnlLoginDetails
-            // 
-            this.pnlLoginDetails.Controls.Add(this.groupControl1);
-            this.pnlLoginDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLoginDetails.Location = new System.Drawing.Point(0, 467);
-            this.pnlLoginDetails.Name = "pnlLoginDetails";
-            this.pnlLoginDetails.Size = new System.Drawing.Size(911, 81);
-            this.pnlLoginDetails.TabIndex = 128;
-            this.pnlLoginDetails.Visible = false;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.txtGafferConfirmPassword);
-            this.groupControl1.Controls.Add(this.labelControl37);
-            this.groupControl1.Controls.Add(this.txtGafferPin);
-            this.groupControl1.Controls.Add(this.labelControl47);
-            this.groupControl1.Controls.Add(this.txtGafferPassword);
-            this.groupControl1.Controls.Add(this.labelControl48);
-            this.groupControl1.Controls.Add(this.txtGafferUserName);
-            this.groupControl1.Controls.Add(this.labelControl49);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(911, 81);
-            this.groupControl1.TabIndex = 127;
-            this.groupControl1.Text = "Login Details";
-            // 
-            // txtGafferConfirmPassword
-            // 
-            this.txtGafferConfirmPassword.Location = new System.Drawing.Point(410, 52);
-            this.txtGafferConfirmPassword.Name = "txtGafferConfirmPassword";
-            this.txtGafferConfirmPassword.Properties.MaxLength = 15;
-            this.txtGafferConfirmPassword.Properties.UseSystemPasswordChar = true;
-            this.txtGafferConfirmPassword.Size = new System.Drawing.Size(186, 20);
-            this.txtGafferConfirmPassword.TabIndex = 76;
-            // 
-            // labelControl37
-            // 
-            this.labelControl37.Location = new System.Drawing.Point(308, 55);
-            this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(96, 13);
-            this.labelControl37.TabIndex = 75;
-            this.labelControl37.Text = "Confirm Password : ";
-            // 
-            // txtGafferPin
-            // 
-            this.txtGafferPin.Location = new System.Drawing.Point(95, 52);
-            this.txtGafferPin.Name = "txtGafferPin";
-            this.txtGafferPin.Properties.Mask.EditMask = "\\d{1,4}";
-            this.txtGafferPin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtGafferPin.Properties.MaxLength = 4;
-            this.txtGafferPin.Size = new System.Drawing.Size(186, 20);
-            this.txtGafferPin.TabIndex = 74;
-            // 
-            // labelControl47
-            // 
-            this.labelControl47.Location = new System.Drawing.Point(68, 55);
-            this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(24, 13);
-            this.labelControl47.TabIndex = 73;
-            this.labelControl47.Text = "Pin : ";
-            // 
-            // txtGafferPassword
-            // 
-            this.txtGafferPassword.Location = new System.Drawing.Point(410, 26);
-            this.txtGafferPassword.Name = "txtGafferPassword";
-            this.txtGafferPassword.Properties.MaxLength = 15;
-            this.txtGafferPassword.Properties.UseSystemPasswordChar = true;
-            this.txtGafferPassword.Size = new System.Drawing.Size(186, 20);
-            this.txtGafferPassword.TabIndex = 72;
-            // 
-            // labelControl48
-            // 
-            this.labelControl48.Location = new System.Drawing.Point(348, 29);
-            this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(56, 13);
-            this.labelControl48.TabIndex = 71;
-            this.labelControl48.Text = "Password : ";
-            // 
-            // txtGafferUserName
-            // 
-            this.txtGafferUserName.Location = new System.Drawing.Point(95, 26);
-            this.txtGafferUserName.Name = "txtGafferUserName";
-            this.txtGafferUserName.Properties.MaxLength = 20;
-            this.txtGafferUserName.Size = new System.Drawing.Size(186, 20);
-            this.txtGafferUserName.TabIndex = 70;
-            // 
-            // labelControl49
-            // 
-            this.labelControl49.Location = new System.Drawing.Point(30, 29);
-            this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(62, 13);
-            this.labelControl49.TabIndex = 69;
-            this.labelControl49.Text = "User Name : ";
-            // 
             // frmMasterAddCrew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1422,13 +1425,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmMasterAddCrew_Load);
             this.panel1.ResumeLayout(false);
+            this.pnlLoginDetails.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferConfirmPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGafferUserName.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployeemage.Properties)).EndInit();
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtLic3No.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLic2No.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalary.Properties)).EndInit();
@@ -1482,18 +1492,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtLic2RenewDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtLic3RenewDate.Properties)).EndInit();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            this.pnlLoginDetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferConfirmPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGafferUserName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

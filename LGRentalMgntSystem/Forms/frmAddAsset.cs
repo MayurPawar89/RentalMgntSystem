@@ -31,20 +31,29 @@ namespace LGRentalMgntSystem
         {
             try
             {
+                txtAssetName.Focus();
+                dtIntroductionDate.EditValueChanged-=dtIntroductionDate_EditValueChanged;
                 dtIntroductionDate.EditValue = DateTime.Now;
                 dtReorderTime.EditValue = DateTime.Now;
+                dtIntroductionDate.EditValueChanged += dtIntroductionDate_EditValueChanged;
+
                 dtShelfLife.EditValue = DateTime.Now;
                 dtRetirementDate.EditValue = DateTime.Now;
                 FillAssetMaster();
-                FillAssetCode();
+                //FillAssetCode();
 
                 if (Convert.ToInt64(lblAssetID.Text) != 0)
                 {
-                    pnlSave.Visible = false;
+                    //pnlSave.Visible = false;
+                    btnSave.Text = "Update";
                     FillAssetDetails(Convert.ToInt64(lblAssetID.Text));
                     EnableDisableCodeControl(Convert.ToInt64(lblAssetID.Text));
                 }
-                txtAssetName.Focus();
+                
+                //clsTabIndex.TabScheme scheme = clsTabIndex.TabScheme.AcrossFirst;
+                //clsTabIndex tom = new clsTabIndex(this);
+                //// This method actually sets the order all the way down the control hierarchy.
+                //tom.SetTabOrder(scheme);
             }
             catch (Exception ex)
             {
@@ -101,13 +110,28 @@ namespace LGRentalMgntSystem
                         txtPower.Text = Convert.ToString(dtAssetDetails.Rows[0]["sPower"]);
                         txtAssetCode.Text = GenerateCode();
                     }
-                    if (dtAssetCodeDetails!=null)
+                    if (dtAssetCodeDetails!=null&&dtAssetCodeDetails.Rows.Count>0)
                     {
-                        gvAssetList.GridControl.DataSource = dtAssetCodeDetails;
-                        gvAssetList.Columns[1].Visible = false;
-                        gvAssetList.Columns[6].Visible = false;
+                        lblAssetID.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["nAssetID"]);
+                        lblAssetCodeID.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["nAssetCodeID"]);
+                        txtShelfLifeUnit.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["sShelfLifeUnit"]);
+                        dtShelfLife.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["dtShelfLife"]);
+                        dtRetirementDate.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["dtRetirementDate"]);
+                        txtShelfLifeUnit.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["sShelfLifeUnit"]);
+                        txtAssetCode.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["sUniqueCode"]);
+                        byte[] barcodeImage = (byte[])dtAssetCodeDetails.Rows[0]["barcode"];
+
+                        if (barcodeImage.Length > 0)
+                        {
+                            barcodeImage = (byte[])dtAssetCodeDetails.Rows[0]["barcode"];
+                            MemoryStream msHeaderImage = new MemoryStream(barcodeImage);
+                            picBarcodeImage.Image = Image.FromStream(msHeaderImage);
+                        }
+
+                        //gvAssetList.GridControl.DataSource = dtAssetCodeDetails;
+                        //gvAssetList.Columns[1].Visible = false;
+                        //gvAssetList.Columns[6].Visible = false;
                     }
-                    btnUpdateAsset.Visible = true;
 
                 }
             }
@@ -336,9 +360,10 @@ namespace LGRentalMgntSystem
 
         private void EnableDisableControl(string sMainType)
         {
-            switch (sMainType)
+            switch (sMainType.ToLower())
             {
-                case "Cloth":
+                case "cloth":
+                case "cloths":
                     {//cloth: Wattage,Span,Attachment,Attachment Name,Length,Core,Amps,Plug,Power
                         txtWattage.ReadOnly = true;
                         txtSpan.ReadOnly = true;
@@ -355,7 +380,8 @@ namespace LGRentalMgntSystem
                         cmbDensity.Enabled = true;
                         break;
                     }
-                case "Grip":
+                case "grip":
+                case "grips":
                     {
                         //Grip: Density,Wattage,Color,Length,Core,Amps,Plug,Power
                         txtQuality.ReadOnly = false;
@@ -374,7 +400,7 @@ namespace LGRentalMgntSystem
                         break;
 
                     }
-                case "Accessories":
+                case "accessories":
                 case "":
                     {
                         //Accessories: 
@@ -393,7 +419,8 @@ namespace LGRentalMgntSystem
                         txtLength.ReadOnly = false;
                         break;
                     }
-                case "Light":
+                case "light":
+                case "lights":
                     {
                         //light: size,Color, Density, Span,Attachment,Attachment Name,Length,Core,Amps,Plug,Power
                         txtSizeHeight.ReadOnly = true;
@@ -412,7 +439,8 @@ namespace LGRentalMgntSystem
                         break;
 
                     }
-                case "Light Accessories":
+                case "light accessories":
+                case "lights accessories":
                     {
                         //light Accessories: size,Color,Quality, Density, Span,Attachment,Attachment Name,Core,Amps,Plug
                         txtSizeHeight.ReadOnly = true;
@@ -431,7 +459,8 @@ namespace LGRentalMgntSystem
                         break;
 
                     }
-                case "Power Distribution":
+                case "power distribution":
+                case "power distributions":
                     {
                         //Power Distribution: size,Color,Quality, Density,Wattage, Span,Attachment,Attachment Name,Power
                         txtSizeHeight.ReadOnly = true;
@@ -777,8 +806,10 @@ namespace LGRentalMgntSystem
             txtAssetName.Text = "";
             txtAssetAbbrivation.Text = "";
             txtAssetDescription.Text = "";
+            dtIntroductionDate.EditValueChanged -= dtIntroductionDate_EditValueChanged;
             dtIntroductionDate.EditValue = DateTime.Now;
             dtReorderTime.EditValue = DateTime.Now;
+            dtIntroductionDate.EditValueChanged += dtIntroductionDate_EditValueChanged;
             txtReorderDays.Text = "";
             txtReorderQuantity.Text = "";
             txtAssetRate.Text = "";
@@ -796,7 +827,15 @@ namespace LGRentalMgntSystem
             txtAmps.Text = "";
             txtPlug.Text = "";
             txtPower.Text = "";
-            FillAssetCode();
+            if (picBarcodeImage != null)
+            {
+                picBarcodeImage.Image = null;
+            }
+            dtShelfLife.EditValue = DateTime.Now;
+            dtRetirementDate.EditValue = DateTime.Now;
+            txtShelfLifeUnit.Text = "";
+            txtAssetCode.Text = string.Empty;
+            //FillAssetCode();
         }
         private void txtSizeHeight_EditValueChanged(object sender, EventArgs e)
         {
@@ -810,13 +849,13 @@ namespace LGRentalMgntSystem
         private void UpdateAssetCodeTable()
         {
             txtAssetCode.Text = GenerateCode();
-            DataColumn dc = new DataColumn("sUniqueCode");
-            dc.DataType = typeof(string);
-            dc.DefaultValue = GenerateCode();
-            dtAssetCode.Columns.Remove("sUniqueCode");
-            dtAssetCode.Columns.Add(dc);
-            dtAssetCode.AcceptChanges();
-            gvAssetList.RefreshData();
+            //DataColumn dc = new DataColumn("sUniqueCode");
+            //dc.DataType = typeof(string);
+            //dc.DefaultValue = GenerateCode();``
+            //dtAssetCode.Columns.Remove("sUniqueCode");
+            //dtAssetCode.Columns.Add(dc);
+            //dtAssetCode.AcceptChanges();
+            //gvAssetList.RefreshData();
         }
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
@@ -935,21 +974,34 @@ namespace LGRentalMgntSystem
                 oAsset.sPlug = Convert.ToString(txtPlug.Text);
                 oAsset.sPower = Convert.ToString(txtPower.Text);
                 List<AssetCode> lstAssetCode = new List<AssetCode>();
-                foreach (DataRow dr in dtAssetCode.Rows)
+
+                byte[] BarcodeImage = new byte[] { };
+                if (picBarcodeImage != null)
                 {
-                    using (AssetCode oAssetCode = new AssetCode())
+                    if (picBarcodeImage.Image != null)
                     {
-                        oAssetCode.nAssetCodeID = 0;
-                        oAssetCode.nSequenceNo = Convert.ToInt32(dr["nSequenceNo"]);
-                        oAssetCode.sInitialCode = Convert.ToString(dr["sInitialCode"]);
-                        oAssetCode.sUniqueCode = Convert.ToString(dr["sUniqueCode"]);
-                        oAssetCode.barcode = (byte[])dr["barcode"];
-                        oAssetCode.dtShelfLife = Convert.ToDateTime(dr["dtShelfLife"]);
-                        oAssetCode.sShelfLifeUnit = Convert.ToString(dr["sShelfLifeUnit"]);
-                        oAssetCode.dtRetirementDate = Convert.ToDateTime(dr["dtRetirementDate"]);
-                        lstAssetCode.Add(oAssetCode);
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            picBarcodeImage.Image.Save(ms, ImageFormat.Jpeg);
+                            BarcodeImage = new byte[ms.Length];
+                            ms.Position = 0;
+                            ms.Read(BarcodeImage, 0, BarcodeImage.Length);
+                        }
                     }
                 }
+                using (AssetCode oAssetCode = new AssetCode())
+                {
+                    oAssetCode.nAssetCodeID = Convert.ToInt64(lblAssetCodeID.Text);
+                    oAssetCode.nSequenceNo = 1;
+                    oAssetCode.sInitialCode = Convert.ToString(txtAssetCode.Text);
+                    oAssetCode.sUniqueCode = Convert.ToString(txtAssetCode.Text);
+                    oAssetCode.barcode = BarcodeImage;
+                    oAssetCode.dtShelfLife = Convert.ToDateTime(dtShelfLife.Text);
+                    oAssetCode.sShelfLifeUnit = Convert.ToString(txtShelfLifeUnit.Text);
+                    oAssetCode.dtRetirementDate = Convert.ToDateTime(dtRetirementDate.Text);
+                    lstAssetCode.Add(oAssetCode);
+                }
+                
                 oAsset.lstAssetCode = lstAssetCode;
                 Int64 nAssetID = oAsset.InsertUpdateAsset(bIsSaveAsset_Code);
                 if (nAssetID == 0)
@@ -999,11 +1051,26 @@ namespace LGRentalMgntSystem
 
         private void dtReorderTime_EditValueChanged(object sender, EventArgs e)
         {
+            CalculateReorderDays();
+        }
+
+        private void CalculateReorderDays()
+        {
             double nDays = 0;
             DateTime dtIntroDate = Convert.ToDateTime(dtIntroductionDate.Text);
             DateTime dtROrderDate = Convert.ToDateTime(dtReorderTime.Text);
+            if (dtROrderDate < dtIntroDate)
+            {
+                MessageBox.Show("Re-order date must be greater than or equal to Introduction date.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (dtIntroDate>dtROrderDate)
+            {
+                MessageBox.Show("Introduction date must be less than or equal to Re-order date.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             nDays = (dtROrderDate - dtIntroDate).TotalDays;
-            txtReorderDays.Text=Convert.ToString(nDays);
+            txtReorderDays.Text = Convert.ToString(nDays);
         }
 
         private void gvAssetList_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
@@ -1123,6 +1190,51 @@ namespace LGRentalMgntSystem
             {
                 SaveAssetDetails(false);
             }
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtShelfLife_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtRetirementDate_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelControl20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtIntroductionDate_EditValueChanged(object sender, EventArgs e)
+        {
+            CalculateReorderDays();
         }
     }
 }

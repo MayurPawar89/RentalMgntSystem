@@ -137,7 +137,7 @@ namespace LGRentalMgntSystem
                     oDBAccess.CloseConnection(true);
                     return nAssetID;
                 }
-                if (nAssetID!=0&&bIsSaveAsset_Code)
+                if (nAssetID!=0)
                 {
                     foreach (AssetCode item in lstAssetCode)
                     {

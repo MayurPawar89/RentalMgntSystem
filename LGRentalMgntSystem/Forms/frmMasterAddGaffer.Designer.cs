@@ -185,7 +185,7 @@
             this.btnSave.Location = new System.Drawing.Point(201, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -236,7 +236,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 399);
-            this.panel2.TabIndex = 74;
+            this.panel2.TabIndex = 0;
             // 
             // txtCity
             // 
@@ -244,7 +244,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Properties.MaxLength = 20;
             this.txtCity.Size = new System.Drawing.Size(153, 20);
-            this.txtCity.TabIndex = 134;
+            this.txtCity.TabIndex = 7;
             // 
             // labelControl18
             // 
@@ -260,7 +260,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.MaxLength = 20;
             this.txtCountry.Size = new System.Drawing.Size(153, 20);
-            this.txtCountry.TabIndex = 132;
+            this.txtCountry.TabIndex = 5;
             // 
             // labelControl16
             // 
@@ -276,12 +276,12 @@
             this.txtState.Name = "txtState";
             this.txtState.Properties.MaxLength = 20;
             this.txtState.Size = new System.Drawing.Size(153, 20);
-            this.txtState.TabIndex = 129;
+            this.txtState.TabIndex = 6;
             // 
             // dtGafferBirthdate
             // 
             this.dtGafferBirthdate.EditValue = null;
-            this.dtGafferBirthdate.Location = new System.Drawing.Point(238, 57);
+            this.dtGafferBirthdate.Location = new System.Drawing.Point(238, 58);
             this.dtGafferBirthdate.Name = "dtGafferBirthdate";
             this.dtGafferBirthdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("dtGafferBirthdate.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
@@ -291,7 +291,7 @@
             this.dtGafferBirthdate.Properties.ShowPopupShadow = false;
             this.dtGafferBirthdate.Properties.ShowToday = false;
             this.dtGafferBirthdate.Size = new System.Drawing.Size(124, 22);
-            this.dtGafferBirthdate.TabIndex = 127;
+            this.dtGafferBirthdate.TabIndex = 2;
             this.dtGafferBirthdate.EditValueChanged += new System.EventHandler(this.dtGafferBirthdate_EditValueChanged);
             // 
             // lblGafferID
@@ -316,7 +316,7 @@
             this.groupControl1.Location = new System.Drawing.Point(8, 304);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(505, 82);
-            this.groupControl1.TabIndex = 125;
+            this.groupControl1.TabIndex = 10;
             this.groupControl1.Text = "Login Details";
             // 
             // txtGafferConfirmPassword
@@ -326,7 +326,7 @@
             this.txtGafferConfirmPassword.Properties.MaxLength = 15;
             this.txtGafferConfirmPassword.Properties.UseSystemPasswordChar = true;
             this.txtGafferConfirmPassword.Size = new System.Drawing.Size(143, 20);
-            this.txtGafferConfirmPassword.TabIndex = 76;
+            this.txtGafferConfirmPassword.TabIndex = 3;
             // 
             // labelControl10
             // 
@@ -344,7 +344,7 @@
             this.txtGafferPin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtGafferPin.Properties.MaxLength = 4;
             this.txtGafferPin.Size = new System.Drawing.Size(143, 20);
-            this.txtGafferPin.TabIndex = 74;
+            this.txtGafferPin.TabIndex = 1;
             // 
             // labelControl6
             // 
@@ -361,7 +361,7 @@
             this.txtGafferPassword.Properties.MaxLength = 15;
             this.txtGafferPassword.Properties.UseSystemPasswordChar = true;
             this.txtGafferPassword.Size = new System.Drawing.Size(143, 20);
-            this.txtGafferPassword.TabIndex = 72;
+            this.txtGafferPassword.TabIndex = 2;
             // 
             // labelControl5
             // 
@@ -377,7 +377,7 @@
             this.txtGafferUserName.Name = "txtGafferUserName";
             this.txtGafferUserName.Properties.MaxLength = 20;
             this.txtGafferUserName.Size = new System.Drawing.Size(143, 20);
-            this.txtGafferUserName.TabIndex = 70;
+            this.txtGafferUserName.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -404,7 +404,7 @@
             this.cmbGender.Location = new System.Drawing.Point(95, 58);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(73, 21);
-            this.cmbGender.TabIndex = 122;
+            this.cmbGender.TabIndex = 1;
             // 
             // panel5
             // 
@@ -440,7 +440,7 @@
             this.txtPhone5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone5.Properties.MaxLength = 20;
             this.txtPhone5.Size = new System.Drawing.Size(148, 20);
-            this.txtPhone5.TabIndex = 55;
+            this.txtPhone5.TabIndex = 0;
             // 
             // labelControl40
             // 
@@ -472,7 +472,7 @@
             this.txtPhone4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone4.Properties.MaxLength = 20;
             this.txtPhone4.Size = new System.Drawing.Size(148, 20);
-            this.txtPhone4.TabIndex = 53;
+            this.txtPhone4.TabIndex = 0;
             // 
             // labelControl41
             // 
@@ -504,7 +504,7 @@
             this.txtPhone3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone3.Properties.MaxLength = 20;
             this.txtPhone3.Size = new System.Drawing.Size(148, 20);
-            this.txtPhone3.TabIndex = 51;
+            this.txtPhone3.TabIndex = 0;
             // 
             // labelControl39
             // 
@@ -536,7 +536,7 @@
             this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone2.Properties.MaxLength = 20;
             this.txtPhone2.Size = new System.Drawing.Size(148, 20);
-            this.txtPhone2.TabIndex = 49;
+            this.txtPhone2.TabIndex = 0;
             // 
             // labelControl34
             // 
@@ -567,7 +567,7 @@
             this.btnAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnAddPhone.Size = new System.Drawing.Size(22, 18);
-            this.btnAddPhone.TabIndex = 48;
+            this.btnAddPhone.TabIndex = 1;
             this.btnAddPhone.Click += new System.EventHandler(this.btnAddPhone_Click);
             // 
             // txtPhone1
@@ -581,7 +581,7 @@
             this.txtPhone1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone1.Properties.MaxLength = 20;
             this.txtPhone1.Size = new System.Drawing.Size(148, 20);
-            this.txtPhone1.TabIndex = 47;
+            this.txtPhone1.TabIndex = 0;
             // 
             // labelControl42
             // 
@@ -596,7 +596,7 @@
             this.txtAddressLine2.Location = new System.Drawing.Point(93, 132);
             this.txtAddressLine2.Name = "txtAddressLine2";
             this.txtAddressLine2.Size = new System.Drawing.Size(153, 46);
-            this.txtAddressLine2.TabIndex = 100;
+            this.txtAddressLine2.TabIndex = 4;
             // 
             // cmbCityMaster
             // 
@@ -648,7 +648,7 @@
             this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Properties.MaxLength = 50;
             this.txtEmail.Size = new System.Drawing.Size(153, 20);
-            this.txtEmail.TabIndex = 93;
+            this.txtEmail.TabIndex = 9;
             // 
             // labelControl25
             // 
@@ -665,7 +665,7 @@
             this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(153, 20);
-            this.txtPincode.TabIndex = 91;
+            this.txtPincode.TabIndex = 8;
             // 
             // labelControl26
             // 
@@ -696,10 +696,11 @@
             this.txtAddressLine1.Location = new System.Drawing.Point(93, 84);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(153, 46);
-            this.txtAddressLine1.TabIndex = 88;
+            this.txtAddressLine1.TabIndex = 3;
             // 
             // txtGafferAge
             // 
+            this.txtGafferAge.Enabled = false;
             this.txtGafferAge.Location = new System.Drawing.Point(405, 58);
             this.txtGafferAge.Name = "txtGafferAge";
             this.txtGafferAge.Properties.ReadOnly = true;
@@ -724,6 +725,7 @@
             // 
             // txtGafferAbbrivation
             // 
+            this.txtGafferAbbrivation.Enabled = false;
             this.txtGafferAbbrivation.Location = new System.Drawing.Point(353, 34);
             this.txtGafferAbbrivation.Name = "txtGafferAbbrivation";
             this.txtGafferAbbrivation.Properties.ReadOnly = true;
@@ -740,6 +742,7 @@
             // 
             // txtGafferCode
             // 
+            this.txtGafferCode.Enabled = false;
             this.txtGafferCode.Location = new System.Drawing.Point(94, 34);
             this.txtGafferCode.Name = "txtGafferCode";
             this.txtGafferCode.Properties.ReadOnly = true;
@@ -760,7 +763,7 @@
             this.txtGafferName.Name = "txtGafferName";
             this.txtGafferName.Properties.MaxLength = 100;
             this.txtGafferName.Size = new System.Drawing.Size(383, 20);
-            this.txtGafferName.TabIndex = 68;
+            this.txtGafferName.TabIndex = 0;
             this.txtGafferName.EditValueChanged += new System.EventHandler(this.txtGafferName_EditValueChanged);
             // 
             // labelControl1

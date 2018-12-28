@@ -37,6 +37,7 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdateKit = new DevExpress.XtraEditors.SimpleButton();
             this.lblAssetCodeName = new DevExpress.XtraEditors.LabelControl();
             this.lblAssetCodeID = new DevExpress.XtraEditors.LabelControl();
             this.lblAssetID = new DevExpress.XtraEditors.LabelControl();
@@ -75,7 +76,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pnlSave = new System.Windows.Forms.Panel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUpdateKit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -157,6 +157,18 @@
             this.panel1.Size = new System.Drawing.Size(759, 97);
             this.panel1.TabIndex = 66;
             // 
+            // btnUpdateKit
+            // 
+            this.btnUpdateKit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUpdateKit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnUpdateKit.Location = new System.Drawing.Point(642, 59);
+            this.btnUpdateKit.Name = "btnUpdateKit";
+            this.btnUpdateKit.Size = new System.Drawing.Size(94, 31);
+            this.btnUpdateKit.TabIndex = 206;
+            this.btnUpdateKit.Text = "Update";
+            this.btnUpdateKit.Visible = false;
+            this.btnUpdateKit.Click += new System.EventHandler(this.btnUpdateKit_Click);
+            // 
             // lblAssetCodeName
             // 
             this.lblAssetCodeName.Location = new System.Drawing.Point(654, 34);
@@ -208,7 +220,7 @@
             this.picBarcodeImage.Name = "picBarcodeImage";
             this.picBarcodeImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picBarcodeImage.Size = new System.Drawing.Size(219, 57);
-            this.picBarcodeImage.TabIndex = 200;
+            this.picBarcodeImage.TabIndex = 2;
             // 
             // labelControl2
             // 
@@ -220,6 +232,7 @@
             // 
             // txtKitCode
             // 
+            this.txtKitCode.Enabled = false;
             this.txtKitCode.Location = new System.Drawing.Point(371, 6);
             this.txtKitCode.Name = "txtKitCode";
             this.txtKitCode.Properties.ReadOnly = true;
@@ -247,7 +260,7 @@
             this.txtKitName.Location = new System.Drawing.Point(75, 6);
             this.txtKitName.Name = "txtKitName";
             this.txtKitName.Size = new System.Drawing.Size(227, 20);
-            this.txtKitName.TabIndex = 136;
+            this.txtKitName.TabIndex = 0;
             this.txtKitName.EditValueChanged += new System.EventHandler(this.txtKitName_EditValueChanged);
             // 
             // labelControl28
@@ -260,6 +273,7 @@
             // 
             // txtAbbrivation
             // 
+            this.txtAbbrivation.Enabled = false;
             this.txtAbbrivation.Location = new System.Drawing.Point(601, 6);
             this.txtAbbrivation.Name = "txtAbbrivation";
             this.txtAbbrivation.Properties.ReadOnly = true;
@@ -279,7 +293,7 @@
             this.txtKitDescription.Location = new System.Drawing.Point(75, 32);
             this.txtKitDescription.Name = "txtKitDescription";
             this.txtKitDescription.Size = new System.Drawing.Size(225, 58);
-            this.txtKitDescription.TabIndex = 138;
+            this.txtKitDescription.TabIndex = 1;
             // 
             // groupControl1
             // 
@@ -468,7 +482,7 @@
             this.btnAddAsset.Location = new System.Drawing.Point(621, 5);
             this.btnAddAsset.Name = "btnAddAsset";
             this.btnAddAsset.Size = new System.Drawing.Size(98, 23);
-            this.btnAddAsset.TabIndex = 201;
+            this.btnAddAsset.TabIndex = 1;
             this.btnAddAsset.Text = "Add";
             this.btnAddAsset.Click += new System.EventHandler(this.btnAddAsset_Click);
             // 
@@ -488,7 +502,7 @@
             this.cmbAssetList.Location = new System.Drawing.Point(387, 6);
             this.cmbAssetList.Name = "cmbAssetList";
             this.cmbAssetList.Size = new System.Drawing.Size(211, 21);
-            this.cmbAssetList.TabIndex = 139;
+            this.cmbAssetList.TabIndex = 0;
             // 
             // txtAssetCode
             // 
@@ -521,21 +535,9 @@
             this.btnSave.Location = new System.Drawing.Point(326, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnUpdateKit
-            // 
-            this.btnUpdateKit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUpdateKit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnUpdateKit.Location = new System.Drawing.Point(642, 59);
-            this.btnUpdateKit.Name = "btnUpdateKit";
-            this.btnUpdateKit.Size = new System.Drawing.Size(94, 31);
-            this.btnUpdateKit.TabIndex = 206;
-            this.btnUpdateKit.Text = "Update";
-            this.btnUpdateKit.Visible = false;
-            this.btnUpdateKit.Click += new System.EventHandler(this.btnUpdateKit_Click);
             // 
             // frmAddKit
             // 

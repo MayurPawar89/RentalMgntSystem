@@ -36,6 +36,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
+            this.txtState = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
             this.lblLocationID = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
@@ -57,17 +63,14 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCity = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCountry = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl44 = new DevExpress.XtraEditors.LabelControl();
-            this.txtState = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddressLine2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVilageDistTown.Properties)).BeginInit();
@@ -75,9 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddressLine1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAbbrivation.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -131,7 +131,7 @@
             this.btnSave.Location = new System.Drawing.Point(216, 8);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -170,6 +170,54 @@
             this.panel1.Size = new System.Drawing.Size(520, 241);
             this.panel1.TabIndex = 174;
             // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(351, 179);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.MaxLength = 20;
+            this.txtCity.Size = new System.Drawing.Size(158, 20);
+            this.txtCity.TabIndex = 6;
+            // 
+            // labelControl43
+            // 
+            this.labelControl43.Location = new System.Drawing.Point(320, 179);
+            this.labelControl43.Name = "labelControl43";
+            this.labelControl43.Size = new System.Drawing.Size(29, 13);
+            this.labelControl43.TabIndex = 199;
+            this.labelControl43.Text = "City : ";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(351, 133);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.MaxLength = 20;
+            this.txtCountry.Size = new System.Drawing.Size(158, 20);
+            this.txtCountry.TabIndex = 4;
+            // 
+            // labelControl44
+            // 
+            this.labelControl44.Location = new System.Drawing.Point(300, 136);
+            this.labelControl44.Name = "labelControl44";
+            this.labelControl44.Size = new System.Drawing.Size(49, 13);
+            this.labelControl44.TabIndex = 197;
+            this.labelControl44.Text = "Country : ";
+            // 
+            // txtState
+            // 
+            this.txtState.Location = new System.Drawing.Point(351, 156);
+            this.txtState.Name = "txtState";
+            this.txtState.Properties.MaxLength = 20;
+            this.txtState.Size = new System.Drawing.Size(158, 20);
+            this.txtState.TabIndex = 5;
+            // 
+            // labelControl45
+            // 
+            this.labelControl45.Location = new System.Drawing.Point(313, 158);
+            this.labelControl45.Name = "labelControl45";
+            this.labelControl45.Size = new System.Drawing.Size(36, 13);
+            this.labelControl45.TabIndex = 195;
+            this.labelControl45.Text = "State : ";
+            // 
             // lblLocationID
             // 
             this.lblLocationID.Location = new System.Drawing.Point(22, 31);
@@ -192,14 +240,14 @@
             this.txtDescription.Location = new System.Drawing.Point(91, 9);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(418, 59);
-            this.txtDescription.TabIndex = 157;
+            this.txtDescription.TabIndex = 0;
             // 
             // txtAddressLine2
             // 
             this.txtAddressLine2.Location = new System.Drawing.Point(92, 166);
             this.txtAddressLine2.Name = "txtAddressLine2";
             this.txtAddressLine2.Size = new System.Drawing.Size(179, 56);
-            this.txtAddressLine2.TabIndex = 150;
+            this.txtAddressLine2.TabIndex = 2;
             // 
             // cmbCityMaster
             // 
@@ -266,7 +314,7 @@
             this.txtVilageDistTown.Location = new System.Drawing.Point(351, 105);
             this.txtVilageDistTown.Name = "txtVilageDistTown";
             this.txtVilageDistTown.Size = new System.Drawing.Size(158, 20);
-            this.txtVilageDistTown.TabIndex = 143;
+            this.txtVilageDistTown.TabIndex = 3;
             // 
             // labelControl25
             // 
@@ -283,7 +331,7 @@
             this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(158, 20);
-            this.txtPincode.TabIndex = 141;
+            this.txtPincode.TabIndex = 7;
             // 
             // labelControl26
             // 
@@ -314,10 +362,11 @@
             this.txtAddressLine1.Location = new System.Drawing.Point(92, 103);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(179, 56);
-            this.txtAddressLine1.TabIndex = 138;
+            this.txtAddressLine1.TabIndex = 1;
             // 
             // txtAbbrivation
             // 
+            this.txtAbbrivation.Enabled = false;
             this.txtAbbrivation.Location = new System.Drawing.Point(351, 75);
             this.txtAbbrivation.Name = "txtAbbrivation";
             this.txtAbbrivation.Properties.ReadOnly = true;
@@ -336,6 +385,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(92, 75);
             this.txtCode.Name = "txtCode";
             this.txtCode.Properties.ReadOnly = true;
@@ -349,54 +399,6 @@
             this.labelControl2.Size = new System.Drawing.Size(35, 13);
             this.labelControl2.TabIndex = 130;
             this.labelControl2.Text = "Code : ";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(351, 179);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Properties.MaxLength = 20;
-            this.txtCity.Size = new System.Drawing.Size(158, 20);
-            this.txtCity.TabIndex = 200;
-            // 
-            // labelControl43
-            // 
-            this.labelControl43.Location = new System.Drawing.Point(320, 179);
-            this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(29, 13);
-            this.labelControl43.TabIndex = 199;
-            this.labelControl43.Text = "City : ";
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(351, 133);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Properties.MaxLength = 20;
-            this.txtCountry.Size = new System.Drawing.Size(158, 20);
-            this.txtCountry.TabIndex = 198;
-            // 
-            // labelControl44
-            // 
-            this.labelControl44.Location = new System.Drawing.Point(300, 136);
-            this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(49, 13);
-            this.labelControl44.TabIndex = 197;
-            this.labelControl44.Text = "Country : ";
-            // 
-            // txtState
-            // 
-            this.txtState.Location = new System.Drawing.Point(351, 156);
-            this.txtState.Name = "txtState";
-            this.txtState.Properties.MaxLength = 20;
-            this.txtState.Size = new System.Drawing.Size(158, 20);
-            this.txtState.TabIndex = 196;
-            // 
-            // labelControl45
-            // 
-            this.labelControl45.Location = new System.Drawing.Point(313, 158);
-            this.labelControl45.Name = "labelControl45";
-            this.labelControl45.Size = new System.Drawing.Size(36, 13);
-            this.labelControl45.TabIndex = 195;
-            this.labelControl45.Text = "State : ";
             // 
             // frmMasterAddLocation
             // 
@@ -418,6 +420,9 @@
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddressLine2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVilageDistTown.Properties)).EndInit();
@@ -425,9 +430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddressLine1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAbbrivation.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

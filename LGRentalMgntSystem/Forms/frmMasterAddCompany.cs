@@ -1063,7 +1063,7 @@ namespace LGRentalMgntSystem
             {
                 oCompanyMaster = new CompanyMaster();
                 dt = oCompanyMaster.GetListData("signatory");
-                if (dt != null && dt.Rows.Count > 0)
+                if (dt != null)
                 {
                     DataRow dr = dt.NewRow();
                     dr["ID"] = 0;
@@ -1106,7 +1106,7 @@ namespace LGRentalMgntSystem
             {
                 oCompanyMaster = new CompanyMaster();
                 dt = oCompanyMaster.GetListData("Warehouse Superintendent");
-                if (dt != null && dt.Rows.Count > 0)
+                if (dt != null)
                 {
                     DataRow dr = dt.NewRow();
                     dr["ID"] = 0;

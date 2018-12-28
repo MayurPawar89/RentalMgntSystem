@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMasterAddCompany));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblCompanyTransportID = new DevExpress.XtraEditors.LabelControl();
@@ -47,6 +47,17 @@
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.txtDocumentDate = new DevExpress.XtraEditors.DateEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlWHSupervisor3 = new System.Windows.Forms.Panel();
+            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbWarehouseSupervisor3 = new System.Windows.Forms.ComboBox();
+            this.pnlWHSupervisor2 = new System.Windows.Forms.Panel();
+            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbWarehouseSupervisor2 = new System.Windows.Forms.ComboBox();
+            this.pnlWHSupervisor1 = new System.Windows.Forms.Panel();
+            this.btnWHAddSupervisor = new DevExpress.XtraEditors.ButtonEdit();
+            this.cmbWarehouseSupervisor1 = new System.Windows.Forms.ComboBox();
+            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
             this.txtWHCity = new DevExpress.XtraEditors.TextEdit();
             this.labelControl43 = new DevExpress.XtraEditors.LabelControl();
             this.txtWHCountry = new DevExpress.XtraEditors.TextEdit();
@@ -72,17 +83,17 @@
             this.txtWHPhone1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
             this.txtWHAddressLine2 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtWHPincode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
+            this.txtWHAddressLine1 = new DevExpress.XtraEditors.MemoEdit();
             this.cmbWHCity = new System.Windows.Forms.ComboBox();
             this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             this.cmbWHCState = new System.Windows.Forms.ComboBox();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.cmbWHCountry = new System.Windows.Forms.ComboBox();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWHPincode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWHAddressLine1 = new DevExpress.XtraEditors.MemoEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.picHeaderImage = new DevExpress.XtraEditors.PictureEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -175,17 +186,6 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.cmbCompCountryMaster = new System.Windows.Forms.ComboBox();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pnlWHSupervisor3 = new System.Windows.Forms.Panel();
-            this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbWarehouseSupervisor3 = new System.Windows.Forms.ComboBox();
-            this.pnlWHSupervisor2 = new System.Windows.Forms.Panel();
-            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbWarehouseSupervisor2 = new System.Windows.Forms.ComboBox();
-            this.pnlWHSupervisor1 = new System.Windows.Forms.Panel();
-            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
-            this.cmbWarehouseSupervisor1 = new System.Windows.Forms.ComboBox();
-            this.btnWHAddSupervisor = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDocumentNumber.Properties)).BeginInit();
@@ -195,6 +195,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDocumentDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.pnlWHSupervisor3.SuspendLayout();
+            this.pnlWHSupervisor2.SuspendLayout();
+            this.pnlWHSupervisor1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHState.Properties)).BeginInit();
@@ -268,11 +273,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.pnlWHSupervisor3.SuspendLayout();
-            this.pnlWHSupervisor2.SuspendLayout();
-            this.pnlWHSupervisor1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -289,7 +289,7 @@
             this.groupControl1.Location = new System.Drawing.Point(2, 373);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(718, 70);
-            this.groupControl1.TabIndex = 57;
+            this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Transporter Details";
             // 
             // lblCompanyTransportID
@@ -314,7 +314,7 @@
             this.txtDocumentNumber.Location = new System.Drawing.Point(101, 46);
             this.txtDocumentNumber.Name = "txtDocumentNumber";
             this.txtDocumentNumber.Size = new System.Drawing.Size(200, 20);
-            this.txtDocumentNumber.TabIndex = 21;
+            this.txtDocumentNumber.TabIndex = 1;
             // 
             // labelControl25
             // 
@@ -329,7 +329,7 @@
             this.txtDocumentName.Location = new System.Drawing.Point(455, 23);
             this.txtDocumentName.Name = "txtDocumentName";
             this.txtDocumentName.Size = new System.Drawing.Size(200, 20);
-            this.txtDocumentName.TabIndex = 19;
+            this.txtDocumentName.TabIndex = 2;
             // 
             // labelControl24
             // 
@@ -344,7 +344,7 @@
             this.txtTransporterID.Location = new System.Drawing.Point(101, 23);
             this.txtTransporterID.Name = "txtTransporterID";
             this.txtTransporterID.Size = new System.Drawing.Size(200, 20);
-            this.txtTransporterID.TabIndex = 17;
+            this.txtTransporterID.TabIndex = 0;
             // 
             // labelControl23
             // 
@@ -369,7 +369,7 @@
             this.txtDocumentDate.Properties.ShowPopupShadow = false;
             this.txtDocumentDate.Properties.ShowToday = false;
             this.txtDocumentDate.Size = new System.Drawing.Size(200, 22);
-            this.txtDocumentDate.TabIndex = 23;
+            this.txtDocumentDate.TabIndex = 3;
             // 
             // groupControl2
             // 
@@ -391,8 +391,118 @@
             this.groupControl2.Location = new System.Drawing.Point(2, 444);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(718, 210);
-            this.groupControl2.TabIndex = 58;
+            this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Warehouse Details";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnlWHSupervisor3);
+            this.panel5.Controls.Add(this.pnlWHSupervisor2);
+            this.panel5.Controls.Add(this.pnlWHSupervisor1);
+            this.panel5.Location = new System.Drawing.Point(319, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(365, 69);
+            this.panel5.TabIndex = 195;
+            // 
+            // pnlWHSupervisor3
+            // 
+            this.pnlWHSupervisor3.Controls.Add(this.labelControl48);
+            this.pnlWHSupervisor3.Controls.Add(this.cmbWarehouseSupervisor3);
+            this.pnlWHSupervisor3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWHSupervisor3.Location = new System.Drawing.Point(0, 46);
+            this.pnlWHSupervisor3.Name = "pnlWHSupervisor3";
+            this.pnlWHSupervisor3.Size = new System.Drawing.Size(365, 23);
+            this.pnlWHSupervisor3.TabIndex = 2;
+            this.pnlWHSupervisor3.Visible = false;
+            // 
+            // labelControl48
+            // 
+            this.labelControl48.Location = new System.Drawing.Point(4, 4);
+            this.labelControl48.Name = "labelControl48";
+            this.labelControl48.Size = new System.Drawing.Size(128, 13);
+            this.labelControl48.TabIndex = 93;
+            this.labelControl48.Text = "Warehouse Supervisor 3 : ";
+            // 
+            // cmbWarehouseSupervisor3
+            // 
+            this.cmbWarehouseSupervisor3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbWarehouseSupervisor3.FormattingEnabled = true;
+            this.cmbWarehouseSupervisor3.Location = new System.Drawing.Point(133, 1);
+            this.cmbWarehouseSupervisor3.Name = "cmbWarehouseSupervisor3";
+            this.cmbWarehouseSupervisor3.Size = new System.Drawing.Size(201, 21);
+            this.cmbWarehouseSupervisor3.TabIndex = 0;
+            // 
+            // pnlWHSupervisor2
+            // 
+            this.pnlWHSupervisor2.Controls.Add(this.labelControl49);
+            this.pnlWHSupervisor2.Controls.Add(this.cmbWarehouseSupervisor2);
+            this.pnlWHSupervisor2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWHSupervisor2.Location = new System.Drawing.Point(0, 24);
+            this.pnlWHSupervisor2.Name = "pnlWHSupervisor2";
+            this.pnlWHSupervisor2.Size = new System.Drawing.Size(365, 22);
+            this.pnlWHSupervisor2.TabIndex = 1;
+            this.pnlWHSupervisor2.Visible = false;
+            // 
+            // labelControl49
+            // 
+            this.labelControl49.Location = new System.Drawing.Point(4, 3);
+            this.labelControl49.Name = "labelControl49";
+            this.labelControl49.Size = new System.Drawing.Size(128, 13);
+            this.labelControl49.TabIndex = 93;
+            this.labelControl49.Text = "Warehouse Supervisor 2 : ";
+            // 
+            // cmbWarehouseSupervisor2
+            // 
+            this.cmbWarehouseSupervisor2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbWarehouseSupervisor2.FormattingEnabled = true;
+            this.cmbWarehouseSupervisor2.Location = new System.Drawing.Point(133, 0);
+            this.cmbWarehouseSupervisor2.Name = "cmbWarehouseSupervisor2";
+            this.cmbWarehouseSupervisor2.Size = new System.Drawing.Size(201, 21);
+            this.cmbWarehouseSupervisor2.TabIndex = 0;
+            // 
+            // pnlWHSupervisor1
+            // 
+            this.pnlWHSupervisor1.Controls.Add(this.btnWHAddSupervisor);
+            this.pnlWHSupervisor1.Controls.Add(this.cmbWarehouseSupervisor1);
+            this.pnlWHSupervisor1.Controls.Add(this.labelControl50);
+            this.pnlWHSupervisor1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWHSupervisor1.Location = new System.Drawing.Point(0, 0);
+            this.pnlWHSupervisor1.Name = "pnlWHSupervisor1";
+            this.pnlWHSupervisor1.Size = new System.Drawing.Size(365, 24);
+            this.pnlWHSupervisor1.TabIndex = 0;
+            // 
+            // btnWHAddSupervisor
+            // 
+            this.btnWHAddSupervisor.Location = new System.Drawing.Point(338, 4);
+            this.btnWHAddSupervisor.Name = "btnWHAddSupervisor";
+            this.btnWHAddSupervisor.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnWHAddSupervisor.Properties.Appearance.Options.UseBackColor = true;
+            this.btnWHAddSupervisor.Properties.AutoHeight = false;
+            this.btnWHAddSupervisor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddSupervisor.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnWHAddSupervisor.Size = new System.Drawing.Size(22, 18);
+            this.btnWHAddSupervisor.TabIndex = 1;
+            this.btnWHAddSupervisor.Click += new System.EventHandler(this.btnWHAddSupervisor_Click);
+            // 
+            // cmbWarehouseSupervisor1
+            // 
+            this.cmbWarehouseSupervisor1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbWarehouseSupervisor1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbWarehouseSupervisor1.FormattingEnabled = true;
+            this.cmbWarehouseSupervisor1.Location = new System.Drawing.Point(133, 2);
+            this.cmbWarehouseSupervisor1.Name = "cmbWarehouseSupervisor1";
+            this.cmbWarehouseSupervisor1.Size = new System.Drawing.Size(201, 21);
+            this.cmbWarehouseSupervisor1.TabIndex = 0;
+            // 
+            // labelControl50
+            // 
+            this.labelControl50.Location = new System.Drawing.Point(4, 6);
+            this.labelControl50.Name = "labelControl50";
+            this.labelControl50.Size = new System.Drawing.Size(128, 13);
+            this.labelControl50.TabIndex = 91;
+            this.labelControl50.Text = "Warehouse Supervisor 1 : ";
             // 
             // txtWHCity
             // 
@@ -400,7 +510,7 @@
             this.txtWHCity.Name = "txtWHCity";
             this.txtWHCity.Properties.MaxLength = 20;
             this.txtWHCity.Size = new System.Drawing.Size(200, 20);
-            this.txtWHCity.TabIndex = 194;
+            this.txtWHCity.TabIndex = 4;
             // 
             // labelControl43
             // 
@@ -416,7 +526,7 @@
             this.txtWHCountry.Name = "txtWHCountry";
             this.txtWHCountry.Properties.MaxLength = 20;
             this.txtWHCountry.Size = new System.Drawing.Size(200, 20);
-            this.txtWHCountry.TabIndex = 192;
+            this.txtWHCountry.TabIndex = 2;
             // 
             // labelControl44
             // 
@@ -432,7 +542,7 @@
             this.txtWHState.Name = "txtWHState";
             this.txtWHState.Properties.MaxLength = 20;
             this.txtWHState.Size = new System.Drawing.Size(200, 20);
-            this.txtWHState.TabIndex = 190;
+            this.txtWHState.TabIndex = 3;
             // 
             // labelControl45
             // 
@@ -482,7 +592,7 @@
             this.txtWHPhone5.Properties.Mask.EditMask = "\\d{1,20}";
             this.txtWHPhone5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPhone5.Size = new System.Drawing.Size(200, 20);
-            this.txtWHPhone5.TabIndex = 55;
+            this.txtWHPhone5.TabIndex = 0;
             // 
             // labelControl37
             // 
@@ -511,7 +621,7 @@
             this.txtWHPhone4.Properties.Mask.EditMask = "\\d{1,20}";
             this.txtWHPhone4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPhone4.Size = new System.Drawing.Size(200, 20);
-            this.txtWHPhone4.TabIndex = 53;
+            this.txtWHPhone4.TabIndex = 0;
             // 
             // labelControl38
             // 
@@ -540,7 +650,7 @@
             this.txtWHPhone3.Properties.Mask.EditMask = "\\d{1,20}";
             this.txtWHPhone3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPhone3.Size = new System.Drawing.Size(200, 20);
-            this.txtWHPhone3.TabIndex = 51;
+            this.txtWHPhone3.TabIndex = 0;
             // 
             // labelControl39
             // 
@@ -569,7 +679,7 @@
             this.txtWHPhone2.Properties.Mask.EditMask = "\\d{1,20}";
             this.txtWHPhone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPhone2.Size = new System.Drawing.Size(200, 20);
-            this.txtWHPhone2.TabIndex = 49;
+            this.txtWHPhone2.TabIndex = 0;
             // 
             // labelControl40
             // 
@@ -600,7 +710,7 @@
             this.btnWHAddPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnWHAddPhone.Size = new System.Drawing.Size(22, 18);
-            this.btnWHAddPhone.TabIndex = 48;
+            this.btnWHAddPhone.TabIndex = 1;
             this.btnWHAddPhone.Click += new System.EventHandler(this.btnWHAddPhone_Click);
             // 
             // txtWHPhone1
@@ -612,7 +722,7 @@
             this.txtWHPhone1.Properties.Mask.EditMask = "\\d{1,20}";
             this.txtWHPhone1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPhone1.Size = new System.Drawing.Size(200, 20);
-            this.txtWHPhone1.TabIndex = 47;
+            this.txtWHPhone1.TabIndex = 0;
             // 
             // labelControl41
             // 
@@ -627,7 +737,47 @@
             this.txtWHAddressLine2.Location = new System.Drawing.Point(100, 71);
             this.txtWHAddressLine2.Name = "txtWHAddressLine2";
             this.txtWHAddressLine2.Size = new System.Drawing.Size(200, 46);
-            this.txtWHAddressLine2.TabIndex = 49;
+            this.txtWHAddressLine2.TabIndex = 1;
+            // 
+            // txtWHPincode
+            // 
+            this.txtWHPincode.Location = new System.Drawing.Point(100, 186);
+            this.txtWHPincode.Name = "txtWHPincode";
+            this.txtWHPincode.Properties.Mask.EditMask = "\\d{1,6}";
+            this.txtWHPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtWHPincode.Size = new System.Drawing.Size(200, 20);
+            this.txtWHPincode.TabIndex = 5;
+            // 
+            // labelControl34
+            // 
+            this.labelControl34.Location = new System.Drawing.Point(50, 189);
+            this.labelControl34.Name = "labelControl34";
+            this.labelControl34.Size = new System.Drawing.Size(47, 13);
+            this.labelControl34.TabIndex = 41;
+            this.labelControl34.Text = "Pincode : ";
+            // 
+            // labelControl35
+            // 
+            this.labelControl35.Location = new System.Drawing.Point(17, 73);
+            this.labelControl35.Name = "labelControl35";
+            this.labelControl35.Size = new System.Drawing.Size(80, 13);
+            this.labelControl35.TabIndex = 40;
+            this.labelControl35.Text = "Address Line 2 : ";
+            // 
+            // labelControl36
+            // 
+            this.labelControl36.Location = new System.Drawing.Point(17, 25);
+            this.labelControl36.Name = "labelControl36";
+            this.labelControl36.Size = new System.Drawing.Size(80, 13);
+            this.labelControl36.TabIndex = 38;
+            this.labelControl36.Text = "Address Line 1 : ";
+            // 
+            // txtWHAddressLine1
+            // 
+            this.txtWHAddressLine1.Location = new System.Drawing.Point(100, 22);
+            this.txtWHAddressLine1.Name = "txtWHAddressLine1";
+            this.txtWHAddressLine1.Size = new System.Drawing.Size(200, 46);
+            this.txtWHAddressLine1.TabIndex = 0;
             // 
             // cmbWHCity
             // 
@@ -689,46 +839,6 @@
             this.labelControl33.Text = "Country : ";
             this.labelControl33.Visible = false;
             // 
-            // txtWHPincode
-            // 
-            this.txtWHPincode.Location = new System.Drawing.Point(100, 186);
-            this.txtWHPincode.Name = "txtWHPincode";
-            this.txtWHPincode.Properties.Mask.EditMask = "\\d{1,6}";
-            this.txtWHPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtWHPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtWHPincode.TabIndex = 42;
-            // 
-            // labelControl34
-            // 
-            this.labelControl34.Location = new System.Drawing.Point(50, 189);
-            this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(47, 13);
-            this.labelControl34.TabIndex = 41;
-            this.labelControl34.Text = "Pincode : ";
-            // 
-            // labelControl35
-            // 
-            this.labelControl35.Location = new System.Drawing.Point(17, 73);
-            this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(80, 13);
-            this.labelControl35.TabIndex = 40;
-            this.labelControl35.Text = "Address Line 2 : ";
-            // 
-            // labelControl36
-            // 
-            this.labelControl36.Location = new System.Drawing.Point(17, 25);
-            this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(80, 13);
-            this.labelControl36.TabIndex = 38;
-            this.labelControl36.Text = "Address Line 1 : ";
-            // 
-            // txtWHAddressLine1
-            // 
-            this.txtWHAddressLine1.Location = new System.Drawing.Point(100, 22);
-            this.txtWHAddressLine1.Name = "txtWHAddressLine1";
-            this.txtWHAddressLine1.Size = new System.Drawing.Size(200, 46);
-            this.txtWHAddressLine1.TabIndex = 39;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.picHeaderImage);
@@ -747,7 +857,7 @@
             this.picHeaderImage.Properties.NullText = "Right click to add image";
             this.picHeaderImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picHeaderImage.Size = new System.Drawing.Size(189, 117);
-            this.picHeaderImage.TabIndex = 1;
+            this.picHeaderImage.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -826,7 +936,7 @@
             this.picTermsCondition.Properties.NullText = "Right click to add image";
             this.picTermsCondition.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picTermsCondition.Size = new System.Drawing.Size(185, 124);
-            this.picTermsCondition.TabIndex = 1;
+            this.picTermsCondition.TabIndex = 0;
             // 
             // panel2
             // 
@@ -855,7 +965,7 @@
             this.rdImageFormat.Location = new System.Drawing.Point(7, 17);
             this.rdImageFormat.Name = "rdImageFormat";
             this.rdImageFormat.Size = new System.Drawing.Size(55, 17);
-            this.rdImageFormat.TabIndex = 1;
+            this.rdImageFormat.TabIndex = 0;
             this.rdImageFormat.Text = "Image";
             this.rdImageFormat.UseVisualStyleBackColor = true;
             this.rdImageFormat.CheckedChanged += new System.EventHandler(this.rdImageFormat_CheckedChanged);
@@ -875,7 +985,7 @@
             this.rdTextFormat.Location = new System.Drawing.Point(68, 17);
             this.rdTextFormat.Name = "rdTextFormat";
             this.rdTextFormat.Size = new System.Drawing.Size(47, 17);
-            this.rdTextFormat.TabIndex = 2;
+            this.rdTextFormat.TabIndex = 1;
             this.rdTextFormat.Text = "Text";
             this.rdTextFormat.UseVisualStyleBackColor = true;
             this.rdTextFormat.CheckedChanged += new System.EventHandler(this.rdTextFormat_CheckedChanged);
@@ -916,7 +1026,7 @@
             this.groupControl3.Location = new System.Drawing.Point(2, 36);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(718, 335);
-            this.groupControl3.TabIndex = 65;
+            this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Company Informations";
             // 
             // panel4
@@ -956,7 +1066,7 @@
             this.cmbCompanySignatory3.Location = new System.Drawing.Point(121, 2);
             this.cmbCompanySignatory3.Name = "cmbCompanySignatory3";
             this.cmbCompanySignatory3.Size = new System.Drawing.Size(201, 21);
-            this.cmbCompanySignatory3.TabIndex = 92;
+            this.cmbCompanySignatory3.TabIndex = 0;
             // 
             // pnlCompSign2
             // 
@@ -985,7 +1095,7 @@
             this.cmbCompanySignatory2.Location = new System.Drawing.Point(121, 1);
             this.cmbCompanySignatory2.Name = "cmbCompanySignatory2";
             this.cmbCompanySignatory2.Size = new System.Drawing.Size(201, 21);
-            this.cmbCompanySignatory2.TabIndex = 92;
+            this.cmbCompanySignatory2.TabIndex = 0;
             // 
             // pnlCompSign1
             // 
@@ -1016,7 +1126,7 @@
             this.btnAddCompanySignatory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanySignatory.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnAddCompanySignatory.Size = new System.Drawing.Size(22, 18);
-            this.btnAddCompanySignatory.TabIndex = 90;
+            this.btnAddCompanySignatory.TabIndex = 1;
             this.btnAddCompanySignatory.Click += new System.EventHandler(this.btnAddCompanySignatory_Click);
             // 
             // cmbCompanySignatory1
@@ -1027,7 +1137,7 @@
             this.cmbCompanySignatory1.Location = new System.Drawing.Point(121, 3);
             this.cmbCompanySignatory1.Name = "cmbCompanySignatory1";
             this.cmbCompanySignatory1.Size = new System.Drawing.Size(201, 21);
-            this.cmbCompanySignatory1.TabIndex = 89;
+            this.cmbCompanySignatory1.TabIndex = 0;
             // 
             // labelControl11
             // 
@@ -1042,7 +1152,7 @@
             this.txtGSTNo.Location = new System.Drawing.Point(99, 291);
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Size = new System.Drawing.Size(200, 20);
-            this.txtGSTNo.TabIndex = 191;
+            this.txtGSTNo.TabIndex = 13;
             // 
             // labelControl10
             // 
@@ -1057,7 +1167,7 @@
             this.txtPANNo.Location = new System.Drawing.Point(99, 313);
             this.txtPANNo.Name = "txtPANNo";
             this.txtPANNo.Size = new System.Drawing.Size(200, 20);
-            this.txtPANNo.TabIndex = 193;
+            this.txtPANNo.TabIndex = 14;
             // 
             // txtEmail
             // 
@@ -1068,7 +1178,7 @@
             this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtEmail.Properties.MaxLength = 50;
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 189;
+            this.txtEmail.TabIndex = 11;
             // 
             // txtCity
             // 
@@ -1076,7 +1186,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Properties.MaxLength = 20;
             this.txtCity.Size = new System.Drawing.Size(200, 20);
-            this.txtCity.TabIndex = 188;
+            this.txtCity.TabIndex = 9;
             // 
             // labelControl5
             // 
@@ -1092,7 +1202,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.MaxLength = 20;
             this.txtCountry.Size = new System.Drawing.Size(200, 20);
-            this.txtCountry.TabIndex = 186;
+            this.txtCountry.TabIndex = 8;
             // 
             // labelControl6
             // 
@@ -1133,7 +1243,7 @@
             this.txtPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPincode.Size = new System.Drawing.Size(200, 20);
-            this.txtPincode.TabIndex = 181;
+            this.txtPincode.TabIndex = 10;
             // 
             // labelControl42
             // 
@@ -1196,7 +1306,7 @@
             this.txtFaxNo.Location = new System.Drawing.Point(120, 2);
             this.txtFaxNo.Name = "txtFaxNo";
             this.txtFaxNo.Size = new System.Drawing.Size(200, 20);
-            this.txtFaxNo.TabIndex = 17;
+            this.txtFaxNo.TabIndex = 0;
             // 
             // dtCompanyFormedOn
             // 
@@ -1213,7 +1323,7 @@
             this.dtCompanyFormedOn.Properties.ShowPopupShadow = false;
             this.dtCompanyFormedOn.Properties.ShowToday = false;
             this.dtCompanyFormedOn.Size = new System.Drawing.Size(200, 22);
-            this.dtCompanyFormedOn.TabIndex = 25;
+            this.dtCompanyFormedOn.TabIndex = 2;
             // 
             // labelControl13
             // 
@@ -1236,7 +1346,7 @@
             this.txtHSN_SAVCode.Location = new System.Drawing.Point(120, 24);
             this.txtHSN_SAVCode.Name = "txtHSN_SAVCode";
             this.txtHSN_SAVCode.Size = new System.Drawing.Size(200, 20);
-            this.txtHSN_SAVCode.TabIndex = 19;
+            this.txtHSN_SAVCode.TabIndex = 1;
             // 
             // labelControl9
             // 
@@ -1280,7 +1390,7 @@
             this.txtPhone2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone2.Properties.MaxLength = 20;
             this.txtPhone2.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone2.TabIndex = 49;
+            this.txtPhone2.TabIndex = 0;
             // 
             // labelControl19
             // 
@@ -1311,7 +1421,7 @@
             this.txtPhone3.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone3.Properties.MaxLength = 20;
             this.txtPhone3.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone3.TabIndex = 51;
+            this.txtPhone3.TabIndex = 0;
             // 
             // labelControl20
             // 
@@ -1342,7 +1452,7 @@
             this.txtPhone5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone5.Properties.MaxLength = 20;
             this.txtPhone5.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone5.TabIndex = 55;
+            this.txtPhone5.TabIndex = 0;
             // 
             // labelControl22
             // 
@@ -1373,7 +1483,7 @@
             this.txtPhone4.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone4.Properties.MaxLength = 20;
             this.txtPhone4.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone4.TabIndex = 53;
+            this.txtPhone4.TabIndex = 0;
             // 
             // labelControl21
             // 
@@ -1404,7 +1514,7 @@
             this.btnAddCompanyPhone.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAddCompanyPhone.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnAddCompanyPhone.Size = new System.Drawing.Size(22, 18);
-            this.btnAddCompanyPhone.TabIndex = 48;
+            this.btnAddCompanyPhone.TabIndex = 1;
             this.btnAddCompanyPhone.Click += new System.EventHandler(this.btnAddCompanyPhone_Click);
             // 
             // txtPhone1
@@ -1418,7 +1528,7 @@
             this.txtPhone1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPhone1.Properties.MaxLength = 20;
             this.txtPhone1.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone1.TabIndex = 47;
+            this.txtPhone1.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -1433,7 +1543,7 @@
             this.txtAddressLine2.Location = new System.Drawing.Point(101, 112);
             this.txtAddressLine2.Name = "txtAddressLine2";
             this.txtAddressLine2.Size = new System.Drawing.Size(200, 40);
-            this.txtAddressLine2.TabIndex = 86;
+            this.txtAddressLine2.TabIndex = 6;
             // 
             // cmbCompanyType
             // 
@@ -1443,7 +1553,7 @@
             this.cmbCompanyType.Location = new System.Drawing.Point(450, 46);
             this.cmbCompanyType.Name = "cmbCompanyType";
             this.cmbCompanyType.Size = new System.Drawing.Size(201, 21);
-            this.cmbCompanyType.TabIndex = 77;
+            this.cmbCompanyType.TabIndex = 4;
             // 
             // labelControl14
             // 
@@ -1458,7 +1568,7 @@
             this.txtWebsiteURL.Location = new System.Drawing.Point(101, 268);
             this.txtWebsiteURL.Name = "txtWebsiteURL";
             this.txtWebsiteURL.Size = new System.Drawing.Size(200, 20);
-            this.txtWebsiteURL.TabIndex = 75;
+            this.txtWebsiteURL.TabIndex = 12;
             // 
             // labelControl8
             // 
@@ -1489,7 +1599,7 @@
             this.txtCompanyName.Location = new System.Drawing.Point(101, 46);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(200, 20);
-            this.txtCompanyName.TabIndex = 66;
+            this.txtCompanyName.TabIndex = 3;
             this.txtCompanyName.EditValueChanged += new System.EventHandler(this.txtCompanyName_EditValueChanged);
             // 
             // labelControl2
@@ -1522,7 +1632,7 @@
             this.txtAddressLine1.Location = new System.Drawing.Point(101, 69);
             this.txtAddressLine1.Name = "txtAddressLine1";
             this.txtAddressLine1.Size = new System.Drawing.Size(200, 40);
-            this.txtAddressLine1.TabIndex = 68;
+            this.txtAddressLine1.TabIndex = 5;
             // 
             // panel3
             // 
@@ -1540,7 +1650,7 @@
             this.btnSave.Location = new System.Drawing.Point(419, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 31);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -1639,116 +1749,6 @@
             this.labelControl16.Text = "Country : ";
             this.labelControl16.Visible = false;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pnlWHSupervisor3);
-            this.panel5.Controls.Add(this.pnlWHSupervisor2);
-            this.panel5.Controls.Add(this.pnlWHSupervisor1);
-            this.panel5.Location = new System.Drawing.Point(319, 20);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(365, 69);
-            this.panel5.TabIndex = 195;
-            // 
-            // pnlWHSupervisor3
-            // 
-            this.pnlWHSupervisor3.Controls.Add(this.labelControl48);
-            this.pnlWHSupervisor3.Controls.Add(this.cmbWarehouseSupervisor3);
-            this.pnlWHSupervisor3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWHSupervisor3.Location = new System.Drawing.Point(0, 46);
-            this.pnlWHSupervisor3.Name = "pnlWHSupervisor3";
-            this.pnlWHSupervisor3.Size = new System.Drawing.Size(365, 23);
-            this.pnlWHSupervisor3.TabIndex = 2;
-            this.pnlWHSupervisor3.Visible = false;
-            // 
-            // labelControl48
-            // 
-            this.labelControl48.Location = new System.Drawing.Point(4, 4);
-            this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(128, 13);
-            this.labelControl48.TabIndex = 93;
-            this.labelControl48.Text = "Warehouse Supervisor 3 : ";
-            // 
-            // cmbWarehouseSupervisor3
-            // 
-            this.cmbWarehouseSupervisor3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbWarehouseSupervisor3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbWarehouseSupervisor3.FormattingEnabled = true;
-            this.cmbWarehouseSupervisor3.Location = new System.Drawing.Point(133, 1);
-            this.cmbWarehouseSupervisor3.Name = "cmbWarehouseSupervisor3";
-            this.cmbWarehouseSupervisor3.Size = new System.Drawing.Size(201, 21);
-            this.cmbWarehouseSupervisor3.TabIndex = 92;
-            // 
-            // pnlWHSupervisor2
-            // 
-            this.pnlWHSupervisor2.Controls.Add(this.labelControl49);
-            this.pnlWHSupervisor2.Controls.Add(this.cmbWarehouseSupervisor2);
-            this.pnlWHSupervisor2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWHSupervisor2.Location = new System.Drawing.Point(0, 24);
-            this.pnlWHSupervisor2.Name = "pnlWHSupervisor2";
-            this.pnlWHSupervisor2.Size = new System.Drawing.Size(365, 22);
-            this.pnlWHSupervisor2.TabIndex = 1;
-            this.pnlWHSupervisor2.Visible = false;
-            // 
-            // labelControl49
-            // 
-            this.labelControl49.Location = new System.Drawing.Point(4, 3);
-            this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(128, 13);
-            this.labelControl49.TabIndex = 93;
-            this.labelControl49.Text = "Warehouse Supervisor 2 : ";
-            // 
-            // cmbWarehouseSupervisor2
-            // 
-            this.cmbWarehouseSupervisor2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbWarehouseSupervisor2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbWarehouseSupervisor2.FormattingEnabled = true;
-            this.cmbWarehouseSupervisor2.Location = new System.Drawing.Point(133, 0);
-            this.cmbWarehouseSupervisor2.Name = "cmbWarehouseSupervisor2";
-            this.cmbWarehouseSupervisor2.Size = new System.Drawing.Size(201, 21);
-            this.cmbWarehouseSupervisor2.TabIndex = 92;
-            // 
-            // pnlWHSupervisor1
-            // 
-            this.pnlWHSupervisor1.Controls.Add(this.btnWHAddSupervisor);
-            this.pnlWHSupervisor1.Controls.Add(this.cmbWarehouseSupervisor1);
-            this.pnlWHSupervisor1.Controls.Add(this.labelControl50);
-            this.pnlWHSupervisor1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWHSupervisor1.Location = new System.Drawing.Point(0, 0);
-            this.pnlWHSupervisor1.Name = "pnlWHSupervisor1";
-            this.pnlWHSupervisor1.Size = new System.Drawing.Size(365, 24);
-            this.pnlWHSupervisor1.TabIndex = 0;
-            // 
-            // labelControl50
-            // 
-            this.labelControl50.Location = new System.Drawing.Point(4, 6);
-            this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(128, 13);
-            this.labelControl50.TabIndex = 91;
-            this.labelControl50.Text = "Warehouse Supervisor 1 : ";
-            // 
-            // cmbWarehouseSupervisor1
-            // 
-            this.cmbWarehouseSupervisor1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbWarehouseSupervisor1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbWarehouseSupervisor1.FormattingEnabled = true;
-            this.cmbWarehouseSupervisor1.Location = new System.Drawing.Point(133, 2);
-            this.cmbWarehouseSupervisor1.Name = "cmbWarehouseSupervisor1";
-            this.cmbWarehouseSupervisor1.Size = new System.Drawing.Size(201, 21);
-            this.cmbWarehouseSupervisor1.TabIndex = 92;
-            // 
-            // btnWHAddSupervisor
-            // 
-            this.btnWHAddSupervisor.Location = new System.Drawing.Point(338, 4);
-            this.btnWHAddSupervisor.Name = "btnWHAddSupervisor";
-            this.btnWHAddSupervisor.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btnWHAddSupervisor.Properties.Appearance.Options.UseBackColor = true;
-            this.btnWHAddSupervisor.Properties.AutoHeight = false;
-            this.btnWHAddSupervisor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnWHAddSupervisor.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btnWHAddSupervisor.Size = new System.Drawing.Size(22, 18);
-            this.btnWHAddSupervisor.TabIndex = 93;
-            this.btnWHAddSupervisor.Click += new System.EventHandler(this.btnWHAddSupervisor_Click);
-            // 
             // frmMasterAddCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1791,6 +1791,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.pnlWHSupervisor3.ResumeLayout(false);
+            this.pnlWHSupervisor3.PerformLayout();
+            this.pnlWHSupervisor2.ResumeLayout(false);
+            this.pnlWHSupervisor2.PerformLayout();
+            this.pnlWHSupervisor1.ResumeLayout(false);
+            this.pnlWHSupervisor1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWHState.Properties)).EndInit();
@@ -1881,14 +1889,6 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.pnlWHSupervisor3.ResumeLayout(false);
-            this.pnlWHSupervisor3.PerformLayout();
-            this.pnlWHSupervisor2.ResumeLayout(false);
-            this.pnlWHSupervisor2.PerformLayout();
-            this.pnlWHSupervisor1.ResumeLayout(false);
-            this.pnlWHSupervisor1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWHAddSupervisor.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
