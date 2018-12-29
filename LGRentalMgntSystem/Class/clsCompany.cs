@@ -76,7 +76,7 @@ namespace LGRentalMgntSystem
         public string sTransporterID { get; set; }
         public string sTransDocumentName { get; set; }
         public string sTransDocumentNumber { get; set; }
-        public string sTransDocumentDate { get; set; }
+        public DateTime sTransDocumentDate { get; set; }
         #endregion
 
         #region "Warehouse Details"

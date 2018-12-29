@@ -125,6 +125,17 @@ namespace LGRentalMgntSystem
                     {
                         return;
                     }
+                    AssetMaster oAssetMaster = new AssetMaster();
+                    oAssetMaster.nAssetID=Convert.ToInt64(row[1]);
+                    if (oAssetMaster.DeleteAsset() > 0)
+                    {
+                        MessageBox.Show("Asset details deleted successfully.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    if (oAssetMaster != null)
+                    {
+                        oAssetMaster.Dispose();
+                        oAssetMaster = null;
+                    }
                     //clsMasters oclsMaster = new clsMasters();
                     //oclsMaster.nMasterID = Convert.ToInt64(row[1]);
                     //oclsMaster.MasterType = this.MasterType;

@@ -313,6 +313,7 @@
             // 
             this.txtDocumentNumber.Location = new System.Drawing.Point(101, 46);
             this.txtDocumentNumber.Name = "txtDocumentNumber";
+            this.txtDocumentNumber.Properties.MaxLength = 20;
             this.txtDocumentNumber.Size = new System.Drawing.Size(200, 20);
             this.txtDocumentNumber.TabIndex = 1;
             // 
@@ -328,6 +329,7 @@
             // 
             this.txtDocumentName.Location = new System.Drawing.Point(455, 23);
             this.txtDocumentName.Name = "txtDocumentName";
+            this.txtDocumentName.Properties.MaxLength = 20;
             this.txtDocumentName.Size = new System.Drawing.Size(200, 20);
             this.txtDocumentName.TabIndex = 2;
             // 
@@ -343,6 +345,7 @@
             // 
             this.txtTransporterID.Location = new System.Drawing.Point(101, 23);
             this.txtTransporterID.Name = "txtTransporterID";
+            this.txtTransporterID.Properties.MaxLength = 20;
             this.txtTransporterID.Size = new System.Drawing.Size(200, 20);
             this.txtTransporterID.TabIndex = 0;
             // 
@@ -743,7 +746,7 @@
             // 
             this.txtWHPincode.Location = new System.Drawing.Point(100, 186);
             this.txtWHPincode.Name = "txtWHPincode";
-            this.txtWHPincode.Properties.Mask.EditMask = "\\d{1,6}";
+            this.txtWHPincode.Properties.Mask.EditMask = "\\d{1,10}";
             this.txtWHPincode.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtWHPincode.Size = new System.Drawing.Size(200, 20);
             this.txtWHPincode.TabIndex = 5;
@@ -1052,7 +1055,7 @@
             // 
             // labelControl47
             // 
-            this.labelControl47.Location = new System.Drawing.Point(17, 5);
+            this.labelControl47.Location = new System.Drawing.Point(16, 5);
             this.labelControl47.Name = "labelControl47";
             this.labelControl47.Size = new System.Drawing.Size(99, 13);
             this.labelControl47.TabIndex = 93;
@@ -1083,9 +1086,9 @@
             // 
             this.labelControl46.Location = new System.Drawing.Point(15, 4);
             this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(102, 13);
+            this.labelControl46.Size = new System.Drawing.Size(99, 13);
             this.labelControl46.TabIndex = 93;
-            this.labelControl46.Text = "Comp.  Signatory 2 : ";
+            this.labelControl46.Text = "Comp. Signatory 2 : ";
             // 
             // cmbCompanySignatory2
             // 
@@ -1151,6 +1154,7 @@
             // 
             this.txtGSTNo.Location = new System.Drawing.Point(99, 291);
             this.txtGSTNo.Name = "txtGSTNo";
+            this.txtGSTNo.Properties.MaxLength = 20;
             this.txtGSTNo.Size = new System.Drawing.Size(200, 20);
             this.txtGSTNo.TabIndex = 13;
             // 
@@ -1166,6 +1170,9 @@
             // 
             this.txtPANNo.Location = new System.Drawing.Point(99, 313);
             this.txtPANNo.Name = "txtPANNo";
+            this.txtPANNo.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Strong;
+            this.txtPANNo.Properties.Mask.EditMask = "[A-Za-z]{5}\\d{4}[A-Za-z]{1}";
+            this.txtPANNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPANNo.Size = new System.Drawing.Size(200, 20);
             this.txtPANNo.TabIndex = 14;
             // 
@@ -1567,6 +1574,7 @@
             // 
             this.txtWebsiteURL.Location = new System.Drawing.Point(101, 268);
             this.txtWebsiteURL.Name = "txtWebsiteURL";
+            this.txtWebsiteURL.Properties.MaxLength = 20;
             this.txtWebsiteURL.Size = new System.Drawing.Size(200, 20);
             this.txtWebsiteURL.TabIndex = 12;
             // 

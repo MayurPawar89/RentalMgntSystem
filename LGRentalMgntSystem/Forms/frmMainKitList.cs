@@ -129,7 +129,10 @@ namespace LGRentalMgntSystem
                     }
                     KitMaster oKitMaster = new KitMaster();
                     oKitMaster.nKitID = Convert.ToInt64(row[1]);
-                    oKitMaster.DeleteKit();
+                    if (oKitMaster.DeleteKit() > 0)
+                    {
+                        MessageBox.Show("Kit details deleted successfully.", clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     if (oKitMaster!=null)
                     {
                         oKitMaster.Dispose();

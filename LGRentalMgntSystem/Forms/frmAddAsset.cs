@@ -89,8 +89,8 @@ namespace LGRentalMgntSystem
                         txtAssetName.Text = Convert.ToString(dtAssetDetails.Rows[0]["sAssetName"]);
                         txtAssetAbbrivation.Text = Convert.ToString(dtAssetDetails.Rows[0]["sAssetAbbrivation"]);
                         txtAssetDescription.Text = Convert.ToString(dtAssetDetails.Rows[0]["sDescription"]);
-                        dtIntroductionDate.Text = Convert.ToString(dtAssetDetails.Rows[0]["dtIntroductionDate"]);
-                        dtReorderTime.Text = Convert.ToString(dtAssetDetails.Rows[0]["dtReorderDate"]);
+                        dtIntroductionDate.EditValue = Convert.ToDateTime(dtAssetDetails.Rows[0]["dtIntroductionDate"]);
+                        dtReorderTime.EditValue = Convert.ToDateTime(dtAssetDetails.Rows[0]["dtReorderDate"]);
                         txtReorderDays.Text = Convert.ToString(dtAssetDetails.Rows[0]["sReorderDays"]);
                         txtReorderQuantity.Text = Convert.ToString(dtAssetDetails.Rows[0]["sReorderQuality"]);
                         txtAssetRate.Text = Convert.ToString(dtAssetDetails.Rows[0]["sRate"]);
@@ -115,8 +115,8 @@ namespace LGRentalMgntSystem
                         lblAssetID.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["nAssetID"]);
                         lblAssetCodeID.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["nAssetCodeID"]);
                         txtShelfLifeUnit.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["sShelfLifeUnit"]);
-                        dtShelfLife.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["dtShelfLife"]);
-                        dtRetirementDate.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["dtRetirementDate"]);
+                        dtShelfLife.EditValue = Convert.ToDateTime(dtAssetCodeDetails.Rows[0]["dtShelfLife"]);
+                        dtRetirementDate.EditValue = Convert.ToDateTime(dtAssetCodeDetails.Rows[0]["dtRetirementDate"]);
                         txtShelfLifeUnit.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["sShelfLifeUnit"]);
                         txtAssetCode.Text = Convert.ToString(dtAssetCodeDetails.Rows[0]["sUniqueCode"]);
                         byte[] barcodeImage = (byte[])dtAssetCodeDetails.Rows[0]["barcode"];
@@ -1075,113 +1075,113 @@ namespace LGRentalMgntSystem
 
         private void gvAssetList_CustomRowCellEdit(object sender, DevExpress.XtraGrid.Views.Grid.CustomRowCellEditEventArgs e)
         {
-            try
-            {
-                if (e.Column.Caption == "Delete")
-                {
-                    int nVal = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+            //try
+            //{
+            //    if (e.Column.Caption == "Delete")
+            //    {
+            //        int nVal = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
                     
-                    bool val = Convert.ToBoolean(nVal);
-                    if (val)
-                    {
-                        DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-                        ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-                        ritem.ReadOnly = false;
-                        ritem.Buttons[0].Enabled = false;
-                        ritem.Buttons[0].Visible = false;
-                        e.RepositoryItem = ritem;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        bool val = Convert.ToBoolean(nVal);
+            //        if (val)
+            //        {
+            //            DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ritem = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            //            ritem.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            //            ritem.ReadOnly = false;
+            //            ritem.Buttons[0].Enabled = false;
+            //            ritem.Buttons[0].Visible = false;
+            //            e.RepositoryItem = ritem;
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
+            //}
         }
 
         private void gvAssetList_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            try
-            {
-                if (e.Column.Caption == "Edit")
-                {
-                    var row = gvAssetList.GetFocusedDataRow();
+            //try
+            //{
+            //    if (e.Column.Caption == "Edit")
+            //    {
+            //        var row = gvAssetList.GetFocusedDataRow();
 
-                    txtShelfLifeUnit.Text=Convert.ToString(row[10]);
-                    dtShelfLife.Text=Convert.ToString(row[9]);
-                    dtRetirementDate.Text=Convert.ToString(row[11]);
-                    byte[] barcodeImage = (byte[])row[8];
-                    lblAssetCodeID.Text = Convert.ToString(row[1]);
-                    lblInitialCode.Text = Convert.ToString(row[3]);
-                    lblSequenceNo.Text = Convert.ToString(row[4]);
-                    lblSelectedRow.Text = Convert.ToString(row[0]);
-                    btnAddBarcodeDetails.Text = "Edit";
-                    if (barcodeImage.Length > 0)
-                    {
-                        barcodeImage = (byte[])row[9];
-                        MemoryStream msHeaderImage = new MemoryStream(barcodeImage);
-                        picBarcodeImage.Image = Image.FromStream(msHeaderImage);
-                    }
-                }
-                if (e.Column.Caption == "Delete")
-                {
-                    var row = gvAssetList.GetFocusedDataRow();
-                    int n = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
+            //        txtShelfLifeUnit.Text=Convert.ToString(row[10]);
+            //        dtShelfLife.Text=Convert.ToString(row[9]);
+            //        dtRetirementDate.Text=Convert.ToString(row[11]);
+            //        byte[] barcodeImage = (byte[])row[8];
+            //        lblAssetCodeID.Text = Convert.ToString(row[1]);
+            //        lblInitialCode.Text = Convert.ToString(row[3]);
+            //        lblSequenceNo.Text = Convert.ToString(row[4]);
+            //        lblSelectedRow.Text = Convert.ToString(row[0]);
+            //        btnAddBarcodeDetails.Text = "Edit";
+            //        if (barcodeImage.Length > 0)
+            //        {
+            //            barcodeImage = (byte[])row[9];
+            //            MemoryStream msHeaderImage = new MemoryStream(barcodeImage);
+            //            picBarcodeImage.Image = Image.FromStream(msHeaderImage);
+            //        }
+            //    }
+            //    if (e.Column.Caption == "Delete")
+            //    {
+            //        var row = gvAssetList.GetFocusedDataRow();
+            //        int n = Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "" || Convert.ToString(gvAssetList.GetRowCellValue(e.RowHandle, "IsUsed")) == "0" ? 0 : 1;
                     
-                    if (n == 1)
-                    {
-                        return;
-                    }
-                    if (Convert.ToInt64(lblAssetID.Text)>0)
-                    {
-                        Int64 nAssetCodeID = Convert.ToInt64(row["nAssetCodeID"]);
-                        AssetCode oAssetCode = new AssetCode();
-                        oAssetCode.nAssetCodeID = nAssetCodeID;
-                        if (oAssetCode.DeleteAssetCode() > 0)
-                        {
-                            MessageBox.Show("Asset code deleted successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Asset code not deleted.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        FillAssetCode(Convert.ToInt64(lblAssetID.Text));
+            //        if (n == 1)
+            //        {
+            //            return;
+            //        }
+            //        if (Convert.ToInt64(lblAssetID.Text)>0)
+            //        {
+            //            Int64 nAssetCodeID = Convert.ToInt64(row["nAssetCodeID"]);
+            //            AssetCode oAssetCode = new AssetCode();
+            //            oAssetCode.nAssetCodeID = nAssetCodeID;
+            //            if (oAssetCode.DeleteAssetCode() > 0)
+            //            {
+            //                MessageBox.Show("Asset code deleted successfully.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("Asset code not deleted.", clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
+            //            FillAssetCode(Convert.ToInt64(lblAssetID.Text));
 
-                        if (oAssetCode != null)
-                        {
-                            oAssetCode.Dispose();
-                            oAssetCode = null;
-                        }
-                    }
-                    else
-                    {
-                        Int64 nRowNo = Convert.ToInt64(row["RowNo"]);
-                        DataRow[] drDelete = dtAssetCode.Select("RowNo=" + Convert.ToInt64(nRowNo));
-                        foreach (DataRow dr in drDelete)
-                        {
-                            dr.Delete();
-                        }
-                        dtAssetCode.AcceptChanges();
-                        int nRow = 0;
-                        foreach (DataRow dr in dtAssetCode.Rows)
-                        {
-                            nRow++;
-                            dr["RowNo"] = nRow;
-                        }
-                        //gvAssetList.GridControl.DataSource = dtAssetCode;
-                        //gvAssetList.RefreshData();
-                    }
-                    gvAssetList.GridControl.DataSource = dtAssetCode;
-                    gvAssetList.RefreshData();
-                    //FillAssetCode();
-                }
+            //            if (oAssetCode != null)
+            //            {
+            //                oAssetCode.Dispose();
+            //                oAssetCode = null;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Int64 nRowNo = Convert.ToInt64(row["RowNo"]);
+            //            DataRow[] drDelete = dtAssetCode.Select("RowNo=" + Convert.ToInt64(nRowNo));
+            //            foreach (DataRow dr in drDelete)
+            //            {
+            //                dr.Delete();
+            //            }
+            //            dtAssetCode.AcceptChanges();
+            //            int nRow = 0;
+            //            foreach (DataRow dr in dtAssetCode.Rows)
+            //            {
+            //                nRow++;
+            //                dr["RowNo"] = nRow;
+            //            }
+            //            //gvAssetList.GridControl.DataSource = dtAssetCode;
+            //            //gvAssetList.RefreshData();
+            //        }
+            //        gvAssetList.GridControl.DataSource = dtAssetCode;
+            //        gvAssetList.RefreshData();
+            //        //FillAssetCode();
+            //    }
                 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex, clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error : " + ex, clsGlobal.MessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnUpdateAsset_Click(object sender, EventArgs e)

@@ -120,11 +120,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureEdit1.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAASdEVYdFRpdGxlAExpc3Q7QnVsbGV0O1FzfzkAAACY
-        SURBVFhH7ZRBCsAwCAT7jrwlj+sn8x4bQUTKXnqIc+lhYNlKtGpymRmKNDuRZifS7ESanUizkxRzzrG5
-        NytwPWrwCVJEQntx1+ATpNjJ/K/fBawaLL5/pp7n1MPxAvARsEtIIc1OUni7o+3MCCIhuoT4NcQLwEfw
-        vwMIKbzd0XZmBJEQXUL8GuIF4CP43wEEaXYizT7segAT/MtP9FuuRgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAATdEVYdFRpdGxlAFRhYmxlO1NlbGVjdDtjMY+OAAAAPklE
+        QVQ4T93OMQ4AMAgCQP/E/99GCSNTrZMdjkESYpEccQBguLr9NDDhyGXpfZCFbBuYcOSy9D7IQrYNvGMd
+        lWP64II0A2kAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnEdit.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

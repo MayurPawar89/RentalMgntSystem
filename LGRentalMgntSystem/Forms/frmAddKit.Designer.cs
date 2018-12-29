@@ -69,11 +69,11 @@
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnShowAsset = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtAssetCode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnAddAsset = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.cmbAssetList = new System.Windows.Forms.ComboBox();
-            this.txtAssetCode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pnlSave = new System.Windows.Forms.Panel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -218,6 +218,7 @@
             // 
             this.picBarcodeImage.Location = new System.Drawing.Point(374, 33);
             this.picBarcodeImage.Name = "picBarcodeImage";
+            this.picBarcodeImage.Properties.NullText = "Right click to add image";
             this.picBarcodeImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.picBarcodeImage.Size = new System.Drawing.Size(219, 57);
             this.picBarcodeImage.TabIndex = 2;
@@ -259,6 +260,7 @@
             // 
             this.txtKitName.Location = new System.Drawing.Point(75, 6);
             this.txtKitName.Name = "txtKitName";
+            this.txtKitName.Properties.MaxLength = 30;
             this.txtKitName.Size = new System.Drawing.Size(227, 20);
             this.txtKitName.TabIndex = 0;
             this.txtKitName.EditValueChanged += new System.EventHandler(this.txtKitName_EditValueChanged);
@@ -466,20 +468,37 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtAssetCode);
+            this.panel2.Controls.Add(this.labelControl3);
             this.panel2.Controls.Add(this.btnAddAsset);
             this.panel2.Controls.Add(this.labelControl4);
             this.panel2.Controls.Add(this.cmbAssetList);
-            this.panel2.Controls.Add(this.txtAssetCode);
-            this.panel2.Controls.Add(this.labelControl3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(2, 20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(755, 34);
             this.panel2.TabIndex = 0;
             // 
+            // txtAssetCode
+            // 
+            this.txtAssetCode.Location = new System.Drawing.Point(489, 7);
+            this.txtAssetCode.Name = "txtAssetCode";
+            this.txtAssetCode.Size = new System.Drawing.Size(206, 20);
+            this.txtAssetCode.TabIndex = 202;
+            this.txtAssetCode.Visible = false;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(420, 10);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(62, 13);
+            this.labelControl3.TabIndex = 201;
+            this.labelControl3.Text = "Asset Code :";
+            this.labelControl3.Visible = false;
+            // 
             // btnAddAsset
             // 
-            this.btnAddAsset.Location = new System.Drawing.Point(621, 5);
+            this.btnAddAsset.Location = new System.Drawing.Point(300, 5);
             this.btnAddAsset.Name = "btnAddAsset";
             this.btnAddAsset.Size = new System.Drawing.Size(98, 23);
             this.btnAddAsset.TabIndex = 1;
@@ -488,7 +507,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(313, 9);
+            this.labelControl4.Location = new System.Drawing.Point(8, 9);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(69, 13);
             this.labelControl4.TabIndex = 200;
@@ -499,25 +518,10 @@
             this.cmbAssetList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbAssetList.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbAssetList.FormattingEnabled = true;
-            this.cmbAssetList.Location = new System.Drawing.Point(387, 6);
+            this.cmbAssetList.Location = new System.Drawing.Point(82, 6);
             this.cmbAssetList.Name = "cmbAssetList";
             this.cmbAssetList.Size = new System.Drawing.Size(211, 21);
             this.cmbAssetList.TabIndex = 0;
-            // 
-            // txtAssetCode
-            // 
-            this.txtAssetCode.Location = new System.Drawing.Point(85, 6);
-            this.txtAssetCode.Name = "txtAssetCode";
-            this.txtAssetCode.Size = new System.Drawing.Size(206, 20);
-            this.txtAssetCode.TabIndex = 138;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(16, 9);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(62, 13);
-            this.labelControl3.TabIndex = 137;
-            this.labelControl3.Text = "Asset Code :";
             // 
             // pnlSave
             // 
@@ -601,8 +605,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSave;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.TextEdit txtAssetCode;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btnAddAsset;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.ComboBox cmbAssetList;
@@ -625,5 +627,7 @@
         private DevExpress.XtraEditors.LabelControl lblAssetCodeName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.SimpleButton btnUpdateKit;
+        private DevExpress.XtraEditors.TextEdit txtAssetCode;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

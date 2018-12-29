@@ -131,7 +131,7 @@ namespace LGRentalMgntSystem
                     txtGafferName.Text = Convert.ToString(dtGafferDetails.Rows[0]["sGafferName"]);
                     txtGafferAbbrivation.Text = Convert.ToString(dtGafferDetails.Rows[0]["sGafferAbbrivation"]);
                     cmbGender.Text = Convert.ToString(dtGafferDetails.Rows[0]["sGender"]);
-                    dtGafferBirthdate.Text = Convert.ToString(dtGafferDetails.Rows[0]["dtDOB"]);
+                    dtGafferBirthdate.EditValue = Convert.ToDateTime(dtGafferDetails.Rows[0]["dtDOB"]);
                     txtGafferAge.Text = Convert.ToString(dtGafferDetails.Rows[0]["sAge"]);
                     txtAddressLine1.Text = Convert.ToString(dtGafferDetails.Rows[0]["sAddressLine1"]);
                     txtAddressLine2.Text = Convert.ToString(dtGafferDetails.Rows[0]["sAddressLine2"]);

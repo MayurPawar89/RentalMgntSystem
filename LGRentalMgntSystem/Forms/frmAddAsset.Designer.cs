@@ -463,10 +463,9 @@
             // 
             // txtAssetCode
             // 
-            this.txtAssetCode.Enabled = false;
             this.txtAssetCode.Location = new System.Drawing.Point(317, 49);
             this.txtAssetCode.Name = "txtAssetCode";
-            this.txtAssetCode.Properties.ReadOnly = true;
+            this.txtAssetCode.Properties.MaxLength = 16;
             this.txtAssetCode.Size = new System.Drawing.Size(149, 20);
             this.txtAssetCode.TabIndex = 5;
             // 

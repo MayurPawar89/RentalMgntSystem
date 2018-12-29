@@ -280,10 +280,11 @@ namespace LGRentalMgntSystem
             return dt;
         }
 
-        public void DeleteKit()
+        public Int32 DeleteKit()
         {
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
+            Int32 nDeletedID = 0;
             try
             {
                 oDBAccess = new DatabaseAccess();
@@ -291,7 +292,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.clear();
                 oDBParameter.Add("@nKitID", this.nKitID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Execute("lgsp_Delete_Kit", oDBParameter);
+                nDeletedID=oDBAccess.Execute("lgsp_Delete_Kit", oDBParameter);
                 oDBAccess.CloseConnection(false);
             }
             catch (Exception ex)
@@ -312,6 +313,7 @@ namespace LGRentalMgntSystem
                     oDBParameter = null;
                 }
             }
+            return nDeletedID;
         }
     }
     public class KitAsset:IDisposable

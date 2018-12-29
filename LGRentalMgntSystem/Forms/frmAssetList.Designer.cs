@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssetList));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
@@ -49,6 +49,7 @@
             this.gcAssetMainType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcAllowAccess = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcAllowSignatory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcSystemDefined = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcCreatedOn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcModifiedOn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcIsUsed = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +57,6 @@
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gcSystemDefined = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -81,7 +81,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(942, 40);
+            this.panelControl1.Size = new System.Drawing.Size(942, 35);
             this.panelControl1.TabIndex = 9;
             // 
             // pictureEdit1
@@ -94,13 +94,13 @@
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(51, 36);
+            this.pictureEdit1.Size = new System.Drawing.Size(28, 31);
             this.pictureEdit1.TabIndex = 4;
             // 
             // lblFormHeader
             // 
             this.lblFormHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormHeader.Location = new System.Drawing.Point(59, 12);
+            this.lblFormHeader.Location = new System.Drawing.Point(36, 8);
             this.lblFormHeader.Name = "lblFormHeader";
             this.lblFormHeader.Size = new System.Drawing.Size(28, 18);
             this.lblFormHeader.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.panelControl4.Controls.Add(this.txtSearch);
             this.panelControl4.Controls.Add(this.lblTypeName);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(0, 40);
+            this.panelControl4.Location = new System.Drawing.Point(0, 35);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(942, 62);
             this.panelControl4.TabIndex = 12;
@@ -160,9 +160,9 @@
             // 
             this.panelControl2.Controls.Add(this.gridControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 102);
+            this.panelControl2.Location = new System.Drawing.Point(0, 97);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(942, 430);
+            this.panelControl2.Size = new System.Drawing.Size(942, 435);
             this.panelControl2.TabIndex = 13;
             // 
             // gridControl1
@@ -174,7 +174,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEdit,
             this.btnDelete});
-            this.gridControl1.Size = new System.Drawing.Size(938, 426);
+            this.gridControl1.Size = new System.Drawing.Size(938, 431);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMasterList});
@@ -282,6 +282,12 @@
             this.gcAllowSignatory.Visible = true;
             this.gcAllowSignatory.VisibleIndex = 6;
             // 
+            // gcSystemDefined
+            // 
+            this.gcSystemDefined.Caption = "System Defined";
+            this.gcSystemDefined.FieldName = "SystemDefined";
+            this.gcSystemDefined.Name = "gcSystemDefined";
+            // 
             // gcCreatedOn
             // 
             this.gcCreatedOn.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -330,7 +336,7 @@
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -349,15 +355,9 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // gcSystemDefined
-            // 
-            this.gcSystemDefined.Caption = "System Defined";
-            this.gcSystemDefined.FieldName = "SystemDefined";
-            this.gcSystemDefined.Name = "gcSystemDefined";
             // 
             // frmAssetList
             // 
@@ -373,7 +373,6 @@
             this.MinimizeBox = false;
             this.Name = "frmAssetList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Asset List";
             this.Load += new System.EventHandler(this.frmAssetList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

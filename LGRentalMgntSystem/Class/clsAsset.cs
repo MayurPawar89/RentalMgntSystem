@@ -377,10 +377,11 @@ namespace LGRentalMgntSystem
             return dt;
         }
 
-        public void DeleteAsset()
+        public Int32 DeleteAsset()
         {
             DatabaseAccess oDBAccess = null;
             DatabaseParameters oDBParameter = null;
+            Int32 nDeletedID = 0;
             try
             {
                 oDBAccess = new DatabaseAccess();
@@ -388,7 +389,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.clear();
                 oDBParameter.Add("@nAssetID", this.nAssetID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBAccess.OpenConnection(false);
-                oDBAccess.Execute("lgsp_Delete_Asset", oDBParameter);
+                nDeletedID= oDBAccess.Execute("lgsp_Delete_Asset", oDBParameter);
                 oDBAccess.CloseConnection(false);
             }
             catch (Exception ex)
@@ -409,6 +410,7 @@ namespace LGRentalMgntSystem
                     oDBParameter = null;
                 }
             }
+            return nDeletedID;
         }
         #endregion
     }

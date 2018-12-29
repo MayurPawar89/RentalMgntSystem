@@ -505,7 +505,7 @@ namespace LGRentalMgntSystem
                     cmbEmpCompany.SelectedValue = Convert.ToString(dtStaffDetails.Rows[0]["nCompanyID"]);
                     txtEmpAbbrivation.Text = Convert.ToString(dtStaffDetails.Rows[0]["sStaffAbbrivation"]);
                     cmbGender.SelectedValue = Convert.ToString(dtStaffDetails.Rows[0]["sGender"]);
-                    dtEmpBirthdate.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtDOB"]);
+                    dtEmpBirthdate.EditValue = Convert.ToDateTime(dtStaffDetails.Rows[0]["dtDOB"]);
                     txtEmpAge.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAge"]);
                     txtAddressLine1.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAddressLine1"]);
                     txtAddressLine2.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAddressLine2"]);
@@ -518,7 +518,7 @@ namespace LGRentalMgntSystem
                     txtPermanentAddressLine2.Text = Convert.ToString(dtStaffDetails.Rows[0]["sPermanentAddressLine2"]);
                     txtPermanentPincode.Text = Convert.ToString(dtStaffDetails.Rows[0]["sPermanentPincode"]);
                     txtDistrictTownVillage.Text = Convert.ToString(dtStaffDetails.Rows[0]["sPermanentDistTown"]);
-                    dtEmpDOJ.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtDOJ"]);
+                    dtEmpDOJ.EditValue = Convert.ToDateTime(dtStaffDetails.Rows[0]["dtDOJ"]);
                     txtGSTNNo.Text = Convert.ToString(dtStaffDetails.Rows[0]["sGSTNNo"]);
                     txtPANNo.Text = Convert.ToString(dtStaffDetails.Rows[0]["sPANNo"]);
                     txtAadharNo.Text = Convert.ToString(dtStaffDetails.Rows[0]["sAadharNo"]);
@@ -529,13 +529,13 @@ namespace LGRentalMgntSystem
                     txtDailyWages.Text = Convert.ToString(dtStaffDetails.Rows[0]["sDailyWages"]);
                     txtSalary.Text = Convert.ToString(dtStaffDetails.Rows[0]["sSalary"]);
                     txtUnionID.Text = Convert.ToString(dtStaffDetails.Rows[0]["sUnionID"]);
-                    dtUnionRenewDate.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtUnionIDRenewalDate"]);
+                    dtUnionRenewDate.EditValue = Convert.ToDateTime(dtStaffDetails.Rows[0]["dtUnionIDRenewalDate"]);
                     txtlic1No.Text = Convert.ToString(dtStaffDetails.Rows[0]["sFirstLicenseNumber"]);
-                    dtLic1RenewDate.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtFirstLicenseRenewalDate"]);
+                    dtLic1RenewDate.EditValue = Convert.ToDateTime(dtStaffDetails.Rows[0]["dtFirstLicenseRenewalDate"]);
                     txtLic2No.Text = Convert.ToString(dtStaffDetails.Rows[0]["sSecondLicenseNumber"]);
-                    dtLic2RenewDate.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtSecondLicenseRenewalDate"]);
+                    dtLic2RenewDate.EditValue = Convert.ToDateTime(dtStaffDetails.Rows[0]["dtSecondLicenseRenewalDate"]);
                     txtLic3No.Text = Convert.ToString(dtStaffDetails.Rows[0]["sThirdLicenseNumber"]);
-                    dtLic3RenewDate.Text = Convert.ToString(dtStaffDetails.Rows[0]["dtThirdLicenseRenewalDate"]);
+                    dtLic3RenewDate.EditValue = Convert.ToDateTime(dtStaffDetails.Rows[0]["dtThirdLicenseRenewalDate"]);
 
                     string[] sPhoneAll = Convert.ToString(dtStaffDetails.Rows[0]["sPhoneNo"]).Split(',');
                     if (sPhoneAll.Length > 0)

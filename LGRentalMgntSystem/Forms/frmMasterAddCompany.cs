@@ -660,7 +660,7 @@ namespace LGRentalMgntSystem
                         txtHSN_SAVCode.Text = Convert.ToString(dtCompDetails.Rows[0]["sHSN_SACCode"]);
                         txtGSTNo.Text = Convert.ToString(dtCompDetails.Rows[0]["sGSTNO"]);
                         txtPANNo.Text = Convert.ToString(dtCompDetails.Rows[0]["sPANNO"]);
-                        dtCompanyFormedOn.Text = Convert.ToString(dtCompDetails.Rows[0]["dtCompanyFormedOn"]);
+                        dtCompanyFormedOn.EditValue = Convert.ToDateTime(dtCompDetails.Rows[0]["dtCompanyFormedOn"]);
 
                         string[] sPhoneAll = Convert.ToString(dtCompDetails.Rows[0]["sPhoneNo"]).Split(',');
                         if (sPhoneAll.Length > 0)
@@ -688,7 +688,7 @@ namespace LGRentalMgntSystem
                         txtTransporterID.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sTransportorID"]);
                         txtDocumentName.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sDoumentName"]);
                         txtDocumentNumber.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sDoumentNumber"]);
-                        txtDocumentDate.Text = Convert.ToString(dtCompTransDetails.Rows[0]["sDocumentDate"]);
+                        txtDocumentDate.EditValue = Convert.ToDateTime(dtCompTransDetails.Rows[0]["sDocumentDate"]);
                     }
 
                     if (dtCompWHDetails != null && dtCompWHDetails.Rows.Count > 0)
@@ -906,7 +906,7 @@ namespace LGRentalMgntSystem
 
 
                 clsCompanyMaster.sTransporterID = Convert.ToString(txtTransporterID.Text.Trim());
-                clsCompanyMaster.sTransDocumentDate = Convert.ToString(txtDocumentDate.Text.Trim());
+                clsCompanyMaster.sTransDocumentDate = Convert.ToDateTime(txtDocumentDate.Text.Trim());
                 clsCompanyMaster.sTransDocumentName = Convert.ToString(txtDocumentName.Text.Trim());
                 clsCompanyMaster.sTransDocumentNumber = Convert.ToString(txtDocumentNumber.Text.Trim());
 
