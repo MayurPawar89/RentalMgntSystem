@@ -41,6 +41,7 @@ namespace LGRentalMgntSystem
         #endregion
         public Int64 nMasterID { get; set; }
         public string sMasterName { get; set; }
+        public string sMasterCode { get; set; }
         public Int64 nMasterMainID { get; set; }
         public MasterType MasterType { get; set; }
         public bool IsAllowAccess { get; set; }
@@ -59,6 +60,7 @@ namespace LGRentalMgntSystem
                 oDBParameter.clear();
                 oDBParameter.Add("@nMasterID", this.nMasterID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@sMasterName", this.sMasterName, ParameterDirection.Input, SqlDbType.VarChar);
+                oDBParameter.Add("@sMasterCode", this.sMasterCode, ParameterDirection.Input, SqlDbType.VarChar);
                 oDBParameter.Add("@nMasterMainID", this.nMasterMainID, ParameterDirection.Input, SqlDbType.BigInt);
                 oDBParameter.Add("@nMasterType", this.MasterType.GetHashCode(), ParameterDirection.Input, SqlDbType.Int);
                 oDBParameter.Add("@bIsAllowAccess", this.IsAllowAccess, ParameterDirection.Input, SqlDbType.Bit);

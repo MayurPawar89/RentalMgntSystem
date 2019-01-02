@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssetMaster));
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblTypeID = new DevExpress.XtraEditors.LabelControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.pnlAllowSettings = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rdAllowSignatoryYes = new System.Windows.Forms.RadioButton();
@@ -48,11 +51,12 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.lblTypeID = new DevExpress.XtraEditors.LabelControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.txtMasterCode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAllowSettings)).BeginInit();
             this.pnlAllowSettings.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,8 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMasterCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl4
@@ -77,15 +80,45 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 70);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(367, 114);
+            this.panelControl4.Size = new System.Drawing.Size(367, 150);
             this.panelControl4.TabIndex = 11;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.lblTypeID);
+            this.panelControl2.Controls.Add(this.btnSave);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(2, 113);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(363, 35);
+            this.panelControl2.TabIndex = 13;
+            // 
+            // lblTypeID
+            // 
+            this.lblTypeID.Location = new System.Drawing.Point(60, 8);
+            this.lblTypeID.Name = "lblTypeID";
+            this.lblTypeID.Size = new System.Drawing.Size(6, 13);
+            this.lblTypeID.TabIndex = 5;
+            this.lblTypeID.Text = "0";
+            this.lblTypeID.Visible = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSave.Location = new System.Drawing.Point(261, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 23);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pnlAllowSettings
             // 
             this.pnlAllowSettings.Controls.Add(this.panel2);
             this.pnlAllowSettings.Controls.Add(this.panel1);
             this.pnlAllowSettings.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAllowSettings.Location = new System.Drawing.Point(2, 32);
+            this.pnlAllowSettings.Location = new System.Drawing.Point(2, 63);
             this.pnlAllowSettings.Name = "pnlAllowSettings";
             this.pnlAllowSettings.Size = new System.Drawing.Size(363, 50);
             this.pnlAllowSettings.TabIndex = 12;
@@ -175,17 +208,19 @@
             // 
             // pnlName
             // 
+            this.pnlName.Controls.Add(this.txtMasterCode);
+            this.pnlName.Controls.Add(this.labelControl5);
             this.pnlName.Controls.Add(this.txtMainTypeName);
             this.pnlName.Controls.Add(this.labelControl1);
             this.pnlName.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlName.Location = new System.Drawing.Point(2, 2);
             this.pnlName.Name = "pnlName";
-            this.pnlName.Size = new System.Drawing.Size(363, 30);
+            this.pnlName.Size = new System.Drawing.Size(363, 61);
             this.pnlName.TabIndex = 11;
             // 
             // txtMainTypeName
             // 
-            this.txtMainTypeName.Location = new System.Drawing.Point(118, 4);
+            this.txtMainTypeName.Location = new System.Drawing.Point(118, 8);
             this.txtMainTypeName.Name = "txtMainTypeName";
             this.txtMainTypeName.Properties.MaxLength = 100;
             this.txtMainTypeName.Size = new System.Drawing.Size(232, 20);
@@ -193,11 +228,11 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(39, 7);
+            this.labelControl1.Location = new System.Drawing.Point(42, 11);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(69, 13);
+            this.labelControl1.Size = new System.Drawing.Size(66, 13);
             this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Enter  Name : ";
+            this.labelControl1.Text = "Enter Name : ";
             // 
             // pnlAssetMainType
             // 
@@ -262,41 +297,27 @@
             this.lblFormHeader.TabIndex = 3;
             this.lblFormHeader.Text = "Master";
             // 
-            // panelControl2
+            // txtMasterCode
             // 
-            this.panelControl2.Controls.Add(this.lblTypeID);
-            this.panelControl2.Controls.Add(this.btnSave);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(2, 82);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(363, 30);
-            this.panelControl2.TabIndex = 13;
+            this.txtMasterCode.Location = new System.Drawing.Point(118, 34);
+            this.txtMasterCode.Name = "txtMasterCode";
+            this.txtMasterCode.Properties.MaxLength = 100;
+            this.txtMasterCode.Size = new System.Drawing.Size(232, 20);
+            this.txtMasterCode.TabIndex = 5;
             // 
-            // lblTypeID
+            // labelControl5
             // 
-            this.lblTypeID.Location = new System.Drawing.Point(60, 8);
-            this.lblTypeID.Name = "lblTypeID";
-            this.lblTypeID.Size = new System.Drawing.Size(6, 13);
-            this.lblTypeID.TabIndex = 5;
-            this.lblTypeID.Text = "0";
-            this.lblTypeID.Visible = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSave.Location = new System.Drawing.Point(261, 4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 23);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.labelControl5.Location = new System.Drawing.Point(44, 37);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(64, 13);
+            this.labelControl5.TabIndex = 4;
+            this.labelControl5.Text = "Enter Code : ";
             // 
             // frmAssetMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 184);
+            this.ClientSize = new System.Drawing.Size(367, 220);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.pnlAssetMainType);
             this.Controls.Add(this.panelControl1);
@@ -307,6 +328,9 @@
             this.Load += new System.EventHandler(this.frmAssetMaster_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAllowSettings)).EndInit();
             this.pnlAllowSettings.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -324,9 +348,7 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMasterCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,5 +377,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl lblTypeID;
         private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.TextEdit txtMasterCode;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

@@ -23,6 +23,7 @@ namespace LGRentalMgntSystem
         public bool IsMasterSave { get; set; }
         public Int64 nTypeID { get; set; }
         public string sTypeName { get; set; }
+        public string sTypeCode { get; set; }
         public bool bIsAllowAccess { get; set; }
         public bool bIsAllowSignatory { get; set; }
         public Int64 nMainTypeID { get; set; }
@@ -35,28 +36,31 @@ namespace LGRentalMgntSystem
                 {
                     case MasterType.CompanyType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Company Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
                     case MasterType.MaterialType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Material Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
                     case MasterType.Designation:
                         {
-                            this.Height = 186;
+                            this.Height = 216;
                             lblFormHeader.Text = "Designation";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             if (bIsAllowAccess)
                             {
@@ -83,10 +87,11 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.AssetType:
                         {
-                            this.Height = 170;
+                            this.Height = 200;
                             lblFormHeader.Text = "Asset Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             FillAssetMaintype();
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             pnlAssetMainType.Visible = true; 
@@ -95,10 +100,11 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.AssetType1:
                         {
-                            this.Height = 170;
+                            this.Height = 200;
                             lblFormHeader.Text = "Asset Type1";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             FillAssetMaintype();
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             pnlAssetMainType.Visible = true;
@@ -106,46 +112,51 @@ namespace LGRentalMgntSystem
                         }
                     case MasterType.PartyType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Party Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
                     case MasterType.VehicleType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Vehicle Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
                     case MasterType.ColourType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Colour Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
                     case MasterType.DensityType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Density Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
                     case MasterType.AssetMainType:
                         {
-                            this.Height = 140;
+                            this.Height = 170;
                             lblFormHeader.Text = "Asset Main Type";
                             lblTypeID.Text = Convert.ToString(nTypeID);
                             txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
@@ -237,6 +248,7 @@ namespace LGRentalMgntSystem
                 clsMaster.nMasterID = Convert.ToInt64(lblTypeID.Text);
                 clsMaster.nMasterMainID = Convert.ToInt64(cmbAssetMainType.SelectedValue);
                 clsMaster.sMasterName = txtMainTypeName.Text.Trim();
+                clsMaster.sMasterCode = txtMasterCode.Text.Trim();
                 clsMaster.IsAllowAccess = bIsAllowAccess;
                 clsMaster.IsAllowSignatory = bIsAllowSignatory;
                 Int64 nResult=clsMaster.InsertUpdateMaster();
@@ -272,6 +284,7 @@ namespace LGRentalMgntSystem
         private void ClearForm()
         {
             txtMainTypeName.Text = string.Empty;
+            txtMasterCode.Text = string.Empty;
             cmbAssetMainType.SelectedValue = 0;
         }
     }
