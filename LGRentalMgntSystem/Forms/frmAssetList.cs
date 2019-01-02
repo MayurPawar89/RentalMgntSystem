@@ -143,6 +143,8 @@ namespace LGRentalMgntSystem.Forms
                     frmMaster.sTypeName = Convert.ToString(row[3]);
                     frmMaster.bIsAllowAccess = Convert.ToBoolean(row[5]);
                     frmMaster.bIsAllowSignatory = Convert.ToBoolean(row[6]);
+                    frmMaster.sTypeCode = Convert.ToString(row[8]);
+
                     switch (MasterType)
                     {
                         case MasterType.AssetType:

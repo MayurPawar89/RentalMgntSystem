@@ -43,6 +43,8 @@
             this.rdAllowAccessNo = new System.Windows.Forms.RadioButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pnlName = new DevExpress.XtraEditors.PanelControl();
+            this.txtMasterCode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtMainTypeName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlAssetMainType = new DevExpress.XtraEditors.PanelControl();
@@ -51,8 +53,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblFormHeader = new DevExpress.XtraEditors.LabelControl();
-            this.txtMasterCode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -63,13 +63,13 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlName)).BeginInit();
             this.pnlName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMasterCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMainTypeName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAssetMainType)).BeginInit();
             this.pnlAssetMainType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMasterCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl4
@@ -218,6 +218,22 @@
             this.pnlName.Size = new System.Drawing.Size(363, 61);
             this.pnlName.TabIndex = 11;
             // 
+            // txtMasterCode
+            // 
+            this.txtMasterCode.Location = new System.Drawing.Point(118, 34);
+            this.txtMasterCode.Name = "txtMasterCode";
+            this.txtMasterCode.Properties.MaxLength = 5;
+            this.txtMasterCode.Size = new System.Drawing.Size(232, 20);
+            this.txtMasterCode.TabIndex = 5;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(44, 37);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(64, 13);
+            this.labelControl5.TabIndex = 4;
+            this.labelControl5.Text = "Enter Code : ";
+            // 
             // txtMainTypeName
             // 
             this.txtMainTypeName.Location = new System.Drawing.Point(118, 8);
@@ -297,22 +313,6 @@
             this.lblFormHeader.TabIndex = 3;
             this.lblFormHeader.Text = "Master";
             // 
-            // txtMasterCode
-            // 
-            this.txtMasterCode.Location = new System.Drawing.Point(118, 34);
-            this.txtMasterCode.Name = "txtMasterCode";
-            this.txtMasterCode.Properties.MaxLength = 100;
-            this.txtMasterCode.Size = new System.Drawing.Size(232, 20);
-            this.txtMasterCode.TabIndex = 5;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(44, 37);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(64, 13);
-            this.labelControl5.TabIndex = 4;
-            this.labelControl5.Text = "Enter Code : ";
-            // 
             // frmAssetMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +340,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlName)).EndInit();
             this.pnlName.ResumeLayout(false);
             this.pnlName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMasterCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMainTypeName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAssetMainType)).EndInit();
             this.pnlAssetMainType.ResumeLayout(false);
@@ -348,7 +349,6 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMasterCode.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

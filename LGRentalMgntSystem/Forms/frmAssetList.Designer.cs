@@ -57,6 +57,7 @@
             this.btnEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gdDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gcTypeCode = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -187,6 +188,7 @@
             this.gcRowNo,
             this.gcTypeID,
             this.gcAssetMainTypeID,
+            this.gcTypeCode,
             this.gcTypeName,
             this.gcAssetMainType,
             this.gcAllowAccess,
@@ -248,7 +250,7 @@
             this.gcTypeName.FieldName = "TypeName";
             this.gcTypeName.Name = "gcTypeName";
             this.gcTypeName.Visible = true;
-            this.gcTypeName.VisibleIndex = 3;
+            this.gcTypeName.VisibleIndex = 4;
             this.gcTypeName.Width = 125;
             // 
             // gcAssetMainType
@@ -259,7 +261,7 @@
             this.gcAssetMainType.FieldName = "AssetType";
             this.gcAssetMainType.Name = "gcAssetMainType";
             this.gcAssetMainType.Visible = true;
-            this.gcAssetMainType.VisibleIndex = 4;
+            this.gcAssetMainType.VisibleIndex = 5;
             this.gcAssetMainType.Width = 108;
             // 
             // gcAllowAccess
@@ -270,7 +272,7 @@
             this.gcAllowAccess.FieldName = "AllowAccess";
             this.gcAllowAccess.Name = "gcAllowAccess";
             this.gcAllowAccess.Visible = true;
-            this.gcAllowAccess.VisibleIndex = 5;
+            this.gcAllowAccess.VisibleIndex = 6;
             // 
             // gcAllowSignatory
             // 
@@ -280,7 +282,7 @@
             this.gcAllowSignatory.FieldName = "AllowSignatory";
             this.gcAllowSignatory.Name = "gcAllowSignatory";
             this.gcAllowSignatory.Visible = true;
-            this.gcAllowSignatory.VisibleIndex = 6;
+            this.gcAllowSignatory.VisibleIndex = 7;
             // 
             // gcSystemDefined
             // 
@@ -296,7 +298,7 @@
             this.gcCreatedOn.FieldName = "CreatedOn";
             this.gcCreatedOn.Name = "gcCreatedOn";
             this.gcCreatedOn.Visible = true;
-            this.gcCreatedOn.VisibleIndex = 7;
+            this.gcCreatedOn.VisibleIndex = 8;
             this.gcCreatedOn.Width = 81;
             // 
             // gcModifiedOn
@@ -307,7 +309,7 @@
             this.gcModifiedOn.FieldName = "ModifiedOn";
             this.gcModifiedOn.Name = "gcModifiedOn";
             this.gcModifiedOn.Visible = true;
-            this.gcModifiedOn.VisibleIndex = 8;
+            this.gcModifiedOn.VisibleIndex = 9;
             this.gcModifiedOn.Width = 81;
             // 
             // gcIsUsed
@@ -318,7 +320,7 @@
             this.gcIsUsed.FieldName = "IsUsed";
             this.gcIsUsed.Name = "gcIsUsed";
             this.gcIsUsed.Visible = true;
-            this.gcIsUsed.VisibleIndex = 9;
+            this.gcIsUsed.VisibleIndex = 10;
             this.gcIsUsed.Width = 73;
             // 
             // gcEdit
@@ -329,7 +331,7 @@
             this.gcEdit.ColumnEdit = this.btnEdit;
             this.gcEdit.Name = "gcEdit";
             this.gcEdit.Visible = true;
-            this.gcEdit.VisibleIndex = 10;
+            this.gcEdit.VisibleIndex = 11;
             this.gcEdit.Width = 91;
             // 
             // btnEdit
@@ -348,7 +350,7 @@
             this.gdDelete.ColumnEdit = this.btnDelete;
             this.gdDelete.Name = "gdDelete";
             this.gdDelete.Visible = true;
-            this.gdDelete.VisibleIndex = 11;
+            this.gdDelete.VisibleIndex = 12;
             this.gdDelete.Width = 85;
             // 
             // btnDelete
@@ -358,6 +360,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // gcTypeCode
+            // 
+            this.gcTypeCode.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gcTypeCode.AppearanceHeader.Options.UseFont = true;
+            this.gcTypeCode.Caption = "Type Code";
+            this.gcTypeCode.FieldName = "TypeCode";
+            this.gcTypeCode.Name = "gcTypeCode";
+            this.gcTypeCode.Visible = true;
+            this.gcTypeCode.VisibleIndex = 3;
             // 
             // frmAssetList
             // 
@@ -420,6 +432,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcAllowAccess;
         private DevExpress.XtraGrid.Columns.GridColumn gcAllowSignatory;
         private DevExpress.XtraGrid.Columns.GridColumn gcSystemDefined;
+        private DevExpress.XtraGrid.Columns.GridColumn gcTypeCode;
 
     }
 }

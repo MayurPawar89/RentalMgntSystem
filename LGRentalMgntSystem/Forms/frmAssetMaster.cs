@@ -204,8 +204,14 @@ namespace LGRentalMgntSystem
         {
             if (txtMainTypeName.Text.Trim()=="")
             {
-                MessageBox.Show("Please Enter " + lblFormHeader.Text + ".", sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Enter " + lblFormHeader.Text + ".", sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMainTypeName.Focus();
+                return;
+            }
+            if (txtMasterCode.Text.Trim() == "")
+            {
+                MessageBox.Show("Please Enter Code for " + lblFormHeader.Text + ".", sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMasterCode.Focus();
                 return;
             }
             switch (MasterType)

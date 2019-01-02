@@ -79,8 +79,9 @@ namespace LGRentalMgntSystem
             catch (Exception ex)
             {
                 oDBAccess.CloseConnection(false);
-                MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                nMasterID = -1;
+                throw ex;
+                //MessageBox.Show("Error: " + ex.ToString(), clsGlobal._sMessageboxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
