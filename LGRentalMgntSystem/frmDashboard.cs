@@ -22,7 +22,8 @@ namespace LGRentalMgntSystem
             VehicleType = 6,
             ColourType = 7,
             DensityType = 8,
-            AssetMainType=9
+            AssetMainType=9,
+            Make=10
 
         }
     public enum MainMasterType
@@ -178,6 +179,16 @@ namespace LGRentalMgntSystem
         private void btnDensityTypeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             showMaster(MasterType.DensityType);
+        }
+
+        private void btnAddMakeMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            showMasterForm(MasterType.Make);
+        }
+
+        private void btnMakeMasterList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            showMaster(MasterType.Make);
         }
 
         public bool showMasterForm(MasterType MasterType)
@@ -368,6 +379,25 @@ namespace LGRentalMgntSystem
                             }
                             break;
                         }
+                    case MasterType.Make:
+                        {
+                            if (frmAssetMaster != null)
+                            {
+                                frmAssetMaster.Dispose();
+                                frmAssetMaster = null;
+                            }
+                            frmAssetMaster = new frmAssetMaster();
+                            frmAssetMaster.MasterType = MasterType.Make;
+                            frmAssetMaster.ShowDialog();
+                            _result = frmAssetMaster.IsMasterSave;
+                            if (frmAssetMaster != null)
+                            {
+                                frmAssetMaster.Dispose();
+                                frmAssetMaster = null;
+                            }
+                            break;
+                        }
+
                 }
             }
             catch (Exception ex)
@@ -559,6 +589,23 @@ namespace LGRentalMgntSystem
                             }
                             break;
                         }
+                    case MasterType.Make:
+                        {
+                            if (frmAssetMasterList != null)
+                            {
+                                frmAssetMasterList.Dispose();
+                                frmAssetMasterList = null;
+                            }
+                            frmAssetMasterList = new LGRentalMgntSystem.Forms.frmAssetList();
+                            frmAssetMasterList.MasterType = MasterType.Make;
+                            frmAssetMasterList.ShowDialog();
+                            if (frmAssetMasterList != null)
+                            {
+                                frmAssetMasterList.Dispose();
+                                frmAssetMasterList = null;
+                            }
+                            break;
+                        }
                 }
             }
             catch (Exception ex)
@@ -634,6 +681,8 @@ namespace LGRentalMgntSystem
             ofrmMasterListLocation.ShowDialog();
         } 
         #endregion
+
+        
 
         
 

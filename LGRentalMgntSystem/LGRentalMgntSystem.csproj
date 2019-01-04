@@ -47,7 +47,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  
   <ItemGroup>
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -345,7 +344,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-	<None Include="LGRentalMgntSystem_TemporaryKey.pfx" />
+    <None Include="LGRentalMgntSystem_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -379,6 +378,9 @@
     <None Include="Resources\btnBackground.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DB Script\02 Jan\ALLScripts.sql" />
+    <Content Include="DB Script\02 Jan\AllTables_add_Column.sql" />
+    <Content Include="DB Script\02 Jan\AllTables_alter_Column.sql" />
     <Content Include="DLL\DevExpress.Data.v15.2.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

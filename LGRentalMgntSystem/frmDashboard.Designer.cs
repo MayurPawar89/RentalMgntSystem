@@ -92,6 +92,9 @@
             this.rpSettings = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rpgMake = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnAddMakeMaster = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMakeMasterList = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,9 +139,11 @@
             this.btnAddGafferMaster,
             this.btnGafferMasterList,
             this.btnAddLocationMaster,
-            this.btnLocationMasterList});
+            this.btnLocationMasterList,
+            this.btnAddMakeMaster,
+            this.btnMakeMasterList});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 48;
+            this.ribbonControl1.MaxItemId = 50;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpAsset,
@@ -543,7 +548,8 @@
             this.rpgPartyType,
             this.rpgVehicleType,
             this.rpgColourType,
-            this.rpgDensityType});
+            this.rpgDensityType,
+            this.rpgMake});
             this.rpTypeMaster.Name = "rpTypeMaster";
             this.rpTypeMaster.Text = "Type Master";
             // 
@@ -636,6 +642,29 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Company Type";
             // 
+            // rpgMake
+            // 
+            this.rpgMake.ItemLinks.Add(this.btnAddMakeMaster, true);
+            this.rpgMake.ItemLinks.Add(this.btnMakeMasterList, true);
+            this.rpgMake.Name = "rpgMake";
+            this.rpgMake.Text = "Make";
+            // 
+            // btnAddMakeMaster
+            // 
+            this.btnAddMakeMaster.Caption = "Add Make";
+            this.btnAddMakeMaster.Id = 48;
+            this.btnAddMakeMaster.ImageUri.Uri = "Add";
+            this.btnAddMakeMaster.Name = "btnAddMakeMaster";
+            this.btnAddMakeMaster.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddMakeMaster_ItemClick);
+            // 
+            // btnMakeMasterList
+            // 
+            this.btnMakeMasterList.Caption = "Make List";
+            this.btnMakeMasterList.Id = 49;
+            this.btnMakeMasterList.ImageUri.Uri = "ListNumbers";
+            this.btnMakeMasterList.Name = "btnMakeMasterList";
+            this.btnMakeMasterList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMakeMasterList_ItemClick);
+            // 
             // frmDashboard
             // 
             this.AllowDraggingByPageCategory = DevExpress.Utils.DefaultBoolean.False;
@@ -723,6 +752,9 @@
         private DevExpress.XtraBars.BarButtonItem btnGafferMasterList;
         private DevExpress.XtraBars.BarButtonItem btnAddLocationMaster;
         private DevExpress.XtraBars.BarButtonItem btnLocationMasterList;
+        private DevExpress.XtraBars.BarButtonItem btnAddMakeMaster;
+        private DevExpress.XtraBars.BarButtonItem btnMakeMasterList;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgMake;
 
     }
 }

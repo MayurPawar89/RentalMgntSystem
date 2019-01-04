@@ -160,6 +160,16 @@ namespace LGRentalMgntSystem
                             cmbAssetMainType.SelectedValue = nMainTypeID;
                             break;
                         }
+                    case MasterType.Make:
+                        {
+                            this.Height = 170;
+                            lblFormHeader.Text = "Make";
+                            lblTypeID.Text = Convert.ToString(nTypeID);
+                            txtMainTypeName.Text = sTypeName;
+                            txtMasterCode.Text = sTypeCode;
+                            cmbAssetMainType.SelectedValue = nMainTypeID;
+                            break;
+                        }
                 }
             }
             catch (Exception ex)
